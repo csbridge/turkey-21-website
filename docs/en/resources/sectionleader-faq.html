@@ -1,0 +1,1168 @@
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+<title>CS Bridge  | Section Leader FAQs</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../style.css">
+
+<!-- Java Script -->
+<script src="../../plugins/jquery.min.js"></script>
+<script src="../../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+<!--<script src="../../karel/ace/ace.js" type="text/javascript"></script>-->
+
+<!-- Moment.js -->
+<script type="text/javascript" src="../../js/moment.min.js"></script>
+<script type="text/javascript" src="../../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../../js/time.js"></script>
+
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<!--
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<!--<script src="sweetalert2.all.min.js"></script>-->
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+-->
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+
+
+<!-- The datetime editor, for testing -->
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>
+<!-- The navigation bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="container">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../../en/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
+							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+
+							<!-- Divider only visible once Python resources visible -->
+							<li 
+									class="divider visible-after" data-visible-after="2020080600"
+							/>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/resources/quick-python.html">Python Reference</a>
+							</li>
+
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/resources/graphics.html">Graphics Reference</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Course Information</li>
+							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
+							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
+							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
+							<li class="divider" />
+							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of content -->
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Evening
+						</li>
+
+							<li
+							>
+								<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
+							</li>
+							<li
+							>
+								<a href="../../en/projects/arches.html">Arches Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/placeSquare.html">Place Square</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/mountain.html">Mountain Karel</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/stripeKarel.html">Stripe Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/hospitalKarel.html">Hospital Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/randomPainter.html">Random Painter</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Variables</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/sandcastles.html">Sandcastles</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/runningSum.html">Run, Sum, Run!</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/areaCalculator.html">Area Calculator</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/8ball.html">8 Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/viralVideo.html">Viral Video</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/khansole.html">Khansole Academy</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">4: For loops, deconstructed</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080700"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../en/projects/someSum.html">That&#039;s Some Sum!</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../../en/projects/carbonDating.html">Carbon Dating</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081000"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/projects/programmingIsAwesome.html">Programming is Awesome</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../../en/projects/randomCircles.html">Random Circles</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/funkyFunctions.html">Funky Functions</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/fizzbuzz-functions.html">FizzBuzz</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/target.html">Target</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/stringArt.html">String Art</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/printIndices.html">Print Indices</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../../en/projects/illusion.html">Optical Illusion</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/mysterySquare.html">Mystery Square</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/bouncingBall.html">Bouncing Ball</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/shortFilm.html">Short Film</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/sorted.html">Sorted Numbers</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../../en/projects/ascending.html">Ascending Numbers</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/mouseLocation.html">Mouse Location</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/makingTracks.html">Making Tracks</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/snow.html">Snow</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/catchMeIfYouCan.html">Catch Me If You Can</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">9: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081400"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081400"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081700"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../en/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081710"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081710"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081800"
+		>
+			<a tabindex="-1" href="#">11: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081800"
+						>
+							Final Project
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081800"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081900"
+		>
+			<a tabindex="-1" href="#">12: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081900"
+						>
+							Final Project
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081900"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Examples <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of content -->
+		<li 
+				class="dropdown-submenu"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header"
+						>
+							Evening
+						</li>
+
+							<li
+							>
+								<a href="../../en/projects/stepUp/">Step Up</a>
+							</li>
+							<li
+							>
+								<a href="../../en/projects/place100/">Place 100</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel and Control Flow</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../../en/projects/beeperLine/">Beeper Line</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/invertBeeper/">Invert Beeper</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/unKarel/">UN Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../../en/projects/banishWinter/">Banish Winter</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Variables</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Morning
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../../en/projects/emc2/">E=MC²</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/fibonacci/">Fibonacci</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/findPi/">Find Pi</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../../en/projects/favoriteNumber/">Favorite Number</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Graphics and Functions</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/robotFace/">Robot Face</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/halfGreen/">Half Green</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/average/">Average Function</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/division/">Division</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../../en/projects/drawPeople/">Draw People</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Loops and Animation</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/moveToCenter/">Move to Center</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../../en/projects/gravityBall/">Gravity Ball</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/stamptool/">Stamp Tool</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/holePuncher/">Hole Puncher</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/debrisSweeper/">Debris Sweeper</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../../en/projects/rocketPaddle/">Rocket Paddle</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../../en/projects/keyboardKarel/">Keyboard Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081900"
+		>
+			<a tabindex="-1" href="#">12: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081900"
+						>
+							Final Project
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081900"
+							>
+								<a href="../../en/projects/coloredShapes/">Colored Shapes</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Lectures <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each lecture -->
+</ul>					</li>
+					
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../../en/bonus-index.html">Bonus</a></li>
+					</ul>
+
+					<!-- TA Link -->
+
+				</ul>
+
+				<!-- Language toggle button
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
+				</ul>
+			-->
+
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Script to toggle between languages
+<script>
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+	
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>
+-->
+		<div class="container">
+			<!--
+Template for rendering an FAQ page, for use with Markdown specs.  Expects
+the following properties passed in:
+
+title - problem title
+base - the HTML body for this template
+filePath - the total path to the markdown file being rendered in this template
+-->
+
+
+<!-- Header -->
+<div id="pageHeader">
+	<h1>
+		Section Leader FAQs
+	</h1>
+
+</div>
+<hr/>
+
+<!-- Text description -->
+<div class="row">
+	<div class="col-xs-12">
+		<div class="toc">
+<ul>
+<li><a href="#general">General</a></li>
+<li><a href="#platforms-we-will-be-using">Platforms We Will Be Using</a><ul>
+<li><a href="#ed">Ed</a></li>
+<li><a href="#course-website">Course Website</a></li>
+<li><a href="#zoom">Zoom</a></li>
+<li><a href="#pycharm">PyCharm</a></li>
+</ul>
+</li>
+<li><a href="#schedule">Schedule</a><ul>
+<li><a href="#what-will-lectures-look-like">What will lectures look like?</a></li>
+<li><a href="#what-is-quickstart">What is quickstart?</a></li>
+<li><a href="#what-is-tea-time">What is tea time?</a></li>
+<li><a href="#what-will-the-office-hourswork-block-look-like">What will the office hours/work block look like?</a></li>
+<li><a href="#what-is-the-difference-between-morning-submit-and-evening-submit">What is the difference between morning submit and evening submit?</a></li>
+<li><a href="#why-is-there-a-free-play-and-a-dinner-block">Why is there a free play and a dinner block?</a></li>
+<li><a href="#what-will-happen-in-the-sl-team-meeting">What will happen in the SL team meeting?</a></li>
+<li><a href="#what-will-section-look-like">What will section look like?</a></li>
+<li><a href="#what-will-the-social-activity-look-like">What will the social activity look like?</a></li>
+</ul>
+</li>
+<li><a href="#who-to-asktell-for-what">Who to Ask/Tell for What</a><ul>
+<li><a href="#who-do-i-contact-if-im-having-issues-with-section-or-office-hours">Who do I contact if I'm having issues with section or office hours?</a></li>
+<li><a href="#what-if-i-cant-make-it-to-my-section-on-a-specific-day-who-do-i-tell">What if I can't make it to my section on a specific day, who do I tell?</a></li>
+<li><a href="#who-do-i-contact-if-im-having-personal-issues-or-if-one-of-my-students-is-having-a-serious-personal-issue">Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue?</a></li>
+</ul>
+</li>
+<li><a href="#general-questions">General Questions</a><ul>
+<li><a href="#if-i-have-feedback-about-the-program-or-content-id-like-to-discuss-in-the-sl-team-meeting-where-can-i-share-my-thoughts">If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?</a></li>
+<li><a href="#who-should-answer-posts-made-by-students-in-the-cs-bridge-group-on-ed">Who should answer posts made by students in the CS Bridge group on Ed?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><em>Do you have a question about Section Leading for CS Bridge? It might be answered here.</em></p>
+<h2 id="general">General</h2>
+<p>Welcome! We're excited to have you on board as a Section Leader for this online version of CS Bridge. There are Section Leaders from Czech Technical University in the Czech Republic, Koç University in Turkey, and Stanford University in the United States. Some of you have been a Section Leader for the CS Bridge in-person program in past summers, some of you are brand new to the Section Leader role, <strong>but ALL of you are new to teaching CS Bridge online</strong>. This will be a learning experience for all involved! Our goal is to provide you with the resources you need to help high school students learn a brand new skill - programming!</p>
+<h2 id="platforms-we-will-be-using">Platforms We Will Be Using</h2>
+<h3 id="ed"><a href="https://us.edstem.org/">Ed</a></h3>
+<p>We will be using this platform to communicate with students as a group and in sections (no one will use email to communicate). Students will submit their work on Ed and you will be able to download it and read their code. You can use the <strong>Workspace</strong> function in Ed during section so that you can simultaneously edit something. Recorded lectures will be posted in the "Lectures" thread of this group.</p>
+<p>You will be enrolled in three Ed groups:</p>
+<ul>
+<li><a href="https://us.edstem.org/courses/968/discussion/">CS Bridge</a>: The main discussion group.</li>
+</ul>
+<p>This is where students will post questions they have (conceptual, technical, etc.) and where we’ll post announcements about the course that everyone needs to see. We will assign some Section Leaders to be responsible for answering Ed posts during the day.</p>
+<ul>
+<li><a href="https://us.edstem.org/courses/972/discussion/">Section Leaders</a>: The group for Section Leaders (not for students).</li>
+</ul>
+<p>This is where you can communicate directly with Section Leaders. We'll be posting solutions in the Resources folder in this group. You'll find categories for threads related to the course but can also post social/fun things in this group. This group is for YOU! It is unfortunate that you all can't meet in person but this is the next best thing. The goal is for you to finish this program with many new friends from your university AND from other countries!</p>
+<ul>
+<li><strong>Section #</strong>: This is your section's Ed group.</li>
+</ul>
+<p>You will be assigned a section and this will be your go-to location for all things related to section. You'll communicate exclusively with your group of students in this group.</p>
+<p>For more information on Ed Discussion, you can refer to the <a href="https://us.edstem.org/help">Quick Start Guide</a>.</p>
+<h3 id="course-website"><a href="http://online.csbridge.org/">Course Website</a></h3>
+<p>This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders.</p>
+<h3 id="zoom">Zoom</h3>
+<p>We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. If you have not already been provided details for your Zoom account, you will receive that information from someone at your university soon. We'll go through a short Zoom tutorial during the Section Leader training and you can find a <a href="https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing">Zoom tutorial here</a></p>
+<h3 id="pycharm">PyCharm</h3>
+<p>This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the <a href="http://online.csbridge.org/en/resources/install.html">PyCharm installation tutorial here</a></p>
+<h2 id="schedule">Schedule</h2>
+<p>Below is the calendar for the program. The Section Leader Team Meeting is NOT on the below calendar but it will occur 1hr before the evening lecture each day (except Fridays) (9am in CA/7pm in Prague/8pm in Istanbul) and you're required to attend.
+Click on one of the three buttons below to set the calendar to your timezone.</p>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Timezone: Czech</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-danger">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        Timezone: Turkey</a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p><div class="panel panel-warning">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Timezone: USA (California)</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSanFrancisco&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+  </div>
+</div></p>
+<h3 id="what-will-lectures-look-like">What will <strong>lectures</strong> look like?</h3>
+<p>Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where students will learn the core concepts of the class.</p>
+<ul>
+<li>Lectures will be delivered LIVE through Zoom and will be recorded and posted on Ed so students can refer back to them later if they need to. If students want to ask questions during lecture, they can. The Head TA will help by monitoring the chat.</li>
+<li>You do not need to attend lecture.</li>
+</ul>
+<h3 id="what-is-quickstart">What is <strong>quickstart</strong>?</h3>
+<p>This can be thought of as time that you are supervising students as they work. It will occur in Zoom but can be thought of as work time and not teaching time. It is a time in which students will be working individually on a "quickstart" problem.</p>
+<h3 id="what-is-tea-time">What is <strong>tea time</strong>?</h3>
+<p>This is an opportunity for you to get to know a small group of students better. You can do some ice breakers as a form of social time or you can have discussions about cs. Due to the time difference, the Koç and CTU SLs will run these sessions so the Stanford SLs' students will be distributed among the Koç and CTU SLs.</p>
+<h3 id="what-will-the-office-hourswork-block-look-like">What will the <strong>office hours/work</strong> block look like?</h3>
+<p>These office hours will be help sessions with opportunities for small breakout sessions over Zoom.</p>
+<ul>
+<li>
+<p>The Koç and CTU SLs will be broken up into two groups and assigned to the following office hours:</p>
+</li>
+<li>
+<ol>
+<li>Monday+Wednesday+Friday morning office hours and Tuesday+Thursday evening office hours</li>
+</ol>
+</li>
+<li>
+<ol>
+<li>Tuesday+Thursday morning office hours and Monday+Wednesday+Friday evening office hours</li>
+</ol>
+</li>
+<li>
+<p>Stanford SLs will run all evening office hours.</p>
+</li>
+</ul>
+<p>We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there in the Zoom who can help them. There will be a system for students to submit the code they need help with when they sign up for the office hours so that you can see their code and help them in a breakout room. There will be one or two SLs hosting the Zoom office hour session who will pair off SLs and students into breakout rooms for individual help.</p>
+<h3 id="what-is-the-difference-between-morning-submit-and-evening-submit">What is the difference between <strong>morning submit</strong> and <strong>evening submit</strong>?</h3>
+<p>Students will be submitting two projects per day - once for the project they've been working on in the morning (morning submit) and once in the evening for the project they've been working in the second half of the day (evening submit). Submissions will be made directly to Ed.</p>
+<h3 id="why-is-there-a-free-play-and-a-dinner-block">Why is there a <strong>free play</strong> and a <strong>dinner</strong> block?</h3>
+<p>We wanted to make sure that it's clear to students when they will be working on CS Bridge activities and when they are not expected to be at their computer working on the program. Free play and dinner are unstructured time blocks with <strong>NO CS Bridge activities</strong>. Students should take a huge break during this time (step away from the computer and be kids).
+We've blocked out time for dinner 5-7pm (CZ) and 6-8pm (TU) so that students, families, SLs can make sure to have dinner before the evening activities begin. Lunch isn't labeled in the schedule but it'd be after 12:30 (CZ) and after 1:30 (TU).</p>
+<h3 id="what-will-happen-in-the-sl-team-meeting">What will happen in the <strong>SL team meeting</strong>?</h3>
+<p>This meeting will be lead by the Lecturers and is a time for ALL SLs to meet (via Zoom) to share feedback and to focus on different aspects of the program. It is also an opportunity for SL training.</p>
+<h3 id="what-will-section-look-like">What will <strong>section</strong> look like?</h3>
+<p>Sections will be held in the evening (morning for Stanford) on Zoom. Every Section Leader will have their <strong>own</strong> section of about 8 students.</p>
+<ul>
+<li>
+<p>You will be assigned a group of students</p>
+</li>
+<li>
+<p>See the student-facing page <a href="http://online.csbridge.org/en/resources/section-info.html">What to Expect for Section</a> for more information about section.</p>
+</li>
+</ul>
+<h3 id="what-will-the-social-activity-look-like">What will the <strong>social activity</strong> look like?</h3>
+<p>We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell the Head TA! These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).</p>
+<h2 id="who-to-asktell-for-what">Who to Ask/Tell for What</h2>
+<h3 id="who-do-i-contact-if-im-having-issues-with-section-or-office-hours">Who do I contact if I'm having issues with section or office hours?</h3>
+<p>Contact the Head TA, Ceren.</p>
+<h3 id="what-if-i-cant-make-it-to-my-section-on-a-specific-day-who-do-i-tell">What if I can't make it to my section on a specific day, who do I tell?</h3>
+<p>If you are sick or can't make it to your section for another reason, communicate this with the Head TA, Ceren, as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed.</p>
+<h3 id="who-do-i-contact-if-im-having-personal-issues-or-if-one-of-my-students-is-having-a-serious-personal-issue">Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue?</h3>
+<p>Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the welcome message in the Welcome post on the Section Leaders Ed page <a href="https://us.edstem.org/courses/972/discussion/94282">here</a>.</p>
+<h2 id="general-questions">General Questions</h2>
+<h3 id="if-i-have-feedback-about-the-program-or-content-id-like-to-discuss-in-the-sl-team-meeting-where-can-i-share-my-thoughts">If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?</h3>
+<p>There is a <strong>Reflection</strong> category in the Ed Section Leader group. Once the program starts, we encourage you to fill out the reflection form that we've linked to in Ed <a href="https://us.edstem.org/courses/972/discussion/94782">here</a>.' This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!</p>
+<h3 id="who-should-answer-posts-made-by-students-in-the-cs-bridge-group-on-ed">Who should answer posts made by students in the CS Bridge group on Ed?</h3>
+<p>If you see the Ed post and are confident of the answer, you can go ahead and respond. As the course progresses, we might create a system for answering Ed questions if we think it's necessary.</p>
+<p><em>Have a question that wasn't answered here? Please post on <a href="https://us.edstem.org/courses/972">Ed</a>.</em></p>
+	</div>
+</div>
+
+					
+
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+
+		<!-- Start of content that must be translated -->
+			&#169; Stanford &#124; Created by 
+			<a href="http://stanford.edu/~cpiech">Chris</a> with help from the entire team.
+			Based on the wonderful CS106A class which was developed by many talented teachers. Special thanks to <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> and <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>.
+		<!-- End of content that must be translated -->
+	</p>
+</div>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+	// Subscribe to the demo_tutorial channel
+	pubnubDemo.addListener({
+	    message: function(request) {
+	    	let msg = request['message']
+	    	console.log(msg)
+	    	let swalData = msg['swal'];
+	    	console.log(swalData)
+        Swal.fire(swalData)
+	    }
+	})
+
+	pubnubDemo.subscribe({
+	    channels: ['csbridge_alert']
+	});
+</script>
+		</div>
+
+	</body>
+</html>

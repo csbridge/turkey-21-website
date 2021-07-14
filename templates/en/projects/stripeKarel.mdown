@@ -1,0 +1,41 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Stripe Karel
+credit: Written by Lisa Yan
+
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Examples: [Invert Beeper]({{pathToRoot}}en/projects/invertBeeper/index.html)<br/>
+File: `stripe_karel.py`
+
+Your goal is to fill every odd row of Karel's world with beepers.
+For example, if you ran your program on the world on the left, it should produce the world on the right.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world1.png">	
+</center>
+
+Here are some tips:
+
+* You can assume that Karel starts on the bottom left of the world, facing east.
+* Karel must place beepers on odd-numbered rows 1, 3, 5, and so on.
+
+Your program should also work for worlds of different sizes. For example if we run the EXACT same program on this slightly larger world, Karel should still be able to place stripes of beepers without crashing. This means we can't use a for loop. We don't know before hand how big the world is going to be!
+
+Try to get your program to work on worlds with an **odd** number of rows first. Then if you have time, edit your code to work on worlds with any number or rows, even or odd.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world2.png">	
+</center>
+
+Note that Karel should still work on the below world as well:
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world3.png">	
+</center>
+
+## Extension
+
+Congrats on finishing this part! If you have time, try editing your code to work with an even number of rows, like below.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/stripeKarel/world_even.png">	
+</center>

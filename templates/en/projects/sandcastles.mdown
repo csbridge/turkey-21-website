@@ -1,0 +1,23 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Sandcastles
+
+Write the following programs to get warmed up to Python variables.
+
+## 1. Hello world
+File: `hello_world.py`
+
+Write a console program that displays hello world (or any message you like):
+
+```
+Hello, world!
+```
+
+## 2. Moon Weight
+File: `moon.py`
+
+The user (an Earthling) enters their weight on Earth. Your program will print the user's weight on the moon, which is 16.5% of their weight on Earth.
+
+```
+Enter a weight on Earth: 60
+Your weight on the moon is 9.9
+```
