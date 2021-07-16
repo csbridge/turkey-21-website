@@ -1,12 +1,13 @@
-# CSBridge Course Website
-This repository is a template website for CSBridge course websites.  Make a copy of this template to use for your own course websites.
+# CSBridge Course Website - Turkey 21
+This repository is the course website for the online CSBridge Turkey summer 2021 course.
 
-## Setting Up Your Website
+## Website Setup
 
-+ Enable GitHub pages on your new repo:
++ Enable GitHub pages:
     1. Go to setting on the GitHub page for your repo.
     + Change the 'Source' section of the GitHub pages to point to ```master branch/docs folder```.
 	+ Check ```Enforce HTTPS.```
+	+ Change the custom URL
 
 This site uses GitHub pages.  Specifically, all files in the `docs` folder of the master branch are published.
 
@@ -14,11 +15,8 @@ Make sure to install all necessary tools before working on this website:
 
 ```
 pip3 install -r requirements.txt
-python -m pip install -U watchdog[watchmedo]
+python3 -m pip install -U watchdog[watchmedo]
 ```
-
-## Lecture Slides
-Lecture slides aren't included in this repository.  If you'd like to use slides from the past CS Bridge offering, visit the CS Bridge 2020 online course website [here](//online.csbridge.org) and select any of the dropdown links from "Lectures".  Change the .pdf to .pptx to get an editable copy.
 
 ## Website Updates
 
@@ -79,6 +77,7 @@ The main project table on the course homepage, the project table on the SL page,
 The file itself should be an array of JSON objects, in order of days (e.g. day 1, then day 2, etc.).  Here are the fields the object can contain:
 
 + `title_en` (string): the day's topic (English)
++ `title_tr` (string): the day's topic (Turkish)
 + `visible_after` (string): optional timestamp when the day should become visible
 + `bonus` (boolean): optional, set to false if you do not want to show a banner linking to the bonus page for more projects to work on
 + `sections` (array): a list of section objects for the day, such as one for morning, one for evening
@@ -86,6 +85,7 @@ The file itself should be an array of JSON objects, in order of days (e.g. day 1
 Each element of `sections` is an object specifying the content that should be displayed for that section of the day.  The sections should be in the order that they should be displayed on the website.  Here are the fields a section object can contain:
 
 + `title_en` (string): the section name (English) - e.g. "Morning"
++ `title_tr` (string): the section name (Turkish)
 + `visible_after` (string): optional timestamp when this content should become visible.  If this is not included, this section will become visible when the entire day becomes visible.
 + `projectURL` (string): starter code URL.  Prepended with domain.   In other words, if the site is `online.csbridge.org`, the starter code would be assumed to have the URL `online.csbridge.org/[URL]`.
 + `examples` (array): optional info about worked examples
@@ -94,18 +94,21 @@ Each element of `sections` is an object specifying the content that should be di
 "examples" is a list of worked examples that should be displayed for that day in the navigation bar.  Here is the format each worked example should have (all fields required):
 
 + `title_en` (string): the worked example title (English)
++ `title_tr` (string): the worked example title (Turkish)
 + `url` (string): the worked example URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this worked example would be assumed to have the URL `online.csbridge.org/en/[URL]`.
 
 "projects" is a list of projects that should be displayed for that day in the main project table and in the navigation bar.  Here is the format each project should have (all fields required):
 
 + `imageURL` (string): the URL of the image to use in the project table for this problem.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the image would be assumed to have the URL `online.csbridge.org/[URL]`.
 + `title_en` (string): the project title (English)
++ `title_tr` (string): the project title (Turkish)
 + `topic_en` (string): the project topic (English) - e.g. "While Loops"
++ `topic_tr` (string): the project topic (Turkish)
 + `type` (string): one of "quickstart", "project" or "section" - determines the badge displayed for this project in the project table
 + `url` (string): the project URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this project would be assumed to have the URL `online.csbridge.org/en/[URL]`.
 + `teachURL` (string): an optional URL to the SL guide for this project.  Same format as `url`.
 
-You'll notice that many of these objects have fields ending in `_en`.  These correspond to the language codes used by the site - currently, we use "en" for English.  Therefore, it is expected that these objects have a version of some of the fields above for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the English versions.
+You'll notice that many of these objects have fields ending in `_en` and `_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of some of the fields above for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the English versions.
 
 ### Updating Bonus Projects
 The bonus project table on the bonus page is **generated automatically** based on the contents of the `templates/programs/bonusPrograms.json` file.  In other words, you should not modify the HTML file that represents the bonus table - it is reading from this JSON file to know what to display.  This makes translation and updating easier because all translations are in one file.  This file contains an array of JSON objects, one per bonus topic that should be displayed.  Each topic's information contains what projects should be listed for students for that topic, as well as when the problems should become visible to students.  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
@@ -113,6 +116,7 @@ The bonus project table on the bonus page is **generated automatically** based o
 The file itself should be an array of JSON objects, in order of topics (e.g. topic 1, then topic 2, etc.).  Here are the fields the object can contain:
 
 + `title_en` (string): the topic (English)
++ `title_tr` (string): the topic (Turkish)
 + `visible_after` (string): optional timestamp when the topic should become visible
 + `projects` (array): info about bonus projects
 + `projectURL` (string): starter code URL.  Prepended with domain.   In other words, if the site is `online.csbridge.org`, the starter code would be assumed to have the URL `online.csbridge.org/[URL]`.
@@ -121,11 +125,12 @@ The file itself should be an array of JSON objects, in order of topics (e.g. top
 
 + `imageURL` (string): the URL of the image to use in the table for this problem.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the image would be assumed to have the URL `online.csbridge.org/[URL]`.
 + `title_en` (string): the project title (English)
++ `title_tr` (string): the project title (Turkish)
 + `difficulty` (integer): a difficulty rating, 1 (easy), 2 (medium) or 3 (hard)
 + `url` (string): the project URL.  Prepended with domain and language.  In other words, if the site is `online.csbridge.org`, the english version of this project would be assumed to have the URL `online.csbridge.org/en/[URL]`.
 + `teachURL` (string): an optional URL to the SL guide for this project.  Same format as `url`.
 
-You'll notice that the title ends in `_en`.  These correspond to the language codes used by the site - currently, we use "en" for English.  Therefore, it is expected that these objects have a version of the title field for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
+You'll notice that there is a field `titleen` and `title_tr`.  These correspond to the language codes used by the site - currently, we use "en" for English and "tr" for Turkish.  Therefore, it is expected that these objects have a version of the title field for each supported language.  If you wanted to add support for other languages, you should add additional fields for those languages alongside the Turkish and English versions.
 
 ### Updating Lecture Materials
 The lectures dropdown in the navigation bar is **generated automatically** based on the contents of the `templates/lectures.json` file.  In other words, you should not modify the HTML file that represents the navbar dropdown for lecture materials - it is reading from this JSON file to know what to display.  This makes translation easier because all translations are in one file.  This file contains an array of JSON objects, one per lecture that should be displayed.  Each lecture's information contains the lecture title (including translations) and links to its slides and code (if applicable).  See the file itself for an example of its structure.  Below, we specify in more detail the general format the file is expected to have.
@@ -133,6 +138,7 @@ The lectures dropdown in the navigation bar is **generated automatically** based
 The file itself should be an array of JSON objects, in order of lectures (e.g. lecture 1, then lecture 2, etc.).  Here are the fields the object can contain:
 
 + `title_en` (string): the lecture title (English)
++ `title_tr` (string): the lecture title (Turkish)
 + `slidesURL` (string): the URL for the slides.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the slides would be assumed to have the URL `online.csbridge.org/[URL]`.
 + `codeURL` (string): the URL for the code.  Prepended with domain.  In other words, if the site is `online.csbridge.org`, the code would be assumed to have the URL `online.csbridge.org/[URL]`.  This is optional.
 + `visible_after` (string): optional timestamp when this lecture content should become visible.
