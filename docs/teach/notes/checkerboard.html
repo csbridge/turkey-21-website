@@ -151,13 +151,21 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider"
-							/>
+							<li
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
@@ -171,6 +179,9 @@ visible-after, to ensure they display when you want them to.
 								<a href="../../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
 							>
@@ -182,15 +193,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -820,7 +834,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../../en/bonus-index.html">Bonus</a></li>
@@ -833,32 +847,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			
 <!-- Main Content -->
@@ -880,7 +891,7 @@ visible-after, to ensure they display when you want them to.
 <p>Another solution which is great especially if students have no clue where to start is to realize that after checkering the first row, where we put down beepers tells us how to checker the <em>columns</em> in the world.  In other words, after checkering the first row, if a column has a beeper, checker it vertically one way and if a column doesn't have a beeper at its base, checker it vertically the other way. You only need three main functions: <code>checker_row</code>, <code>checker_column_with_beeper</code>, and <code>checker_column_without_beeper</code>), and avoids the messy code (see below) students often have to check whether a row is odd or even. </p>
 <p>Lots of them want to check the beeper to determine if the next row is odd or even. It is hard to do this without lots of special casing for the weird worlds. They usually end up moving up a row first, then moving back down and checking the beeper. </p>
 <p>People also often use recursion on this, by having <code>odd_checker</code> and <code>even_checker</code> methods that call each other. This is fine if it is done cleanly (which is rare), but you should still mention that mutual recursion is generally difficult to understand and should be avoided.</p>
-<p>Remember that <code>break</code> is NOT allowed in Karel!</p>	
+<p>Remember that <code>break</code> is NOT allowed in Karel!</p>
 		</div>
 	</div>
 

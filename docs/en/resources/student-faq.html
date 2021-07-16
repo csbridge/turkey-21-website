@@ -151,31 +151,46 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider visible-after" data-visible-after="2020080600"
-							/>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+									class="visible-after" data-visible-after="2021063000"
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
 							</li>
 
 							<!-- Python reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="../../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+									class="visible-after" data-visible-after="2021070200"
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020081000"
+									class="visible-after" data-visible-after="2021070200"
 							>
 								<a href="../../en/resources/graphics.html">Graphics Reference</a>
 							</li>
@@ -185,15 +200,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -207,23 +225,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/arches.html">Arches Karel</a>
 							</li>
@@ -626,23 +646,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/stepUp/">Step Up</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/place100/">Place 100</a>
 							</li>
@@ -881,7 +903,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../../en/bonus-index.html">Bonus</a></li>
@@ -891,32 +913,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			<!--
 Template for rendering an FAQ page, for use with Markdown specs.  Expects
@@ -952,8 +971,8 @@ filePath - the total path to the markdown file being rendered in this template
 <li><a href="#how-can-i-make-the-most-of-this-course">How can I make the most of this course?</a></li>
 <li><a href="#i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</a></li>
 <li><a href="#i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</a></li>
-<li><a href="#i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</a></li>
-<li><a href="#i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</a></li>
+<li><a href="#i-finished-the-daily-project-early-what-do-i-do-with-the-extra-work-time">I finished the daily project early, what do I do with the extra work time?</a></li>
+<li><a href="#i-havent-finished-the-daily-project-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the daily project yet but it's time to submit, what do I do?</a></li>
 <li><a href="#i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</a></li>
 <li><a href="#can-i-re-watch-lecture">Can I re-watch lecture?</a></li>
 </ul>
@@ -961,31 +980,17 @@ filePath - the total path to the markdown file being rendered in this template
 </ul>
 </div>
 <h2 id="schedule">Schedule</h2>
-<p>Click on one of the two buttons below to set the calendar to your timezone.</p>
 <div class="panel-group" id="accordion">
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Timezone: Czech</a>
+        Timezone: Turkey</a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-danger">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Timezone: Turkey</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_s7vcjb0l3rv6b0j78f8kdrbrp4%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -993,25 +998,25 @@ filePath - the total path to the markdown file being rendered in this template
 
 <h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
 <h3 id="is-this-course-graded">Is this course graded?</h3>
-<p>No, you will not receive a grade. This is purely for the joy of learning! </p>
+<p>No, you will not receive a grade. This is purely for the joy of learning!</p>
 <h3 id="will-i-receive-a-certificate-of-completion">Will I receive a certificate of completion?</h3>
-<p>Yes, you will receive a certificate of completion after participating in the full course.  </p>
+<p>Yes, you will receive a certificate of completion if you participate in the full course. This includes regularly attending lectures and quickstart/tea time/section, submitting daily projects, and submitting the final project. Students will not be eligible for the certificate if they submit a final project that includes copied code from any source. All work must be original. Section Leaders will be taking attendance in quickstart/tea time/section. Certificates will be issued via email after the end of the course.</p>
 <h3 id="how-can-i-make-the-most-of-this-course">How can I make the most of this course?</h3>
-<p>Have fun with it! Participate <strong>fully</strong> in all program activities. This means attending lectures, doing the project work, asking for help in office hours, asking your Section Leader for help, engaging with the community on Ed, and making new friends as you learn to code!</p>
+<p>Have fun with it! Participate <strong>fully</strong> in all program activities. This means attending lectures, doing the daily projects and the final project, asking for help in office hours, asking your Section Leader for help, engaging with the community on Ed, and making new friends as you learn to code!</p>
 <h3 id="i-have-a-general-question-about-the-course-where-do-i-ask-it">I have a general question about the course, where do I ask it?</h3>
 <p>The CS Bridge Ed page is the perfect place to ask a general question. Check out the list of categories and select the one that best matches the topic you have a question about. We will keep an eye on Ed throughout the day and will try to answer questions as quickly as we can.</p>
 <h3 id="i-am-sick-or-i-have-a-time-conflict-and-i-cant-make-it-to-lecturetea-timesection-what-should-i-do">I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?</h3>
-<p>We've designed the program with the expectation that you attend every activity in the schedule, but we know things happen (you might get sick or have to deal with a sudden family issue) so just send a private message in Ed to your Section Leader right away if you can't attend something. They can let you know the best way to make sure that you get the information you need so that you do not fall behind in the course.   </p>
-<h3 id="i-finished-the-assignment-early-what-do-i-do-with-the-extra-work-time">I finished the assignment early, what do I do with the extra work time?</h3>
+<p>We've designed the program with the expectation that you attend every activity in the schedule, but we know things happen (you might get sick or have to deal with a sudden family issue) so just send a private message in Ed to your Section Leader right away if you can't attend something. They can let you know the best way to make sure that you get the information you need so that you do not fall behind in the course.</p>
+<h3 id="i-finished-the-daily-project-early-what-do-i-do-with-the-extra-work-time">I finished the daily project early, what do I do with the extra work time?</h3>
 <p>Think about other fun things you can create based on what you've learned and then post fun things to the Ed page to show other students.</p>
-<h3 id="i-havent-finished-the-assignment-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the assignment yet but it's time to submit, what do I do?</h3>
-<p>Submit as much code as you've been able to write. </p>
+<h3 id="i-havent-finished-the-daily-project-yet-but-its-time-to-submit-what-do-i-do">I haven't finished the daily project yet but it's time to submit, what do I do?</h3>
+<p>Submit as much code as you've been able to write. It's okay if you don't finish every daily project fully but submit what you've done.</p>
 <h3 id="i-am-lost-where-am-i-supposed-to-be">I am lost. Where am I supposed to be?</h3>
-<p>Check the schedule that is posted in your section page on Ed. That's where you'll find times, activities, and the necessary Zoom links. </p>
+<p>Check the schedule that is posted in <a href="https://edstem.org/us/courses/6372/discussion/473852">Ed</a>. That's where you'll find times, activities, and the necessary Zoom links.</p>
 <h3 id="can-i-re-watch-lecture">Can I re-watch lecture?</h3>
 <p>Yes! All lectures will be recorded and posted to the "Lectures" category on the CS Bridge Ed page.</p>
 <p><br/>
-<em>Have a question which wasn't covered here? Please post on <a href="https://us.edstem.org/courses/968">Ed</a>.</em></p>
+<em>Have a question which wasn't covered here? Please post on <a href="https://edstem.org/us/courses/6372/discussion/">Ed</a>.</em></p>
 	</div>
 </div>
 

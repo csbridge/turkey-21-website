@@ -151,31 +151,46 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider visible-after" data-visible-after="2020080600"
-							/>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+									class="visible-after" data-visible-after="2021063000"
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
 							</li>
 
 							<!-- Python reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="../../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+									class="visible-after" data-visible-after="2021070200"
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020081000"
+									class="visible-after" data-visible-after="2021070200"
 							>
 								<a href="../../en/resources/graphics.html">Graphics Reference</a>
 							</li>
@@ -185,15 +200,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -207,23 +225,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/arches.html">Arches Karel</a>
 							</li>
@@ -626,23 +646,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/stepUp/">Step Up</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/place100/">Place 100</a>
 							</li>
@@ -881,7 +903,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../../en/bonus-index.html">Bonus</a></li>
@@ -891,32 +913,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			<!--
 Template for rendering an FAQ page, for use with Markdown specs.  Expects
@@ -950,7 +969,7 @@ filePath - the total path to the markdown file being rendered in this template
 <li><a href="#b-tea-time">B. Tea Time</a></li>
 <li><a href="#c-section">C. Section</a></li>
 <li><a href="#d-office-hourswork">D. Office Hours/Work</a></li>
-<li><a href="#e-projects">E. Projects</a></li>
+<li><a href="#e-assignments">E. Assignments</a></li>
 <li><a href="#e-social-activities">E. Social Activities</a></li>
 </ul>
 </li>
@@ -961,7 +980,6 @@ filePath - the total path to the markdown file being rendered in this template
 </li>
 <li><a href="#whom-to-contact-about-what">Whom to Contact About What</a></li>
 <li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li>
-<li><a href="#learning-with-honor">Learning With Honor</a></li>
 <li><a href="#additional-resources">Additional Resources</a><ul>
 <li><a href="#accessibility">Accessibility</a></li>
 <li><a href="#process-for-reporting-misconduct">Process for reporting misconduct</a></li>
@@ -973,7 +991,7 @@ filePath - the total path to the markdown file being rendered in this template
 <p>CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.</p>
 <ul>
 <li>It assumes <strong>no prior programming experience.</strong></li>
-<li>This course will follow the <strong>same schedule</strong> each day.</li>
+<li>This course will follow the <strong>same schedule</strong> each day (except for a few days where we have social activities).</li>
 <li>We've designed the course so that outside of the schedule, you do not need to be on your computer working on the course material. If you want to spend extra time because you're excited about the material, that's okay but it is not necessary.</li>
 <li>You will have weekends <strong>off</strong>.</li>
 </ul>
@@ -994,9 +1012,9 @@ filePath - the total path to the markdown file being rendered in this template
 <ol>
 <li>Lecturers - These people are current lecturers at all three universities. You will hear from all of them as they take turns delivering lectures each day.</li>
 <li>Section Leaders - These fun people are students from all three universities who are passionate about computer science and serve as great role models. You will be assigned to a small group led by a Section Leader. You'll get to know this person really well throughout the course!</li>
-<li>Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford will be managing administrative components of the course.</li>
+<li>Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford, Yosefa Gilon, will be managing administrative components of the course.</li>
 </ol>
-<p>This is the first time that we are offering CS Bridge online and not in-person. Due to the nature of an online platform, we were able to combine the Turkey and Czech Republic programs which means in addition to meeting students from within your home country, you'll also get to know high school students from another country!
+<p>Pre-pandemic, this program was run in-person. We have adjusted the program slightly so it could be offered online and this is the second year we are running CS Bridge as an online program.
 Our goal is to create one community of enthusiastic teachers and students who support each other as you all learn a new and exciting skill!</p>
 <hr />
 
@@ -1007,7 +1025,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 <li>An internet connection strong enough to stream video.</li></li>
 <li><b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li></li>
 <li>The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://online.csbridge.org/en/resources/install.html'>http://online.csbridge.org/en/resources/install.html</a></li>
-<li>A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li></li>
+<li>A love of learning and an interest in getting to know other high school students in Turkey!</li></li>
 </ol>
 <p>What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!</p>
 <p><hr />
@@ -1017,7 +1035,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 <!-- A. Lectures -->
 
 <h4 id="a-lectures">A. <u>Lectures</u></h4>
-<p>Lectures will be held <strong>twice a day</strong> - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where you’ll learn the core concepts of the class.</p>
+<p>Lectures will be held <strong>twice a day</strong> - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. Each lecture will be taught by a lecturer from one of the three universities. This is where you’ll learn the core concepts of the class.</p>
 <ul>
 <li>Lectures will be delivered <strong>LIVE</strong> through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!</li>
 </ul>
@@ -1044,14 +1062,14 @@ Our goal is to create one community of enthusiastic teachers and students who su
 <ul>
 <li>If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.</li>
 <li>You may have to wait in the Nook community until a Section Leader is free to help you.</li>
-<li>If you don't have questions, this is the time that you'll spend working on your assignments.</li>
+<li>If you don't have questions, this is the time that you'll spend working on your assignments and there's no need to join Nooks.</li>
 </ul>
 <!-- E. Projects -->
 
-<h4 id="e-projects">E. <u>Projects</u></h4>
-<p>There will be two programming projects that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).</p>
+<h4 id="e-assignments">E. <u>Assignments</u></h4>
+<p>There will be two programming assignments that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).</p>
 <ul>
-<li>You will be expected to submit the first project by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second project by the end of the Office Hours/Work session in the evening.</li>
+<li>You will be expected to submit the first assignment by 14:00 (Turkey) each day and the second assignment by the end of the Office Hours/Work session in the evening.</li>
 <li>Instructions for completing and submitting assignments will be posted on Ed.</li>
 </ul>
 <!-- F. Social Activities -->
@@ -1100,19 +1118,23 @@ Our goal is to create one community of enthusiastic teachers and students who su
  style="width: 80%;"
 />
 </center></p>
-<p>Here are some tips:</p>
+<p>Here are some community norms and expectations for Ed:</p>
 <ul>
+<li>Always be respectful and kind to section leaders, students and instructors that you are engaging with on Ed.</li>
 <li>Search before you post</li>
 <li>Heart questions and answers you find useful</li>
 <li>Answer questions you feel confident answering</li>
 <li>Share interesting course related content with staff and peers</li>
+<li>Do not talk about groups of people like they are inferior. Homophobia, racism, sexism, ableism, or other forms of discrimination are unacceptable not tolerated.</li>
+<li>Do not post any private information in Ed for everyone to see</li>
+<li>Do not post any external links</li>
 <li>For more information on Ed Discussion, you can refer to the <a href="https://us.edstem.org/help">Quick Start Guide</a>.</li>
 </ul>
 <p><hr />
 <!-- Whom to Contact About What --></p>
 <h3 id="whom-to-contact-about-what">Whom to Contact About What</h3>
 <p><p>
-    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href="#C4">Class Discussion Forum</a>) where the Section Leaders and other students can help you. Some guidelines:
+    It is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (class discussion forum) where the Section Leaders and other students can help you. Some guidelines:
 </p></p>
 <ul>
 <li>For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li></li>
@@ -1128,24 +1150,6 @@ Our goal is to create one community of enthusiastic teachers and students who su
     Please see: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
 </p></p>
 <p><hr />
-<!-- Learning with Honor --></p>
-<h3 id="learning-with-honor"><h2 id="C5">Learning With Honor</h2></h3>
-<p><p>
-    Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to engage honestly and fully in the course. Some guidelines:
-</p>
-<ul>
-    <li>We value humanity, intellectual joy, social connection, new skills, and gratitude.</li>
-    <li>Teach each other! We are all in this for one another.</li>
-    <li>Avoid publicly posting your solution code to assignments on the Ed forums. We want everybody to get a chance to discover their own solution.</li>
-    <li>Be welcoming. We are a diverse and wonderful community.</li>
-    <li>If you are having trouble with the course or do not understand something that is communicated, please let us know about it so we can help.</li>
-</ul>
-<p>
-    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. CS Bridge and the community we create is a place all students should feel welcome in.
-</p>
-<p>
-</p></p>
-<p><hr />
 <!-- Additional Resources --></p>
 <h3 id="additional-resources">Additional Resources</h3>
 <!-- Accessibility -->
@@ -1157,7 +1161,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 <!-- Process for reporting misconduct --></p>
 <h4 id="process-for-reporting-misconduct">Process for reporting misconduct</h4>
 <ul>
-<li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Contact information can be found on the CS Bridge Ed in the "General" category <a href="https://us.edstem.org/courses/968/discussion/">here</a></li>
+<li>Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this <a href="https://edstem.org/us/courses/6372/discussion/488586">Ed post</a>.</li>
 </ul>
 	</div>
 </div>

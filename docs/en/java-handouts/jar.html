@@ -151,31 +151,46 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider visible-after" data-visible-after="2020080600"
-							/>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+									class="visible-after" data-visible-after="2021063000"
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
 							</li>
 
 							<!-- Python reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="../../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+									class="visible-after" data-visible-after="2021070200"
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020081000"
+									class="visible-after" data-visible-after="2021070200"
 							>
 								<a href="../../en/resources/graphics.html">Graphics Reference</a>
 							</li>
@@ -185,15 +200,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -207,23 +225,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/collectNewspaper.html">Collect Newspaper</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/arches.html">Arches Karel</a>
 							</li>
@@ -626,23 +646,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/stepUp/">Step Up</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../../en/projects/place100/">Place 100</a>
 							</li>
@@ -881,7 +903,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../../en/bonus-index.html">Bonus</a></li>
@@ -891,32 +913,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			
 

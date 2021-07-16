@@ -151,31 +151,46 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider visible-after" data-visible-after="2020080600"
-							/>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+									class="visible-after" data-visible-after="2021063000"
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Reader</a>
 							</li>
 
 							<!-- Python reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 							>
 								<a href="../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+									class="visible-after" data-visible-after="2021070200"
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
-									class="visible-after" data-visible-after="2020081000"
+									class="visible-after" data-visible-after="2021070200"
 							>
 								<a href="../en/resources/graphics.html">Graphics Reference</a>
 							</li>
@@ -185,15 +200,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -207,23 +225,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../en/projects/collectNewspaper.html">Collect Newspaper</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../en/projects/arches.html">Arches Karel</a>
 							</li>
@@ -626,23 +646,25 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each day of content -->
 		<li 
-				class="dropdown-submenu"
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
 		>
 			<a tabindex="-1" href="#">1: Karel</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
-								class="dropdown-header"
+								class="dropdown-header visible-after" data-visible-after="2021062809"
 						>
 							Evening
 						</li>
 
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../en/projects/stepUp/">Step Up</a>
 							</li>
 							<li
+									class="visible-after" data-visible-after="2021062809"
 							>
 								<a href="../en/projects/place100/">Place 100</a>
 							</li>
@@ -881,7 +903,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../en/bonus-index.html">Bonus</a></li>
@@ -891,32 +913,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			
 <div class="page-header">
@@ -939,471 +958,457 @@ visible-after, to ensure they display when you want them to.
         </div>
 	</div>
 </div>
-	
+
 <br />
 
 
 
-  <div class="alert alert-warning visible-during" data-visible-start="20200731 17:00" data-visible-end=" 20200804 10:00">
+  <div class="alert alert-success visible-during" data-visible-start="20210530 00:00" data-visible-end=" 20210624 12:00">
+        Welcome to the CS Bridge program! Please read the information on the website under the Resources tab. General information can be found in <a class="alert-link" href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>, common questions and the course schedule can be found in
+ <a class="alert-link" href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a>, and information about section can be found in <a class="alert-link" href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a>. Before the start of the class, we will be sending a detailed email with information about joining the first lecture and things you need to do to make sure your computer is ready for the course! Read that email carefully, follow the instructions and then we'll see you on the first day of class!   
+  </div>
+  <div class="alert alert-info visible-during" data-visible-start="20210624 12:00" data-visible-end=" 20210628 08:00">
         The program starts soon! To make sure you are ready to go on 4 August, please do the following:
-1) Install PyCharm and learn how to use it - information for both can be found by clicking on the "Resources" tab at the top of this page.
+<br>
+<br>
 
-2) Click on the Ed account setup link you should have received in an email. Setup your account. Familiarize yourself with <a href="https://us.edstem.org/" target="_blank">Ed</a> and post questions with screenshots <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">on Ed here</a> if you need help with the PyCharm installation.
+<ol>
+    <li>Install PyCharm and learn how to use it - information for both can be found by clicking on the "Resources" tab at the top of this page.</li>
+    <li>Click on the Ed account setup link you should have received in an email. Setup your account. Familiarize yourself with <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> and post questions with screenshots <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">on Ed here</a> if you need help with the PyCharm installation.</li>
+    <li>Download the "Zoom Client for Meetings" <a class="alert-link" href="https://zoom.us/download" target="_blank">here</a>.</li>
+</ol>
 
-3) Download the "Zoom Client for Meetings" version 5.1.2 <a href="https://zoom.us/download" target="_blank">here</a>.
 
-Please read the information on the website under the resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
- <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a>, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a>.   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200803 14:00" data-visible-end=" 20200804 10:00">
-        The program starts TODAY! Make sure you have tried to install PyCharm before lecture starts. Did you try installing it but need help? Post your question to <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">Ed</a>.
-Lecture begins at 19:00 in Czech Republic and 20:00 in Turkey. When it's time for lecture, click <a href="https://stanford.zoom.us/j/92718948442" target="_blank">here</a>. Check <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed</a> for the password.
 
-Hope you are getting excited for the start of the program! Please read the information on the website under the Resources tab, such as <a href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
- <a href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a> is where you can find the schedule - be sure to click on "Czech" or "Turkey" to make sure you're viewing the calendar in the correct time zone, and <a href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a> to learn more about what will happen in section.
+
+
+
+Please read the information on the website under the resources tab, such as <a class="alert-link" href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a class="alert-link" href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a>, and <a class="alert-link" href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a>.   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210628 08:00" data-visible-end=" 20210628 13:00">
+        The program starts TODAY! Make sure you have tried to install PyCharm before lecture starts. Did you try installing it but need help? Post your question to <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">Ed</a>.
+Lecture begins at 19:00 in Czech Republic and 20:00 in Turkey. When it's time for lecture, click <a class="alert-link" href="https://stanford.zoom.us/j/92718948442" target="_blank">here</a>. Check <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed</a> for the password.
+
+Hope you are getting excited for the start of the program! Please read the information on the website under the Resources tab, such as <a class="alert-link" href="https://online.csbridge.org/en/resources/general-info.html" target="_blank">General Info</a>,
+ <a class="alert-link" href="https://online.csbridge.org/en/resources/student-faq.html" target="_blank">Student Frequently Asked Questions</a> is where you can find the schedule - be sure to click on "Czech" or "Turkey" to make sure you're viewing the calendar in the correct time zone, and <a class="alert-link" href="https://online.csbridge.org/en/resources/section-info.html" target="_blank">Section Info</a> to learn more about what will happen in section.
    
   </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200729 14:37" data-visible-end=" 20200731 17:00">
-        There's nothing scheduled for CS Bridge at the moment.  Take a break, have some tea, and we'll see you at the next lecture!   
-  </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200804 10:00" data-visible-end=" 20200804 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210628 13:00" data-visible-end=" 20210628 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200805 10:00" data-visible-end=" 20200805 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 09:00" data-visible-end=" 20210629 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200806 10:00" data-visible-end=" 20200806 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 13:00" data-visible-end=" 20210629 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200810 10:00" data-visible-end=" 20200810 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 09:00" data-visible-end=" 20210630 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200811 10:00" data-visible-end=" 20200811 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 13:00" data-visible-end=" 20210630 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200812 10:00" data-visible-end=" 20200812 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210701 09:00" data-visible-end=" 20210701 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200813 10:00" data-visible-end=" 20200813 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 09:00" data-visible-end=" 20210702 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200817 10:00" data-visible-end=" 20200817 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 13:00" data-visible-end=" 20210702 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200818 10:00" data-visible-end=" 20200818 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-primary visible-during" data-visible-start="20210705 00:00" data-visible-end=" 20210702 23:59">
+        Today is a holiday! Go outside and enjoy your day. We'll see you in lecture on Tuesday!   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 09:00" data-visible-end=" 20210706 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200819 10:00" data-visible-end=" 20200819 10:45">
-        At this time, you should be in evening lecture at <a href="https://stanford.zoom.us/j/92718948442" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 13:00" data-visible-end=" 20210706 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200805 01:00" data-visible-end=" 20200805 1:45">
-        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 09:00" data-visible-end=" 20210707 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200806 01:00" data-visible-end=" 20200806 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 13:00" data-visible-end=" 20210707 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200807 01:00" data-visible-end=" 20200807 1:45">
-        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 09:00" data-visible-end=" 20210708 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200810 01:00" data-visible-end=" 20200810 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 13:00" data-visible-end=" 20210708 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200811 01:00" data-visible-end=" 20200811 1:45">
-        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210709 09:00" data-visible-end=" 20210709 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200812 01:00" data-visible-end=" 20200812 1:45">
-        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 09:00" data-visible-end=" 20210712 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200813 01:00" data-visible-end=" 20200813 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 13:00" data-visible-end=" 20210712 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200814 01:00" data-visible-end=" 20200814 1:45">
-        At this time, you should be in Morning lecture at <a href="https://zoom.us/j/96004783458" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 09:00" data-visible-end=" 20210713 09:45">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 13:00" data-visible-end=" 20210713 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200817 01:00" data-visible-end=" 20200817 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 09:00" data-visible-end=" 20210714 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200818 01:00" data-visible-end=" 20200818 1:45">
-        At this time, you should be meeting with your morning Section Leader to discuss final project ideas.
-   
-  </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200819 01:00" data-visible-end=" 20200819 1:45">
-        At this time, you should be in Morning lecture at <a href="https://kocun.zoom.us/j/5396529746" target="_blank">this link</a>.
-Password is on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed!</a>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 13:00" data-visible-end=" 20210714 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
 If lecture ends early, check out the next activity in the message below!
    
   </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200804 10:00" data-visible-end=" 20200804 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200805 10:00" data-visible-end=" 20200805 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200806 10:00" data-visible-end=" 20200806 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200810 10:00" data-visible-end=" 20200810 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200811 10:00" data-visible-end=" 20200811 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200812 10:00" data-visible-end=" 20200812 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200813 10:00" data-visible-end=" 20200813 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200817 10:00" data-visible-end=" 20200817 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200818 10:00" data-visible-end=" 20200818 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200819 10:00" data-visible-end=" 20200819 12:00">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200804 12:00" data-visible-end=" 20200804 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200805 12:00" data-visible-end=" 20200805 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200806 12:00" data-visible-end=" 20200806 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200810 12:00" data-visible-end=" 20200810 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200811 12:00" data-visible-end=" 20200811 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200812 12:00" data-visible-end=" 20200812 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200813 12:00" data-visible-end=" 20200813 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200817 12:00" data-visible-end=" 20200817 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200818 12:00" data-visible-end=" 20200818 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200819 12:00" data-visible-end=" 20200819 13:00">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200805 02:30" data-visible-end=" 20200805 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200806 02:30" data-visible-end=" 20200806 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200807 02:30" data-visible-end=" 20200807 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200810 02:30" data-visible-end=" 20200810 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200811 02:30" data-visible-end=" 20200811 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200812 02:30" data-visible-end=" 20200812 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200813 02:30" data-visible-end=" 20200813 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200814 02:30" data-visible-end=" 20200814 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200817 02:30" data-visible-end=" 20200817 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200818 02:30" data-visible-end=" 20200818 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200819 02:30" data-visible-end=" 20200819 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-warning visible-during" data-visible-start="20200820 02:30" data-visible-end=" 20200820 03:30">
-        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help click on <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">this Ed link</a>.
-Read the description under the calendar and click on the link there.
-   
-  </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200805 03:30" data-visible-end=" 20200805 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210628 16:00" data-visible-end=" 20210628 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200806 03:30" data-visible-end=" 20200806 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 16:00" data-visible-end=" 20210629 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200807 03:30" data-visible-end=" 20200807 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 16:00" data-visible-end=" 20210630 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200810 03:30" data-visible-end=" 20200810 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 16:00" data-visible-end=" 20210702 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200811 03:30" data-visible-end=" 20200811 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 16:00" data-visible-end=" 20210706 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200812 03:30" data-visible-end=" 20200812 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 16:00" data-visible-end=" 20210707 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200813 03:30" data-visible-end=" 20200813 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 16:00" data-visible-end=" 20210708 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200814 03:30" data-visible-end=" 20200814 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 16:00" data-visible-end=" 20210712 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200817 03:30" data-visible-end=" 20200817 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 16:00" data-visible-end=" 20210713 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200818 03:30" data-visible-end=" 20200818 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 16:00" data-visible-end=" 20210714 16:15">
+        At this time, you should be submitting the evening assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200819 03:30" data-visible-end=" 20200819 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 11:30" data-visible-end=" 20210629 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200820 03:30" data-visible-end=" 20200820 04:15">
-        At this time, you should be submitting the morning assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 11:30" data-visible-end=" 20210630 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200804 13:00" data-visible-end=" 20200804 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210701 11:30" data-visible-end=" 20210701 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200805 13:00" data-visible-end=" 20200805 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 11:30" data-visible-end=" 20210702 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200806 13:00" data-visible-end=" 20200806 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 11:30" data-visible-end=" 20210706 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200810 13:00" data-visible-end=" 20200810 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 11:30" data-visible-end=" 20210707 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200811 13:00" data-visible-end=" 20200811 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 11:30" data-visible-end=" 20210708 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200812 13:00" data-visible-end=" 20200812 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210709 11:30" data-visible-end=" 20210709 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200813 13:00" data-visible-end=" 20200813 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 11:30" data-visible-end=" 20210712 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200817 13:00" data-visible-end=" 20200817 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 11:30" data-visible-end=" 20210713 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200818 13:00" data-visible-end=" 20200818 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 11:30" data-visible-end=" 20210714 11:15">
+        At this time, you should be submitting the morning assignment/project in <a class="alert-link" href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a class="alert-link" href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
 If you haven't finished it, that's okay, submit what you have!
    
   </div>
-  <div class="alert alert-danger visible-during" data-visible-start="20200819 13:00" data-visible-end=" 20200819 13:15">
-        At this time, you should be submitting the evening assignment/project in <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a>. Detailed instructions on how to submit <a href="https://online.csbridge.org/en/resources/submission-oh.html">here</a>.
-If you haven't finished it, that's okay, submit what you have!
+  <div class="alert alert-success visible-during" data-visible-start="20210628 13:30" data-visible-end=" 20210628 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200805 01:00" data-visible-end=" 20200805 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200806 01:00" data-visible-end=" 20200806 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200807 01:00" data-visible-end=" 20200807 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200810 01:00" data-visible-end=" 20200810 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200811 01:00" data-visible-end=" 20200811 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200812 01:00" data-visible-end=" 20200812 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200813 01:00" data-visible-end=" 20200813 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200814 01:00" data-visible-end=" 20200814 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200817 01:00" data-visible-end=" 20200817 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200818 01:00" data-visible-end=" 20200818 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200819 01:00" data-visible-end=" 20200819 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200820 01:00" data-visible-end=" 20200820 02:30">
-        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
-  </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200807 11:30" data-visible-end=" 20200807 13:00">
-        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
+  <div class="alert alert-success visible-during" data-visible-start="20210629 13:30" data-visible-end=" 20210629 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200814 10:00" data-visible-end=" 20200814 11:00">
-        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
+  <div class="alert alert-success visible-during" data-visible-start="20210630 13:30" data-visible-end=" 20210630 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200820 10:45" data-visible-end=" 20200820 12:00">
-        The Final Project Showcase and Party is happening now! Come join the <a href="https://stanford.zoom.us/j/92718948442"_blank">party</a>!!
+  <div class="alert alert-success visible-during" data-visible-start="20210702 13:30" data-visible-end=" 20210702 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
-  <div class="alert alert-success visible-during" data-visible-start="20200820 10:00" data-visible-end=" 20200820 10:45">
-        You should be in Quickstart/Section. Check your section <a href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+  <div class="alert alert-success visible-during" data-visible-start="20210706 13:30" data-visible-end=" 20210706 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
-  <div class="alert alert-info visible-during" data-visible-start="20200819 08:30" data-visible-end=" 20200819 09:00">
-        The Ask Me Anything (AMA) is happening now with CS Bridge Section Leaders and the Developer of Nooks! Check out the <a href="https://us.edstem.org/courses/968/discussion/108711"_blank">Ed post</a> for the link to the special Nooks page!!
+  <div class="alert alert-success visible-during" data-visible-start="20210707 13:30" data-visible-end=" 20210707 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210708 13:30" data-visible-end=" 20210708 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210712 13:30" data-visible-end=" 20210712 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 13:30" data-visible-end=" 20210713 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210714 13:30" data-visible-end=" 20210714 15:00">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210629 09:30" data-visible-end=" 20210629 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210630 09:30" data-visible-end=" 20210630 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210701 09:30" data-visible-end=" 20210701 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210702 09:30" data-visible-end=" 20210702 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210706 09:30" data-visible-end=" 20210706 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210707 09:30" data-visible-end=" 20210707 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210708 09:30" data-visible-end=" 20210708 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210709 09:30" data-visible-end=" 20210709 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210712 09:30" data-visible-end=" 20210712 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 09:30" data-visible-end=" 20210713 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210714 09:30" data-visible-end=" 20210714 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210715 09:30" data-visible-end=" 20210715 10:30">
+        Once lecture ends, you should be in Quickstart/Tea Time. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210628 15:00" data-visible-end=" 20210628 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210629 15:00" data-visible-end=" 20210629 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210630 15:00" data-visible-end=" 20210630 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210702 15:00" data-visible-end=" 20210702 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210706 15:00" data-visible-end=" 20210706 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210707 15:00" data-visible-end=" 20210707 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210708 15:00" data-visible-end=" 20210708 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210712 15:00" data-visible-end=" 20210712 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210713 15:00" data-visible-end=" 20210713 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210714 15:00" data-visible-end=" 20210714 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210715 15:00" data-visible-end=" 20210715 16:00">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210629 10:30" data-visible-end=" 20210628 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210630 10:30" data-visible-end=" 20210630 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210701 10:30" data-visible-end=" 20210701 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210702 10:30" data-visible-end=" 20210702 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210706 10:30" data-visible-end=" 20210706 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210707 10:30" data-visible-end=" 20210707 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210708 10:30" data-visible-end=" 20210708 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210709 10:30" data-visible-end=" 20210709 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210712 10:30" data-visible-end=" 20210712 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210713 10:30" data-visible-end=" 20210713 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210714 10:30" data-visible-end=" 20210714 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210715 10:30" data-visible-end=" 20210715 11:30">
+        At this time, you should be working on the projects or visiting the Section Leaders in office hours to ask for help - click on <a class="alert-link" href="https://stanford.zoom.us/j/95486319790?" target="_blank">Zoom</a>.
+   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210715 12:30" data-visible-end=" 20210715 15:00">
+        At this time, you should be working on your final project! There will be no lecture, quickstart, or section this afternoon. If you need help on your project, go to office hours at 1:00pm PT.
+   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210701 13:00" data-visible-end=" 20210701 14:30">
+        It's the last day of CS Bridge! Join the Final Project Showcase and Party happening NOW! Click on this <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">Zoom link</a> to join the fun!!   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210709 13:00" data-visible-end=" 20210709 14:30">
+        It's the last day of CS Bridge! Join the Final Project Showcase and Party happening NOW! Click on this <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">Zoom link</a> to join the fun!!   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210716 09:45" data-visible-end=" 20210716 11:30">
+        It's the last day of CS Bridge! Join the Final Project Showcase and Party happening NOW! Click on this <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">Zoom link</a> to join the fun!!   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210716 09:00" data-visible-end=" 20210716 09:45">
+        You should be in Quickstart/Section. Check your section <a class="alert-link" href="https://us.edstem.org/" target="_blank">Ed</a> page for the link and password.
    
   </div>
 
@@ -1422,8 +1427,9 @@ If you haven't finished it, that's okay, submit what you have!
 <hr/>
 
 <!-- Daily schedule / list of programs -->
-<div class="section" id="schedule">
-	<h2>Programs</h2>
+<div class="visible-after" data-visible-after="2021062810">
+	<div class="section" id="schedule">
+		<h2>Programs</h2>
 
 
 <table class="table table-striped">
@@ -2388,6 +2394,7 @@ If you haven't finished it, that's okay, submit what you have!
 
 		<!-- The head of the table should show the day's topic title -->
 		<thead
+				class="visible-after" data-visible-after="2021062809"
 		>
 			<tr>
 				<th colspan = "6">
@@ -2400,7 +2407,7 @@ If you haven't finished it, that's okay, submit what you have!
 		</thead>
 
 				<tr 
-						class="info"
+						class="info visible-after" data-visible-after="2021062809"
 				>
 					<!-- Display the name of this part of the day and the link for its starter code -->
 	      			<td colspan = "6">
@@ -2412,6 +2419,7 @@ If you haven't finished it, that's okay, submit what you have!
 
 	      		<!-- Display the projects for this part of the day -->
 	      		<tbody
+						class="visible-after" data-visible-after="2021062809"
 	      		>
 		      			<tr>
 
@@ -2442,10 +2450,10 @@ If you haven't finished it, that's okay, submit what you have!
 		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
 
 </table>
+	</div>
+
+	<hr/>
 </div>
-
-<hr/>
-
 <!-- Course Staff -->
 <div class="section" id="staff">
 	<h2>Teachers</h2>

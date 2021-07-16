@@ -1,0 +1,2980 @@
+<!--
+	A template used for every page - contains the header, nav bar, a container div, and the footer.
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+<title>CS Bridge  | Home</title>
+
+<!-- Fonts -->
+<!--<link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900,600italic,700italic,900italic' rel='stylesheet' type='text/css'>-->
+
+<!-- Styles -->
+
+<link href="../plugins/bootstrap-3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+<!-- Java Script -->
+<script src="../plugins/jquery.min.js"></script>
+<script src="../plugins/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+
+<!--<script src="../karel/ace/ace.js" type="text/javascript"></script>-->
+
+<!-- Moment.js -->
+<script type="text/javascript" src="../js/moment.min.js"></script>
+<script type="text/javascript" src="../js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script type="text/javascript" src="../js/time.js"></script>
+
+<!-- Date picker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Latex support -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<!--
+<script src="../karel/js/html/websiteImports.js"></script>
+<script>importCss();</script>
+<script>importJs();</script>
+-->
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<!--<script src="sweetalert2.all.min.js"></script>-->
+<!-- Optional: include a polyfill for ES6 Promises for IE11 and Android browser
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+-->
+	<script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+	</head>
+	<body>
+
+
+<!-- The datetime editor, for testing -->
+<!--
+This element is the datetime picker shown above the navigation bar, only when running the website
+locally.  It shows a compact form to enter a date and time for when you want to view what the website
+will look like at that time.  This is helpful to preview time-sensitive elements, such as
+visible-after, to ensure they display when you want them to.
+-->
+
+<div id="dateTimeEditor" style="margin: 10px 10px 10px 10px; display: none;">
+	<p style="margin-bottom: 10px;"><b>[VISIBLE ONLY LOCALLY] Optionally view what the website will look like at another time (in PDT):</b></p>
+
+	<form class="form-inline">
+	  	<div class="form-group">
+	    	<label class="sr-only" for="date">Date</label>
+	    	<input type="text" class="form-control" id="datePicker" placeholder="Click For Calendar">
+	  	</div>
+	  	<div class="form-group">
+	    	<label class="sr-only" for="time">Hour</label>
+	    	<input type="number" class="form-control" id="hourPicker" placeholder="Enter Hour (24hr)">
+	  	</div>
+	  	<div class="form-group">
+	  	  	<label class="sr-only" for="time">Minutes</label>
+	  	  	<input type="number" class="form-control" id="minutesPicker" placeholder="Enter Minutes">
+	  	</div>
+
+	  	<button type="button" onclick="dateTimeEditorSubmitted()" class="btn btn-default">Set Time</button>
+
+	  	<!-- Help text -->
+	  	<span id="helpBlock" class="help-block" style="color: red; display: none;">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// On page load, show the datetime picker if we're running locally
+		var url = window.location.href;
+		if (url.startsWith("http://localhost:") || url.startsWith("file://")) {
+			$("#dateTimeEditor").show();
+			$("#datePicker").datepicker();
+		}
+	});
+
+	// This function is called when the form is submitted
+	function dateTimeEditorSubmitted() {
+		if ($("#datePicker").val() == "" || $("#hourPicker").val() == ""
+			|| $("#minutesPicker").val() == "") {
+			
+			// Not all inputs entered
+			$("#helpBlock").text("Please make sure to fill out all fields.");
+			$("#helpBlock").show();
+		} else if (parseInt($("#hourPicker").val()) == NaN ||
+			parseInt($("#minutesPicker").val()) == NaN ||
+			parseInt($("#hourPicker").val()) > 23 || 
+			parseInt($("#hourPicker").val()) < 0 || 
+			parseInt($("#minutesPicker").val()) > 59 ||
+			parseInt($("#minutesPicker").val()) < 0) {
+			
+			// Invalid inputs
+			$("#helpBlock").text("Please enter an hour 0-23 and minutes 0-59.");
+			$("#helpBlock").show();
+		} else {
+			$("#helpBlock").hide();
+
+			// Re-process the time-sensitive elements with this time as the standard
+			dateString = $("#datePicker").val() + " " + $("#hourPicker").val() + ":" + $("#minutesPicker").val();
+			momentDate = moment(dateString, "MM/DD/YYYY HH:mm");
+
+			showHideRelevantElementsForDate(momentDate);
+		}
+	}
+</script>
+<!-- The navigation bar -->
+<nav class="navbar-inverse navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="container">
+
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="../tr/index.html">CS Bridge</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+
+					<!-- Resources dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Kaynaklar<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">TODO</li>
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Okuyucu</a>
+							</li>
+
+							<li
+									class="visible-after" data-visible-after="2021062800"
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Referansı</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+									class="visible-after" data-visible-after="2021063000"
+								style="margin-bottom: 13px;"
+							></div>
+
+							<!-- Python reader visible later -->
+							<li
+									class="visible-after" data-visible-after="2021063000"
+							>
+								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">Python Okuyucu</a>
+							</li>
+
+							<!-- Python reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2021063000"
+							>
+								<a href="../tr/resources/quick-python.html">Python Referansı</a>
+							</li>
+
+							<div
+									class="visible-after" data-visible-after="2021070200"
+								style="margin-bottom: 13px;"
+							></div>
+							<!-- Graphics reference visible later -->
+							<li
+									class="visible-after" data-visible-after="2021070200"
+							>
+								<a href="../tr/resources/graphics.html">Grafikler Referansı</a>
+							</li>
+
+							<li class="divider" />
+
+							<!-- Yosefa's Part -->
+							<li class="dropdown-header">Program Bilgileri</li>
+							<li><a href="../tr/resources/general-info.html">Genel Bilgiler</a></li>
+							<li><a href="../tr/resources/code-of-conduct.html">TODO</a></li>
+							<li><a href="../tr/resources/student-faq.html">[Öğrenciler] Sıkça Sorulan Sorular</a></li>
+							<li><a href="../tr/resources/section-info.html">Grup Bilgileri</a></li>
+							<!-- End Yosefa's Part -->
+
+							<li class="divider" />
+
+							<li class="dropdown-header">TODO</li>
+							<li><a href="../tr/resources/install.html">PyCharm Kurulumu</a></li>
+							<li><a href="../tr/resources/pycharm-how-to.html">Nasıl PyCharm Kullanırım?</a></li>
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
+							<li><a href="../tr/resources/submission-oh.html">Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri</a></li>
+						</ul>
+					</li>
+
+					<!-- Projects dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projeler <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of content -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021062809"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021062809"
+							>
+								<a href="../tr/projects/collectNewspaper.html">Gazete Alma</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2021062809"
+							>
+								<a href="../tr/projects/arches.html">Sütun Tamircisi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../tr/projects/placeSquare.html">Kare Yerleştir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../tr/projects/mountain.html">Dağcı Karel</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/stripeKarel.html">Şerit Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/hospitalKarel.html">Hastaneci Karel</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/randomPainter.html">Deli Ressam</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../tr/projects/runningSum.html">Topla ve Biriktir</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/areaCalculator.html">Alan Hesaplayıcı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/8ball.html">8 Numaralı Top</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/viralVideo.html">Viral Video</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/khansole.html">Khansole Akademi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080700"
+		>
+			<a tabindex="-1" href="#">4: For döngüsü ve analizi</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080700"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../tr/projects/someSum.html">Toplama Diye Buna Derim!</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080700"
+							>
+								<a href="../tr/projects/carbonDating.html">Carbon Dating</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081000"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../tr/projects/programmingIsAwesome.html">Programlamak Bir Harika</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081000"
+							>
+								<a href="../tr/projects/randomCircles.html">Tesadüfi Daireler</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/funkyFunctions.html">Fırlama Fonksiyonlar</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/fizzbuzz-functions.html">CızBız</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/target.html">Hedef Tahtası</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/stringArt.html">Çizgi Sanatı</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081100"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../tr/projects/printIndices.html">İndeksleri Yazdır</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081100"
+							>
+								<a href="../tr/projects/illusion.html">Optik İllüzyon</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../tr/projects/mysterySquare.html">Gizemli Kare</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../tr/projects/shortFilm.html">Kısa Film</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081200"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../tr/projects/sorted.html">Sıralayıcı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081200"
+							>
+								<a href="../tr/projects/ascending.html">Yükseliyor</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/mouseLocation.html">Farenin Konumu</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/snow.html">Kar</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/catchMeIfYouCan.html">Sıkıysa Yakala</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../tr/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081400"
+		>
+			<a tabindex="-1" href="#">9: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081400"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081400"
+							>
+								<a href="../tr/projects/breakout.html">Breakout</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081700"
+		>
+			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081700"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../tr/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081700"
+							>
+								<a href="../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081710"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081710"
+							>
+								<a href="../tr/projects/project.html">Final Projesi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081800"
+		>
+			<a tabindex="-1" href="#">11: Final Projesi</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081800"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081800"
+							>
+								<a href="../tr/projects/project.html">Final Projesi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081900"
+		>
+			<a tabindex="-1" href="#">12: Final Projesi</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081900"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081900"
+							>
+								<a href="../tr/projects/project.html">Final Projesi</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Örnekler <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each day of content -->
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021062809"
+		>
+			<a tabindex="-1" href="#">1: Karel</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021062809"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021062809"
+							>
+								<a href="../tr/projects/stepUp/">Öne Çık</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2021062809"
+							>
+								<a href="../tr/projects/place100/">100 Tane Yerleştir</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080500"
+		>
+			<a tabindex="-1" href="#">2: Karel ve Kontrol Akışı</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080500"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080500"
+							>
+								<a href="../tr/projects/beeperLine/">Beeper Hattı</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080509"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/invertBeeper/">Ters Çevir</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/unKarel/">İnsani Yardım Karel&#039;ı</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080509"
+							>
+								<a href="../tr/projects/banishWinter/">Kışa Veda</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020080600"
+		>
+			<a tabindex="-1" href="#">3: Değişkenler</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080600"
+						>
+							Sabah
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080600"
+							>
+								<a href="../tr/projects/emc2/">E=MC²</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020080609"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/fibonacci/">Fibonacci</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/findPi/">Pi&#039;yi Bul</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020080609"
+							>
+								<a href="../tr/projects/favoriteNumber/">Favori Sayım</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081000"
+		>
+			<a tabindex="-1" href="#">5: Grafikler ve Fonksiyonlar</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081009"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/robotFace/">Robot Yüzü</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/halfGreen/">Yarısı Yeşil</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/average/">Ortalama Fonksiyonu</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/division/">Bölme</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081009"
+							>
+								<a href="../tr/projects/drawPeople/">İnsan Çiz</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081100"
+		>
+			<a tabindex="-1" href="#">6: Döngüsü / Animasyon</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081109"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../tr/projects/moveToCenter/">Merkeze Git</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081109"
+							>
+								<a href="../tr/projects/gravityBall/">Seken Top</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081200"
+		>
+			<a tabindex="-1" href="#">7: Lists and Mouse</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/stamptool/">Damga Makinesi</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/holePuncher/">Delgeç</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/debrisSweeper/">Enkazı Kaldır</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2020081209"
+							>
+								<a href="../tr/projects/rocketPaddle/">Roket Atar</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081300"
+		>
+			<a tabindex="-1" href="#">8: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081300"
+							>
+								<a href="../tr/projects/keyboardKarel/">Keyboard Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2020081900"
+		>
+			<a tabindex="-1" href="#">12: Final Projesi</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2020081900"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2020081900"
+							>
+								<a href="../tr/projects/coloredShapes/">Colored Shapes</a>
+							</li>
+			</ul>
+		</li>
+</ul>					</li>
+
+					<!-- Examples dropdown -->
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Ders <b class="caret"></b></a>
+
+<ul class="dropdown-menu">
+
+
+	<!-- This dropdown should display one element for each lecture -->
+</ul>					</li>
+
+					<!-- Bonus -->
+					<ul class="nav navbar-nav">
+						<li><a href="../tr/bonus-index.html">Bonus</a></li>
+					</ul>
+
+					<!-- TA Link -->
+
+				</ul>
+
+				<!-- Language toggle button -->
+				<ul class="nav navbar-nav navbar-right">
+						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="../img/english_flag.png"></img></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<!-- Script to toggle between languages -->
+<script>
+	function changeToTurkish() {
+		var url = window.location.href;
+		url = url.replace("/en/", "/tr/");
+		window.location.href = url;
+	}
+
+	function changeToEnglish() {
+		var url = window.location.href;
+		url = url.replace("/tr/", "/en/");
+		window.location.href = url;
+	}
+</script>
+		<div class="container">
+			
+<div class="page-header">
+  <div class="container">
+    <div>
+      <div id="logo">
+        <img id="logoImg" src="../img/logo.png" />
+      </div>
+      <div id="headerText" style="padding-bottom: 15px;">
+        <div class="h1" style="margin-top: 0px; font-size: 40px;">
+          Bilgisayar Bilimine Giriş
+        </div>
+        <div>
+          2020 Yaz
+        </div>
+        <div>
+          4 - 20 Ağustos, Online
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+
+
+  <div class="alert alert-success visible-during" data-visible-start="20210530 00:00" data-visible-end=" 20210624 12:00">
+        Programın başlangıcı için heyecanlı olduğunuzu umuyoruz! Lütfen siteden Kaynaklar başlığının altındaki <a href="https://online.csbridge.org/tr/resources/general-info.html" target="_blank">Genel Bilgiler</a> gibi bilgileri okuyun.
+    <a href="https://online.csbridge.org/tr/resources/student-faq.html" target="_blank">Sıkça Sorulan Sorular</a> sayfasında programı bulabilirsiniz, "Czech" ya da "Turkey" (Türkiye) opsiyonlarını kullanarak programı doğru saat diliminde görüntülediğinizden emin olun.
+    <a href="https://online.csbridge.org/tr/resources/section-info.html" target="_blank">Grup Buluşmaları</a> sayfasını inceleyerek grup buluşmalarınızın nasıl olacağını öğrenin.   
+  </div>
+  <div class="alert alert-info visible-during" data-visible-start="20210624 12:00" data-visible-end=" 20210628 08:00">
+        Program yakında başlıyor! 4 Ağustos'ta başlamaya hazır oldunuzdan emin olmak için aşağıdakileri yapın:
+1) PyCharm'ı indirin ve kullanmayı öğrenin - iki konu için de bu sayfanın üst kısmındaki "Kaynaklar" sekmesine tıklayarak bilgi alabilirsiniz.
+
+2) Bir eposta ile size ulaşmış olması gereken Ed hesap kurulum linkine tıklayın. Hesabınızı ayarlayın. Kendinizi <a href="https://us.edstem.org/" target="_blank">Ed</a> kullanmaya alıştırın. PyCharm yüklemekle ilgili yardıma ihtiyacınız varsa ekran görüntüleri ile  <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">bu Ed postunda</a> sorularınızı paylaşın.
+
+3) "Toplantılar için Zoom"un ("Zoom Client for Meetings") 5.1.2 versiyonunu <a href="https://zoom.us/download" target="_blank">buradan</a> indirin.
+
+Lütfen siteden Kaynaklar başlığının altındaki <a href="https://online.csbridge.org/tr/resources/general-info.html" target="_blank">Genel Bilgiler</a> gibi bilgileri okuyun.
+    <a href="https://online.csbridge.org/tr/resources/student-faq.html" target="_blank">Sıkça Sorulan Sorular</a> sayfasında programı bulabilirsiniz, "Czech" ya da "Turkey" (Türkiye) opsiyonlarını kullanarak programı doğru saat diliminde görüntülediğinizden emin olun.
+    <a href="https://online.csbridge.org/tr/resources/section-info.html" target="_blank">Grup Buluşmaları</a> sayfasını inceleyerek grup buluşmalarınızın nasıl olacağını öğrenin.   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210628 08:00" data-visible-end=" 20210628 13:00">
+        Program BUGÜN başlıyor! Ders başlamadan önce PyCharm'ı indirmeyi denediğinizden emin olun. İndirmeyi denediniz ancak yardıma mı ihtiyacınız var? Sorularınızı <a href="https://us.edstem.org/courses/968/discussion/98915" target="_blank">Ed</a> üzerinden sorabilirsiniz. Ders Türkiye saatiyle 20:00'da (Çek Cumhuriyeti saati ile 19:00'da) başlayacak. Ders vakti geldiğinde <a href="https://stanford.zoom.us/j/92718948442" target="_blank">bu linke</a> tıklayın. <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed</a> sayfasını şifre için kontrol edin.
+
+Programın başlangıcı için heyecanlı olduğunuzu umuyoruz! Lütfen siteden Kaynaklar başlığının altındaki <a href="https://online.csbridge.org/tr/resources/general-info.html" target="_blank">Genel Bilgiler</a> gibi bilgileri okuyun.
+    <a href="https://online.csbridge.org/tr/resources/student-faq.html" target="_blank">Sıkça Sorulan Sorular</a> sayfasında programı bulabilirsiniz, "Czech" ya da "Turkey" (Türkiye) opsiyonlarını kullanarak programı doğru saat diliminde görüntülediğinizden emin olun.
+    <a href="https://online.csbridge.org/tr/resources/section-info.html" target="_blank">Grup Buluşmaları</a> sayfasını inceleyerek grup buluşmalarınızın nasıl olacağını öğrenin.   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210628 13:00" data-visible-end=" 20210628 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 09:00" data-visible-end=" 20210629 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 13:00" data-visible-end=" 20210629 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 09:00" data-visible-end=" 20210630 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 13:00" data-visible-end=" 20210630 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210701 09:00" data-visible-end=" 20210701 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 09:00" data-visible-end=" 20210702 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 13:00" data-visible-end=" 20210702 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210705 00:00" data-visible-end=" 20210702 23:59">
+        Today is a holiday! Go outside and enjoy your day. We'll see you in lecture on Tuesday!   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 09:00" data-visible-end=" 20210706 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 13:00" data-visible-end=" 20210706 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 09:00" data-visible-end=" 20210707 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 13:00" data-visible-end=" 20210707 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 09:00" data-visible-end=" 20210708 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 13:00" data-visible-end=" 20210708 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210709 09:00" data-visible-end=" 20210709 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 09:00" data-visible-end=" 20210712 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 13:00" data-visible-end=" 20210712 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 09:00" data-visible-end=" 20210713 09:45">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 13:00" data-visible-end=" 20210713 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 09:00" data-visible-end=" 20210714 09:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 13:00" data-visible-end=" 20210714 13:45">
+        At this time, you should be in lecture at <a class="alert-link" href="https://stanford.zoom.us/j/96028551412?" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/473852" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210628 16:00" data-visible-end=" 20210628 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 16:00" data-visible-end=" 20210629 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 16:00" data-visible-end=" 20210630 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 16:00" data-visible-end=" 20210702 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 16:00" data-visible-end=" 20210706 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 16:00" data-visible-end=" 20210707 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 16:00" data-visible-end=" 20210708 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 16:00" data-visible-end=" 20210712 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 16:00" data-visible-end=" 20210713 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 16:00" data-visible-end=" 20210714 16:15">
+        Şu anda akşam ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210629 11:30" data-visible-end=" 20210629 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210630 11:30" data-visible-end=" 20210630 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210701 11:30" data-visible-end=" 20210701 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210702 11:30" data-visible-end=" 20210702 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210706 11:30" data-visible-end=" 20210706 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210707 11:30" data-visible-end=" 20210707 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210708 11:30" data-visible-end=" 20210708 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210709 11:30" data-visible-end=" 20210709 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210712 11:30" data-visible-end=" 20210712 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210713 11:30" data-visible-end=" 20210713 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-danger visible-during" data-visible-start="20210714 11:30" data-visible-end=" 20210714 11:15">
+        Şu anda sabah ödevini/projesini <a href="https://us.edstem.org/courses/968/discussion/" target="_blank">Ed Lessons</a> sayfası üzerinden yüklemelisiniz.
+Çalışmalarınızı sisteme yükleme ile ilgili detaylı bilgiye <a href="https://online.csbridge.org/tr/resources/submission-oh.html">buradan</a> ulaşabilirsiniz.
+Eğer bitirmediyseniz de önemli değil, yaptığınız kadarını yükleyin.
+   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210628 13:30" data-visible-end=" 20210628 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210629 13:30" data-visible-end=" 20210629 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210630 13:30" data-visible-end=" 20210630 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210702 13:30" data-visible-end=" 20210702 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210706 13:30" data-visible-end=" 20210706 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210707 13:30" data-visible-end=" 20210707 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210708 13:30" data-visible-end=" 20210708 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210712 13:30" data-visible-end=" 20210712 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 13:30" data-visible-end=" 20210713 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210714 13:30" data-visible-end=" 20210714 15:00">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210629 09:30" data-visible-end=" 20210629 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210630 09:30" data-visible-end=" 20210630 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210701 09:30" data-visible-end=" 20210701 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210702 09:30" data-visible-end=" 20210702 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210706 09:30" data-visible-end=" 20210706 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210707 09:30" data-visible-end=" 20210707 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210708 09:30" data-visible-end=" 20210708 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210709 09:30" data-visible-end=" 20210709 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210712 09:30" data-visible-end=" 20210712 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210713 09:30" data-visible-end=" 20210713 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210714 09:30" data-visible-end=" 20210714 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210715 09:30" data-visible-end=" 20210715 10:30">
+        Ders bitince Hızlı Başlangıç (Quickstart)/Çay Saati (Tea Time)'nde olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210628 15:00" data-visible-end=" 20210628 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210629 15:00" data-visible-end=" 20210629 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210630 15:00" data-visible-end=" 20210630 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210702 15:00" data-visible-end=" 20210702 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210706 15:00" data-visible-end=" 20210706 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210707 15:00" data-visible-end=" 20210707 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210708 15:00" data-visible-end=" 20210708 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210712 15:00" data-visible-end=" 20210712 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210713 15:00" data-visible-end=" 20210713 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210714 15:00" data-visible-end=" 20210714 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210715 15:00" data-visible-end=" 20210715 16:00">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210629 10:30" data-visible-end=" 20210628 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210630 10:30" data-visible-end=" 20210630 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210701 10:30" data-visible-end=" 20210701 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210702 10:30" data-visible-end=" 20210702 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210706 10:30" data-visible-end=" 20210706 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210707 10:30" data-visible-end=" 20210707 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210708 10:30" data-visible-end=" 20210708 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210709 10:30" data-visible-end=" 20210709 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210712 10:30" data-visible-end=" 20210712 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210713 10:30" data-visible-end=" 20210713 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210714 10:30" data-visible-end=" 20210714 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-warning visible-during" data-visible-start="20210715 10:30" data-visible-end=" 20210715 11:30">
+        Şu anda projeleriniz üzerinde çalışmalı ya da Grup Lider'lerinden yardım istemek için  ofis saatlerine katılmalısınız.
+Bu <a href="https://us.edstem.org/courses/968/discussion/96933" target="_blank">Ed linkinde</a> takvimin altındaki açıklamayı okuyup linke tıklayın.
+   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210715 12:30" data-visible-end=" 20210715 15:00">
+        At this time, you should be working on your final project! There will be no lecture, quickstart, or section this afternoon. If you need help on your project, go to office hours at 1:00pm PT.
+   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210701 13:00" data-visible-end=" 20210701 14:30">
+        Şu anda sosyal aktivite gerçekleşiyor! Kamp ateşi sohbetine <a href="https://stanford.zoom.us/j/92718948442"_blank">bu linkten</a> katılabilirsiniz!!   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210709 13:00" data-visible-end=" 20210709 14:30">
+        Şu anda sosyal aktivite gerçekleşiyor! Kamp ateşi sohbetine <a href="https://stanford.zoom.us/j/92718948442"_blank">bu linkten</a> katılabilirsiniz!!   
+  </div>
+  <div class="alert alert-primary visible-during" data-visible-start="20210716 09:45" data-visible-end=" 20210716 11:30">
+        Şu anda sosyal aktivite gerçekleşiyor! Kamp ateşi sohbetine <a href="https://stanford.zoom.us/j/92718948442"_blank">bu linkten</a> katılabilirsiniz!!   
+  </div>
+  <div class="alert alert-success visible-during" data-visible-start="20210716 09:00" data-visible-end=" 20210716 09:45">
+        Ders bitince Hızlı Başlangıç (Quickstart) / Grup Buluşması (Section)'da olmalısınız. Link ve şifre için <a href="https://us.edstem.org/" target="_blank">Ed</a> üzerinden Grup sayfanızı kontrol edin.   
+  </div>
+
+<!-- Display the default announcement.  It will be removed (see times.js) if any announcements are visible above. -->
+<div class="alert alert-warning visible-default">
+      There's nothing scheduled for CS Bridge at the moment.  Take a break, have some tea, and we'll see you at the next lecture!
+</div>
+<div>
+    <h2>
+      Bu Dersin Amacı
+    </h2>
+
+    <p>
+      Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza
+      öğrenmeye devam edebilecek seviyede programcılığın temellerini
+      öğretmektir. Dersler, Stanford, Koç Üniversitesi ve CTU'dan gelen bir grup
+      eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin
+      Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden
+      öğreneceksiniz.
+    </p>
+</div>
+</hr>
+
+<!-- Daily schedule / list of programs -->
+<div class="section" id="schedule">
+	<h2>Programlar</h2>
+  <!--
+	<div class="alert alert-info">
+	  Buradan lablar sırasında programlar üzerinde nasıl çalışacağınıza bakabilirsiniz: <a href="../en/handouts/eclipse.html">buraya tıklayın</a>.
+	</div>
+  -->
+
+
+<table class="table table-striped">
+
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081900"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>12. Gün: Final Projesi</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081900"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Final Projesi Projesi [<a href="../starter/FinalProject.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081900"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/finalProject/project.png" />
+</td>
+<td>
+	<a href="../tr/projects/project.html">Final Projesi</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td></td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081800"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>11. Gün: Final Projesi</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081800"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Final Projesi Projesi [<a href="../starter/FinalProject.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081800"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/finalProject/project.png" />
+</td>
+<td>
+	<a href="../tr/projects/project.html">Final Projesi</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td></td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081700"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>10. Gün: Dictionaries, Breakout and Final Projects</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081700"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day10AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081700"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/phonebook/icon.png" />
+</td>
+<td>
+	<a href="../tr/projects/phonebook.html">Phonebook</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Dictionaries</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081710"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/FinalProject.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081710"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/finalProject/project.png" />
+</td>
+<td>
+	<a href="../tr/projects/project.html">Final Projesi</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td></td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081400"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>9. Gün: Breakout</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081400"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Breakout Projesi [<a href="../starter/Breakout.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081400"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081300"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>8. Gün: Breakout</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081300"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Breakout Projesi [<a href="../starter/Breakout.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081300"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/breakout/breakout.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/breakout.html">Breakout</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Python, Graphics, Animation, Lists and Mouse</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081200"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>7. Gün: Lists and Mouse</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081200"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day7AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081200"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/sorted/sorted.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/sorted.html">Sıralayıcı</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/ascending/icon.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/ascending.html">Yükseliyor</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081209"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day7PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081209"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/mouseLocation/mouseLocation.png" />
+</td>
+<td>
+	<a href="../tr/projects/mouseLocation.html">Farenin Konumu</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Mouse</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/makingTracks/makingTracks.png" />
+</td>
+<td>
+	<a href="../tr/projects/makingTracks.html">İz Çıkartmaca</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Mouse</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/snow/snowflake.png" />
+</td>
+<td>
+	<a href="../tr/projects/snow.html">Kar</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Lists</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/catchMeIfYouCan/demo1.png" />
+</td>
+<td>
+	<a href="../tr/projects/catchMeIfYouCan.html">Sıkıysa Yakala</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Listeler ve Fare (Mouse)</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081200"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081100"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>6. Gün: Döngüsü / Animasyon</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081100"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day6AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081100"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/printIndices/logo.png" />
+</td>
+<td>
+	<a href="../tr/projects/printIndices.html">İndeksleri Yazdır</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>For Döngüsü</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/illusion/illusion1.png" />
+</td>
+<td>
+	<a href="../tr/projects/illusion.html">Optik İllüzyon</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>For Döngüsü</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081109"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day6PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081109"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/mysterySquare/mysterySquare.png" />
+</td>
+<td>
+	<a href="../tr/projects/mysterySquare.html">Gizemli Kare</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Animasyon</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/bouncingBall/demo.png" />
+</td>
+<td>
+	<a href="../tr/projects/bouncingBall.html">Zıp Zıp Top</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Animasyon</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/shortfilm/sunset.png" />
+</td>
+<td>
+	<a href="../tr/projects/shortFilm.html">Kısa Film</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Animasyon</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081100"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020081000"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>5. Gün: Grafikler ve Fonksiyonlar</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020081000"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day5AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081000"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/programmingIsAwesome/demo.png" />
+</td>
+<td>
+	<a href="../tr/projects/programmingIsAwesome.html">Programlamak Bir Harika</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Grafik</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/randomCircles/demo1.png" />
+</td>
+<td>
+	<a href="../tr/projects/randomCircles.html">Tesadüfi Daireler</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Grafikler ve Rastgelelik</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020081009"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day5PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020081009"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/funkyFunctions/logo.png" />
+</td>
+<td>
+	<a href="../tr/projects/funkyFunctions.html">Fırlama Fonksiyonlar</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Param ve Return</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/fizzbuzz/fizzbuzz.png" />
+</td>
+<td>
+	<a href="../tr/projects/fizzbuzz-functions.html">CızBız</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Param ve Return</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/target/target.png" />
+</td>
+<td>
+	<a href="../tr/projects/target.html">Hedef Tahtası</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Parametreler</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/stringArt/stringArt.png" />
+</td>
+<td>
+	<a href="../tr/projects/stringArt.html">Çizgi Sanatı</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>For Döngüsü</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020081000"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020080700"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>4. Gün: For döngüsü ve analizi</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020080700"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day4AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020080700"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/someSum/someSum.png" />
+</td>
+<td>
+	<a href="../tr/projects/someSum.html">Toplama Diye Buna Derim!</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Döngü değişkenleri</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/carbonDating/carbondating.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/carbonDating.html">Carbon Dating</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Döngü değişkenleri</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020080700"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020080600"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>3. Gün: Değişkenler</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020080600"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day3AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020080600"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/sandcastles/sandcastle.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/sandcastles.html">Kumdan Kaleler</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Değişkenler</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/runningSum/runningSum.png" />
+</td>
+<td>
+	<a href="../tr/projects/runningSum.html">Topla ve Biriktir</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Değişkenler</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020080609"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day3PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020080609"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/areaCalculator/areaCalculator.png" />
+</td>
+<td>
+	<a href="../tr/projects/areaCalculator.html">Alan Hesaplayıcı</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Değişkenler</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/8Ball/8ball.png" />
+</td>
+<td>
+	<a href="../tr/projects/8ball.html">8 Numaralı Top</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Conditional&#039;lar</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/viralvideo/viralVideo.png" />
+</td>
+<td>
+	<a href="../tr/projects/viralVideo.html">Viral Video</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>Conditional&#039;lar</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/khansole/khansole.png" />
+</td>
+<td>
+	<a href="../tr/projects/khansole.html">Khansole Akademi</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>Conditional&#039;lar</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020080600"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2020080500"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>2. Gün: Karel ve Kontrol Akışı</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2020080500"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Sabah Projesi [<a href="../starter/Day2AM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020080500"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/placeSquare/placeSquare.png" />
+</td>
+<td>
+	<a href="../tr/projects/placeSquare.html">Kare Yerleştir</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>While Döngüsü</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/mountain/mountain.png" />
+</td>
+<td>
+	<a href="../tr/projects/mountain.html">Dağcı Karel</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>While Döngüsü</td>		      			</tr>
+		      	</tbody>
+				<tr 
+						class="info visible-after" data-visible-after="2020080509"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day2PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2020080509"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/stripeKarel/stripeKarel.png" />
+</td>
+<td>
+	<a href="../tr/projects/stripeKarel.html">Şerit Karel</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>İç İçe Döngüler</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/hospitalkarel/hospitalkarel.png" />
+</td>
+<td>
+	<a href="../tr/projects/hospitalKarel.html">Hastaneci Karel</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>İç İçe Döngüler</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/randomPainter/randomPainter.png" />
+</td>
+<td>
+	<a href="../tr/projects/randomPainter.html">Deli Ressam</a>
+    <br/>
+
+    <span class="label label-success">Proje</span>	
+</td>
+<td>If İfadeleri</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+  		  	<tr 
+  		  			class="active visible-after" data-visible-after="2020080500"
+  		  	>
+  				<td colspan = "6">
+  					<center>
+  							Daha fazlasını mı arıyorsunuz?  <a href="../tr/bonus-index.html">Bonus problemlerini deneyin!</a>
+  					</center>
+  				</td>
+  			</tr>
+
+		<!-- The head of the table should show the day's topic title -->
+		<thead
+				class="visible-after" data-visible-after="2021062809"
+		>
+			<tr>
+				<th colspan = "6">
+					<br/>
+					<b>
+							<h4>1. Gün: Karel</h4>
+					</b>
+				</th>
+			</tr>
+		</thead>
+
+				<tr 
+						class="info visible-after" data-visible-after="2021062809"
+				>
+					<!-- Display the name of this part of the day and the link for its starter code -->
+	      			<td colspan = "6">
+	      				<center>
+	      					<h4>Akşam Projesi [<a href="../starter/Day1PM.zip">burada</a>]</h4>
+	      				</center>
+	      			</td>
+	      		</tr>
+
+	      		<!-- Display the projects for this part of the day -->
+	      		<tbody
+						class="visible-after" data-visible-after="2021062809"
+	      		>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/newspaper/newspaper.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/collectNewspaper.html">Gazete Alma</a>
+    <br/>
+
+    <span class="label label-default">Hızlı Başlangıç</span>	
+</td>
+<td>Fonksiyonlar</td>		      			</tr>
+		      			<tr>
+
+<td>
+	<img class="projectImg" src="../img/projects/efes/charles.jpg" />
+</td>
+<td>
+	<a href="../tr/projects/arches.html">Sütun Tamircisi</a>
+    <br/>
+
+    <span class="label label-primary">Grup</span>	
+</td>
+<td>For Döngüleri</td>		      			</tr>
+		      	</tbody>
+
+		<!-- Display a row at the very bottom of this day's projects mentioning the bonus page, unless this day does not have bonus activities -->
+
+</table>
+</div>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Öğretmenler</h2>
+
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/nickt.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick T.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/ondra.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ondra</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Ayca.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ayca</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/chris.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Chris</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/nickm.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Nick M.</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Josef.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Josef</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Yosefa.JPG" alt="profile picture">
+				  		<div class="caption">
+							<b>Yosefa</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Burcu.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Burcu</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/lisa.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Lisa</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/ceren.PNG" alt="profile picture">
+				  		<div class="caption">
+							<b>Ceren</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Ahmet.png" alt="profile picture">
+				  		<div class="caption">
+							<b>Ahmet</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Anna.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Anna</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Demet.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Demet</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Eddie.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eddie</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Eliška.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eliška</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Emilia.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Emilia</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Emirhan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Emirhan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Eren.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Eren</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Ezgi.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ezgi</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Gaby.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Gaby</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Gül Sena.JPG" alt="profile picture">
+				  		<div class="caption">
+							<b>Gül Sena</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Honza.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Honza</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Jan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/jaroslav.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jaroslav</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/jillian.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Jillian</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Julie.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Julie</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Melis.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Melis</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Necla.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Necla</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Okan.png" alt="profile picture">
+				  		<div class="caption">
+							<b>Okan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Oya.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Oya</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+	  	<div class="row">
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Ozan.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Ozan</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Pinar.jpeg" alt="profile picture">
+				  		<div class="caption">
+							<b>Pinar</b>
+				  		</div>
+					</div>
+		  		</div>
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="../img/staff/Radek.jpg" alt="profile picture">
+				  		<div class="caption">
+							<b>Radek</b>
+				  		</div>
+					</div>
+		  		</div>
+	  	</div>
+</div>
+
+<hr/>
+
+<!-- Müfredat Özeti -->
+<div class="section" id="playWithKarel">
+	<h2>Müfredat</h2>
+	<img src = "../img/resources/curriculum.jpg" style="width:100%"></img>
+</div>
+
+
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Karel'la oynayın
+	</h2>
+
+	<p>Stanford'un üniversite öğrencilerini programlama ile tanıştırmak için kullandığı robot, Karel'la tanışın.</p>
+
+	<p>Karel'ın komutlarını kullanarak beeper'ı çıkıntının üstüne taşıtın. Normalde programınızı PyCharm isimli bir uygulamada yazacaksınız ama başlangıç için sitemize küçük bir arayüz yaptık:
+	</p>
+
+
+<div style="width:100%;">
+	<div id="runButtonBar" class="buttonBar"></div> 
+       <script>importButtonBar();</script>
+</div>
+   <div id ='mainIde' class = "getStarted">
+ 
+      <div id = "mainIdeCenter" >
+      	
+         <div id = 'mainIdeEditorDiv'>
+            <script>importEditor('mainIdeEditor','mainIdeEditorDiv');</script>
+         </div>
+         <div id = 'mainIdeCanvasDiv' class = 'orange'>
+            <canvas id = 'mainIdeCanvas' class = 'red'></canvas>
+         </div>
+         
+      </div>
+
+   </div>
+
+
+   
+   
+
+<script>
+
+		
+
+  function init() {
+  	 var stepUpWorld = null;
+     var karelIde = null;
+
+     var onReadyCalled = false;
+
+     var buttonState = 'play';
+
+     document.onready = function() {
+        if (onReadyCalled) return;
+        onReadyCalled = true;
+        $("[title]").tooltip({ position: "bottom center", opacity: 0.9});
+        
+        initTabs();
+        var canvas = document.getElementById('mainIdeCanvas');
+        karelIde = KarelIde(window._editor, canvas, 'collectNewspaper');
+
+        var stepUpCanvase = document.getElementById('firstIdeCanvas');
+        stepUpWorld = KarelIde(window._editor, stepUpCanvase, '5x5');
+        
+        $('#playButton').click(function(){playClicked()});
+        $('#move').click(function(){stepUpWorld.stepMove()});
+        $('#left').click(function(){stepUpWorld.stepTurnLeft()});
+        $('#right').click(function(){stepUpWorld.stepTurnRight()});
+        $('#put').click(function(){stepUpWorld.stepPutBeeper()});
+        $('#pick').click(function(){stepUpWorld.stepPickBeeper()});
+        /*$('#worldSelector').change(
+           function() {
+              var worldName = $("#worldSelector option:selected").text();
+              karelIde.stopButton();
+              var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	  $('#playButton').html(playText);
+         	  buttonState = 'play';
+	          karelIde.changeWorld(worldName);
+	        }
+        );*/
+        window.onresize();
+        
+     }
+
+     function playClicked() {
+     	if(buttonState == 'play') {
+     		karelIde.playButton();
+         	
+         	var resetText = '<span class="glyphicon glyphicon-repeat"></span> Reset Program';
+         	$('#playButton').html(resetText);
+         	buttonState = 'reset';
+         } else if (buttonState == 'reset') {
+         	karelIde.stopButton();
+         	var playText = '<span class="glyphicon glyphicon-play"></span> Run Program';
+         	$('#playButton').html(playText);
+         	buttonState = 'play';
+         }
+     	
+   }
+
+     window.onresize = function() { 
+        var parentHeight = 600;
+        var canvasWidth = 300
+        var parentWidth = $("#playWithKarel").width();
+        console.log('pw: ' + parentWidth);
+
+        var ide = document.getElementById('mainIde');
+        var editorDiv = document.getElementById('mainIdeEditorDiv');
+        var canvas = document.getElementById('mainIdeCanvasDiv');
+        var center = document.getElementById('mainIdeCenter');
+        
+        var ideHeight = parentHeight
+        ide.style.height = (ideHeight)+ 'px';
+        ide.style.width = parentWidth + 'px';
+        
+        var centerHeight = ideHeight;
+        center.style.height = centerHeight + 'px';
+        center.style.width = parentWidth + 'px';
+
+        //center.style.top = centerTop + 'px';
+
+        var availibleWidth = parentWidth ;
+        var elementSpacing = 12;
+
+        
+        var editorWidth = availibleWidth - canvasWidth - elementSpacing; 
+
+        canvas.style.width = canvasWidth + 'px';
+        canvas.style.height = canvasWidth + 'px';
+        canvas.style.left = (editorWidth + elementSpacing) + 'px';
+
+       	
+       	//editorWidth = Math.max(editorWidth, Const.MIN_EDITOR_WIDTH)
+
+        editorDiv.style.left = 0 + 'px'
+        editorDiv.style.width = editorWidth + 'px';
+
+        if (karelIde) {
+           karelIde.resizeCanvas(canvasWidth, canvasWidth);
+           stepUpWorld.resizeCanvas($("#firstIdeCanvas").width(), 200);
+        }
+        if (window._editor) {
+           window._editor.renderer.onResize();
+        }
+        ReferenceDialog.resize();
+        DeployDialog.resize();
+     }
+
+     
+  }
+  init();
+</script></div>-->
+
+					
+
+<hr>
+
+<div class="footer">
+	<p class="pull-left">
+
+		<!-- Start of content that must be translated -->
+			&#169; Stanford &#124; Hazırlayan: 
+    		<a href="http://stanford.edu/~cpiech">Chris</a> (Tüm ekibin de yardımıyla).
+			Pek yetenekli birçok eğitimci tarafından hazırlanan muhteşem CS106A sınıfından esinlenilmiştir. <a href="http://cs.stanford.edu/people/eroberts/">Eric Roberts</a> ve <a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>'ye özel teşekkürlerimizi sunarız. Türkçe tercüme ile ilgili tüm soru ve görüşleriniz için <a href="http://web.stanford.edu/~sarslan/">Serhat Arslan</a> ile iletişime geçebilirsiniz.
+		<!-- End of content that must be translated -->
+	</p>
+</div>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-35433298-1']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+<script type="text/javascript">
+    var pubnubDemo = new PubNub({
+        subscribeKey: 'sub-c-f79c3cd0-a4b5-11e9-aaf3-de35c74afaf8'
+    });
+
+	// Subscribe to the demo_tutorial channel
+	pubnubDemo.addListener({
+	    message: function(request) {
+	    	let msg = request['message']
+	    	console.log(msg)
+	    	let swalData = msg['swal'];
+	    	console.log(swalData)
+        Swal.fire(swalData)
+	    }
+	})
+
+	pubnubDemo.subscribe({
+	    channels: ['csbridge_alert']
+	});
+</script>
+		</div>
+
+	</body>
+</html>

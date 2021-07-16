@@ -151,13 +151,21 @@ visible-after, to ensure they display when you want them to.
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></li>
+							<li class="dropdown-header">References</li>
+							<li
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">Karel Reader</a>
+							</li>
 
-							<!-- Divider only visible once Python resources visible -->
-							<li 
-									class="divider"
-							/>
+							<li
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">Karel Reference</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
@@ -171,6 +179,9 @@ visible-after, to ensure they display when you want them to.
 								<a href="../../en/resources/quick-python.html">Python Reference</a>
 							</li>
 
+							<div
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
 							>
@@ -182,15 +193,18 @@ visible-after, to ensure they display when you want them to.
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">Course Information</li>
 							<li><a href="../../en/resources/general-info.html">General Info</a></li>
+							<li><a href="../../en/resources/code-of-conduct.html">Code of Conduct</a></li>
 							<li><a href="../../en/resources/student-faq.html">[Student] Course FAQs</a></li>
 							<li><a href="../../en/resources/section-info.html">Section Info</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">Software</li>
 							<li><a href="../../en/resources/install.html">Install PyCharm</a></li>
 							<li><a href="../../en/resources/pycharm-how-to.html">How to use PyCharm</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="../../en/resources/submission-oh.html">Submission/Office Hours</a></li>
 						</ul>
 					</li>
@@ -820,7 +834,7 @@ visible-after, to ensure they display when you want them to.
 
 	<!-- This dropdown should display one element for each lecture -->
 </ul>					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="../../en/bonus-index.html">Bonus</a></li>
@@ -833,32 +847,29 @@ visible-after, to ensure they display when you want them to.
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="../../img/turkish_flag.png"></img></a></li>
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");
 		window.location.href = url;
 	}
 </script>
--->
 		<div class="container">
 			
 <!-- Main Content -->
@@ -898,7 +909,7 @@ visible-after, to ensure they display when you want them to.
 <li>This assignment really requires parameters and return values to come up with a solution. So they probably won't be 100% sure how to use them and when to use them, or how they work.</li>
 <li><em>Bug: It goes through multiple bricks</em>  This usually happens when they act on all overlapping objects instead of just the first they find that is not the ball.  When the ball intersects two bricks simultaneously, vy=-vy happens twice and cancels itself out. Instead, they should stop looping over the colliding objects once they find one to react to.</li>
 <li><em>Bug: After hitting a corner between the wall and paddle, or wall and wall, the ball gets stuck on the wall and bounces back and forth.</em>  This usually happens when their checks for the walls/the paddle are in an "<code>if</code>..<code>elif</code>... rather than a group of singular <code>if</code>s. What happens is that the ball is both vertically and horizontally off the screen, and should bounce both ways. However, since the <code>if</code>s are cascaded, after changing, say, vy to -vy, vx is not changed to -vx. The next step, the ball moves even further off the screen. This time, vx does get switched to -vx, but the ball is already far enough off screen that moving it -vx pixels doesn't move it back on the screen. Therefore, the value of vx is flipped again on the next round, and the ball appears to vibrate back and forth around the wall.</li>
-</ul>	
+</ul>
 		</div>
 	</div>
 
