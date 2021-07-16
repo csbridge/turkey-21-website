@@ -188,7 +188,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 
 				</ul>
 
-				<!-- Language toggle button
+				<!-- Language toggle button -->
 				<ul class="nav navbar-nav navbar-right">
 					% if lang == "en":
 						<li><a onclick="changeToTurkish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/turkish_flag.png"></img></a></li>
@@ -196,14 +196,12 @@ Note: when adding support for additional languages, also make sure to add the ab
 						<li><a onclick="changeToEnglish()" style="cursor: pointer;"><img class="languageIcon" src="{{pathToRoot}}img/english_flag.png"></img></a></li>
 					% end
 				</ul>
-			-->
-
 			</div>
 		</div>
 	</div>
 </nav>
 
-<!-- Script to toggle between languages
+<!-- Script to toggle between languages -->
 <script>
 	function changeToTurkish() {
 		var url = window.location.href;
@@ -217,4 +215,3 @@ Note: when adding support for additional languages, also make sure to add the ab
 		window.location.href = url;
 	}
 </script>
--->
