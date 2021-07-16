@@ -1,0 +1,20 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Yarısı Yeşil
+credit: Chris Piech
+solution: soln.py
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+
+
+Ekranda rastgele konumlarda 1000 adet daire oluşturacağız. Sol alt köşeye daha yakın olan daireler mavi olurken sağ üste yakın olanlar yeşil olacak. Bu örnek döndürülen (return) değerlere dair bir örnek.
+
+<center>
+<img style="width:500px; border: 1px solid black;" src="{{pathToRoot}}img/projects/halfGreen/halfGreen.png">	
+</center>
+
+* Her daire 20 piksele 20 piksel.
+
+* Her dairenin tam olarak tuval üzerine çizildiğine dikkat edin.
+
+* `time.sleep(0.002)` fonksiyon çağrısı daireler çizerken her seferinde 2 milisaniye bekliyor.

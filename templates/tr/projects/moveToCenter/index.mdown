@@ -1,0 +1,14 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Merkeze Git
+credit: Chris ve Julia tarafından yazıldı.
+translation: Serhat Arslan, Demet Tümkaya
+solution: soln.py
+
+Ders Notları: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
+
+Bu program, bir kareyi ekranın merkezine ulaşana kadar hareket ettirir. Kare, sol taraftan başlar.
+
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/moveToCenter/demo.png">	
+</center>

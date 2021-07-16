@@ -1,0 +1,13 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Damga Makinesi
+credit: Gizli bir CS106A öğretim görevlisi tarafından yazıldı.
+translation: Serhat Arslan, Demet Tümkaya
+solution: soln.py
+
+Mavi bir dikdörtgenin (damgayı temsil eder) kullanıcının faresini takip ettiği bir program yazın. Program; kullanıcı tıkladığında, imleci merkez alarak bir dikdörtgen çizebilmelidir.
+
+<center>
+  <img style="width:500px"
+          alt = "Stamp tool demo"
+          src="{{pathToRoot}}img/projects/stampTool/demo.png">
+</center>

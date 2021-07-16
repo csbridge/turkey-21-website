@@ -1,0 +1,27 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Rastgele Daireler
+credit: Eric Roberts'ın ders notları
+translation: Serhat Arslan, Gül Sena Altıntaş
+
+Farklı boyutlarda, konumlarda ve renklerde on daire çizen bir grafik programı yazın. Her dairenin rastgele seçilmiş bir rengi, 70 ile 200 piksel arasından rastgele seçilmiş yarıçapı, ve kanvas üzerinde rastgele seçilmiş bir pozisyonu olmalı. Seçilen bu pozisyona göre dairenin tamamı kenarlardan taşmayacak şekilde kanvasın içine sığmalı. Aşağıda programın örnek bir sonucunu görebilirsiniz:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/randomCircles/demo1.png">
+</center>
+
+Programı her çalıştırdığınızda on daire görmeyebilirsiniz. Sizce neden?
+
+Rastgele sayılar üretmek için, programınızın başına `import random` satırını ekleyin. Daha sonra aşağıdaki şekilde rastgele sayılar elde edebilirsiniz:
+
+```
+# (min, max) aralığında rastgele bir int (tamsayı) üretir
+random.randint(min, max)
+```
+Canvas'ı kullanarak rastgele renkler elde edebilirsiniz:
+
+```
+# rastgele renk ismi üretir
+canvas.get_random_color()
+```
+
+Erken bitirirseniz, rastgele tatlı çörekler (doughnut) yapmayı deneyebilirsiniz.

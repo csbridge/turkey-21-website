@@ -1,0 +1,31 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Enkazı Kaldır (çözümlü)
+credit: Chris Piech ve gizemli CS106A ekibi tarafından yazıldı.
+translation: Serhat Arslan, Demet Tümkaya, Ceren Kocaoğullar
+solution: soln.py
+
+Bu örneğin amacı, ekranı rastgele bir enkaz (oval) yığınıyla dolduran ve daha sonra kullanıcının kalıntı parçalarını tıklayıp kaldırmasına olanak tanıyan bir program yazmaktır. Bu program, sınıfta öğrendiğimiz birçok tekniği uygulamanıza izin verir. Fonksiyonlar, `for` döngüleri, grafikler, rasgele sayılar, fare ve belki daha fazlasını kullanacaksınız!
+
+İlk adım, enkazı oluşturmak. Enkaz parçalarının ne kadar büyük olabileceğine ve ekranda kaç parça bulunabileceğine dair limitleri sabitlerle oluşturun. Her parça için, rastgele (random) bir boyuta, konuma ve renge sahip (oluşturduğunuz lmitler içerisinde) yeni bir oval oluşturun. Bunun her boyutta ekran için çalışması gerektiğini unutmayın. Kodunuzu daha kolay okunabilir yapmak için bunu birkaç fonksiyona bölmek isteyebilirsiniz!
+
+<center>
+<img style="width:500px" src="{{pathToRoot}}img/projects/debrisSweeper/demo.png">   
+</center>
+
+Sonrasında, kullanıcıların enkazı ekrandan kaldırmalarını sağlamalıyız. Sonsuz bir döngü ekle ve kullanıcı bir objenin üstüne tıklayıp tıklamadığını kontrol edin. Eğer tıkladılarsa, o enkazı temizleyin (ekrandan kaldırın)!
+
+## Tıklanan objeyi almak
+
+`canvas.find_element_at(x, y)` tuval işlevi, sağlanan `(x, y)` bağımsız değişkenindeki nesneyi alacaktır. Hiçbir nesne yoksa, "Yok" döndürür. Bir nesne üzerinde bazı eylemler gerçekleştirmek için (eğer varsa), aşağıdaki gibi bir şey yazabilirsiniz:
+
+```
+object = canvas.find_element_at(x, y)    # x and y are some coordinates
+if object:    # If there was an object there...
+    print("Obje (" + str(x) + ", " + str(y) + ") konumunda bulundu")
+else:
+    print("Obje bulunamadı")
+```
+
+## Bonus!
+
+Eğer isterseniz bonus olarak, tüm ekranın enkazdan temizlenmiş olduğu kontrol edecek bir yol ekleyebilirsiniz. Eğer öyleyse, kullanıcıya tebrikler de ve ekranı temizledikleri için teşekkür edin!

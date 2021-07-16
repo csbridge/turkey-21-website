@@ -1,0 +1,41 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Dağcı Karel
+credit: Chris Piech
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Ders Notları: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Çözümlü Örnek: [UN Karel]({{pathToRoot}}tr/projects/unKarel/index.html)<br/>
+Dosya: `mountain_karel.py`
+
+Karel dağlara tırmanmanın hayalini kuruyor. Ona herhangi bir yükseklikteki bir dağın zirvesine çıkmayı öğretin. Mesela, aşağıdaki dağın:
+
+<p>
+<center>
+		<img class="psetImg" style="width:400px" src="{{pathToRoot}}img/projects/mountain/mountain0.png">	
+</center>
+</p>
+
+Karel zirveye tırmanmalı ve aşağıda gösterildiği gibi bir bayrağı (bir beeper'ı) zirvede bırakmalı:
+
+<p>
+<center>
+		<img class="psetImg" style="width:400px" src="{{pathToRoot}}img/projects/mountain/mountain1.png">	
+</center>
+</p>
+
+Önceki problemlerin aksine, dağın yüksekliği önceden verilmiş <b>değil</b>. Yazdığınız program Karel'ın herhangi bir boyuttaki dağa tırmanmasına izin vermeli. Örneğin aşağıdaki üçüne:
+
+<p>
+<center>
+    <img class="psetImg" style="width:100%"  src="{{pathToRoot}}img/projects/mountain/mountains.png">	
+</center>
+</p>
+
+Şunları varsayabilirsiniz:
+
+- Karel dünyanın sol altında yüzü doğuya dönük bir şekilde başlıyor.
+- Dağ ile dünya sınırları arasında (solda ve sağda) bir birim boşluk var.
+- Dağ en az bir kare yükseklikte.
+- Dağ, yukarı/aşağı ve sol/sağ olmak üzere 1 boşluk büyüklüğünde basamaklardan oluşur.
+
+While döngüleri kullanın.

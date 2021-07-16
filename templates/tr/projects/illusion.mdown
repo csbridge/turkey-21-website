@@ -1,0 +1,47 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Optik İllüzyon
+credit: Chris Piech (Steve Cooper'ın bir fikri üzerine oluşturulmuştur)
+translation: Serhat Arslan ve Ahmet Uysal
+
+Ders Notları: [Grafik Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Dosya: `illusion1.py`
+
+Bazen örüntülerin tekrar etmesi, gözlerimizin olmayan şeyleri görmesine yol açar. Aşağıdaki resme bakın. Beyaz çizgilerin kesişimlerindeki küçük gri kareleri görebiliyor musunuz? Optik illüzyon yaratan bir grafik programı yazın:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion1.png">
+</center>
+
+## Sabitler
+
+Bu projenin başlangıç kodunda aşağıdaki satırların varlığı dikkatinizi çekmiş olabilir:
+
+```
+SIZE = 100
+GAP = 10
+```
+
+Bu satırlar `main()` fonksiyonunun dışında yazılmışlar ve değişkenler (variables) tamamen büyük harflerle isimlendirilmiş. Bu satırlar sabitleri, yani değerleri hiç değişmeyen değişkenleri, tanımlar. Bu değişkenler tüm fonksiyonların dışında tanımlanmış olduğu için onların değerini programınızın herhangi bir noktasında okuyabilirsiniz. Sabit değerleri direkt olarak kullanmak yerine (10 ve 100 sayılarını programınızda doğrudan kullanmak) sabit değişkenler yaratmak programınızın okunurluğunu artırır ve değişiklik yapmanızı kolaylaştırır.
+
+## Çift for döngüsü
+
+Bu problem for döngüsü içinde for döngüsü kullanmanızı gerektirir. İçerideki döngü için farklı bir döngü değişkeni kullanmayı unutmayın. Örneğin, eğer dışarıdaki döngünüz şu şekildeyse:
+
+```
+for i in range(100):
+  ... iç for döngüsü ...
+```
+
+Onun içindeki for döngüsü <code>i</code>' den başka bir döngü değişkeni kullanmalı.
+
+# Eklemeler
+
+Dosya: `illusion2.py`
+
+Vaktiniz olursa, bu optik illüzyonu yaratmayı deneyin! Tüm karelerin aynı boyutta ve tüm çizgilerin yatay olduğuna dikkat edin! Çözümünüzü nasıl parçalara ayıracağınız üzerine düşünün.
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/illusion/illusion2.png">
+</center>
+
+Eğer takılırsanız, her bir satırı ilk siyah karesi x = 0'da başlayacak şekilde çizmeyi deneyin. Ardından her satırın başındaki fazlalığın örüntüsünü nasıl oluşturabileceğinizi bulmaya çalışın. Üst sıra kaydırılmamıştır, altındaki satır bir karenin boyutunun %25'i kadar, bunun altındaki satır bir kare boyutunun %50'si kadar, altındaki satır ise bir karenin boyutunun %25'i kadar kaydırılmıştır. Bu 4 sıralı dizi, kalan sıralar için tekrar eder.

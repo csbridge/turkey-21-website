@@ -1,0 +1,45 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Programlamak Bir Harika
+credit: Chris Piech ve Eric Roberts
+translation: Serhat Arslan, Gül Sena Altıntaş
+Handouts: [Graphics Reference]({{pathToRoot}}tr/handouts/graphics.html)<br/>
+
+Bu programın amacı sizin ilk grafik programınızı oluşturmanızı sağlamak. Biri kırmızı, biri mavi ve biri sarı olmak üzere üç dikdörtgen çizmelisiniz ve ekranın merkezine "Programming is Awesome." ("Programlamak Bir Harika.") yazmalısınız. Dikdörtgenlerinizi herhangi bir boyutta yapabilirsiniz ve görülebilir olduğu sürece ekranda istediğiniz yere yerleştirebilirsiniz. Bizim programımızın görünüşü şu şekilde:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/programmingIsAwesome/demo.png">
+</center>
+
+## Aşama 1: Dikdörtgenler Çizin
+
+Geometri kullanan basit sanat eseleri bazen çok fazla paraya satılır. Örneğin, bu tablo, Piet Mondrian'ın Composition II adlı eseri, 40 milyon dolara satıldı:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/programmingIsAwesome//mondrian.jpg">
+</center>
+
+İlk göreviniz biri kırmızı, biri mavi, biri sarı üç dikdötgen eklemek. Yukarıdaki resmi oluşturmak zorunda değilsiniz. Dikdörtgenlerinizi ekranda istediğiniz herhangi bir yere koyabilirsiniz. Eğer resimleriniz milyonlarca dolara satılırsa... öğretmenlerinizi unutmayın :). Daha çok dikdörtgen eklemeye ihtiyaç duyuyorsanz, bu harika. Sadece önce aşama #2'yi bitirdiğinize emin olun.
+
+## Aşama 2: Ortalanmış Metin
+
+Bir metin yaratın ve ekranın merkezine ekleyin. Ekranın genişliğini ve yüksekliğini `canvas` değişkeninizi kullanarak şu komutlarla elde edebilirsiniz:
+
+```
+canvas.get_canvas_width()
+canvas.get_canvas_height()
+```
+
+`create_text` fonksiyonunu kullanarak metin üretebilirsiniz:
+
+```
+label = canvas.create_text(x, y, text)
+```
+
+Fonksiyona girdiğiniz x ve y koordinatları çizilen metinin _merkezi_ olarak ayarlanacak.
+
+Metninizin daha havalı görünmesini istiyorsanız, `canvas` değişkeninizi kullanarak yazı tipini değiştirebilirsiniz:
+
+```
+canvas.set_font(label, "Courier", 50)
+```
+Hepsi bu kadar! Eğer erken bitirirseniz, resminize istediğinizi eklemekte özgürsünüz. Elipsleri seviyorsanız... onları da ekleyebilirsiniz.

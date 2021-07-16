@@ -1,0 +1,75 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Dolu Tanesi
+credit: Eric Roberts
+translation: Serhat Arslan, Demet Tümkaya
+
+Dünyamız ilginç matematik bulmacalarına sahiptir, birçoğu da bilgisayar programları ile ifade edilebilir. Öğrendiklerimizi güzelce kapsayan muhteşem bir problem ise dolu tanesi problemi.
+
+Bu problem aşağıdaki gibi ifade edilebilir:
+
+> Pozitif bir tam sayı seçin ve ona n diyin.
+> n çiftse, onu ikiye bölün.
+> n tekse, onu 3 ile çarpıp 1 ekleyin.
+> Bu uygulamayı n 1'e eşit olana kadar devam ettirin.
+
+Aşağıdaki örnek, 15 sayısı ile başlar ve 1'e ulaşma sürecini gösterir:
+
+```
+15 tek sayıdır, bu yüzden 3n+1 yapıyorum: 46
+46 çift sayıdır, bu yüzden yarısını alıyorum: 23
+23 tek sayıdır, bu yüzden 3n+1 yapıyorum: 70
+70 çift sayıdır, bu yüzden yarısını alıyorum 35
+35 tek sayıdır, bu yüzden 3n+1 yapıyorum: 106
+106 çift sayıdır, bu yüzden yarısını alıyorum 53
+53 tek sayıdır, bu yüzden 3n+1 yapıyorum: 160
+160 çift sayıdır, bu yüzden yarısını alıyorum 80
+80 çift sayıdır, bu yüzden yarısını alıyorum 40
+40 çift sayıdır, bu yüzden yarısını alıyorum 20
+20 çift sayıdır, bu yüzden yarısını alıyorum 10
+10 çift sayıdır, bu yüzden yarısını alıyorum: 5
+5 tek sayıdır, bu yüzden 3n+1 yapıyorum: 16
+16 çift sayıdır, bu yüzden yarısını alıyorum: 8
+8 çift sayıdır, bu yüzden yarısını alıyorum: 4
+4 çift sayıdır, bu yüzden yarısını alıyorum: 2
+2 çift sayıdır, bu yüzden yarısını alıyorum: 1
+```
+
+Bu örnekte gördüğünüz gibi, sayılar artar ve azalır, fakat sonunda, en azından denenen har sayıda 1'e ulaşarak süreç sonlandı. Bazı açılardan, bu süreç, toprağa düşene kadar sürekli rüzgarla yukarı taşınan dolu tanelerinin oluşumunu andırır. Bu benzetmeden dolayı, bu sayı dizisi genellike Dolu Tanesi dizisi olarak adlandırılır, tabii başka adları da vardır.
+
+Kullanıcıdan bir sayı alan, sonrasında bu sayının Dolu Tanesi dizisini ve 1'e ulaşana kadar kaç adım geçtiğini sırayla gösteren bir program yazın. Örneğin, programınız aşağıdaki gibi gözüken bir çıktı üretmelidir:
+
+```
+Bir sayı girin: 17
+17 tek sayıdır, bu yüzden 3n+1 yapıyorum: 52
+52 çift sayıdır, bu yüzden yarısını alıyorum: 26
+26 çift sayıdır, bu yüzden yarısını alıyorum: 13
+13 tek sayıdır, bu yüzden 3n+1 yapıyorum: 40
+40 çift sayıdır, bu yüzden yarısını alıyorum: 20
+20 çift sayıdır, bu yüzden yarısını alıyorum: 10
+10 çift sayıdır, bu yüzden yarısını alıyorum: 5
+5 tek sayıdır, bu yüzden 3n+1 yapıyorum: 16
+16 çift sayıdır, bu yüzden yarısını alıyorum: 8
+8 çift sayıdır, bu yüzden yarısını alıyorum: 4
+4 çift sayıdır, bu yüzden yarısını alıyorum: 2
+2 çift sayıdır, bu yüzden yarısını alıyorum: 1
+```
+
+Bu problem hakkında büyüleyici olan ise kimsenin şimdiye kadar her zaman duracağını kanıtlayamamasıdır. Süreçteki adımların sayısı çok büyüyebilir. Örneğin kullanıcıdan 27 sayısı alan program için ne kadar adım gerekir?
+
+**İpucu:** Python ile bölme yaparken '/' kullanmak, sonuç olarak her zaman gerçek bir sayı verir, bu sayı tam sayı olsa da. Bu program için, hesaplanan sayıları sonunda `.0` ile yazdırması anlamına gelir. Bunu önlemek için, bölümü 'int'e (tamsayı) çevirmeyi deneyin, `int(num / 2)` gibi. Sonrasında bu değeri yazırabilirsiniz veya bir değişken içinde depolayabilirsiniz, örneğin: `num = int(num / 2)`.
+{: class="alert alert-info"}
+
+## Tekliği veya Çiftliği Kontrol Etmek
+Bu problemi çözebilmek için, bir tamsayının tek veya çift olduğuna karar vermeliyiz. Bildiğiniz ve sevdiğiniz operatörlerin dışında (+, -, \*, ve / gibi), programlama dilleri bir 'kalan' operatörüne sahiptir: %.
+
+```
+a % b
+```
+
+a'yı b'ye böldüğünüzde kalan sayıyı döndürür. Örneğin, 10 % 3, 1'e eşittir çünkü 10'u 3'e böldüğünüzde kalan 1 olacaktır. Herhangi bir sayıyı 2'ye böldüğünüzde, eğer sayı çiftse kalan 0 ve sayı tekse kalan 1'dir. Böylelikle,
+
+```
+n % 2 == 0
+```
+
+n'in çift olup olmadığına dair bir testtir.

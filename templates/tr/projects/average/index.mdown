@@ -1,0 +1,11 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Ortalama Fonksiyonu
+credit: Chris Piech ve Mehran Sahami
+solution: soln.py
+
+Aşağıdaki demoda iki girdi alan ve bunların ortalamasını döndüren bir fonksiyon gösterilmektedir:
+
+```
+def average(a, b):
+    # ... a ve b'nin ortalamasını döndürür ...
+```

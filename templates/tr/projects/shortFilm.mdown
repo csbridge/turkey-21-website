@@ -1,0 +1,91 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Kısa Film
+credit: Chris Piech, Keith Schwarz.
+translation: Ceren Kocaoğullar
+
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Çözümlü Örnek: [Yarı Yeşil]({{pathToRoot}}tr/projects/halfgreen.html),
+[Hedef Tahtası]({{pathToRoot}}tr/projects/target.html)<br/>
+Dosya: `short_film.py`
+
+<i>Oyuncak Hikayesi</i>, <i>Yukarı Bak (Up)</i> ve <i>Frozen</i> gibi animasyon filmlerinin bilgisayar programları kullanılarak yapıldığını biliyor muydunuz? Bu ödevde kısa bir film oluşturmak için bir program kullanacaksınız.
+
+## Mesaj Görüntüleme
+
+Her filmin bir başlangıcı ve bir sonu vardır. Bazen "Bir Zamanlar ..." diye, bazen bir başlık ile, bazense daha komik bir şeyle başlarlar. Filmin sonunda ise bazen "Son" yazar.
+
+Programınıza ekranda bir mesaj çizecek bir fonksiyon ekleyin (siyah arka plan üzerine) ve mesajı iki saniye ekranda görüntüleyin.
+
+```
+def display_message(canvas, message):
+  ...
+```
+
+Başlangıç mesajı, aşağıdaki ekranda olduğu gibi görünmelidir.
+
+<center>
+  <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/onceUpon.png">
+</center>
+
+Burada kullandığımız font (ve font büyüklüğü) şunlardır:
+
+```
+canvas.set_font(label, "Papyrus", 40)
+```
+
+Yazının rengini beyaz yaptığınızdan emin olun! İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için `delete` fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).
+
+```
+canvas.delete(your_object)
+```
+
+Tabii ki, bu fonksiyonu hikayenizi anlatmak için istediğiniz kadar kullanabilirsiniz!
+
+## Güneşi Batırmak
+
+Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için önce gökyüzünü, dünyayı ve güneşi çizin. Ardından, yavaş yavaş güneşin inişi animasyonunu gerçekleştirin. Gökyüzü tuvalin üst yarısını ve yer ise ikinci yarıyı kaplamalıdır. Programın başlangıcından ve birkaç saniye sonrasından alınmış aşağıdaki kareleri göz önünde bulundurun.
+
+<center>
+  <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/animation.png">
+</center>
+
+## get_sun_color Fonksiyonu
+
+Write a function that takes some parameter, and returns the color of the sun. You should specify the parameter of this function: for example, the time (in number of frames since the beginning of the movie), or the y position of the sun, or anything else you think would be useful for getting the correct color of the sun.
+
+Bazı parametreleri alan ve güneşin rengini döndüren bir fonksiyon yazın. Bu fonksiyonun parametresini belirtmelisiniz: örneğin, zaman (filmin başlangıcından bu yana kare sayısı olarak) veya güneşin y konumu veya Güneş'in doğru rengini elde etmek için yararlı olacağını düşündüğünüz herhangi bir şey olabilir.
+
+```
+def get_sun_color(...):
+  ...
+  return color
+```
+
+Fonkisyonun, kaç yineleme geçtiğine göre "ye", "turuncu" veya "kırmızı" renklerinden birini döndürmesini sağlayın.
+
+## Son Dokunuşlar
+
+Filminiz bittikten sonra, daha önce tanımlanan `display_message()` fonksiyonunuzu kullanarak bir bitirme mesajı görüntüleyin. Bitiş mesajı aşağıdaki ekrana benzemelidir.
+
+<center>
+  <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/theEnd.png">
+</center>
+
+## Daha da İyileştir
+
+Hikayenizi batan bir güneşten daha büyüleyici hale getirmek için istediğiniz her şeyi yapın. Bir aşk veya aksiyon hikayesi anlatabilir misiniz? Hayatınızı kolaylaştırmak için fonksiyonları kullanmayı unutmayın.
+
+<center>
+  <img style="width:500px" src="{{pathToRoot}}img/projects/shortfilm/poster.jpg">
+</center>
+
+Sahnenizi daha büyüleyici hale getirmek için daha fazla nesne de ekleyebilirsiniz. Bir gökkuşağı (veya çift gökkuşağı) nasıl olur? Gün batımlarının her zaman nesinin eksik olduğu hakkında bir fikriniz var mı? Yanan Boğaz Köprüsü'ne veya Charles Köprüsü'ne ne dersiniz?
+
+<div class="row">
+  <div class="col-md-12 col-lg-6">
+    <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/sunsetTrees.png"></img>
+  </div>
+  <div class="col-md-12 col-lg-6">
+    <img style="width:100%" src="{{pathToRoot}}img/projects/shortfilm/sunsetT2.png"></img>
+  </div>
+</div>

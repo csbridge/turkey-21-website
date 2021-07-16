@@ -1,0 +1,52 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Zıp Zıp Top
+credit: Mehran Sahami'nin bir örneği temel alınmıştır.
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Dosya: `bouncing_ball.py`
+
+Bir top oluşturan ve ekranın etrafında onu zıplatan bir grafik programı yazın. Yerçekimini göz ardı edin. Top sol ve sağ duvara çarptığında x eksenindeki yönünü, üst ya da alt duvara çarptığında ise y eksenindeki yönünü değiştirin.
+
+Aşağıdaki şekil alt duvardan sekerek hareket eden bir topu gösteriyor.
+
+<center>
+  <img style="width:600px;" src="{{pathToRoot}}img/projects/bouncingBall/demo.png">
+</center>
+
+## Aşama 1: Bir Top Yarat
+
+Top herhangi bir boyutta olabilir. Ekranda rastgele bir konumda başlamasını sağlayın.
+
+## Aşama 2: Topu Hareket Ettir
+
+Sonsuza kadar çalışan bir döngü yazın. Döngünün içinde topun konumunu güncelleyin ve durdurun. Programınızın en yukarısına `import time` satırını ekleyerek ve aşağıdakini yaparak topu durdurabilirsiniz:
+
+```
+time.sleep(seconds)
+```
+
+Eğer durdurmazsanız bilgisayar insan gözünün hareketi görebileceğinden çok hızlı olarak animasyonu oynatır!
+
+Tuval üzerinde grafik bir şekil taşıma fonksiyonu vardır:
+
+```
+canvas.move(object, dx, dy)
+```
+
+_dx_, nesnenin x yönünde hareket edeceği piksel sayısıdır. <BR>
+_dy_, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR>
+
+## Aşama 3: Topu Sektir
+
+Şimdi, topun konumunu güncellemeden önce, top duvara çarpmış mı diye kontrol etmeli ve çarptıysa, hareket ettiği yönü güncellemelisiniz.
+
+Yansımalar, "gelen açı yansıyan açıya eşittir" kuralına uymalı. Bunu, top sol ya da sağ duvara çarparsa x doğrultusundaki yönünü, alt ya da üst duvara çarparsa y doğrultusundaki yönünü değiştirerek bunu başarabilirsiniz.
+
+Topun konumunu nasıl bulacaksınız? Şu fonksiyonları kullanabilirsiniz:
+
+```
+canvas.get_left_x(obj)
+canvas.get_top_y(obj)
+```
+
+İşinize yarayabilecek başka bir Python fonksiyonu ise `abs(val)` - bir sayının mutlak değerini döndürür.

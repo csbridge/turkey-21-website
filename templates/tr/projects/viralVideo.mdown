@@ -1,0 +1,32 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Viral Video
+credit: Lisa Yan
+translation: Gül Sena Altıntaş
+File: `viral_video.py`
+
+Göreviniz TikTok'u Dünya'da popüler hale getirmek! Bu proje için iki girdi alan bir program yazmanız gerek: (1) hedef görüntüleme sayısı, ve (2) büyüme oranı. Programınız hedef görüntüleme sayısına ulaşmak için gereken gün sayısını hesaplayacak. Aşağıda bir örnek görebilirsiniz (kullanıcı girdileri mavi ile belirtilmiştir):
+
+<center>
+	<img style="width:500px" src="{{pathToRoot}}img/projects/viralvideo/output.png">
+	<p style="text-align:center"><i>(1) Hedef görüntüleme sayısı 100 ve (2) büyüme oranı 3 olan bir örnek.</i></p>
+</center>
+
+## Büyüme Oranı
+
+Videonuzun toplam görüntülenme sayısı her gün yukarıdaki büyüme oranıyla çarpılarak artar. Yukarıdaki örnekte üstel büyüme oranının 3 olması şunu ifade eder:
+
+* <span>1.</span> günde, 1 görüntüleme ile başlarsınız (kendi görüntülemeniz).
+* <span>2.</span> günde, görüntülenme sayınız 3'e çıkar.
+* <span>3.</span> günde, görüntülenme sayınız 9'a çıkar.
+
+... ve böyle devam eder.
+
+Programınızı `viral_video.py` dosyasında deneyin.
+
+## Üstel büyüme oranı
+
+Bu şekildeki büyüme modellerine **üstel büyüme oranı** denir ve viral videoların görüntülenme sayıları, maddi yatırımlar ve hastalıkların yayılması gibi olaylar bu modelle tarif edilir.
+
+* Tasarruf hesapları için iyi bir üstel büyüme oranı yaklaşık olarak yıllık 1.01 civarındadır.
+* Yıllık grip oranlarının kişi başına düşen üstel büyüme oranı 1.3'tür.
+* COVID-19'un kişi başına düşen üstel büyüme oranı 3.28 ile 9 arasındadır.

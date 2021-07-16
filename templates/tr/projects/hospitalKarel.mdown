@@ -1,0 +1,51 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Hastaneci Karel
+credit: Chris Piech
+translation: Gül Sena Altıntaş
+
+Handouts: [KarelReference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+Worked Examples: [UN Karel]({{pathToRoot}}tr/projects/unKarel/index.html), [Banish Winter]({{pathToRoot}}tr/projects/banishWinter/index.html)<br/>
+Day1: `hospital_karel.py`
+
+Dünyanın dört bir tarafındaki ülkeler, hastalanan herkesin tedavi gördüğünden emin olmak için
+hastane inşa eden robotları görevlendiriyor. Bu görev için Karel robotları seçildi. Sizin
+göreviniz de bu robotları programlamak.
+
+Karel programa satırın solunda aşağıdaki gibi başlıyor:
+
+<p>
+<center>
+	<img style="width:100%"  src="{{pathToRoot}}img/projects/hospitalkarel/hospitalstart.png">
+</center>
+</p>
+
+Fotoğraftaki her beeper bir malzeme yığınını temsil ediyor. Karel'ın görevi satır boyunca
+yürüyüp beeper'la işaretlenmiş yerlere hastane inşa etmek. Her hastane aşağıdaki fotoğraftaki
+gibi gözükmeli (üçer beeper'dan oluşan iki sütun):
+
+<p>
+<center>
+	<img style="width:50px"  src="{{pathToRoot}}img/projects/hospitalkarel/supplies.png">
+</center>
+</p>
+
+Yeni hastanenin köşesi malzeme yığınının bırakıldığı köşede bulunmalı. Program tamamlandığında, Karel
+gerekli hastaneleri yaratmış ve satırın sonunda olmalı. Yukarıda gösterilen başlangıç koşulları için
+sonuç şu şekilde gözükmelidir:
+
+<p>
+<center>
+	<img style="width:100%"  src="{{pathToRoot}}img/projects/hospitalkarel/hospitalend.png">
+</center>
+</p>
+
+Dünya hakkında aşağıdaki bigileri unutmayın:
+
+* Karel doğuya (east) bakarak (1, 1) koordinatlarında çantasında sonsuz sayıda beeper'la başlar.
+* Hastanelerin yerlerini gösteren beeper'lar yeterli sayıda hastaneyi üst üste gelmeyecek ya da
+duvarlarla çakışmayacak şekilde yerleştirileceğinden emin olabilirsiniz.
+* Son sütunda malzeme olmayacak.
+* Karel son sütunu da kapsayan bir hastane inşa ederse bitişte duvara çarpmamalı.
+
+Hastane İnşa Eden Karel projesini gerçekleştiren bir program yazın. Unutmayın, programınız
+yukarıdaki koşulları sağlayan tüm dünyalarda çalışmalıdır.

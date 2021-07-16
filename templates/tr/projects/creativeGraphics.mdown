@@ -1,0 +1,18 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Yaratıcı Grafikler
+credit: Lisa Yan
+translation: Serhat Arslan, Demet Tümkaya
+
+Bu bir bonus program!
+
+İstediniz her şeyi yapabilecek bir grafik programı yazın!!! Aşağıda yapabileceklerinize bir örnek bulunuyor:
+
+<center>
+  <img style="width:400px; border: 1px solid black;" src="{{pathToRoot}}img/projects/creativeGraphics/example.gif">
+</center>
+
+İşte bu da size yardım edebilecek bir Karel.
+
+<center>
+  <img src="{{pathToRoot}}img/projects/creativeGraphics/karel.png">
+</center>

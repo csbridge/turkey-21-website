@@ -1,0 +1,40 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Zıplayan Toplar
+credit: Tyler Conklin
+translation: Serhat Arslan, Demet Tümkaya
+
+Bu bir bonus program. Biraz zorlayıcı olabilir!
+
+Kanvas üzerinde zıplayan 2 farklı topu hareket ettiren bir program yazın. Eğer bir top duvara vurursa, ters yöne geri zıplamalıdır. 2 top birbirlerine çarpıp yine farklı yönlere zıplayabilirler. Aşağıdaki gif'te bir örnek gösterilmekte:
+
+<center>
+  <img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/bouncingBalls/multipleBalls.gif">
+</center>
+
+Gösterilen bu programda, her topun genişliği 50 pikseldir, fakat istediğin herhangi bir sayıyı kullanmakta özgürsün. Unutma, topları oluştururken onlara farklı, rastgele hızlar ve başlangıç X,Y pozisyonları vermek önemlidir.
+
+Bilgisayar bilimcileri büyük bir problemle karşılaştıklarında, onu küçük parçalarak bölmek ve bu şekilde ilerlemek çözüme yardım eder. Bu problemi parçalara ayırmanın bir yolu şu şekilde olabilir:
+
+1. Başlangıçta, ekrana farklı ve rastgele pozisyonlara sahip 2 top ekleyin.
++ Topların rastgele hızlarda hareket etmesini sağlayın.
++ Topların duvarlardan doğru şekilde zıplamaya başlamasını sağlayın. Bir grafiksel objenin X koordinatını `canvas.get_left_x(ball)` ile çağırabileceğinizi unutmayın (durum Y koordinatı için de geçerlidir).
++ Topların birbirine çarptıklarında zıplamalarını sağlayın. Bunu nasıl yapabiliriz?`canvas.find_overlapping(obj)` kullanarak 'obj' ile üst üste gelen tüm objelerin (eğer varsa) listesini elde edebiliriz. Bunu, `==` ve `!=` ile kontrol edebilirsiniz. Örneğin:
+
+```
+# Topun koordinatlarını alalım
+ball_coords = canvas.coords(ball)
+
+# Bu koordinatlara üst üste gelen (çakışan) tüm objeleri bulalım
+colliders = canvas.find_overlapping(ball_coords[0], ball_coords[1],
+	ball_coords[2], ball_coords[3])
+
+# 'Colliders' (çakışanlar) listesindeki her element için bir döngü oluşturarak and see if it is something
+# 'collider' yani çakışanın topun kendisinde farklı olup olmadığını görelim (bir obje her zaman kendisiyle üst üste gelir)
+for collider in colliders:
+	if collider != ball:
+		...
+```
+
+It may also help to write functions that return more than one thing.
+
+Bonus: Herhangi bir sayıda topu ekranda hareket ettirmek için listeleri kullanmayı deneyin! Toplar birbiriyle çarpıştığında/üst üste geldiğinde ne olduğu üzerine değişiklikler yaparak, zıplamayı daha doğal hala getirmeye de çalışabilirsiniz.

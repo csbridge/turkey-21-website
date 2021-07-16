@@ -1,0 +1,54 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Topla ve Biriktir
+credit: Lisa Yan
+translation: Kazim Okan Akgül
+
+Dosya: `running_sum.py`
+
+Kullanıcının girdiği tamsayıları okuyup bunların toplam değerini veren bir program yazınız. Programın çıktısı şöyle görünmelidir:
+
+```
+Tamsayıları birer birer girin. Size toplamı göstereceğim!
+Lütfen bir tamsayı girin: 3
+Toplam: 3
+Lütfen bir tamsayı girin: 4
+Toplam: 7
+Lütfen bir tamsayı girin: 5
+Toplam: 12
+Lütfen bir tamsayı girin: 10
+Toplam: 22
+Lütfen bir tamsayı girin: 3
+Toplam: 25
+Lütfen bir tamsayı girin: 4
+Toplam: 29
+Lütfen bir tamsayı girin: 1
+Toplam: 30
+Lütfen bir tamsayı girin: ...
+```
+
+## Programdan Çıkış
+
+Programınızı çalıştırmak için Pycharm Terminaline bunu yazmanız yeterlidir: `python3 runningsum.py` (Eğer Mac kullanıcısıysanız)
+or `py runningsum.py` (Eğer PC kullanıcısıysanız). Ancak bu program sonsuza kadar çalışır!
+
+Sonsuza kadar çalışan bir programdan çıkmak için Terminal'deyken klavyenizdeki `Ctrl-C` tuşlarına basın. Daha sonra programınızı tekrar çalıştırmak isterseniz Terminale `python3 runningsum.py` veya `py runningsum.py` yazarak bu işlemi gerçekleştirebilirsiniz.
+
+## Değişkenleri yazdırma
+
+Genellikle konsol programlarında, kullanıcıya bir string değeri yazdırmak gerekir. Yukarıdaki örneği incelersek:
+
+```
+Toplam: 55
+```
+
+Eğer programı yukarıdaki girdi ile çalıştırırsanız, 55 toplamı veren değişkende saklanan değer olur. Eğer bu değişken `sum`, olarak adlandırılırsa, değeri yazdırmak için şunu yazabilirsiniz:
+
+```
+print("Toplam: " + str(toplam))
+```
+
+Daha genel formu:
+
+```
+"String mesajı" + str(değişken_ismi) + "daha fazla string mesajı"
+```

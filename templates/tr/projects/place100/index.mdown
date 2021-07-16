@@ -1,0 +1,14 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: 100 Tane Yerleştir (ve çözümü)
+credit: Eric Roberts'ın ders notları
+translation: Serhat Arslan, Gül Sena Altıntaş
+solution: soln.py
+
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+File: `place_100.py`<br/>
+
+Hedefiniz Karel'ın başladığı yerin önündeki karede 100 beeper'dan oluşan bir yığın oluşturmasını sağlamak.  Lütfen art arda 100 kere putBeeper yazmayın!!! (ipucu: `for` döngüsü kullanın.)
+
+<center>
+<img style="width:700px" src="{{pathToRoot}}img/projects/place100/place100.png">
+</center>

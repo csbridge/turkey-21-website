@@ -1,0 +1,25 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Robot Yüzü
+credit: Eric Roberts tarafından yazılmış, Chris Piech ve Lisa Yan tarafından güncellenmiştir.
+solution: soln.py
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Ders Notları: [Grafikler Referansı]({{pathToRoot}}tr/resources/graphics.html)<br/>
+
+Bu resmi çizdiren bir program yazın. Verilmiş sabitleri (constant) kullanmalısınız, ama değerlerini (veya yüzün herhangi bir kısmının rengini) değiştirmekten çekinmeyin. </p>
+
+<center>
+	<img style="width:500px;border:1px solid #000000" src="{{pathToRoot}}img/projects/robotFace/face.jpg">
+</center>
+
+```
+FACE_WIDTH = 300      # Robot yüzünün genişliği
+FACE_HEIGHT = 350     # Robot yüzünün yüksekliği
+EYE_DIAMETER = 70     # Robot gözünün çapı
+EYE_Y_OFFSET = 40     # Başın tepesinden gözlerin tepesine kadar olan uzaklık
+EYE_X_SEPARATION = 40 # Sağ ve sol göz arasındaki uzaklık
+MOUTH_WIDTH = 150     # Ağzın genişliği
+MOUTH_HEIGHT = 30     # Ağzın yüksekliği
+MOUTH_Y_OFFSET = 200   # Başın tepesinden ağzın tepesine kadar olan uzaklık
+LABEL_Y = 40          # Ekranın tepesinden yazının merkezine kadar olan uzaklık
+```

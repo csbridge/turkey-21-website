@@ -1,0 +1,23 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Öne Çık (çözümü ile)
+credit: Eric Roberts'ın ders notları
+solution: soln.py
+
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+File: `step_up.py` <br/>
+
+Karel dünyada solda başlıyor. Karel'ı beeper'ı alıp çıkıntının üstüne taşıması için nasıl programlardınız?  Karel beeper'ı 2. Cadde ile 3. Bulvarın köşesinde bırakmalı ve sonra doğuda bir köşeye doğru daha ilerleyerek 4. Bulvar'da son bulmalı. Programınızın sonunda, Karel'ın dünyası sağdaki resimdeki gibi görünmeli.
+
+<center>
+<img style="width:700px" class="psetImg" src="{{pathToRoot}}img/projects/stepUp/stepUp.png">	
+</center>
+
+Eğer Karel sadece aşağıdaki komutları biliyorsa:
+```
+move()
+pick_beeper()
+put_beeper()
+turn_left()
+```
+
+Karel'ın sağa dönmesini nasıl sağlarsınız?

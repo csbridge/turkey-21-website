@@ -1,0 +1,24 @@
+<!--
+	A template used for every Turkish page - contains the nav bar, a container div, and the footer.
+-->
+
+<!--
+  A template used for every page - contains the header.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    %include templates/parts/header.ptl
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    % include('templates/tr/old/navBar.ptl', taMode=get('taMode', False))
+    
+    <div class="container">
+      
+      {{!base}}
+          
+      <!-- Footer -->
+      % include('templates/tr/old/footer.ptl', taMode=get('taMode', False))
+  </body>
+</html>

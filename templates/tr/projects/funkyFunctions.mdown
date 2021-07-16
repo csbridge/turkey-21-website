@@ -1,0 +1,77 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Fırlama Fonksiyonlar
+credit: Chris, Bryce, Lisa
+translation: Ceren Kocaoğullar, Serhat Arslan
+
+Örnek: [Ortalama Fonksiyonu]({{pathToRoot}}tr/projects/average/) <br/>
+
+## 1. Mad Max
+
+Dosya: `mad_max.py`
+
+Programı, üç sayının maksimumunu döndüren `mad_max` fonksiyonunu yazarak tamamlayın.
+
+```
+def mad_max(x, y, z):
+    # kodunuzu buraya yazın
+```
+
+`main` fonksiyonu sizin için yazılmış durumda:
+
+```
+def main():
+    print("4, 5, ve 6 sayılarının maksimumu:", mad_max(4, 5, 6))
+    print("-4, 4, ve 0 sayılarının maksimumu:", mad_max(-4, 4, 0))
+    print("3, 2, ve 1 sayılarının maksimumu:", mad_max(3, 2, 1))
+    print("0, 0, ve 0 sayılarının maksimumu:", mad_max(0, 0, 0))
+```
+
+Çıktınız şöyle görünmeli:
+
+```
+4, 5, ve 6 sayılarının maksimumu: 6
+-4, 4, ve 0 sayılarının maksimumu: 4
+3, 2, ve 1 sayılarının maksimumu: 3
+0, 0, ve 0 sayılarının maksimumu: 0
+```
+
+Python'da normalde bunun için kullanacağımız yerleşik bir `max` fonksiyonu olmasına rağmen, bu problem için onu kullanmamalısınız. Bunun yerine, `if`, `elif` ve `else` ifadeleri gibi başka şeylerle uygulama pratiği yapmanızı istiyoruz.
+
+## 2. Dog Years
+
+Dosya: `dog_years.py`
+
+Tüylü dostlarımızın insanlardan farklı bir oranda yaşlandığını herkes bilir. Kullanıcıdan bir insan yaşını (tam sayı olarak ifade edilir) soran ve insan yılı başına yedi köpek yılı olduğu gerçeğini kullanarak eşdeğer köpek yaşını yazdıran bir program yazın. Bir `DOG_YEARS_PER_HUMAN_YEAR` sabiti tanımlayın. Kullanıcıcının tamsayı girdiğini varsayabilirsiniz, ancak tam sayının pozitif olması şart değildir. Değilse, bir hata mesajı yazdırın. Kullanıcı 0 girerse, program durmalıdır.
+
+Programınız, `human_years` olarak adlandırılan bir tamsayıyı parametre olarak kabul eden `compute_dog_years` adlı bir fonksiyon tanımlamalıdır. Fonksiyon, dönüştürülmüş insan yaşını döndürmelidir. Daha sonra bu fonksiyonu çağırmak için `main` fonksiyonunu düzenlemelisiniz.
+
+
+```
+def compute_dog_years(human_years):
+    ... kodunuzu buraya yazın ...
+```
+
+Main fonksiyonu zaten sizin için yazılmıştır, ancak `compute_dog_years` fonksiyonunuzu çağıran ve doğru ifadeyi yazdıran kod eksik.
+
+```
+def main():
+    user_input = int(input("İnsan yılıyla bir yaş girin: "))
+    while user_input != 0:
+        if user_input < 0:
+            print("Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin:")
+        else:
+            ... kodunuzu buraya yazın ...
+        user_input = int(input("İnsan yılıyla bir yaş girin: "))
+```
+
+
+İşte programınızın bir çalıştırmasının nasıl görünmesi gerektiğine dair bir örnek (kullanıcı girdilerinin sırayla -12, 13 ve 0 olduğunu düşünürsek):
+
+
+```
+İnsan yılıyla bir yaş girin: -12
+Üzgünüz, lütfen pozitif bir sayı veya çıkmak için 0 girin
+İnsan yaşında bir yaş girin: 13
+Köpek yılıyla yaş 91
+İnsan yılıyla bir yaş girin: 0
+```

@@ -1,0 +1,28 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Hedef Tahtası
+credit: Eric Roberts, Mehran Sahami
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Handouts: [Graphics Reference]({{pathToRoot}}tr/resources/graphics.html)<br/>
+Worked Example: [Draw People]({{pathToRoot}}tr/projects/drawPeople/)<br/>
+File: `target.py`
+
+Farz edin ki, şunun gibi görünen bir okçuluk hedef tahtasının resmini çizdiren bir program ortaya koymanız için işe alındınız:
+
+<center>
+  <img style="width:500px;border: 1px solid #000000" src="{{pathToRoot}}img/projects/target/target.png">
+</center>
+
+Bu şekil sadece doğru sırayla çizilmiş üç ovalden oluşuyor, ikisi kırmızı ve biri beyaz. En dış çemberin yarıçapı 150 piksel, beyaz çemberin yarıçapı 100 piksel, ve en içteki kırmızı çemberin yarıçapı ise 50 piksel. Şekil pencereye göre ortalanmalı.
+
+# Sabitler
+
+Bu proje için başlangıç kodunun main() fonksiyonunun dışına yazılmış olan şu satırlara sahip olduğunu fark edebilirsiniz:
+
+```
+BIG_CIRCLE_RADIUS = 150
+MEDIUM_CIRCLE_RADIUS = 100
+SMALL_CIRCLE_RADIUS = 50
+```
+
+Bu satırlar sabitleri tanımlar: yani değerleri asla değişmeyen değişkenler. Bunlar tüm fonksiyonların dışında tanımlandığından, değerlerini programın herhangi bir noktasında okuyabilirsiniz. Bu programı 150, 100 ve 50 sayılarını doğrudan ihtiyacınız olan her yerde kullanarak da yazabilirsiniz, ancak sabitleri kullanmak programınızın okunmasını çok daha kolay hale getirir.

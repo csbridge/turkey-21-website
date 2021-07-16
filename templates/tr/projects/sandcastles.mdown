@@ -1,0 +1,26 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Kumdan Kaleler
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Aşağıdaki programı yazarak değişkenleri konusunda egzersiz yapabilirsiniz.
+
+## 1. Merhaba Dünya
+
+File: `hello_world.py`
+
+Ekrana "Merhaba Dünya" (ya da istediğiniz herhangi bir mesaj) yazan bir konsol programı yazın:
+
+```
+Merhaba Dünya!
+```
+
+## 2. Ay'daki Ağırlığım
+
+File: `moon.py`
+
+Kullanıcı (bir Dünyalı) kaç kilogram olduğu bilgisini girer. Sizin programınız da bu bilgi ile kullanıcının Ay üzerinde kaç kilogram olacağı (Dünya ağırlığının %16,5'i) bilgisini ekrana yansıtır.
+
+```
+Dünya'daki ağırlığınızı giriniz: 60
+Ay'daki ağırlığınız 9.9
+```

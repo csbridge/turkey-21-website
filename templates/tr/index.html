@@ -1,0 +1,151 @@
+% rebase('templates/tr/template.ptl', title="Home")
+
+<div class="page-header">
+  <div class="container">
+    <div>
+      <div id="logo">
+        <img id="logoImg" src="{{pathToRoot}}img/logo.png" />
+      </div>
+      <div id="headerText" style="padding-bottom: 15px;">
+        <div class="h1" style="margin-top: 0px; font-size: 40px;">
+          Bilgisayar Bilimine Giriş
+        </div>
+        <div>
+          2020 Yaz
+        </div>
+        <div>
+          4 - 20 Ağustos, Online
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+
+% include('templates/announcements/announcements.ptl', lang='tr')
+
+<div>
+    <h2>
+      Bu Dersin Amacı
+    </h2>
+
+    <p>
+      Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza
+      öğrenmeye devam edebilecek seviyede programcılığın temellerini
+      öğretmektir. Dersler, Stanford, Koç Üniversitesi ve CTU'dan gelen bir grup
+      eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin
+      Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden
+      öğreneceksiniz.
+    </p>
+</div>
+</hr>
+
+<!-- Daily schedule / list of programs -->
+<div class="section" id="schedule">
+	<h2>Programlar</h2>
+  <!--
+	<div class="alert alert-info">
+	  Buradan lablar sırasında programlar üzerinde nasıl çalışacağınıza bakabilirsiniz: <a href="{{pathToRoot}}en/handouts/eclipse.html">buraya tıklayın</a>.
+	</div>
+  -->
+	%include("templates/programs/projectsTable.ptl", lang="tr")
+</div>
+
+<!-- Course Staff -->
+<div class="section" id="staff">
+	<h2>Öğretmenler</h2>
+	<%
+	# A list of the rows of staff members.
+	# Each row is a list of the staff members to display photos for,
+	# with each staff member being a (name, image file) tuple.  The
+	# image files are assumed to live in img/staff/.
+	courseStaff = [
+	[
+	  ("Nick T.", "nickt.jpg"),
+	  ("Ondra", "ondra.jpg"),
+	  ("Ayca", "Ayca.jpg"),
+	  ("Chris", "chris.jpg"),
+	  ("Nick M.", "nickm.jpg"),
+	  ("Josef", "Josef.jpg"),
+	],
+	[
+	  ("Yosefa", "Yosefa.JPG"),
+	  ("Burcu", "Burcu.jpg"),
+	  ("Lisa", "lisa.jpg"),
+	  ("Ceren", "ceren.PNG"),
+	  ("Ahmet", "Ahmet.png"),
+	  ("Anna", "Anna.jpg"),
+	],
+	[
+	("Demet", "Demet.jpeg"),
+	  ("Eddie", "Eddie.jpg"),
+	  ("Eliška", "Eliška.jpg"),
+	  ("Emilia", "Emilia.jpg"),
+	  ("Emirhan", "Emirhan.jpg"),
+	  ("Eren", "Eren.jpeg"),
+	  
+	],
+	[
+	("Ezgi", "Ezgi.jpg"),
+	  ("Gaby", "Gaby.jpeg"),
+	  ("Gül Sena", "Gül Sena.JPG"),
+	  ("Honza", "Honza.jpeg"),
+	  ("Jan", "Jan.jpg"),
+	  ("Jaroslav", "jaroslav.jpg"),
+	  
+	],
+	[
+	("Jillian", "jillian.jpg"),
+	  ("Julie", "Julie.jpeg"),
+	  ("Melis", "Melis.jpg"),
+	  ("Necla", "Necla.jpg"),
+	  ("Okan", "Okan.png"),
+	  ("Oya", "Oya.jpg"),
+	  
+	],
+	[
+	("Ozan", "Ozan.jpg"),
+	  ("Pinar", "Pinar.jpeg"),
+	  ("Radek", "Radek.jpg")
+	],
+]
+	%>
+
+	% for i in range(len(courseStaff)):
+	  	<div class="row">
+			% for staffMember in courseStaff[i]:
+		  		<div class="col-xs-2">
+					<div class="thumbnail">
+			  			<img class="thumbnailImg" src="{{pathToRoot}}img/staff/{{staffMember[1]}}" alt="profile picture">
+				  		<div class="caption">
+							<b>{{staffMember[0]}}</b>
+				  		</div>
+					</div>
+		  		</div>
+			% end
+	  	</div>
+	% end
+</div>
+
+<hr/>
+
+<!-- Müfredat Özeti -->
+<div class="section" id="playWithKarel">
+	<h2>Müfredat</h2>
+	<img src = "{{pathToRoot}}img/resources/curriculum.jpg" style="width:100%"></img>
+</div>
+
+
+<!--<div class="section" id="playWithKarel">
+	<h2>
+		Karel'la oynayın
+	</h2>
+
+	<p>Stanford'un üniversite öğrencilerini programlama ile tanıştırmak için kullandığı robot, Karel'la tanışın.</p>
+
+	<p>Karel'ın komutlarını kullanarak beeper'ı çıkıntının üstüne taşıtın. Normalde programınızı PyCharm isimli bir uygulamada yazacaksınız ama başlangıç için sitemize küçük bir arayüz yaptık:
+	</p>
+
+	%include templates/parts/playWithKarel.ptl
+</div>-->

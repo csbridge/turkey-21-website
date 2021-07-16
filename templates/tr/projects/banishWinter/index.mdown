@@ -1,0 +1,22 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Kışa Veda (ve çözümü)
+credit: Eric Roberts'ın ders notlarını temel alır, Zach Birnholz ve Lisa Yan tarafından güncellenmiştir
+solution: soln.py
+translation: Ceren Kocaoğullar
+
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+File: `banish_winter.py`<br/>
+
+Karel, Stanford / CTU / Koç kampüsünde yürümek ve bahar için biraz bahçe işleri yapmak istiyor. Bahar başladı, ancak kampüs ağaçları henüz bunu fark edemedi ve hala yapraksızlar. Karel, batıdan doğuya doğru kampüs boyunca yürümeli, tüm ağaçları yapay yapraklarla süslemeli ve kampüsü şu şekilde dönüştürmeli:
+
+<center>
+<img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter1.png">
+</center>
+
+Sorun karmaşık çünkü Karel her ağacın ne kadar uzun olduğunu ya da ağaçlar arasındaki mesafeleri bilmiyor. Ancak beeper çantasında tüm ağaçları süslemeye başlayan yeterince beeper olduğunu ve dünyanın (CTU kampüsü) 9 boşluk genişliğinde olduğunu biliyor. Yukarıdaki iki anlık görüntüye bakarak program gereksinimini anlamaya çalışın (dünya dosyasının adı `banish_winter.w`.) Programınız yalnızca bu dünyada değil, aşağıdaki dünya için de çalışmalıdır (`banish_winter2.w`):
+
+<center>
+<img style="width:800px" src="{{pathToRoot}}img/projects/banishWinter/banishWinter2.png">
+</center>
+
+Yukarıdaki gereksinimleri karşılayan **herhangi bir dünyada** çalışan bir programı nasıl yazabiliriz?

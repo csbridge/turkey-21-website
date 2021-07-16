@@ -1,0 +1,19 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Beeper Hattı
+credit: Written by Chris Piech
+translation: Serhat Arslan, Gül Sena Altıntaş
+solution: soln.py
+
+Handouts: [Karel Reference](https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html)<br/>
+File: `beeper_line.py`
+
+Hedefiniz Karel'ın dünyasının ilk satırını beeper'larla doldurmak. Karel'ın doğuya (east) dönük bir şekilde sol alt köşede başladığını varsayabilirsiniz.  Örneğin, programınızı soldaki dünyada çalıştırırsanız, sağdaki dünyayı üretmeli.
+
+<center>
+	<img style="width:600px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine1.png">	
+</center>
+Programınız farklı büyüklüklerdeki dünyalar için de çalışmalı. Örneğin AYNI programı biraz daha büyük bir dünyada çalıştırırsak Karel beeper'ları doğru şekilde yerleştirebilmeli. Bu demek oluyor ki `for` döngüsü kullanamayız, çünkü programın çalıştırılacağı dünyanın büyüklüğünü önceden bilmiyoruz.
+
+<center>
+	<img style="width:700px"  src="{{pathToRoot}}img/projects/beeperLine/beeperLine2.png">	
+</center>

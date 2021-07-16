@@ -1,0 +1,78 @@
+template: templates/tr/projects/projectTemplate.ptl
+title: Sıralayıcı
+credit: Chris Piech
+translation: Serhat Arslan, Ceren Kocaoğullar
+
+Kullanıcıdan 10 sayı vermesini isteyin ve bu sayıları sıralı olarak yazdırın. İşte size bir örnek çıktı:
+
+```
+> 9
+> 2
+> 12
+> 34
+> -5
+> 12
+> 0
+> 23
+> 4
+> 1
+-5
+0
+1
+2
+4
+9
+12
+12
+23
+34
+```
+
+Kullanıcının verdiği sayıları listede saklayın. Bir liste içinde bulunan sayıları sıralamak için iu fonksiyonu kullanabilirsiniz:
+
+```
+my_list.sort()
+```
+
+"sort" fonksiyonunu çağırmak, verilen liste içindeki sayıları yeniden sıralar. Örnek olarak aşağıdaki listenin sıralanmasını inceleyebilirsiniz:
+
+![Image of list of numbers before and after sorting - afterwards the list is in ascending order]({{pathToRoot}}img/projects/sorted/sorting.png){: style="width: 400px"}
+
+## İpuçları
+
+Sayılardan oluşan bir liste yaratmak için:
+
+```
+my_list = []
+```
+
+Kullanıcıdan bir integer (tamsayı) almak için şunu yapabileceğinizi hatırlayın:
+
+```
+number = int(input(prompt))
+```
+
+Listeye bir eleman eklemek için:
+
+```
+my_list.append(newValue)
+```
+
+Listedeki bir elemanı almak için:
+
+```
+my_list[index]
+```
+
+Listedeki tüm elemanlar üzerinde gezmek için:
+
+```
+for i in range(len(my_list)):
+    # my_list[i] ile bir şeyler yap
+}
+
+-- OR --
+
+for elem in my_list:
+	# elem ile bir şey yap
+```

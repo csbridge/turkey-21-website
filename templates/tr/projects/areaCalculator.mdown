@@ -1,0 +1,69 @@
+template: templates/en/projects/projectTemplate.ptl
+title: Area Calculator
+credit: Lisa Yan
+translation: Ceren Kocaoğullar
+File: `area_calculator.py`
+
+Kullanıcıdan float türünde bir yarıçap okuyan ve daha sonra dairenin alanını yazdıran bir program yazın. <span class = "blue"> Yarıçap geçersizse (negatif veya sıfır) bir hata yazdırın </span>. İşte programın üç örnek çalışması:
+
+```
+Lütfen bir daire yarıçapı girin: 5
+Dairenizin alanı: 78.53981633974483
+```
+
+```
+Lütfen bir daire yarıçapı girin: -3
+Hata! Geçersiz bir yarıçap girdiniz.
+```
+
+```
+Lütfen bir daire yarıçapı girin: 0
+Hata! Geçersiz bir yarıçap girdiniz.
+```
+
+## Görev #1: Dairenin alanını hesaplamak
+
+Kullanıcıdan bir yarıçap isteyen bir kod yazın ve ardından karşılık gelen dairenin alanını ekrana basın.
+
+Bir dairenin yarıçapı (bazen `r` olarak da adlandırılır) göz önüne alındığında, dairenin alanını, yarıçapın karesi π katını hesaplayabilirsiniz (bkz. [Wikipedia](https://en.wikipedia.org/wiki/Area_of_a_circle)).
+
+$$\text{Alan} = \pi \cdot \text{yarıçap} ^2$$
+
+Pi nedir? π (pi), Python'un matematik kütüphanesinde sakladığı matematiksel bir sabittir. Projenizde, matematik kütüphanesine erişmenizi sağlayan `import math` satırını ekledik. Bu satırı silmeyin. `main()` fonksiyonunuzun içinde π'ye erişmek için `math.pi` kullanabilirsiniz. Örneğin, konsola π'yi basmak istiyorsak:
+
+```
+def main():
+    print(math.pi)
+```
+
+## Görev #2: Kullanıcının bir <span class = "blue"> geçerli bir sayı </span> girdiğinden emin olun
+
+The radius value which a user inputs should be positive. It doesn't make sense to calculate the area if the radius is zero or negative! If they enter an "invalid" radius print out "Error! You entered an invalid radius."
+
+Bir kullanıcının girdiği yarıçap değeri pozitif olmalıdır. Yarıçap sıfır veya negatifse alanı hesaplamanın bir anlamı yoktur! Kullanıcılar "geçersiz" bir yarıçap değeri girerlerse ekrana "Hata! Geçersiz bir yarıçap girdiniz." mesajını bastırın.
+
+## Görev #3: Kodunuzu <span class="blue">while True</span> döngüsüne sokun
+
+Bütün kodunuzu bir while True döngüsünün içine koymayı deneyin:
+
+```
+while True:
+   # sizin kodunuz
+```
+
+böylece programınız kullanıcıdan sürekli olarak bir yarıçap ister ve alanı tekrar tekrar hesaplar.
+
+İşte programın örnek bir çalışması:
+
+```
+Lütfen bir daire yarıçapı girin: 5
+Dairenizin alanı: 78.53981633974483
+
+Lütfen bir daire yarıçapı girin: -2
+Hata! Geçersiz bir yarıçap girdiniz.
+
+Lütfen bir daire yarıçapı girin: 9
+Dairenizin alanı: 254.4690049412345
+
+Lütfen bir daire yarıçapı girin:
+```
