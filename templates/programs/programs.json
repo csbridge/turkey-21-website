@@ -2,6 +2,7 @@
     {
         "title_en": "Karel",
         "title_tr": "Karel",
+        "visible_after": "2021062809",
         "bonus": false,
         "sections": [
             {

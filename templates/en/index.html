@@ -20,7 +20,7 @@
         </div>
 	</div>
 </div>
-	
+
 <br />
 
 % include('templates/announcements/announcements.ptl', lang='en')
@@ -36,13 +36,14 @@
 <hr/>
 
 <!-- Daily schedule / list of programs -->
-<div class="section" id="schedule">
-	<h2>Programs</h2>
-	%include("templates/programs/projectsTable.ptl", lang="en")
+<div class="visible-after" data-visible-after="2021062810">
+	<div class="section" id="schedule">
+		<h2>Programs</h2>
+		%include("templates/programs/projectsTable.ptl", lang="en")
+	</div>
+
+	<hr/>
 </div>
-
-<hr/>
-
 <!-- Course Staff -->
 <div class="section" id="staff">
 	<h2>Teachers</h2>

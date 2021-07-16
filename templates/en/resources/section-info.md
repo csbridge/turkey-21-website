@@ -17,7 +17,7 @@ title: What to Expect for Section
     <li>In section, we’ll <b>answer questions, go over common errors or misconceptions, and discuss sample problems</b> in more detail than we can in lecture.</li>
 </ul>
 <p>
-	We have a large team of wonderful Section Leaders, whose jobs are to facilitate each of these sections. One of them will specifically be your section leader for the entire course. You and a group of about 7 other students will attend their section every day. We hope you will all get to know each other throughout the course.
+	We have a large team of wonderful Section Leaders, whose jobs are to facilitate each of these sections. One of them will specifically be your section leader for the entire course. You and a group of about 7-10 other students will attend their section every day. We hope you will all get to know each other throughout the course.
 </p>
 
 <hr />
@@ -114,7 +114,7 @@ title: What to Expect for Section
 <!-- Personal Privacy in Section -->
 ### Personal Privacy and Safety in Section
 
-We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)</b>.
+We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)</b>. We encourage students to turn on their video but we do not require it. 
 
 Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://online.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
 

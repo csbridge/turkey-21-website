@@ -33,8 +33,11 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Karel Reference"] = {"en": "Karel Reference", "tr": "Karel Referansı"}
 	translation_dictionary["Python Reference"] = {"en": "Python Reference", "tr": "Python Referansı"}
 	translation_dictionary["Graphics Reference"] = {"en": "Graphics Reference", "tr": "Grafikler Referansı"}
+	translation_dictionary["References"] = {"en": "References", "tr": "TODO"}
+	translation_dictionary["Software"] = {"en": "Software", "tr": "TODO"}
 	translation_dictionary["Course Information"] = {"en": "Course Information", "tr": "Program Bilgileri"}
 	translation_dictionary["General Info"] = {"en": "General Info", "tr": "Genel Bilgiler"}
+	translation_dictionary["Code of Conduct"] = {"en": "Code of Conduct", "tr": "TODO"}
 	translation_dictionary["[Student] Course FAQs"] = {"en": "[Student] Course FAQs", "tr": "[Öğrenciler] Sıkça Sorulan Sorular"}
 	translation_dictionary["Section Info"] = {"en": "Section Info", "tr": "Grup Bilgileri"}
 	translation_dictionary["Install PyCharm"] = {"en": "Install PyCharm", "tr": "PyCharm Kurulumu"}
@@ -74,22 +77,35 @@ Note: when adding support for additional languages, also make sure to add the ab
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Resources"][lang]}}<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">{{translation_dictionary["Karel Reader"][lang]}}</a></li>
-							<li><a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">{{translation_dictionary["Karel Reference"][lang]}}</a></li>
-
-							<!-- Divider only visible once Python resources visible -->
-							<li 
+							<li class="dropdown-header">{{translation_dictionary["References"][lang]}}</li>
+							<li
 								% if not get('taMode', False):
-									class="divider visible-after" data-visible-after="2020080600"
-								% else:
-									class="divider"
+									class="visible-after" data-visible-after="2021062800"
 								% end
-							/>
+							>
+								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">{{translation_dictionary["Karel Reader"][lang]}}</a>
+							</li>
+
+							<li
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2021062800"
+								% end
+							>
+							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">{{translation_dictionary["Karel Reference"][lang]}}</a></a>
+							</li>
+
+							<!-- Divider gap only visible once Python resources visible -->
+							<div
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2021063000"
+								% end
+								style="margin-bottom: 13px;"
+							></div>
 
 							<!-- Python reader visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 								% end
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">{{translation_dictionary["Python Reader"][lang]}}</a>
@@ -98,16 +114,22 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<!-- Python reference visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2020080600"
+									class="visible-after" data-visible-after="2021063000"
 								% end
 							>
 								<a href="{{pathToRoot}}{{lang}}/resources/quick-python.html">{{translation_dictionary["Python Reference"][lang]}}</a>
 							</li>
 
+							<div
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2021070200"
+								% end
+								style="margin-bottom: 13px;"
+							></div>
 							<!-- Graphics reference visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2020081000"
+									class="visible-after" data-visible-after="2021070200"
 								% end
 							>
 								<a href="{{pathToRoot}}{{lang}}/resources/graphics.html">{{translation_dictionary["Graphics Reference"][lang]}}</a>
@@ -118,15 +140,18 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<!-- Yosefa's Part -->
 							<li class="dropdown-header">{{translation_dictionary["Course Information"][lang]}}</li>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/general-info.html">{{translation_dictionary["General Info"][lang]}}</a></li>
+							<li><a href="{{pathToRoot}}{{lang}}/resources/code-of-conduct.html">{{translation_dictionary["Code of Conduct"][lang]}}</a></li>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/student-faq.html">{{translation_dictionary["[Student] Course FAQs"][lang]}}</a></li>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/section-info.html">{{translation_dictionary["Section Info"][lang]}}</a></li>
 							<!-- End Yosefa's Part -->
 
 							<li class="divider" />
 
+							<li class="dropdown-header">{{translation_dictionary["Software"][lang]}}</li>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/install.html">{{translation_dictionary["Install PyCharm"][lang]}}</a></li>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/pycharm-how-to.html">{{translation_dictionary["How to use PyCharm"][lang]}}</a></li>
-							<li class="divider" />
+							<!-- weird bug where this wont display unless height is 2-->
+							<li class="divider"/>
 							<li><a href="{{pathToRoot}}{{lang}}/resources/submission-oh.html">{{translation_dictionary["Submission/Office Hours"][lang]}}</a></li>
 						</ul>
 					</li>
@@ -148,7 +173,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Lectures"][lang]}} <b class="caret"></b></a>
 						% include('templates/parts/lecturesDropdown.ptl')
 					</li>
-					
+
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="{{pathToRoot}}{{lang}}/bonus-index.html">{{translation_dictionary["Bonus"][lang]}}</a></li>
@@ -185,7 +210,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 		url = url.replace("/en/", "/tr/");
 		window.location.href = url;
 	}
-	
+
 	function changeToEnglish() {
 		var url = window.location.href;
 		url = url.replace("/tr/", "/en/");

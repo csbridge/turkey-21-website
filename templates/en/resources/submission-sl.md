@@ -7,7 +7,7 @@ title: Accessing Student Submissions
 
 Students submit their code to Edstem twice a day. **It is okay if they don't finish everything, or if they are still working.** We just want to know that they are keeping up with the material. Please be sure to give this messaging to your session <u>in the first tea time</u>. 
 
-They will also need to submit their code for office hours and debugging help. They do not need to submit if they have onceptual questions or are looking for general problem-solving approaches. They can resubmit as many times as they want.
+They will also need to submit their code for office hours and debugging help. They do not need to submit if they have conceptual questions or are looking for general problem-solving approaches. They can resubmit as many times as they want.
 
 [Click here]({{pathToRoot}}en/resources/submission-oh.html) for the Student submission process.
 

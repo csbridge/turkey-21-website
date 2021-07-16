@@ -7,7 +7,7 @@ _Do you have a question about Section Leading for CS Bridge? It might be answere
 
 ## General
 
-Welcome! We're excited to have you on board as a Section Leader for this online version of CS Bridge. There are Section Leaders from Czech Technical University in the Czech Republic, Koç University in Turkey, and Stanford University in the United States. Some of you have been a Section Leader for the CS Bridge in-person program in past summers, some of you are brand new to the Section Leader role, **but ALL of you are new to teaching CS Bridge online**. This will be a learning experience for all involved! Our goal is to provide you with the resources you need to help high school students learn a brand new skill - programming!
+Welcome! We're excited to have you on board as a Section Leader for this online version of CS Bridge. There are Section Leaders from Czech Technical University in the Czech Republic, Koç University in Turkey, and Stanford University in the United States. This will be a learning experience for all involved! Our goal is to provide you with the resources you need to help high school students learn a brand new skill - programming!
 
 ## Platforms We Will Be Using
 
@@ -49,33 +49,20 @@ Below is the calendar for the program. The Section Leader Team Meeting is NOT on
 Click on one of the three buttons below to set the calendar to your timezone.
 
 <div class="panel-group" id="accordion">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-        Timezone: Czech</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FPrague&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;showTabs=1&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </div>
-  </div>
   <div class="panel panel-danger">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-        Timezone: Turkey</a>
-      </h4>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          Timezone: Turkey</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
       </div>
     </div>
   </div>
-</div>
   <div class="panel panel-warning">
     <div class="panel-heading">
       <h4 class="panel-title">
@@ -85,7 +72,7 @@ Click on one of the three buttons below to set the calendar to your timezone.
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FSanFrancisco&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_s7vcjb0l3rv6b0j78f8kdrbrp4%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -93,10 +80,10 @@ Click on one of the three buttons below to set the calendar to your timezone.
 
 ### What will **lectures** look like?
 
-Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where students will learn the core concepts of the class.
+Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The instructors for the course will take turns giving the lectures. This is where students will learn the core concepts of the class.
 
-- Lectures will be delivered LIVE through Zoom and will be recorded and posted on Ed so students can refer back to them later if they need to. If students want to ask questions during lecture, they can. The Head TA will help by monitoring the chat.
-- You do not need to attend lecture.
+- Lectures will be delivered LIVE through Zoom and will be recorded and posted on Ed so students can refer back to them later if they need to. If students want to ask questions during lecture, they can. We'll ask for a couple of Section Leaders to volunteer to help by monitoring the chat.
+- You do not need to attend lecture (unless you've volunteered to help with the Q&A).
 
 ### What is **quickstart**?
 
@@ -104,11 +91,11 @@ This can be thought of as time that you are supervising students as they work. I
 
 ### What is **tea time**?
 
-This is an opportunity for you to get to know a small group of students better. You can do some ice breakers as a form of social time or you can have discussions about cs. Due to the time difference, the Koç and CTU SLs will run these sessions so the Stanford SLs' students will be distributed among the Koç and CTU SLs.
+This is an opportunity for you to get to know a small group of students better. You can do some ice breakers as a form of social time or you can have discussions about cs.  Due to the time difference, the Turkey SLs will run these sessions so the Stanford SLs' students will be distributed among the Turkey SLs.
 
 ### What will the **office hours/work** block look like?
 
-These office hours will be help sessions with opportunities for small breakout sessions over Zoom.
+These office hours will be help sessions with opportunities for small breakout sessions using Nooks.
 
 - The Koç and CTU SLs will be broken up into two groups and assigned to the following office hours:
 
@@ -118,24 +105,24 @@ These office hours will be help sessions with opportunities for small breakout s
 
 - Stanford SLs will run all evening office hours.
 
-We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there in the Zoom who can help them. There will be a system for students to submit the code they need help with when they sign up for the office hours so that you can see their code and help them in a breakout room. There will be one or two SLs hosting the Zoom office hour session who will pair off SLs and students into breakout rooms for individual help.
+We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there on Nooks who can help them. There will be a system for students to submit the code they need help with when they sign in for the office hours so that you can see their code and help them in a breakout room. One Section Leader will need to remain in the main room and put students into a breakout room with a Section Leader as they become available. 
 
 ### What is the difference between **morning submit** and **evening submit**?
 
-Students will be submitting two projects per day - once for the project they've been working on in the morning (morning submit) and once in the evening for the project they've been working in the second half of the day (evening submit). Submissions will be made directly to Ed.
+Students will be submitting two assignments per day - once for the assignment they've been working on in the morning (morning submit) and once in the evening for the project they've been working in the second half of the day (evening submit). Submissions will be made directly to Ed.
 
-### Why is there a **free play** and a **dinner** block?
+### When is it **break time** for students and for Section Leaders?
 
-We wanted to make sure that it's clear to students when they will be working on CS Bridge activities and when they are not expected to be at their computer working on the program. Free play and dinner are unstructured time blocks with **NO CS Bridge activities**. Students should take a huge break during this time (step away from the computer and be kids).
-We've blocked out time for dinner 5-7pm (CZ) and 6-8pm (TU) so that students, families, SLs can make sure to have dinner before the evening activities begin. Lunch isn't labeled in the schedule but it'd be after 12:30 (CZ) and after 1:30 (TU).
+There will be **NO CS Bridge activities** for students between 11:30am - 1:00pm PT. Students should take a break during this time (step away from the computer and be kids and eat lunch). If a student doesn't come to Office Hours, then they can either take a break or work on the assignment on their own.
+Section Leaders will have a break during the Office Hour block they haven't been assigned to as well as before and after the SL team meeting and during lectures if you don't want to attend.
 
 ### What will happen in the **SL team meeting**?
 
-This meeting will be lead by the Lecturers and is a time for ALL SLs to meet (via Zoom) to share feedback and to focus on different aspects of the program. It is also an opportunity for SL training.
+This meeting will be held everyday at 12pm and will be lead by the Lecturers and is a time for ALL SLs to meet (via Zoom) to share feedback and to focus on different aspects of the program. It is also an opportunity for SL training.
 
 ### What will **section** look like?
 
-Sections will be held in the evening (morning for Stanford) on Zoom. Every Section Leader will have their **own** section of about 8 students.
+Sections will be held in the evening (morning for Stanford) on Zoom. Every Section Leader will have their **own** section of about 7-10 students.
 
 - You will be assigned a group of students
 
@@ -143,27 +130,27 @@ Sections will be held in the evening (morning for Stanford) on Zoom. Every Secti
 
 ### What will the **social activity** look like?
 
-We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell the Head TA! These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
+We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell Yosefa! You'll be asked to help run social activities. These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
 
 ## Who to Ask/Tell for What
 
 ### Who do I contact if I'm having issues with section or office hours?
 
-Contact the Head TA, Ceren.
+Contact the Program Manager, Yosefa at ygilon@stanford.edu 
 
 ### What if I can't make it to my section on a specific day, who do I tell?
 
-If you are sick or can't make it to your section for another reason, communicate this with the Head TA, Ceren, as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed.
+If you are sick or can't make it to your section for another reason, communicate this with Yosefa, as soon as possible. We will then ask for a volunteer to take your students for that section and students will be notified of the Zoom link for the section on Ed.
 
 ### Who do I contact if I'm having personal issues or if one of my students is having a serious personal issue?
 
-Please contact either Ayça or Burcu (Koç), Josef (CTU), or Yosefa (Stanford). Contact information can be found in the welcome message in the Welcome post on the Section Leaders Ed page [here](https://us.edstem.org/courses/972/discussion/94282).
+Please contact Yosefa. 
 
 ## General Questions
 
 ### If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?
 
-There is a **Reflection** category in the Ed Section Leader group. Once the program starts, we encourage you to fill out the reflection form that we've linked to in Ed [here](https://us.edstem.org/courses/972/discussion/94782).' This form will help you reflect on your own teaching experience and will help the lecturers get a pulse on how things are going. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!
+There is a **Reflection** category in the Ed Section Leader group. Once the program starts, we encourage you to reflect on your own teaching experience. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!
 
 ### Who should answer posts made by students in the CS Bridge group on Ed?
 

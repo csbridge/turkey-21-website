@@ -8,7 +8,7 @@ title: General CS Bridge Information
 CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.
 
 - It assumes **no prior programming experience.**
-- This course will follow the **same schedule** each day.
+- This course will follow the **same schedule** each day (except for a few days where we have social activities).
 - We've designed the course so that outside of the schedule, you do not need to be on your computer working on the course material. If you want to spend extra time because you're excited about the material, that's okay but it is not necessary.
 - You will have weekends **off**.
 
@@ -30,9 +30,9 @@ The CS Bridge Team is made up of a group of wonderful teachers in **three countr
 
 1. Lecturers - These people are current lecturers at all three universities. You will hear from all of them as they take turns delivering lectures each day.
 1. Section Leaders - These fun people are students from all three universities who are passionate about computer science and serve as great role models. You will be assigned to a small group led by a Section Leader. You'll get to know this person really well throughout the course!
-1. Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford will be managing administrative components of the course.
+1. Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford, Yosefa Gilon, will be managing administrative components of the course.
 
-This is the first time that we are offering CS Bridge online and not in-person. Due to the nature of an online platform, we were able to combine the Turkey and Czech Republic programs which means in addition to meeting students from within your home country, you'll also get to know high school students from another country!
+Pre-pandemic, this program was run in-person. We have adjusted the program slightly so it could be offered online and this is the second year we are running CS Bridge as an online program.
 Our goal is to create one community of enthusiastic teachers and students who support each other as you all learn a new and exciting skill!
 
 <hr />
@@ -44,7 +44,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 1. An internet connection strong enough to stream video.</li>
 2. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
 3. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://online.csbridge.org/en/resources/install.html'>http://online.csbridge.org/en/resources/install.html</a>
-4. A love of learning and an interest in getting to know other high school students in Turkey and Czech Republic!</li>
+4. A love of learning and an interest in getting to know other high school students in Turkey!</li>
 
 What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
 
@@ -59,7 +59,7 @@ It is expected that you participate **fully** in the course. You must attend eve
 
 #### A. <u>Lectures</u>
 
-Lectures will be held **twice a day** - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The morning lectures will be taught by a lecturer from either Koç University or Czech Technical University and the evening lecture will be taught by a lecturer from Stanford University. This is where you’ll learn the core concepts of the class.
+Lectures will be held **twice a day** - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. Each lecture will be taught by a lecturer from one of the three universities. This is where you’ll learn the core concepts of the class.
 
 - Lectures will be delivered **LIVE** through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!
 
@@ -89,15 +89,15 @@ This is when you'll be able to ask for individual help on your code.
 
 - If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
 - You may have to wait in the Nook community until a Section Leader is free to help you.
-- If you don't have questions, this is the time that you'll spend working on your assignments.
+- If you don't have questions, this is the time that you'll spend working on your assignments and there's no need to join Nooks.
 
 <!-- E. Projects -->
 
-#### E. <u>Projects</u>
+#### E. <u>Assignments</u>
 
-There will be two programming projects that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).
+There will be two programming assignments that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).
 
-- You will be expected to submit the first project by 13:00 (Czech Republic), 14:00 (Turkey) each day and the second project by the end of the Office Hours/Work session in the evening.
+- You will be expected to submit the first assignment by 14:00 (Turkey) each day and the second assignment by the end of the Office Hours/Work session in the evening.
 - Instructions for completing and submitting assignments will be posted on Ed.
 
 <!-- F. Social Activities -->
@@ -149,19 +149,23 @@ We want you to learn a lot in this course but we also really want you to have **
 />
 </center>
 
-Here are some tips:
+Here are some community norms and expectations for Ed:
 
+- Always be respectful and kind to section leaders, students and instructors that you are engaging with on Ed.
 - Search before you post
 - Heart questions and answers you find useful
 - Answer questions you feel confident answering
 - Share interesting course related content with staff and peers
+- Do not talk about groups of people like they are inferior. Homophobia, racism, sexism, ableism, or other forms of discrimination are unacceptable not tolerated.
+- Do not post any private information in Ed for everyone to see
+- Do not post any external links
 - For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
 <hr />
 <!-- Whom to Contact About What -->
 ### Whom to Contact About What
 <p>
-    This class is taking place across three time zones so it is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (<a href="#C4">Class Discussion Forum</a>) where the Section Leaders and other students can help you. Some guidelines:
+    It is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (class discussion forum) where the Section Leaders and other students can help you. Some guidelines:
 </p>
 
 - For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
@@ -178,25 +182,6 @@ Here are some tips:
 </p>
 
 <hr />
-<!-- Learning with Honor -->
-### <h2 id="C5">Learning With Honor</h2>
-<p>
-    Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to engage honestly and fully in the course. Some guidelines:
-</p>
-<ul>
-    <li>We value humanity, intellectual joy, social connection, new skills, and gratitude.</li>
-    <li>Teach each other! We are all in this for one another.</li>
-    <li>Avoid publicly posting your solution code to assignments on the Ed forums. We want everybody to get a chance to discover their own solution.</li>
-    <li>Be welcoming. We are a diverse and wonderful community.</li>
-    <li>If you are having trouble with the course or do not understand something that is communicated, please let us know about it so we can help.</li>
-</ul>
-<p>
-    Lastly, please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. CS Bridge and the community we create is a place all students should feel welcome in.
-</p>
-<p>
-</p>
-
-<hr />
 <!-- Additional Resources -->
 ### Additional Resources
 <!-- Accessibility -->
@@ -207,4 +192,4 @@ Here are some tips:
 <!-- Process for reporting misconduct -->
 #### Process for reporting misconduct
 
-- Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Contact information can be found on the CS Bridge Ed in the "General" category [here](https://us.edstem.org/courses/968/discussion/)
+- Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this [Ed post](https://edstem.org/us/courses/6372/discussion/488586).

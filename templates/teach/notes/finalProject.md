@@ -2,7 +2,7 @@ template: templates/teach/notes/template.ptl
 problemtitle: Final Project
 nosolution: True
 
-This is the final project - students can develop any program they want using material they have learned from the class!  
+This is the final project - students can develop any program they want using material they have learned from the class!
 
 ## Approving Projects
 

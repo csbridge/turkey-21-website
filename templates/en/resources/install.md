@@ -3,12 +3,16 @@ title: Installing PyCharm
 
 <p id="osspiel" class="alert alert-warning"></p>
 
+<p class="alert alert-info"  role="alert">
+    If you are using a Chromebook, please consult <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/492648">this</a> thread on Ed.
+</p>
+
 
 You will be writing your code on your computer using an application called [PyCharm](https://www.jetbrains.com/pycharm/). PyCharm is what is known as an IDE, or _Integrated Development Environment_, which means that it allows us to edit our code, browse our files, run our programs and debug them, all in the same place. It's one of the most popular Python IDEs in the world, and used extremely commonly in industry. This handout is intended to take you through installing PyCharm on your own computer.
 
 
 ## Installing Python
-In order to be able to run Python programs on your computer, with or without PyCharm, you first need to install a _Python Interpreter_. An interpreter is a program that is capable of reading a _.py_ file that you have written, and translating the Python code in that file to instructions that your computer can easily execute.  When downloading this on Mac and Windows, this also automatically includes the _Tkinter_ library, which allows us to draw graphics, and which we'll be learning about later in the course.  Begin by downloading Python:
+In order to be able to run Python programs on your computer, with or without PyCharm, you first need to install a _Python Interpreter_. An interpreter is a program that is capable of reading a _.py_ file that you have written, and translating the Python code in that file to instructions that your computer can easily execute.  When downloading this on Mac and Windows, this also automatically includes the _Tkinter_ library, which allows us to draw graphics, and which you'll be learning about later in the course.  Begin by downloading Python:
 
 <ul>
     <li class="maconly">
@@ -33,7 +37,7 @@ In order to be able to run Python programs on your computer, with or without PyC
 
 <h3 class="maconly" data-toc-skip>Installing Python on a Mac</h3>
 <p class="note maconly">
-    Macs come with a version of Python already installed, but this is an older version of Python. We use the newest version of Python, so make sure to follow these instructions even if you think you already have Python installed.  To install Python, simply open the downloaded installer file 
+    Macs come with a version of Python already installed, but this is an older version of Python. We use the newest version of Python, so make sure to follow these instructions even if you think you already have Python installed.  To install Python, simply open the downloaded installer file
     and follow the default instructions.
 </p>
 
@@ -57,7 +61,7 @@ To get started, download and install the community version of PyCharm:
         </a>
         (Open the downloaded <code>.dmg</code> file and drag PyCharm into
         your Applications folder)
-    </li> 
+    </li>
     <li class="winonly">
         <a href="https://download.jetbrains.com/python/pycharm-community-2020.1.4.exe">
             Windows Download
@@ -72,8 +76,8 @@ Once PyCharm finishes installing, go ahead and run the program.  Once the progra
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img 
-            src="{{pathToRoot}}img/pycharm/welcomescreen.png" 
+        <img
+            src="{{pathToRoot}}img/pycharm/welcomescreen.png"
             style="width:100%"
             alt="PyCharm Welcome Screen"
         />
@@ -88,14 +92,14 @@ Click 'Configure' and then open PyCharm's settings, like so:
     <div class="col-md-2"></div>
     <div class="col-md-8">
         <div class="maconly">
-            <img 
+            <img
                 src="{{pathToRoot}}img/pycharm/welcomescreen-config.png"
                 style="width:100%"
                 alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
             />
         </div>
         <div class="winonly">
-            <img 
+            <img
                 src="{{pathToRoot}}img/pycharm/welcomescreen-config-win.png"
                 style="width:100%"
                 alt="PyCharm Welcome Screen, with 'Configure->Preferences' highlighted"
@@ -111,7 +115,7 @@ In the Preferences window, click 'Project Interpreter', open the dropdown menu, 
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img 
+        <img
             src="{{pathToRoot}}img/pycharm/preferences-showinterpreters.png"
             style="width:100%"
             alt="PyCharm Preferences Window, in the 'Project Interpreter' Pane, with 'Show All' highlighted in the dropdown menu" />
@@ -198,7 +202,7 @@ You aren't required to read or understand this code (although you will be able t
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <img src="{{pathToRoot}}img/pycharm/pycharmterminal.png" 
+        <img src="{{pathToRoot}}img/pycharm/pycharmterminal.png"
              style="width:100%"
              alt="PyCharm Terminal" />
     </div>
@@ -267,7 +271,7 @@ If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1"
 Our strong recommendation is to use Python 3.8, which can be installed in parallel with other versions of Python. This is the only version of Python we'll be supporting in this class.
 
 ### Can I use an editor that isn't PyCharm?
-If there's another environment that you're more comfortable with, you may use it, but the course staff will only provide support for issues in PyCharm. You must not modify any configuration files provided in assignment starter code. 
+If there's another environment that you're more comfortable with, you may use it, but the course staff will only provide support for issues in PyCharm. You must not modify any configuration files provided in assignment starter code.
 
 <h3 data-toc-text="Can't open file">
     When I try to run my code, I'm getting an error saying <code>can't open file intro.py: No such file or directory</code>! What does this mean?
@@ -275,7 +279,7 @@ If there's another environment that you're more comfortable with, you may use it
 
 This most often happens when you open the incorrect file or folder in PyCharm. In this case, make sure to open the `pycharm_intro` folder that _directly_ contains `intro.py`, rather than `intro.py` itself or a folder containing `pycharm_intro`. On a Windows computer, you may have a folder called `pycharm_intro` with another folder inside it called `pycharm_intro`. Make sure to open the inner folder.
 
-To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct `pycharm_intro` folder and open it. 
+To correct this error, open the 'File' menu and click 'Open'. Then, navigate to the correct `pycharm_intro` folder and open it.
 
 To verify that you are in the correct folder, type <span class="maconly"><code>ls</code> (that's a lowercase 'L')</span> <span class="winonly"><code>dir</code></span> into your terminal (the same place you type <code><span class="launcher">python3</span> intro.py &lt; YOUR NAME HERE &gt; </code>).  This will show you a list of all the files in that folder, and <code>intro.py</code> should be in this list.
 
@@ -321,7 +325,7 @@ __Course FAQs will be continually updated as we receive questions.__
     function setWindows() {
         toggle("maconly", "none");
         toggle("winonly", "inline-block");
-        
+
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
             launchers[i].innerHTML = 'py';
@@ -341,14 +345,14 @@ __Course FAQs will be continually updated as we receive questions.__
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a>.";   
+        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a>.";
     }
 
     function setUnknownOS() {
-       const osSpiel = document.getElementById('osspiel'); 
+       const osSpiel = document.getElementById('osspiel');
        osSpiel.innerHTML = `
-        We weren't able to detect what operating system you're using. Click 
-        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and 
+        We weren't able to detect what operating system you're using. Click
+        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and
         <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine.
        `
     }
@@ -363,7 +367,7 @@ __Course FAQs will be continually updated as we receive questions.__
         const os = getOS();
         if (os === "MacOS") setMacOS();
         else if (os === "Windows") setWindows();
-        else setUnkownOS();
+        else setUnknownOS();
     }
 
     function toggle(className, displayState) {
