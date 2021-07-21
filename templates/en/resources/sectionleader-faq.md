@@ -7,7 +7,7 @@ _Do you have a question about Section Leading for CS Bridge? It might be answere
 
 ## General
 
-Welcome! We're excited to have you on board as a Section Leader for this online version of CS Bridge. There are Section Leaders from Czech Technical University in the Czech Republic, Koç University in Turkey, and Stanford University in the United States. This will be a learning experience for all involved! Our goal is to provide you with the resources you need to help high school students learn a brand new skill - programming!
+Welcome! We're excited to have you on board as a Section Leader for this online version of CS Bridge. There are Section Leaders from Stanford University, Koç University in Istanbul, and various universities in Izmir. This will be a learning experience for all involved! Our goal is to provide you with the resources you need to help high school students learn a brand new skill - programming!
 
 ## Platforms We Will Be Using
 
@@ -15,15 +15,11 @@ Welcome! We're excited to have you on board as a Section Leader for this online 
 
 We will be using this platform to communicate with students as a group and in sections (no one will use email to communicate). Students will submit their work on Ed and you will be able to download it and read their code. You can use the **Workspace** function in Ed during section so that you can simultaneously edit something. Recorded lectures will be posted in the "Lectures" thread of this group.
 
-You will be enrolled in three Ed groups:
+You will be enrolled in two Ed groups:
 
-- [CS Bridge](https://us.edstem.org/courses/968/discussion/): The main discussion group.
+- [CS Bridge Turkey](https://edstem.org/us/courses/6374/discussion/): The main discussion group.
 
   This is where students will post questions they have (conceptual, technical, etc.) and where we’ll post announcements about the course that everyone needs to see. We will assign some Section Leaders to be responsible for answering Ed posts during the day.
-
-- [Section Leaders](https://us.edstem.org/courses/972/discussion/): The group for Section Leaders (not for students).
-
-  This is where you can communicate directly with Section Leaders. We'll be posting solutions in the Resources folder in this group. You'll find categories for threads related to the course but can also post social/fun things in this group. This group is for YOU! It is unfortunate that you all can't meet in person but this is the next best thing. The goal is for you to finish this program with many new friends from your university AND from other countries!
 
 - **Section #**: This is your section's Ed group.
 
@@ -31,21 +27,21 @@ You will be enrolled in three Ed groups:
 
 For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
-### [Course Website](http://online.csbridge.org/)
+### [Course Website](http://turkey21.csbridge.org/)
 
 This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders.
 
 ### Zoom
 
-We'll be using Zoom to host all live interactions. You will be provided instructions for logging into Zoom by the Program Administrator at hour host university. If you have not already been provided details for your Zoom account, you will receive that information from someone at your university soon. We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing)
+We'll be using Zoom to host all live interactions. All Section Leaders will have access to a Stanford Zoom account. Once you have a Stanford sunet ID, you can read instructions for accessing Zoom [here](https://stanford.service-now.com/it_services?id=kb_article&number=KB00013259). We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing).
 
 ### PyCharm
 
-This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](http://online.csbridge.org/en/resources/install.html)
+This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](http://turkey21.csbridge.org/en/resources/install.html)
 
 ## Schedule
 
-Below is the calendar for the program. The Section Leader Team Meeting is NOT on the below calendar but it will occur 1hr before the evening lecture each day (except Fridays) (9am in CA/7pm in Prague/8pm in Istanbul) and you're required to attend.
+Below is the calendar for the program. The Section Leader Team Meeting is NOT on the below calendar but it will occur 45min before the evening lecture each day (9am in CA/7pm in Turkey) and you're required to attend.
 Click on one of the three buttons below to set the calendar to your timezone.
 
 <div class="panel-group" id="accordion">
@@ -58,7 +54,7 @@ Click on one of the three buttons below to set the calendar to your timezone.
       </div>
       <div id="collapse2" class="panel-collapse collapse">
         <div class="panel-body">
-          <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          <iframe src="https://calendar.google.com/calendar/embed?src=c_b4nupc7gp7jvs5f9b0rk2tr0hk%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </div>
@@ -72,7 +68,7 @@ Click on one of the three buttons below to set the calendar to your timezone.
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?src=c_s7vcjb0l3rv6b0j78f8kdrbrp4%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_b4nupc7gp7jvs5f9b0rk2tr0hk%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -80,7 +76,7 @@ Click on one of the three buttons below to set the calendar to your timezone.
 
 ### What will **lectures** look like?
 
-Lectures will be held twice a day - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. The instructors for the course will take turns giving the lectures. This is where students will learn the core concepts of the class.
+Lectures will be held twice a day - there will be one 40 minute lecture at the start of the day and one 40 minute lecture in the evening. The instructors for the course will take turns giving the lectures. This is where students will learn the core concepts of the class.
 
 - Lectures will be delivered LIVE through Zoom and will be recorded and posted on Ed so students can refer back to them later if they need to. If students want to ask questions during lecture, they can. We'll ask for a couple of Section Leaders to volunteer to help by monitoring the chat.
 - You do not need to attend lecture (unless you've volunteered to help with the Q&A).
