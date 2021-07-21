@@ -5,7 +5,7 @@ title: General CS Bridge Information
 
 ### Description
 
-CS Bridge is a collaboration between Stanford University in the United States, Czech Technical University in the Czech Republic, and Koç University in Turkey. Lecturers and students from all three universities have come together to teach high school students in Czech Republic and Turkey how to code.
+CS Bridge is a collaboration between Stanford University in the United States, Koç University in Istanbul, and instructors and students from Izmir, Turkey. These lecturers and students have come together to teach high school students in Turkey how to code.
 
 - It assumes **no prior programming experience.**
 - This course will follow the **same schedule** each day (except for a few days where we have social activities).
@@ -26,11 +26,11 @@ We hope these course components will help you have a great CS Bridge experience:
 
 ### The CS Bridge Team
 
-The CS Bridge Team is made up of a group of wonderful teachers in **three countries** - Czech Republic, Turkey, and the United States.
+The CS Bridge Team is made up of a group of wonderful teachers in **two countries** - Turkey and the United States.
 
-1. Lecturers - These people are current lecturers at all three universities. You will hear from all of them as they take turns delivering lectures each day.
-1. Section Leaders - These fun people are students from all three universities who are passionate about computer science and serve as great role models. You will be assigned to a small group led by a Section Leader. You'll get to know this person really well throughout the course!
-1. Program Administrators - There is one person from each university who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford, Yosefa Gilon, will be managing administrative components of the course.
+1. Lecturers - These people are current lecturers. You will hear from all of them as they take turns delivering lectures each day.
+1. Section Leaders - These fun people are students from Stanford, Koç and universities in Izmir who are passionate about computer science and serve as great role models. You will be assigned to a small group led by a Section Leader. You'll get to know this person really well throughout the course!
+1. Program Administrators - Each cohort of students (from Koç and Izmir) has a program administrator who manages the enrollment process and is the main point of contact between your families and the program. The CS Bridge Program Manager from Stanford, Yosefa Gilon, will be managing administrative components of the course.
 
 Pre-pandemic, this program was run in-person. We have adjusted the program slightly so it could be offered online and this is the second year we are running CS Bridge as an online program.
 Our goal is to create one community of enthusiastic teachers and students who support each other as you all learn a new and exciting skill!
@@ -42,8 +42,8 @@ Our goal is to create one community of enthusiastic teachers and students who su
 ### Requirements for the Course
 
 1. An internet connection strong enough to stream video.</li>
-2. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for all program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
-3. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://online.csbridge.org/en/resources/install.html'>http://online.csbridge.org/en/resources/install.html</a>
+2. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for most of the program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.7.3.</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
+3. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://turkey21.csbridge.org/en/resources/install.html'>http://turkey21.csbridge.org/en/resources/install.html</a>
 4. A love of learning and an interest in getting to know other high school students in Turkey!</li>
 
 What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
@@ -59,7 +59,7 @@ It is expected that you participate **fully** in the course. You must attend eve
 
 #### A. <u>Lectures</u>
 
-Lectures will be held **twice a day** - there will be one 30 minute lecture at the start of the day and one 30 minute lecture in the evening. Each lecture will be taught by a lecturer from one of the three universities. This is where you’ll learn the core concepts of the class.
+Lectures will be held **twice a day** - there will be one 40 minute lecture at the start of the day and one 40 minute lecture in the evening. Each lecture will be taught by a lecturer from one of the three universities. This is where you’ll learn the core concepts of the class.
 
 - Lectures will be delivered **LIVE** through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!
 
@@ -69,7 +69,7 @@ Lectures will be held **twice a day** - there will be one 30 minute lecture at t
 
 This will follow the morning lecture each day.
 
-- You will be assigned to a small group led by a Section Leader and will have the chance to get to know each other, play games, and talk about course and non-course related things.
+- You will be assigned to a small group led by a Section Leader and will have the chance to get to know each other, play games, and talk about course and non-course related things. Due to the time difference, if your Section Leader is based in the United States, you will be assigned a different Section Leader for the morning tea time so you will socialize with a different group of students.
 - Picture yourself drinking tea and sitting around a circle in a room getting to know each other!
 
 <!-- C. Section -->
@@ -85,7 +85,7 @@ In addition to two lectures per day, <b>you will also be attending a daily discu
 
 #### D. <u>Office Hours/Work</u>
 
-This is when you'll be able to ask for individual help on your code.
+This is when you'll be able to ask for individual help on your code. We will be using Nooks, an online community in which no software is needed.Simply click on the Nooks community link and you will be directed to the office hours space.
 
 - If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
 - You may have to wait in the Nook community until a Section Leader is free to help you.
@@ -95,14 +95,14 @@ This is when you'll be able to ask for individual help on your code.
 
 #### E. <u>Assignments</u>
 
-There will be two programming assignments that you will work on each day. The core assignment questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away” (see <a href="#C5">Learning with Honor</a>).
+There will be two programming projects that you will work on each day. The core project questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away”.
 
-- You will be expected to submit the first assignment by 14:00 (Turkey) each day and the second assignment by the end of the Office Hours/Work session in the evening.
+- You will be expected to submit the first project by 14:00 each day and the second project by the end of the Office Hours/Work session in the evening at 23:00.
 - Instructions for completing and submitting assignments will be posted on Ed.
 
 <!-- F. Social Activities -->
 
-#### E. <u>Social Activities</u>
+#### F. <u>Social Activities</u>
 
 We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different schools and areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
 
@@ -121,7 +121,7 @@ We want you to learn a lot in this course but we also really want you to have **
 #### A. <u>Course Website</u>
 
 <p>
-    The class web page is: <a href='http://online.csbridge.org/'>http://online.csbridge.org/</a><br>
+    The class web page is: <a href='http://turkey21.csbridge.org/'>http://turkey21.csbridge.org/</a><br>
     You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
 </p>
 <!-- B. Class Discussion Forum -->
@@ -132,7 +132,7 @@ We want you to learn a lot in this course but we also really want you to have **
     <p>You will be enrolled in two Ed groups:</p>
 </p>
 <ol>
-    <li><b>“CS Bridge”: the main discussion group.</b></li>
+    <li><b>“CS Bridge Turkey”: the main discussion group.</b></li>
     <!-- TODO Fix alignment to be all the way left aligned -->
     This is where you should post questions you have (conceptual, technical, etc.) and where we’ll post announcements about the course. Please answer your classmates’ questions, too! Before posting a question, check if it has been asked already (and if so, read the answer to <i>that</i> post!). We may not answer duplicate questions.
     <li><b>Your discussion section’s Ed group.</b></li>
@@ -156,7 +156,7 @@ Here are some community norms and expectations for Ed:
 - Heart questions and answers you find useful
 - Answer questions you feel confident answering
 - Share interesting course related content with staff and peers
-- Do not talk about groups of people like they are inferior. Homophobia, racism, sexism, ableism, or other forms of discrimination are unacceptable not tolerated.
+- Do not talk about groups of people like they are inferior. Homophobia, racism, sexism, ableism, or other forms of discrimination are unacceptable and not tolerated.
 - Do not post any private information in Ed for everyone to see
 - Do not post any external links
 - For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
@@ -171,14 +171,14 @@ Here are some community norms and expectations for Ed:
 - For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
 - For <b>personal concerns or issues</b>, please make a private post in the CS Bridge Ed.</li>
 - To <b>send a message to your Section Leader</b>, make a private post in your section’s Ed.</li>
-- For <b>major personal issues or concerns</b>, please contact either Burcu Hanim (Koç) or Mr. Kolar (CTU). Contact information can be found on the CS Bridge Ed in the "General" category [here](https://us.edstem.org/courses/968/discussion/).</li>
+- For <b>major personal issues or concerns</b>, please contact either Burcu Hanim (Koç) or Baris Bozkurt (Izmir). Contact information can be found on the CS Bridge Ed in the "General" category [here](https://edstem.org/us/courses/6374/discussion/527475).</li>
 
 <hr />
 <!-- FAQs -->
 ### Frequently Asked Questions
 <p>
     <b>We will answer your questions as they come up.</b><br>
-    Please see: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
+    Please see: <a href='http://turkey21.csbridge.org/en/resources/student-faq.html'>http://turkey21.csbridge.org/en/resources/student-faq.html</a>
 </p>
 
 <hr />
@@ -192,4 +192,4 @@ Here are some community norms and expectations for Ed:
 <!-- Process for reporting misconduct -->
 #### Process for reporting misconduct
 
-- Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this [Ed post](https://edstem.org/us/courses/6372/discussion/488586).
+- Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this [Ed post](https://edstem.org/us/courses/6374/discussion/527475).

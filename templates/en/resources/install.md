@@ -4,7 +4,7 @@ title: Installing PyCharm
 <p id="osspiel" class="alert alert-warning"></p>
 
 <p class="alert alert-info"  role="alert">
-    If you are using a Chromebook, please consult <a class="alert-link" href="https://edstem.org/us/courses/6372/discussion/492648">this</a> thread on Ed.
+    If you are using a Chromebook, please consult <a class="alert-link" href="https://edstem.org/us/courses/6374/discussion/527525">this</a> thread on Ed.
 </p>
 
 

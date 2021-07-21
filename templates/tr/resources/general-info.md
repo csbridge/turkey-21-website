@@ -41,8 +41,8 @@ Hedefimiz, hepiniz yeni ve heyecan verici bir beceriyi öğrendirken birbirini d
 ### Program Gereksinimleri
 
 1. Video akışı sağlayacak kadar güçlü bir İnternet bağlantısı. </li>
-2. Derse, çalışma saatlerine, bölüme ve sosyal etkinliklere katılmak için <b> video konferans yazılımı </b>. Birlikte çevrimiçi olduğumuz programla ilgili tüm etkinlikler için Zoom'u kullanacağız. <b> "Zoom Client for Meetings" versiyon 5.1.2 </b>i buradan indirebilirsiniz: <a href='https://zoom.us/download'> https://zoom.us/download</a> </ li>
-3. Ödevleri tamamlamak için <b> PyCharm geliştirme ortamı </b>. Buradaki kurulum talimatları: <a href='http://online.csbridge.org/tr/resources/install.html'> http://online.csbridge.org/tr/resources/install.html</a>
+2. Derse, çalışma saatlerine, bölüme ve sosyal etkinliklere katılmak için <b> video konferans yazılımı </b>. Birlikte çevrimiçi olduğumuz programla ilgili tüm etkinlikler için Zoom'u kullanacağız. <b> "Zoom Client for Meetings" versiyon 5.7.3 </b>i buradan indirebilirsiniz: <a href='https://zoom.us/download'> https://zoom.us/download</a> </ li>
+3. Ödevleri tamamlamak için <b> PyCharm geliştirme ortamı </b>. Buradaki kurulum talimatları: <a href='http://turkey21.csbridge.org/tr/resources/install.html'> http://turkey21.csbridge.org/tr/resources/install.html</a>
 4. Türkiye ve Çek Cumhuriyeti'ndeki diğer lise öğrencilerini tanıma ve öğrenme sevgisi! </li>
 
 Bunlardan bazılarına sahip değilsem veya ne yapmam istendiğini anlamadıysam ne olur? Soru sormak için en iyi yer Ed. Ed hakkında daha fazla bilgi için aşağıya bakın!
@@ -94,14 +94,14 @@ This is when you'll be able to ask for individual help on your code.
 
 #### E. <u> Projeler </u>
 
-Her gün üzerinde çalışacağınız iki programlama projesi olacak. Temel ödev soruları ayrı ayrı yapılacak şekilde tasarlanmıştır, ancak birbirinize öğretmenizi öneririz - bu, akranlarınıza “cevabı vermeden" onları cevaba yönlendirmeyi de içerir (detaylar için onurlu öğrenme <a href='#C5'> bölümüne bakın. </a>).
+Her gün üzerinde çalışacağınız iki programlama projesi olacak. Temel ödev soruları ayrı ayrı yapılacak şekilde tasarlanmıştır, ancak birbirinize öğretmenizi öneririz - bu, akranlarınıza “cevabı vermeden" onları cevaba yönlendirmeyi de içerir.
 
-- İlk projeyi her gün 13:00 (Çek Cumhuriyeti), 14:00 (Türkiye) saatine kadar, ikinci projeyi ise akşam Ofis Saatleri / Çalışma oturumunun sonuna kadar sunmanız beklenmektedir.
+- İlk projeyi her gün 14:00 saatine kadar, ikinci projeyi ise akşam Ofis Saatleri / Çalışma oturumunun sonuna kadar sunmanız beklenmektedir (23:00).
 - Ödevleri tamamlama ve gönderme ile ilgili talimatlar Ed'de yayınlanacaktır.
 
 <!-- F. Sosyal Etkinlikler -->
 
-#### E. <u> Sosyal Etkinlikler </u>
+#### F. <u> Sosyal Etkinlikler </u>
 
 Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve farklı okul ve bölgelerdeki öğrencileri tanımanızı istiyoruz! Ayrıca sadece kendi Grup Liderinizi değil, diğer Grup Liderlerini de tanımanızı istiyoruz!
 

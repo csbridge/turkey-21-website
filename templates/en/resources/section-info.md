@@ -23,7 +23,7 @@ title: What to Expect for Section
 <hr />
 
 ### Time and Place of Section
-* Section will be held every night at 20:00 (in CZ) 21:00 (in TU).  
+* Section will be held every night at 20:45.  
 * The link for the section video conference will be posted by your Section Leader in the section "Ed".
 <hr/>
 
@@ -83,7 +83,7 @@ title: What to Expect for Section
 <!-- Attending Section -->
 ### Attending Section
 <p>
-	Sections will be held as a group video call over Zoom. Download the <b>"Zoom Client for Meetings" version 5.1.2</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a>
+	Sections will be held as a group video call over Zoom. Download the <b>"Zoom Client for Meetings" version 5.7.3</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a>
 </p>
 <p>
 	See your section’s Ed page for the specifics about how to attend your section from your computer (e.g. a Zoom link to your section’s video call). <b>Your schedule with all of the Zoom links you need will be posted on your section Ed page.</b>
@@ -106,7 +106,7 @@ title: What to Expect for Section
 <!-- When do sections start? -->
 #### When do sections start?
 <p>
-    <b>Sections start the first night of the course (Tuesday, August 4th)! </b> 
+    <b>Sections start the first night of the course (Monday, August 2nd)! </b> 
 </p>
 
 <hr />
@@ -116,7 +116,7 @@ title: What to Expect for Section
 
 We want to make sure that everybody in CS Bridge is in an environment that they feel comfortable in. This includes during section. <b>To protect your privacy, do not share any personal information in section (this includes contact information or last name)</b>. We encourage students to turn on their video but we do not require it. 
 
-Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://online.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
+Finally, while we hope this will not be the case for anyone at any point during this course, if you encounter any misconduct during section or otherwise, please refer to the "process for reporting misconduct" outlined at the bottom of the <a href='http://turkey21.csbridge.org/en/resources/general-info.html'>general course information page</a>. Creating and maintaining a safe and open community is of utmost importance to us.
 
 
 <hr />
@@ -126,5 +126,5 @@ Finally, while we hope this will not be the case for anyone at any point during 
 #### <u>Other Questions</u>
 <p>
     We will answer your questions as they come up. <br />
-    Please see: <a href='http://online.csbridge.org/en/resources/student-faq.html'>http://online.csbridge.org/en/resources/student-faq.html</a>
+    Please see: <a href='http://turkey21.csbridge.org/en/resources/student-faq.html'>http://turkey21.csbridge.org/en/resources/student-faq.html</a>
 </p>

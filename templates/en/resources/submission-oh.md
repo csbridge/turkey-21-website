@@ -15,7 +15,7 @@ You can submit as many times as you want. You may want to submit multiple times 
 
 #### 1. Go to Lessons in Ed
 
-Navigate to [Ed](https://us.edstem.org/courses/968/discussion/) Lessons, where you will submit your code.
+Navigate to [Ed](https://edstem.org/us/courses/6374/discussion/) Lessons, where you will submit your code.
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-oh/lessons1.png">

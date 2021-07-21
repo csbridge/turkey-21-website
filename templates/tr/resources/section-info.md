@@ -84,7 +84,7 @@ title: Grup Buluşmalarından Beklentiler
 <!-- Grup Buluşma Saatine Katılım -->
 ### Grup Buluşma Saatine Katılım
 <p>
-	Buluşma saatleri, Zoom üzerinden video görüşme ile gerçekleşecek.<b>"Zoom Client for Meetings" versiyon 5.1.2</b>'yi buradan indirebilirsiniz: <a href='https://zoom.us/download'>https://zoom.us/download</a>
+	Buluşma saatleri, Zoom üzerinden video görüşme ile gerçekleşecek.<b>"Zoom Client for Meetings" versiyon 5.7.3</b>'yi buradan indirebilirsiniz: <a href='https://zoom.us/download'>https://zoom.us/download</a>
 </p>
 <p>
 	Grup buluşma saatinize bilgisayarınızdan nasıl katılabileceğiniz ve ayrıntılar (örneğin, grubunuzun video görüşmesine ait Zoom linki gibi için grubunuzun Ed sayfasını ziyaret edebilirsiniz. <b> Zaman çizelgesi, ihtiyacınız olan Zoom linkleri ile birlikte, grubunuzun Ed sayfasında paylaşılacak.</b>
@@ -117,7 +117,7 @@ title: Grup Buluşmalarından Beklentiler
 
 Bizler, herkesin CS Bridge'te kendilerini rahat hissettikleri bir ortamda olduklarından emin olmak istiyoruz. Bu grup buluşmalarını da kapsıyor. <b> Özel yaşamınızı korumak için, hiçbir kişisel bilgiyi bu buluşmalarda paylaşmayın (buna iletişim bilginiz ve soyadınız da dahildir).</b>
 
-Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, eğer sizler grup buluşmalarınız veya başka zamanlarda hatalı davranışlara maruz kalırsanız, lütfen <a href='https://online.csbridge.org/tr/resources/general-info.html'>CS Bridge ile ilgili genel bilgiler sayfasının </a> en altında özetlenen "hatalı davranışı bildirme süreci"ne göz atın. Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürebilmek, bizler için son derece önemli.
+Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, eğer sizler grup buluşmalarınız veya başka zamanlarda hatalı davranışlara maruz kalırsanız, lütfen <a href='https://turkey21.csbridge.org/tr/resources/general-info.html'>CS Bridge ile ilgili genel bilgiler sayfasının </a> en altında özetlenen "hatalı davranışı bildirme süreci"ne göz atın. Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürebilmek, bizler için son derece önemli.
 
 
 <hr />
@@ -127,5 +127,5 @@ Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, 
 #### <u>Diğer Sorular</u>
 <p>
     Sorularınız geldikçe bunları cevaplıyor olacağız. <br />
-    Lütfen göz atın: <a href='http://online.csbridge.org/tr/resources/student-faq.html'>http://online.csbridge.org/tr/resources/student-faq.html</a>
+    Lütfen göz atın: <a href='http://turkey21.csbridge.org/tr/resources/student-faq.html'>http://turkey21.csbridge.org/tr/resources/student-faq.html</a>
 </p>

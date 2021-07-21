@@ -18,7 +18,7 @@ title: CS Bridge SSS
     </div>
     <div id="collapse2" class="panel-collapse collapse in">
       <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FIstanbul&amp;src=MjA4MGNtNDFqZHZwNDEyMGd0YXBzNHV1MnNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23795548&amp;mode=WEEK&amp;hl=tr" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_b4nupc7gp7jvs5f9b0rk2tr0hk%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@ Olabildiğince eğlenmeye çalışın. Program aktivitelerinin hepsine katılın
 
 ### Program hakkında genel bir sorum var, nerede sorabilirim?
 
-CS Bridge [Ed sayfası](https://us.edstem.org/courses/968/discussion/) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
+CS Bridge [Ed sayfası](https://edstem.org/us/courses/6374/discussion/526272) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
 
 ### Hastayım (ya da başka bir işim çıktı) ve Ders/Çay Saati/Grup buluşmamıza katılamayacağım, ne yapmalıyım?
 

@@ -18,7 +18,7 @@ title: Student Frequently Asked Questions (FAQs)
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
       <div class="panel-body">
-        <iframe src="https://calendar.google.com/calendar/embed?src=c_s7vcjb0l3rv6b0j78f8kdrbrp4%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?src=c_b4nupc7gp7jvs5f9b0rk2tr0hk%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>"
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@ Submit as much code as you've been able to write. It's okay if you don't finish 
 
 ### I am lost. Where am I supposed to be?
 
-Check the schedule that is posted in [Ed](https://edstem.org/us/courses/6372/discussion/473852). That's where you'll find times, activities, and the necessary Zoom links.
+Check the schedule that is posted in [Ed](https://edstem.org/us/courses/6374/discussion/526272). That's where you'll find times, activities, and the necessary Zoom links.
 
 ### Can I re-watch lecture?
 
@@ -65,4 +65,4 @@ Yes! All lectures will be recorded and posted to the "Lectures" category on the 
 
 
 <br/>
-*Have a question which wasn't covered here? Please post on [Ed](https://edstem.org/us/courses/6372/discussion/).*
+*Have a question which wasn't covered here? Please post on [Ed](https://edstem.org/us/courses/6374/discussion/).*
