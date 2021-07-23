@@ -54,7 +54,7 @@ Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can 
 ## Office Hours
 
 Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
-Go to the office hour Nooks link listed on the schedule in [Ed](https://edstem.org/us/courses/6374/discussion/526272). 
+Go to the office hour Nooks link listed on the schedule in [Ed](https://edstem.org/us/courses/6374/discussion/526272). If you want help with your code, follow the instructions above to submit your code to Ed so that a Section Leader can see it. 
 
 * **Group Work** 
 
