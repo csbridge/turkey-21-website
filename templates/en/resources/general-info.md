@@ -63,46 +63,55 @@ Lectures will be held **twice a day** - there will be one 40 minute lecture at t
 
 - Lectures will be delivered **LIVE** through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!
 
-<!-- B. Tea Time -->
+<!-- B. Quickstart -->
 
-#### B. <u>Tea Time</u>
+#### B. <u>Quickstart</u>
 
 This will follow the morning lecture each day.
+
+- You will work with your Section Leader and students in your morning group to solve a short problem that is based on what you just learned in lecture. 
+- Quickstart is meant to get you to start thinking about what you just learned but isn't meant to be as in depth as what you'll be working on in Section.
+
+<!-- C. Tea Time -->
+
+#### C. <u>Tea Time</u>
+
+This will follow the morning quickstart each day.
 
 - You will be assigned to a small group led by a Section Leader and will have the chance to get to know each other, play games, and talk about course and non-course related things. Due to the time difference, if your Section Leader is based in the United States, you will be assigned a different Section Leader for the morning tea time so you will socialize with a different group of students.
 - Picture yourself drinking tea and sitting around a circle in a room getting to know each other!
 
-<!-- C. Section -->
 
-#### C. <u>Section</u>
+<!-- D. Section -->
+
+#### D. <u>Section</u>
 
 In addition to two lectures per day, <b>you will also be attending a daily discussion section in small groups with a Section Leader.</b>
 
 - This is where you’ll get to practice with the new concepts you learned in lecture.
 - You will meet with the same group of students and will have the same Section Leader each day.
 
-<!-- D. Office Hours/Work -->
+<!-- E. Office Hours/Work -->
 
-#### D. <u>Office Hours/Work</u>
+#### E. <u>Office Hours/Work</u>
 
-This is when you'll be able to ask for individual help on your code. We will be using Nooks, an online community in which no software is needed.Simply click on the Nooks community link and you will be directed to the office hours space.
+Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
+Go to the office hour Nooks link listed on the schedule in [Ed](https://edstem.org/us/courses/6374/discussion/526272). 
 
-- If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
-- You may have to wait in the Nook community until a Section Leader is free to help you.
-- If you don't have questions, this is the time that you'll spend working on your assignments and there's no need to join Nooks.
+- For more information about how office hours work, visit the [Submission/Office Hours page](https://turkey21.csbridge.org/en/resources/submission-oh.html).
 
-<!-- E. Projects -->
+<!-- F. Projects -->
 
-#### E. <u>Assignments</u>
+#### F. <u>Assignments</u>
 
 There will be two programming projects that you will work on each day. The core project questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away”.
 
 - You will be expected to submit the first project by 14:00 each day and the second project by the end of the Office Hours/Work session in the evening at 23:00.
 - Instructions for completing and submitting assignments will be posted on Ed.
 
-<!-- F. Social Activities -->
+<!-- G. Social Activities -->
 
-#### F. <u>Social Activities</u>
+#### G. <u>Social Activities</u>
 
 We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different schools and areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
 
