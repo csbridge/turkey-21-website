@@ -62,7 +62,7 @@ Go to the office hour Nooks link listed on the schedule in [Ed](https://edstem.o
     * Other students will be there working and a Section Leader will be in that room too. As you are working, you can ask general questions and get advice if you are stuck.
     * This is a nice way to socialize with other students as you work on daily projects
 
-* **1-on-1 Hep** 
+* **1-on-1 Help** 
 
     * If you have a more in depth debugging question, sign up for 1-on-1 Help by joining the queue (see “View Queue”) and we will assign you to a room with a Section Leader as soon as we can.
 
