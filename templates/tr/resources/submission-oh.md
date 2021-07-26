@@ -15,7 +15,7 @@ Sisteme istediğiniz kadar yükleme yapabilirsiniz. Eğer debugging (hata ayıkl
 
 #### 1. Ed üzerinden Lessons'a (Dersler) gidin
 
-Kodunuzu sisteme yükleyeceğiniz [Ed](https://us.edstem.org/courses/968/discussion/) Lessons sayfasına gidin.
+Kodunuzu sisteme yükleyeceğiniz [Ed]({{config['discussion_forum_url']}}) Lessons sayfasına gidin.
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-oh/lessons1.png">

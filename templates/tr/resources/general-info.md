@@ -159,7 +159,7 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 - Lojistik sorular, kavramsal ve teknik sorular veya genel program sohbeti </b> için lütfen CS Bridge Ed forumumuza herkese açık bir soru gönderin. </li>
 - <b> Kişisel kaygılar veya sorunlar </b> için lütfen CS Bridge Ed </li> 'de özel bir gönderi yayınlayın.
 - <b> Grup Liderinize bir mesaj göndermek </b> için bölümünüzün Ed bölümünde özel bir yayın yapın. </li>
-- <b> Büyük kişisel sorunlar veya endişeler </b> için lütfen Burcu Hanım (Koç Üniversitesi) ile temasa geçin. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada] bulunabilir (https://us.edstem.org/courses/968/discussion/). </li>
+- <b> Büyük kişisel sorunlar veya endişeler </b> için lütfen Burcu Hanım (Koç Üniversitesi) ile temasa geçin. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada] bulunabilir ({{config['discussion_forum_url']}}). </li>
 
 <hr />
 
@@ -211,4 +211,4 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 
 #### Hatalı davranışı bildirme süreci
 
-- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya davranışları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde <a href='https://us.edstem.org/courses/968/discussion/'>burada</a> bulunabilir.
+- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya davranışları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde <a href='{{config["discussion_forum_url"]}}'>burada</a> bulunabilir.

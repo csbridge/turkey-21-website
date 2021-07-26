@@ -41,7 +41,7 @@ Olabildiğince eğlenmeye çalışın. Program aktivitelerinin hepsine katılın
 
 ### Program hakkında genel bir sorum var, nerede sorabilirim?
 
-CS Bridge [Ed sayfası](https://edstem.org/us/courses/6374/discussion/526272) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
+CS Bridge [Ed sayfası]({{config['discussion_forum_schedule_url']}}) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
 
 ### Hastayım (ya da başka bir işim çıktı) ve Ders/Çay Saati/Grup buluşmamıza katılamayacağım, ne yapmalıyım?
 
@@ -64,4 +64,4 @@ Grubunuzun Ed sayfasında paylaşılan zaman çizelgesini kontrol edin. Aktivite
 Evet! Bütün dersler kaydedilip CS Bridge Ed sayfasının "Dersler" (Lectures) bölümünde sizinle paylaşılacak.
 
 <br/>
-* Bu sayfada cevaplanmamış sorularınızı [Ed](https://us.edstem.org/courses/968) üzerinden sorabilirsiniz.*
+* Bu sayfada cevaplanmamış sorularınızı [Ed]({{config['discussion_forum_url']}}) üzerinden sorabilirsiniz.*
