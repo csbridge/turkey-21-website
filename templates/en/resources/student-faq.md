@@ -3,7 +3,6 @@ title: Student Frequently Asked Questions (FAQs)
 
 *Do you have a question about CS Bridge? It might be answered here.*
 
-<!-- Table of Contents -->
 [TOC]
 
 ## Schedule
@@ -56,7 +55,7 @@ Submit as much code as you've been able to write. It's okay if you don't finish 
 
 ### I am lost. Where am I supposed to be?
 
-Check the schedule that is posted in [Ed](https://edstem.org/us/courses/6374/discussion/526272). That's where you'll find times, activities, and the necessary Zoom links.
+Check the schedule that is posted in [Ed]({{config['discussion_forum_schedule_url']}}). That's where you'll find times, activities, and the necessary Zoom links.
 
 ### Can I re-watch lecture?
 
@@ -65,4 +64,5 @@ Yes! All lectures will be recorded and posted to the "Lectures" category on the 
 
 
 <br/>
-*Have a question which wasn't covered here? Please post on [Ed](https://edstem.org/us/courses/6374/discussion/).*
+
+*Have a question which wasn't covered here? Please post on [Ed]({{config['discussion_forum_url']}}).*

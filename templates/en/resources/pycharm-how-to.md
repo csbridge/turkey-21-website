@@ -19,7 +19,7 @@ Once you have downloaded a copy of PyCharm as described in the “Installing PyC
 
 1. Open PyCharm (see Figure 1 below, left-hand side). Select the project you want to work on, or click "Open".
 1. If you already have PyCharm open with a different project, go to the top of the screen and click "File"->"Open".
-1. Navigate to the Day1PM folder and open it. Open the <i>**folder**</i>, rather than a particular file you want to edit.
+1. Navigate to the Day1PM folder and open it. Open the ***folder***, rather than a particular file you want to edit.
 
    - If you already have another project open, PyCharm will prompt you to either open the project in your existing window or in a new window. You can select either.
 
@@ -54,7 +54,7 @@ To run a program in PyCharm, click the "Terminal" option at the bottom of the sc
 
 The terminal (also known as a **console**) will then print output and accept user text input, depending on how you write your program.
 
-As a side note, in many handouts we might use the Mac convention of running programs by using the command <b>`python3 <program name>`</b>. If you are a PC user, you should instead use the command <b>`py <program name>`</b>. Just by convention on the PC, you run the Python interpreter using the command <b>`py`</b> (as opposed to <b>`python3`</b> on the Mac).
+As a side note, in many handouts we might use the Mac convention of running programs by using the command **`python3 <program name>`**. If you are a PC user, you should instead use the command **`py <program name>`**. Just by convention on the PC, you run the Python interpreter using the command **`py`** (as opposed to **`python3`** on the Mac).
 
 ### How to run Karel programs in Pycharm
 
@@ -67,15 +67,15 @@ Karel programs are also Python programs!
   <p style="text-align:center"><b>Figure 3</b>: The Karel display that appears when running `newspaper_karel.py`, including Karel’s world, a Run Program button, and a Load World button</p>
 </center>
 
-2. If you then press the <b>Run Program</b> button, Karel will go through the steps in the <b>`main()</b> function that you wrote.
+2. If you then press the **Run Program** button, Karel will go through the steps in the **`main()`** function that you wrote.
 
 3. Use the scroll bar to speed Karel up.
 
-4. <b>Exit out of the window when you are done</b>. The next time you run any Karel program from the PyCharm Terminal (even if it's the same program), it will create a new Karel window.
+4. **Exit out of the window when you are done**. The next time you run any Karel program from the PyCharm Terminal (even if it's the same program), it will create a new Karel window.
 
 #### Running Karel in different worlds
 
-Suppose we are working on Hospital Karel and we think we have gotten our code to work in the default world. Press the <b>Load World</b> button and select and open the world in which you want to run Karel. You can then test Karel in this new world by clicking on the <b>Run Program</b> button.
+Suppose we are working on Hospital Karel and we think we have gotten our code to work in the default world. Press the **Load World** button and select and open the world in which you want to run Karel. You can then test Karel in this new world by clicking on the **Run Program** button.
 
 <!--
 ## Debug

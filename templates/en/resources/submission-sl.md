@@ -9,11 +9,11 @@ Students submit their code to Edstem twice a day. **It is okay if they don't fin
 
 They will also need to submit their code for office hours and debugging help. They do not need to submit if they have conceptual questions or are looking for general problem-solving approaches. They can resubmit as many times as they want.
 
-[Click here]({{pathToRoot}}en/resources/submission-oh.html) for the Student submission process.
+[Click here](submission-oh.html) for the Student submission process.
 
 ## 1. Ed Lessons: View student submissions
 
-Once a student submits their code, you will be able to view their code and try it out in your own PyCharm application. The code is available via Lessons on [Ed](https://us.edstem.org/courses/968/discussion/).
+Once a student submits their code, you will be able to view their code and try it out in your own PyCharm application. The code is available via Lessons on [Ed]({{config['discussion_forum_url']}}).
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-sl/lessons1.png">

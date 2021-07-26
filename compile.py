@@ -24,13 +24,15 @@ the OUTPUT_DIR below.
 '''
 
 from util.bottle.bottle import SimpleTemplate
+import configparser
 import json
-import os.path
+import os
 import sys
 import markdown
 
 
 TEMPLATE_DIR = 'templates'
+CONFIG_FILE = 'config/config.ini'
 
 # Use the --output_dir flag to optionally specify where compiled files go
 if '--output_dir' in sys.argv:
@@ -39,7 +41,7 @@ else:
     OUTPUT_DIR = 'docs'
 
 # Verbose mode
-VERBOSE = '--verbose' in sys.argv
+VERBOSE = True#'--verbose' in sys.argv
 
 '''
 FUNCTION: compile
@@ -53,17 +55,45 @@ hierarchy is preserved.
 -----------------
 ''' 
 def compile():
+    # Read the course config
+    config = configparser.ConfigParser()
+    config.read(CONFIG_FILE)
+
     # Compile all templates
     templateFilePaths = getTemplateFilePaths('')
     print("\nCompiling:\n----------")
     for templateFilePath in templateFilePaths:
         if VERBOSE:
             print("Compiling " + templateFilePath + "...")
-        outputPath = compileTemplate(templateFilePath)
-        if VERBOSE:
-            print(templateFilePath + " -> " + outputPath)
+        outputPath = getCompiledOutputPath(templateFilePath)
+
+        # Recompile only if the template has changed
+        templateLastModified = os.path.getmtime(os.path.join(TEMPLATE_DIR, templateFilePath))
+        compiledLastModified = os.path.getmtime(outputPath)
+        if templateLastModified > compiledLastModified:
+            compileTemplate(templateFilePath, outputPath, config)
+            if VERBOSE:
+                print(templateFilePath + " -> " + outputPath)
+        elif VERBOSE:
+            print("Unmodified - skipping...")
 
     print("\nDONE.\n")
+
+'''
+FUNCTION: getCompiledOutputPath
+-------------------------------
+Parameters:
+    relativePath - the path within TEMPLATE_DIR of the template file to find
+                    the output path for
+
+Returns: the path of where the saved, compiled template file would be put in
+the OUTPUT_DIR directory.  Folder hierarchy is preserved.
+'''
+def getCompiledOutputPath(relativePath):
+    suffix = relativePath.split('.')[-1]
+    relativePath = relativePath[:len(relativePath) - len(suffix)] + "html"
+    absolutePath = os.path.join(OUTPUT_DIR, relativePath)
+    return absolutePath
 
 '''
 FUNCTION: getTemplateFilePaths
@@ -111,17 +141,20 @@ FUNCTION: compileTemplate
 -------------------------
 Parameters:
     relativePath - the path within TEMPLATE_DIR of the template file to compile
+    outputPath - the absolute path where the compiled template file should be saved.
+    config - the site configuration info to pass into the template to compile it.
+                Expected to be a ConfigParser with DEFAULT section.
 
-Returns: the path of the saved, compiled template file.
+Returns: N/A
 
-Compiles the given template file.  Saves the compiled template to relativePath 
-in the OUTPUT_DIR directory.  Can compile both HTML and Markdown template files.
-If a Markdown file is provided, it is converted to HTML and then rendered within
+Compiles the given template file and saves it to outputPath.
+Can compile both HTML and Markdown template files.  If a Markdown file is
+provided, it is converted to HTML and then rendered within
 the template specified in the markdown's rebase field, if any, or otherwise
 just rendered on its own.
 -------------------------
 '''
-def compileTemplate(relativePath):
+def compileTemplate(relativePath, outputPath, config):
     pathToRoot = getPathToRootFrom(relativePath)
     filePath = os.path.join(TEMPLATE_DIR, relativePath)
     fileContents = open(filePath, encoding='utf8').read()
@@ -132,16 +165,17 @@ def compileTemplate(relativePath):
         # HTML
 
         # Just render the HTML template
-        compiledHtml = SimpleTemplate(fileContents).render(pathToRoot=pathToRoot)
+        compiledHtml = SimpleTemplate(fileContents).render(pathToRoot=pathToRoot, 
+            config=config['DEFAULT'])
         compiledHtml = compiledHtml.encode('utf8')
     elif relativePath.endswith('mdown') or relativePath.endswith('md'):
-        suffix = relativePath.split('.')[-1]
         # Markdown
 
         # Convert Markdown -> HTML
-        fileContents = fileContents.replace("{{pathToRoot}}", pathToRoot)
         md = markdown.Markdown(extensions=['fenced_code', 'meta', 'attr_list', 'toc'])
         html = md.convert(fileContents)
+        compiledHtml = SimpleTemplate(html).render(pathToRoot=pathToRoot,
+            config=config['DEFAULT'])
 
         # If the markdown file specifies a template to be rendered within,
         # use that.  Otherwise just use the compiled markdown file itself
@@ -149,21 +183,16 @@ def compileTemplate(relativePath):
             templateText = open(md.Meta['template'][0], encoding='utf8').read()
             attributes = {key:"\n".join(md.Meta[key]) for key in md.Meta}
             compiledHtml = SimpleTemplate(templateText).render(pathToRoot=pathToRoot,
-            base=html, filePath=filePath, **attributes)
-        else:
-            compiledHtml = html
+            base=compiledHtml, filePath=filePath, config=config['DEFAULT'], **attributes)
 
         # Encode the HTML and make its rendered path .html instead of .mdown
         compiledHtml = compiledHtml.encode('utf8')
-        relativePath = relativePath[:len(relativePath) - len(suffix)] + "html"
         if VERBOSE:
-            print(relativePath)
+            print(outputPath)
 
     # Save HTML to file
-    relativePath = os.path.join(OUTPUT_DIR, relativePath)
-    makePath(relativePath)
-    open(relativePath, 'wb').write(compiledHtml)
-    return relativePath
+    makePath(outputPath)
+    open(outputPath, 'wb').write(compiledHtml)
 
 '''
 FUNCTION: getPathToRootFrom

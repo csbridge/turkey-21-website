@@ -9,4 +9,4 @@ function ctrl_c() {
 }
 
 python3 -m http.server --directory docs &
-watchmedo auto-restart --directory templates --pattern '*' --recursive python3 compile.py
+watchmedo auto-restart --directory templates --directory config --recursive python3 compile.py

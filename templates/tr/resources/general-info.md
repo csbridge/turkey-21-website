@@ -119,7 +119,7 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 #### A. <u> Program Web Sitesi </u>
 
 <P>
-    Programın web sayfası: <a href='http://online.csbridge.org/'> http://online.csbridge.org/ </a> <br>
+    Programın web sayfası: <a href="{{config['course_url']}}"> {{config['course_url']}} </a> <br>
     Ders notları, duyurular ve ödevlerle ilgili en güncel bilgiler de dahil olmak üzere diğer bilgileri düzenli olarak program web sitesinde kontrol etmelisiniz.
 </P>
 
@@ -169,7 +169,7 @@ Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve far
 
 <p>
     <b> Sorularınızı geldikçe yanıtlayacağız. </b> <br>
-    Lütfen Sıkça Sorulan Sorular sayfamıza bakınız: <a href='http://online.csbridge.org/tr/resources/student-faq.html'> SSS</a>
+    Lütfen Sıkça Sorulan Sorular sayfamıza bakınız: <a href='student-faq.html'> SSS</a>
 </p>
 
 <hr />

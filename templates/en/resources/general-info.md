@@ -14,15 +14,13 @@ CS Bridge is a collaboration between Stanford University in the United States, K
 
 We hope these course components will help you have a great CS Bridge experience:
 
-- You will meet (via videoconferencing) <b>in a small group</b>, daily, with someone on the teaching team.
-- The course is centered around <b>engaging assignments and projects</b> and other activities to help you meet other students and get to know the teaching team.
+- You will meet (via videoconferencing) **in a small group**, daily, with someone on the teaching team.
+- The course is centered around **engaging assignments and projects** and other activities to help you meet other students and get to know the teaching team.
 - You won't receive a grade in the course, so just enjoy learning and have fun!
 - The main outcome is that you will have had A LOT of FUN and have acquired **a new and wonderful skill: how to program.**
 - After you've finished the course, you will receive a certificate of completion.
 
-<hr />
-
-<!-- CS Bridge Team -->
+---
 
 ### The CS Bridge Team
 
@@ -35,27 +33,22 @@ The CS Bridge Team is made up of a group of wonderful teachers in **two countrie
 Pre-pandemic, this program was run in-person. We have adjusted the program slightly so it could be offered online and this is the second year we are running CS Bridge as an online program.
 Our goal is to create one community of enthusiastic teachers and students who support each other as you all learn a new and exciting skill!
 
-<hr />
-
-<!-- Requirements for the Course -->
+---
 
 ### Requirements for the Course
 
-1. An internet connection strong enough to stream video.</li>
-2. <b>Video conferencing software</b> to participate in lecture, office hours, section, and social activities. We will be using Zoom for most of the program-related activities where we are online together. You can download the <b>"Zoom Client for Meetings" version 5.7.3.</b> here: <a href='https://zoom.us/download'>https://zoom.us/download</a></li>
-3. The <b>PyCharm development environment</b> to complete assignments. Installation instructions here: <a href='http://turkey21.csbridge.org/en/resources/install.html'>http://turkey21.csbridge.org/en/resources/install.html</a>
-4. A love of learning and an interest in getting to know other high school students in Turkey!</li>
+1. An internet connection strong enough to stream video.
+2. **Video conferencing software** to participate in lecture, office hours, section, and social activities. We will be using Zoom for most of the program-related activities where we are online together. You can download the latest versino of the Zoom Client for Meetings [here](https://zoom.us/download)
+3. The **PyCharm development environment** to complete assignments. Installation instructions are [here](install.html).
+4. A love of learning and an interest in getting to know other high school students in Turkey!
 
 What if I don’t have some of these things or don't understand what I'm being asked to do? The best place to ask for questions is on Ed. See below for more information about Ed!
 
-<hr />
-<!-- Elements of the Course -->
+---
 
 ### Elements of the Course
 
 It is expected that you participate **fully** in the course. You must attend every activity on the schedule.
-
-<!-- A. Lectures -->
 
 #### A. <u>Lectures</u>
 
@@ -63,16 +56,12 @@ Lectures will be held **twice a day** - there will be one 40 minute lecture at t
 
 - Lectures will be delivered **LIVE** through Zoom and will be recorded and posted on Ed so you can refer back to them later if you need to. What is Ed??? See the Course Communications section below!
 
-<!-- B. Quickstart -->
-
 #### B. <u>Quickstart</u>
 
 This will follow the morning lecture each day.
 
 - You will work with your Section Leader and students in your morning group to solve a short problem that is based on what you just learned in lecture. 
 - Quickstart is meant to get you to start thinking about what you just learned but isn't meant to be as in depth as what you'll be working on in Section.
-
-<!-- C. Tea Time -->
 
 #### C. <u>Tea Time</u>
 
@@ -82,72 +71,52 @@ This will follow the morning quickstart each day.
 - Picture yourself drinking tea and sitting around a circle in a room getting to know each other!
 
 
-<!-- D. Section -->
-
 #### D. <u>Section</u>
 
-In addition to two lectures per day, <b>you will also be attending a daily discussion section in small groups with a Section Leader.</b>
+In addition to two lectures per day, **you will also be attending a daily discussion section in small groups with a Section Leader.**
 
 - This is where you’ll get to practice with the new concepts you learned in lecture.
 - You will meet with the same group of students and will have the same Section Leader each day.
 
-<!-- E. Office Hours/Work -->
-
 #### E. <u>Office Hours/Work</u>
 
 Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
-Go to the office hour Nooks link listed on the schedule in [Ed](https://edstem.org/us/courses/6374/discussion/526272). 
+Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). 
 
-- For more information about how office hours work, visit the [Submission/Office Hours page](https://turkey21.csbridge.org/en/resources/submission-oh.html).
+- For more information about how office hours work, visit the [Submission/Office Hours page](submission-oh.html).
 
-<!-- F. Projects -->
 
-#### F. <u>Assignments</u>
+#### F. <u>Projects</u>
 
 There will be two programming projects that you will work on each day. The core project questions are designed to be done individually but we encourage you to teach each other -- this includes guiding your peers towards the answer without “giving it away”.
 
-- You will be expected to submit the first project by 14:00 each day and the second project by the end of the Office Hours/Work session in the evening at 23:00.
+- You will be expected to submit the first project by 14:00 each day and the second project by the end of the Office Hours/Work session in the evening at 23:00.  It's ok if you don't finish everything - submit what you are able to complete!
 - Instructions for completing and submitting assignments will be posted on Ed.
-
-<!-- G. Social Activities -->
 
 #### G. <u>Social Activities</u>
 
-We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different schools and areas! We also want you to get to know the Section Leaders, not just your own Section Leader!
+We want you to learn a lot in this course but we also really want you to have **FUN** and to get to know students from different schools and areas! We also want you to get to know all the Section Leaders, not just your own Section Leader!
 
-- Each week there will be one large social activity for everyone involved in the course, we will host them at different times so check the schedule.
+- Each week there will be one large social activity for everyone involved in the course, which we we will host at different times, so check the schedule.
 - These activities are part of the program so please plan to attend!
 - We are going to try really hard to make this program memorable and a lot of fun and hopefully you'll turn off your computer on the last day knowing that you have a lot of new friends in different places!
 
-<hr />
-
-<!-- Course Communications -->
+---
 
 ### Course Communications
 
-<!-- A. Course Website -->
-
 #### A. <u>Course Website</u>
 
-<p>
-    The class web page is: <a href='http://turkey21.csbridge.org/'>http://turkey21.csbridge.org/</a><br>
-    You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
-</p>
-<!-- B. Class Discussion Forum -->
+The class web page is: [{{config['course_url']}}]({{config['course_url']}}).  You should regularly check the class website for handouts, announcements and other information, including the most up-to-date information on assignments.
+
+
 #### B. <u>Class Discussion Forum</u>
-<p>
-    Our class discussion forum is hosted on Ed here: <a href='https://us.edstem.org/'>https://us.edstem.org/</a><br>
-    All communication with the teaching team and students will take place in Ed. <b>Do not share personal contact information with anyone in the course.</b>
-    <p>You will be enrolled in two Ed groups:</p>
-</p>
-<ol>
-    <li><b>“CS Bridge Turkey”: the main discussion group.</b></li>
-    <!-- TODO Fix alignment to be all the way left aligned -->
-    This is where you should post questions you have (conceptual, technical, etc.) and where we’ll post announcements about the course. Please answer your classmates’ questions, too! Before posting a question, check if it has been asked already (and if so, read the answer to <i>that</i> post!). We may not answer duplicate questions.
-    <li><b>Your discussion section’s Ed group.</b></li>
-    <!-- TODO Fix alignment to be all the way left aligned -->
-    This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
-</ol>
+Our class discussion forum is hosted on Ed at [https://us.edstem.org/](https://us.edstem.org/).  All communication with the teaching team and students will take place in Ed. **Do not share personal contact information with anyone in the course.**
+    
+You will be enrolled in two Ed groups:
+
+1. **“CS Bridge Turkey”: the main discussion group.**  This is where you should post questions you have (conceptual, technical, etc.) and where we’ll post announcements about the course. Please answer your classmates’ questions, too! Before posting a question, check if it has been asked already (and if so, read the answer to *that* post!).
+2. **Your discussion section’s Ed group.**  This is specifically for your section. If you need to get in touch with your Section Leader, make a private post (to staff only) in this group. You can also post to the whole section if you want the other students in your section to see. For more general questions not related to your section, use the main CS Bridge Ed group instead.
 
 <center>
 <img
@@ -170,35 +139,29 @@ Here are some community norms and expectations for Ed:
 - Do not post any external links
 - For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
-<hr />
-<!-- Whom to Contact About What -->
+---
+
 ### Whom to Contact About What
-<p>
-    It is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (class discussion forum) where the Section Leaders and other students can help you. Some guidelines:
-</p>
+It is important that you know who to contact for what and how so that you can get help in a timely manner. Please use the Ed platform (class discussion forum) where the Section Leaders and other students can help you. Some guidelines:
 
-- For logistical questions, conceptual and technical questions, or general course conversation</b>, please post a public question on our CS Bridge Ed forum.</li>
-- For <b>personal concerns or issues</b>, please make a private post in the CS Bridge Ed.</li>
-- To <b>send a message to your Section Leader</b>, make a private post in your section’s Ed.</li>
-- For <b>major personal issues or concerns</b>, please contact either Burcu Hanim (Koç) or Baris Bozkurt (Izmir). Contact information can be found on the CS Bridge Ed in the "General" category [here](https://edstem.org/us/courses/6374/discussion/527475).</li>
+- For **logistical questions, conceptual and technical questions, or general course conversation**, please post a public question on our CS Bridge Ed forum.
+- For **personal concerns or issues**, please make a private post in the CS Bridge Ed.
+- To **send a message to your Section Leader**, make a private post in your section’s Ed.
+- For **major personal issues or concerns**, please contact either Burcu Hanim (Koç) or Baris Bozkurt (Izmir). Contact information can be found on the CS Bridge Ed in the "General" category [here]({{config['discussion_forum_contact_url']}}).
 
-<hr />
-<!-- FAQs -->
+---
+
 ### Frequently Asked Questions
-<p>
-    <b>We will answer your questions as they come up.</b><br>
-    Please see: <a href='http://turkey21.csbridge.org/en/resources/student-faq.html'>http://turkey21.csbridge.org/en/resources/student-faq.html</a>
-</p>
+**We will answer your questions as they come up.**  Please see our [FAQ page](student-faq.html).
 
-<hr />
-<!-- Additional Resources -->
+---
+
+
 ### Additional Resources
-<!-- Accessibility -->
-#### Accessibility
-<ul>
-    <li>We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or tell your Section Leader.</li>
-</ul>
-<!-- Process for reporting misconduct -->
-#### Process for reporting misconduct
 
-- Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this [Ed post](https://edstem.org/us/courses/6374/discussion/527475).
+#### Accessibility
+We know that our community will have a variety of learning differences and will include many differently abled individuals. If you have a suggestion for how to make learning more accessible for you, feel free to post on Ed or tell your Section Leader.</li>
+
+
+#### Process for reporting misconduct
+Creating and maintaining a safe and open community is of utmost importance to us, and if the actions or behavior of others (students or staff) make you feel unsafe or unwelcome, we want you to let us know. Information for who to contact for what can be found in this [Ed post]({{config['discussion_forum_contact_url']}}).

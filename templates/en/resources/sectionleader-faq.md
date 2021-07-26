@@ -17,17 +17,13 @@ We will be using this platform to communicate with students as a group and in se
 
 You will be enrolled in two Ed groups:
 
-- [CS Bridge Turkey](https://edstem.org/us/courses/6374/discussion/): The main discussion group.
+- **[CS Bridge Turkey]({{config['discussion_forum_url']}}): The main discussion group.**  This is where students will post questions they have (conceptual, technical, etc.) and where we’ll post announcements about the course that everyone needs to see. We will assign some Section Leaders to be responsible for answering Ed posts during the day.
 
-  This is where students will post questions they have (conceptual, technical, etc.) and where we’ll post announcements about the course that everyone needs to see. We will assign some Section Leaders to be responsible for answering Ed posts during the day.
-
-- **Section #**: This is your section's Ed group.
-
-  You will be assigned a section and this will be your go-to location for all things related to section. You'll communicate exclusively with your group of students in this group.
+- **Section #: This is your section's Ed group.** You will be assigned a section and this will be your go-to location for all things related to section. You'll communicate exclusively with your group of students in this group.
 
 For more information on Ed Discussion, you can refer to the [Quick Start Guide](https://us.edstem.org/help).
 
-### [Course Website](http://turkey21.csbridge.org/)
+### [Course Website]({{config['course_url']}})
 
 This is where you will find all information related to the curriculum - handouts, projects, examples, and slides. You'll also find FAQ information for students and Section Leaders.
 
@@ -37,12 +33,12 @@ We'll be using Zoom to host all live interactions. All Section Leaders will have
 
 ### PyCharm
 
-This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](http://turkey21.csbridge.org/en/resources/install.html)
+This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](install.html)
 
 ## Schedule
 
 Below is the calendar for the program. The Section Leader Team Meeting is NOT on the below calendar but it will occur 45min before the evening lecture each day (9am in CA/7pm in Turkey) and you're required to attend.
-Click on one of the three buttons below to set the calendar to your timezone.
+Click on one of the buttons below to set the calendar to your timezone.
 
 <div class="panel-group" id="accordion">
   <div class="panel panel-danger">
@@ -122,7 +118,7 @@ Sections will be held in the evening (morning for Stanford) on Zoom. Every Secti
 
 - You will be assigned a group of students
 
-- See the student-facing page [What to Expect for Section](http://online.csbridge.org/en/resources/section-info.html) for more information about section.
+- See the student-facing page [What to Expect for Section](section-info.html) for more information about section.
 
 ### What will the **social activity** look like?
 
@@ -152,4 +148,4 @@ There is a **Reflection** category in the Ed Section Leader group. Once the prog
 
 If you see the Ed post and are confident of the answer, you can go ahead and respond. As the course progresses, we might create a system for answering Ed questions if we think it's necessary.
 
-_Have a question that wasn't answered here? Please post on [Ed](https://us.edstem.org/courses/972)._
+_Have a question that wasn't answered here? Please post on Slack._
