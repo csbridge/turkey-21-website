@@ -31,6 +31,10 @@ This is where you will find all information related to the curriculum - handouts
 
 We'll be using Zoom to host all live interactions. All Section Leaders will have access to a Stanford Zoom account. Once you have a Stanford sunet ID, you can read instructions for accessing Zoom [here](https://stanford.service-now.com/it_services?id=kb_article&number=KB00013259). We'll go through a short Zoom tutorial during the Section Leader training and you can find a [Zoom tutorial here](https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing).
 
+### Nooks
+
+This is where we'll be hosting office hours. This is an online platform that requires no software but does require you to create a login upon entering the space. [Here](https://app.nooks.in/goto/CS-Bridge-Turkey~4b8yjtYLce6kmp7h?pwd=Mn72bi) is the link to the Nooks space.
+
 ### PyCharm
 
 This is the Integrated Development Environment (IDE) that everyone will be using for the course. You can find the [PyCharm installation tutorial here](install.html)
@@ -89,15 +93,9 @@ This is an opportunity for you to get to know a small group of students better. 
 
 These office hours will be help sessions with opportunities for small breakout sessions using Nooks.
 
-- The Koç and CTU SLs will be broken up into two groups and assigned to the following office hours:
+- All Section Leaders have been assigned either afternoon or evening office hours depending on time zone and preference.
 
-  - 1. Monday+Wednesday+Friday morning office hours and Tuesday+Thursday evening office hours
-
-  - 2. Tuesday+Thursday morning office hours and Monday+Wednesday+Friday evening office hours
-
-- Stanford SLs will run all evening office hours.
-
-We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there on Nooks who can help them. There will be a system for students to submit the code they need help with when they sign in for the office hours so that you can see their code and help them in a breakout room. One Section Leader will need to remain in the main room and put students into a breakout room with a Section Leader as they become available. 
+We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own or they can join the Nooks space and work in the designated rooms. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there on Nooks who can help them. There will be a system for students to submit the code they need help with when they sign in for the office hours so that you can see their code and help them in a breakout room. One Section Leader will need to remain in the main room and put students into a breakout room with a Section Leader as they become available. 
 
 ### What is the difference between **morning submit** and **evening submit**?
 
@@ -105,12 +103,12 @@ Students will be submitting two assignments per day - once for the assignment th
 
 ### When is it **break time** for students and for Section Leaders?
 
-There will be **NO CS Bridge activities** for students between 11:30am - 1:00pm PT. Students should take a break during this time (step away from the computer and be kids and eat lunch). If a student doesn't come to Office Hours, then they can either take a break or work on the assignment on their own.
+There will be **NO CS Bridge activities** for students between 13:30-19:45. Students should take a break during this time (step away from the computer and be kids). If a student doesn't come to Office Hours, then they can either take a break or work on the assignment on their own.
 Section Leaders will have a break during the Office Hour block they haven't been assigned to as well as before and after the SL team meeting and during lectures if you don't want to attend.
 
 ### What will happen in the **SL team meeting**?
 
-This meeting will be held everyday at 12pm and will be lead by the Lecturers and is a time for ALL SLs to meet (via Zoom) to share feedback and to focus on different aspects of the program. It is also an opportunity for SL training.
+This meeting will be held everyday at 9:00 PT/19:00 TU and will be lead by the Lecturers and is a time for ALL SLs to meet (via Zoom) to share feedback and to focus on different aspects of the program. It is also an opportunity for SL training.
 
 ### What will **section** look like?
 
@@ -122,7 +120,7 @@ Sections will be held in the evening (morning for Stanford) on Zoom. Every Secti
 
 ### What will the **social activity** look like?
 
-We're planning to organize one virtual social activity per week. This could take the form of a fireside chat, a talent show, movie night, or other activity. If you have an idea, tell Yosefa! You'll be asked to help run social activities. These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
+We're planning to organize one to two virtual social activities per week. This could take the form of an Ask Me Anything (AMA) session, game night, or something else. If you have an idea, tell Yosefa! You'll be asked to help run social activities. These are activities for the whole group. Ed will also be used as a platform for sharing other ways for students to engage with each other (such as online pictionary or other games).
 
 ## Who to Ask/Tell for What
 
@@ -139,10 +137,6 @@ If you are sick or can't make it to your section for another reason, communicate
 Please contact Yosefa. 
 
 ## General Questions
-
-### If I have feedback about the program or content I'd like to discuss in the SL team meeting, where can I share my thoughts?
-
-There is a **Reflection** category in the Ed Section Leader group. Once the program starts, we encourage you to reflect on your own teaching experience. Feedback and reflection are essential for making improvements. We want this to be the best it can be for everyone!
 
 ### Who should answer posts made by students in the CS Bridge group on Ed?
 
