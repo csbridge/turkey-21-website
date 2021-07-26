@@ -6,6 +6,6 @@ template: templates/teach/template.ptl
 * Section Leader Training slides: [Google Slides](https://docs.google.com/presentation/d/1FygP9JgeKxeli6_WmWwQ9BsFgGVTmHAbchjmnU9qhDU/edit?usp=sharing)
 * Office Hour Training Exercise: [here]({{pathToRoot}}teach/notes/exercise.html)
 * Section Leader Frequently Asked Questions (FAQs): [\[Section Leader\] FAQs]({{pathToRoot}}en/resources/sectionleader-faq.html)
-* Suggested Activities for Tea Time: [here](https://docs.google.com/presentation/d/1FygP9JgeKxeli6_WmWwQ9BsFgGVTmHAbchjmnU9qhDU/edit?usp=sharing) 
+* Suggested Activities for Tea Time: [here](https://docs.google.com/document/d/16gd4JdP26BY0zXcAIbH1QaON6PcPXEzcMWmMKpAgbwc/edit?usp=sharing) 
 * How to use Zoom: [Zoom Guide](https://docs.google.com/document/d/1HxcSiTCcBfV1iPx7dTMYASN0Ba6QpjCpp3TPKr2dDys/edit?usp=sharing)
 * How to open submissions on Ed: [Submission Overview]({{pathToRoot}}en/resources/submission-sl.html)
