@@ -41,7 +41,7 @@ else:
     OUTPUT_DIR = 'docs'
 
 # Verbose mode
-VERBOSE = True#'--verbose' in sys.argv
+VERBOSE = '--verbose' in sys.argv
 
 '''
 FUNCTION: compile

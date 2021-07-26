@@ -80,7 +80,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<li class="dropdown-header">{{translation_dictionary["References"][lang]}}</li>
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021062800"
+									class="visible-after" data-visible-after="2021080209"
 								% end
 							>
 								<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html">{{translation_dictionary["Karel Reader"][lang]}}</a>
@@ -88,7 +88,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021062800"
+									class="visible-after" data-visible-after="2021080209"
 								% end
 							>
 							<a href="https://compedu.stanford.edu/karel-reader/docs/python/en/reference.html">{{translation_dictionary["Karel Reference"][lang]}}</a></a>
@@ -97,7 +97,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<!-- Divider gap only visible once Python resources visible -->
 							<div
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021063000"
+									class="visible-after" data-visible-after="2021080400"
 								% end
 								style="margin-bottom: 13px;"
 							></div>
@@ -105,7 +105,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<!-- Python reader visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021063000"
+									class="visible-after" data-visible-after="2021080400"
 								% end
 							>
 								<a href="https://codeinplace2020.github.io/pythonreader/en/intro/">{{translation_dictionary["Python Reader"][lang]}}</a>
@@ -114,7 +114,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 							<!-- Python reference visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021063000"
+									class="visible-after" data-visible-after="2021080400"
 								% end
 							>
 								<a href="{{pathToRoot}}{{lang}}/resources/quick-python.html">{{translation_dictionary["Python Reference"][lang]}}</a>
@@ -122,14 +122,14 @@ Note: when adding support for additional languages, also make sure to add the ab
 
 							<div
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021070200"
+									class="visible-after" data-visible-after="2021080509"
 								% end
 								style="margin-bottom: 13px;"
 							></div>
 							<!-- Graphics reference visible later -->
 							<li
 								% if not get('taMode', False):
-									class="visible-after" data-visible-after="2021070200"
+									class="visible-after" data-visible-after="2021080509"
 								% end
 							>
 								<a href="{{pathToRoot}}{{lang}}/resources/graphics.html">{{translation_dictionary["Graphics Reference"][lang]}}</a>
