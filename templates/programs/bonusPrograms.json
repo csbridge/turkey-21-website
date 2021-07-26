@@ -3,7 +3,7 @@
     "title_en": "Karel",
     "title_tr": "Karel",
     "projectURL": "starter/BonusKarel.zip",
-    "visible_after": "2020080500",
+    "visible_after": "2021080300",
     "projects": [
       {
         "title_en": "Midpoint",
@@ -35,7 +35,7 @@
     "title_en": "Variables",
     "title_tr": "Değişkenler",
     "projectURL": "starter/BonusVariables.zip",
-    "visible_after": "2020080609",
+    "visible_after": "2021080409",
     "projects": [
       {
         "title_en": "Console Bonus",
@@ -75,7 +75,7 @@
     "title_en": "Graphics, Parameters and Return",
     "title_tr": "Graphics, Parameters and Return",
     "projectURL": "starter/BonusGraphics.zip",
-    "visible_after": "2020081009",
+    "visible_after": "2021080600",
     "projects": [
       {
         "title_en": "Bouncing Balls",
@@ -123,7 +123,7 @@
     "title_en": "Loops and Animation",
     "title_tr": "Döngüsü / Animasyon",
     "projectURL": "starter/BonusLoopsAnimation.zip",
-    "visible_after": "2020081100",
+    "visible_after": "2021080909",
     "projects": [
       {
         "title_en": "Number Grid",
@@ -155,7 +155,7 @@
     "title_en": "Lists and Mouse",
     "title_tr": "Lists and Mouse",
     "projectURL": "starter/BonusListsMouse.zip",
-    "visible_after": "2020081209",
+    "visible_after": "2021081009",
     "projects": [
       {
         "title_en": "Line Game",

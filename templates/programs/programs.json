@@ -2,7 +2,7 @@
     {
         "title_en": "Karel",
         "title_tr": "Karel",
-        "visible_after": "2021062809",
+        "visible_after": "2021080209",
         "bonus": false,
         "sections": [
             {
@@ -49,7 +49,7 @@
     {
         "title_en": "Karel and Control Flow",
         "title_tr": "Karel ve Kontrol Akışı",
-        "visible_after": "2020080500",
+        "visible_after": "2021080300",
         "sections": [
             {
                 "title_en": "Morning",
@@ -88,7 +88,7 @@
             {
                 "title_en": "Evening",
                 "title_tr": "Akşam",
-                "visible_after": "2020080509",
+                "visible_after": "2021080309",
                 "projectURL": "starter/Day2PM.zip",
                 "examples": [
                     {
@@ -145,7 +145,7 @@
     {
         "title_en": "Variables",
         "title_tr": "Değişkenler",
-        "visible_after": "2020080600",
+        "visible_after": "2021080400",
         "sections": [
             {
                 "title_en": "Morning",
@@ -184,7 +184,7 @@
             {
                 "title_en": "Evening",
                 "title_tr": "Akşam",
-                "visible_after": "2020080609",
+                "visible_after": "2021080409",
                 "projectURL": "starter/Day3PM.zip",
                 "examples": [
                     {
@@ -249,9 +249,9 @@
         ]
     },
     {
-        "title_en": "For loops, deconstructed",
-        "title_tr": "For döngüsü ve analizi",
-        "visible_after": "2020080700",
+        "title_en": "For loops, deconstructed and Graphics",
+        "title_tr": "For döngüsü ve analizi ve Grafikler",
+        "visible_after": "2021080500",
         "sections": [
             {
                 "title_en": "Morning",
@@ -279,18 +279,12 @@
                         "url": "projects/carbonDating.html"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "title_en": "Graphics and Functions",
-        "title_tr": "Grafikler ve Fonksiyonlar",
-        "visible_after": "2020081000",
-        "sections": [
+            },
             {
-                "title_en": "Morning",
-                "title_tr": "Sabah",
-                "projectURL": "starter/Day5AM.zip",
+                "title_en": "Evening",
+                "title_tr": "Akşam",
+                "visible_after": "2021080509",
+                "projectURL": "starter/Day4PM.zip",
                 "projects": [
                     {
                         "imageURL": "img/projects/programmingIsAwesome/demo.png",
@@ -313,12 +307,18 @@
                         "url": "projects/randomCircles.html"
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "title_en": "Functions",
+        "title_tr": " Fonksiyonlar",
+        "visible_after": "2021080600",
+        "sections": [
             {
-                "title_en": "Evening",
-                "title_tr": "Akşam",
-                "visible_after": "2020081009",
-                "projectURL": "starter/Day5PM.zip",
+                "title_en": "Morning",
+                "title_tr": "Sabah",
+                "projectURL": "starter/Day5AM.zip",
                 "examples": [
                     {
                         "title_en": "Robot Face",
@@ -394,7 +394,7 @@
     {
         "title_en": "Loops and Animation",
         "title_tr": "Döngüsü / Animasyon",
-        "visible_after": "2020081100",
+        "visible_after": "2021080900",
         "sections": [
             {
                 "title_en": "Morning",
@@ -427,7 +427,7 @@
                 "title_en": "Evening",
                 "title_tr": "Akşam",
                 "projectURL": "starter/Day6PM.zip",
-                "visible_after": "2020081109",
+                "visible_after": "2021080909",
                 "examples": [
                     {
                         "title_en": "Move to Center",
@@ -478,7 +478,7 @@
     {
         "title_en": "Lists and Mouse",
         "title_tr": "Lists and Mouse",
-        "visible_after": "2020081200",
+        "visible_after": "2021081000",
         "sections": [
             {
                 "title_en": "Morning",
@@ -510,7 +510,7 @@
             {
                 "title_en": "Evening",
                 "title_tr": "Akşam",
-                "visible_after": "2020081209",
+                "visible_after": "2021081009",
                 "projectURL": "starter/Day7PM.zip",
                 "examples": [
                     {
@@ -582,7 +582,7 @@
     {
         "title_en": "Breakout",
         "title_tr": "Breakout",
-        "visible_after": "2020081300",
+        "visible_after": "2021081100",
         "bonus": false,
         "sections": [
             {
@@ -614,7 +614,7 @@
     {
         "title_en": "Breakout",
         "title_tr": "Breakout",
-        "visible_after": "2020081400",
+        "visible_after": "2021081200",
         "bonus": false,
         "sections": [
             {
@@ -639,7 +639,7 @@
     {
         "title_en": "Dictionaries, Breakout and Final Projects",
         "title_tr": "Dictionaries, Breakout and Final Projects",
-        "visible_after": "2020081700",
+        "visible_after": "2021081300",
         "bonus": false,
         "sections": [
             {
@@ -672,7 +672,7 @@
             {
                 "title_en": "Evening",
                 "title_tr": "Akşam",
-                "visible_after": "2020081710",
+                "visible_after": "2021081309",
                 "projectURL": "starter/FinalProject.zip",
                 "projects": [
                     {
@@ -692,7 +692,7 @@
     {
         "title_en": "Final Project",
         "title_tr": "Final Projesi",
-        "visible_after": "2020081800",
+        "visible_after": "2021081600",
         "bonus": false,
         "sections": [
             {
@@ -717,7 +717,7 @@
     {
         "title_en": "Final Project",
         "title_tr": "Final Projesi",
-        "visible_after": "2020081900",
+        "visible_after": "2021081700",
         "bonus": false,
         "sections": [
             {
@@ -731,6 +731,31 @@
                         "url": "projects/coloredShapes/"
                     }
                 ],
+                "projects": [
+                    {
+                        "imageURL": "img/projects/finalProject/project.png",
+                        "teachURL": "teach/notes/finalProject.html",
+                        "title_en": "Final Project",
+                        "title_tr": "Final Projesi",
+                        "topic_en": "",
+                        "topic_tr": "",
+                        "type": "project",
+                        "url": "projects/project.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title_en": "Final Project",
+        "title_tr": "Final Projesi",
+        "visible_after": "2021081800",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Final Project",
+                "title_tr": "Final Projesi",
+                "projectURL": "starter/FinalProject.zip",
                 "projects": [
                     {
                         "imageURL": "img/projects/finalProject/project.png",
