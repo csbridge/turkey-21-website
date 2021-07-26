@@ -18,6 +18,8 @@ pip3 install -r requirements.txt
 python3 -m pip install -U watchdog[watchmedo]
 ```
 
+**Make sure `config/config.ini` is updated with the current course info.**  This file contains site information that is referenced throughout the website, so you only have to input it once (e.g. link to Ed discussion forum).
+
 ## Website Updates
 
 1. Change any file templates in ```templates/```
@@ -36,8 +38,16 @@ Note: there is a special `{{pathToRoot}}` placeholder that you can use in all te
 <img src="{{pathToRoot}}img/projects/newspaper/newspaper.png">	
 ```
 
+You can also access any variables within the `config/config.ini` file using the following syntax:
+
+```
+The course homepage is at {{config['course_url']}}
+```
+
+Replace `course_url` above with the name of the config variable you wish to reference.
+
 ### Local Development
-Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  Enter `Ctl-c` to terminate the script.
+Run `./runLocal.sh` to compile and run a local copy of the website at `localhost:8000`.  The script is long-running, monitoring any changes to the `templates` folder and automatically recompiling whenever a file changes so that you can see modifications you make while you are working.  It only recompiles files that have changed since the last compile.  Enter `Ctl-c` to terminate the script.
 
 The website relies on several CSS classes (see [Timed Release](#timed-release)) to make certain content appear at certain times.  To help with testing, when running _locally only_ (e.g. viewing via `localhost:` or `file://`), the site will show a bar at the top that allows you to preview what the site looks like at another time of day.  When running hosted somewhere, this bar does not show.
 
