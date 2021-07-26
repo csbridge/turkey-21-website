@@ -69,7 +69,7 @@ def compile():
 
         # Recompile only if the template has changed
         templateLastModified = os.path.getmtime(os.path.join(TEMPLATE_DIR, templateFilePath))
-        compiledLastModified = os.path.getmtime(outputPath)
+        compiledLastModified = os.path.getmtime(outputPath) if os.path.exists(outputPath) else None
         if True: #templateLastModified > compiledLastModified: TODO: what if a file's dependency was changed?
             compileTemplate(templateFilePath, outputPath, config)
             if VERBOSE:

@@ -11,7 +11,7 @@
           Bilgisayar Bilimine Giriş
         </div>
         <div>
-          2020 Yaz
+          2021 Yaz
         </div>
         <div>
           2 - 19 Ağustos, Online
@@ -39,7 +39,7 @@
       öğreneceksiniz.
     </p>
 </div>
-</hr>
+<hr/>
 
 <!-- Daily schedule / list of programs -->
 <div class="section" id="schedule">
@@ -52,6 +52,8 @@
 	%include("templates/programs/projectsTable.ptl", lang="tr")
 </div>
 
+<hr/>
+
 <!-- Course Staff -->
 <div class="section" id="staff">
 	<h2>Öğretmenler</h2>
@@ -61,55 +63,8 @@
 	# with each staff member being a (name, image file) tuple.  The
 	# image files are assumed to live in img/staff/.
 	courseStaff = [
-	[
-	  ("Nick T.", "nickt.jpg"),
-	  ("Ondra", "ondra.jpg"),
-	  ("Ayca", "Ayca.jpg"),
-	  ("Chris", "chris.jpg"),
-	  ("Nick M.", "nickm.jpg"),
-	  ("Josef", "Josef.jpg"),
-	],
-	[
-	  ("Yosefa", "Yosefa.JPG"),
-	  ("Burcu", "Burcu.jpg"),
-	  ("Lisa", "lisa.jpg"),
-	  ("Ceren", "ceren.PNG"),
-	  ("Ahmet", "Ahmet.png"),
-	  ("Anna", "Anna.jpg"),
-	],
-	[
-	("Demet", "Demet.jpeg"),
-	  ("Eddie", "Eddie.jpg"),
-	  ("Eliška", "Eliška.jpg"),
-	  ("Emilia", "Emilia.jpg"),
-	  ("Emirhan", "Emirhan.jpg"),
-	  ("Eren", "Eren.jpeg"),
-	  
-	],
-	[
-	("Ezgi", "Ezgi.jpg"),
-	  ("Gaby", "Gaby.jpeg"),
-	  ("Gül Sena", "Gül Sena.JPG"),
-	  ("Honza", "Honza.jpeg"),
-	  ("Jan", "Jan.jpg"),
-	  ("Jaroslav", "jaroslav.jpg"),
-	  
-	],
-	[
-	("Jillian", "jillian.jpg"),
-	  ("Julie", "Julie.jpeg"),
-	  ("Melis", "Melis.jpg"),
-	  ("Necla", "Necla.jpg"),
-	  ("Okan", "Okan.png"),
-	  ("Oya", "Oya.jpg"),
-	  
-	],
-	[
-	("Ozan", "Ozan.jpg"),
-	  ("Pinar", "Pinar.jpeg"),
-	  ("Radek", "Radek.jpg")
-	],
-]
+	
+	]
 	%>
 
 	% for i in range(len(courseStaff)):

@@ -48,6 +48,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Lectures"] = {"en": "Lectures", "tr": "Ders"}
 	translation_dictionary["Bonus"] = {"en": "Bonus", "tr": "Bonus"}
 	translation_dictionary["SL Page"] = {"en": "SL Page", "tr": "SL Sayfası"}
+	translation_dictionary["Sponsors"] = {"en": "Sponsors", "tr": "Sponsors"}
 %>
 
 <!-- The datetime editor, for testing -->
@@ -168,7 +169,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 						% include('templates/programs/programsDropdown.ptl', content_type="examples")
 					</li>
 
-					<!-- Examples dropdown -->
+					<!-- Lectures dropdown -->
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{translation_dictionary["Lectures"][lang]}} <b class="caret"></b></a>
 						% include('templates/parts/lecturesDropdown.ptl')
@@ -177,6 +178,11 @@ Note: when adding support for additional languages, also make sure to add the ab
 					<!-- Bonus -->
 					<ul class="nav navbar-nav">
 						<li><a href="{{pathToRoot}}{{lang}}/bonus-index.html">{{translation_dictionary["Bonus"][lang]}}</a></li>
+					</ul>
+
+					<!-- Sponsors -->
+					<ul class="nav navbar-nav">
+						<li><a href="{{pathToRoot}}{{lang}}/sponsors.html">{{translation_dictionary["Sponsors"][lang]}}</a></li>
 					</ul>
 
 					<!-- TA Link -->
