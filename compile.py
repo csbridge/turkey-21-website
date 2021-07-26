@@ -70,7 +70,7 @@ def compile():
         # Recompile only if the template has changed
         templateLastModified = os.path.getmtime(os.path.join(TEMPLATE_DIR, templateFilePath))
         compiledLastModified = os.path.getmtime(outputPath)
-        if templateLastModified > compiledLastModified:
+        if True: #templateLastModified > compiledLastModified: TODO: what if a file's dependency was changed?
             compileTemplate(templateFilePath, outputPath, config)
             if VERBOSE:
                 print(templateFilePath + " -> " + outputPath)
@@ -174,8 +174,10 @@ def compileTemplate(relativePath, outputPath, config):
         # Convert Markdown -> HTML
         md = markdown.Markdown(extensions=['fenced_code', 'meta', 'attr_list', 'toc'])
         html = md.convert(fileContents)
-        compiledHtml = SimpleTemplate(html).render(pathToRoot=pathToRoot,
-            config=config['DEFAULT'])
+        compiledHtml = html
+        if html:
+            compiledHtml = SimpleTemplate(html).render(pathToRoot=pathToRoot,
+                config=config['DEFAULT'])
 
         # If the markdown file specifies a template to be rendered within,
         # use that.  Otherwise just use the compiled markdown file itself
