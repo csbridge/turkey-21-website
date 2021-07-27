@@ -35,7 +35,7 @@ Each of you should choose a role.  Then, click the button (and only that button!
     You are currently working on getting Karel to ascend the mountain, but are struggling - it looks like Karel climbs in a reasonable manner, but doesn't stop at the top, and keeps going to the top edge of the screen!  In other words, you have roughly figured out what you want to repeat, but are stuck figuring out the condition.  Tell this to the SL when you start to describe where you are, and what you are stuck with.  You can share your screen to show the SL your code.  You're having a hard time knowing what condition to use to get Karel to climb and then stop!
     <br />
     <br />
-    Note: the ultimate issue is the condition for the while loop, which is still true even when you reach the top of the mountain.  One possible solution is to use right_is_blocked() instead.  Another is to not have Karel turn left, and instead immediately check for front_is_blocked(), and use that as a condition to stop.
+    Note: the ultimate issue is the condition for the while loop, which is still true even when you reach the top of the mountain.  One possible solution is to use <code>right_is_blocked()</code> instead.  Another is to not have Karel turn left, and instead immediately check for <code>front_is_blocked()</code>, and use that as a condition to stop.
       </div>
     </div>
   </div>
@@ -44,11 +44,11 @@ Each of you should choose a role.  Then, click the button (and only that button!
 ## Exercise 2: Khansole Academy Debugging
 Now, switch roles!  Then, click the button (and only that button!) corresponding to your new role below.
 
-<div class="panel-group" id="accordion">
+<div class="panel-group" id="accordion2">
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">I am the SL</a>
+        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1">I am the SL</a>
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse">
@@ -63,7 +63,7 @@ Now, switch roles!  Then, click the button (and only that button!) corresponding
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">I am the Student</a>
+        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2">I am the Student</a>
       </h4>
     </div>
     <div id="collapse2" class="panel-collapse collapse">
