@@ -5,11 +5,7 @@ title: Submission/Office Hours
 
 ## Submission
 
-Twice a day, you will submit your work from the session via Ed. **It is okay if you don't finish everything, or if you are still working.** We just want to know that you are keeping up with the material.
-
-You will also need to submit your code if you attend office hours and are looking for debugging help. Section Leaders can then download your code and help you faster.
-
-You can submit as many times as you want. You may want to submit multiple times if you attend office hours multiple times for debugging.
+Twice a day, you will submit your work from the session via Ed. **It is okay if you don't finish everything, or if you are still working.** We just want to know that you are keeping up with the material.  You can submit as many times as you want.
 
 ### How to submit
 
@@ -54,7 +50,7 @@ Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can 
 ## Office Hours
 
 Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
-Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, follow the instructions above to submit your code to Ed so that a Section Leader can see it. 
+Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
 
 * **Group Work** 
 

@@ -55,20 +55,20 @@ Ed üzerinden çalışmalarınızı göndermek için son olarak sağ alt köşed
 
 ## Office Hours
 
-Go to the office hour Nooks link on Ed. Type your name and what help you are looking for. Choose from one of the following categories:
+Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
+Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
 
-* **Concepts**
+* **Group Work** 
 
-    If you would like a Section Leader to go over certain concepts (e.g., variables)
+    * Come and hang out and join the Group Work room for what you are working on! Choose from the following options: **Conceptual Review**, **Lecture Review**, **Project Help**, **Quickstart Help**, and **Section Review** 
+    * Other students will be there working and a Section Leader will be in that room too. As you are working, you can ask general questions and get advice if you are stuck.
+    * This is a nice way to socialize with other students as you work on daily projects
 
-* **Approach**
+* **1-on-1 Help** 
 
-    If you are working on an activity or project and would like tips on how to approach the problem. 
+    * If you have a more in depth debugging question, sign up for 1-on-1 Help by joining the queue (see “View Queue”) and we will assign you to a room with a Section Leader as soon as we can.
 
-* **Debugging**
-
-    If you are working on an activity or project and would like a Section Leader to look directly at your code. **If you are looking for debugging help, you must submit your code via Ed first.**
-
-The Section Leaders in the main room will then move you into a Breakout room with a Section Leader.
+If you run into any issues, just direct message the Head Section Leader (İrem in the afternoon and Ahmet in the evening) through Nooks by clicking the “Chat” tab at the left.
 
 Happy debugging!
+

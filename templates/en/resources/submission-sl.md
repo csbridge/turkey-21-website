@@ -7,7 +7,7 @@ title: Accessing Student Submissions
 
 Students submit their code to Edstem twice a day. **It is okay if they don't finish everything, or if they are still working.** We just want to know that they are keeping up with the material. Please be sure to give this messaging to your session <u>in the first tea time</u>. 
 
-They will also need to submit their code for office hours and debugging help. They do not need to submit if they have conceptual questions or are looking for general problem-solving approaches. They can resubmit as many times as they want.
+They can resubmit as many times as they want.
 
 [Click here](submission-oh.html) for the Student submission process.
 
@@ -43,7 +43,7 @@ On the Slide that pops up, click on Submissions. You should see the submissions 
 
 ## 2. Helping a student in Office Hours
 
-Sometimes you can help the student just by looking at the code on Edstem. Other times, you will need to download and run the code on your own machine. Here are two ways to do so.
+Sometimes you can help the student just by looking at the code via screenshare. Other times, you will need to download and run the code on your own machine. Here are two ways to do so.
 
 Note that while you can open up a Terminal in Ed, the Ed workspace does not support Karel or Graphics, both of which require tkinter (Python graphics library) support. You will need to run these types of programs in PyCharm.
 

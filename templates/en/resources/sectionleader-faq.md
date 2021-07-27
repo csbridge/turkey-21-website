@@ -95,7 +95,7 @@ These office hours will be help sessions with opportunities for small breakout s
 
 - All Section Leaders have been assigned either afternoon or evening office hours depending on time zone and preference.
 
-We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own or they can join the Nooks space and work in the designated rooms. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there on Nooks who can help them. There will be a system for students to submit the code they need help with when they sign in for the office hours so that you can see their code and help them in a breakout room. One Section Leader will need to remain in the main room and put students into a breakout room with a Section Leader as they become available. 
+We are not expecting students to have to spend time working on the course outside of the scheduled blocks which is why this time is also titled “work”. If students don’t need individual help, they’ll just work on the projects on their own or they can join the Nooks space and work in the designated rooms. Office hours are an opportunity for students to work on the assignments and if they need help, there will be SLs there on Nooks who can help them. You can see their code by screensharing and help them in a breakout room.  If you are a 1:1 room SL, you should monitor the queue and invite students into your room 1 by 1 as they sign up.
 
 ### What is the difference between **morning submit** and **evening submit**?
 
