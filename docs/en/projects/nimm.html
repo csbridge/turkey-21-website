@@ -1038,7 +1038,6 @@ Player 2 would you like to remove 1 or 2 stones? 1
 
 Player 1 wins!
 </code></pre>
-
 <p>Write a program to play Nimm. To make your life easier we have broken the problem down into smaller milestones. You have a lot of time for this program. Take it slowly, piece by piece.</p>
 <h2 id="milestone-1">Milestone 1</h2>
 <p>Start with 20 stones. Repeat the process of removing stones and printing out how many stones are left until there are zero. Don't worry about whose turn it is. Don't worry about making sure only one or two stones are removed. Use the function <code>input(msg)</code> which prints <code>msg</code> and waits for the user to enter something.</p>
@@ -1053,7 +1052,6 @@ Would you like to remove 1 or 2 stones? 3
 
 Game over
 </code></pre>
-
 <h2 id="milestone-2">Milestone 2</h2>
 <p>Create an integer variable to keep track of whose turn it is (remember there are two players). Tell the user whose turn it is. Each time someone picks up stones, change the player number.</p>
 <pre><code>There are 20 stones left
@@ -1070,13 +1068,11 @@ Player 2 would you like to remove 1 or 2 stones? 1
 
 Game over
 </code></pre>
-
 <h2 id="milestone-3">Milestone 3</h2>
 <p>Make sure that each turn only one or two stones are removed. After you read a number of stones to remove from a user (their input), you can use the following pattern to check if it was valid and keep asking until it is valid.</p>
 <pre><code>while input is invalid:
    input = int(input(&quot;Please enter 1 or 2: &quot;))
 </code></pre>
-
 <h2 id="milestone-4">Milestone 4</h2>
 <p>Announce the winner.</p>
 <h2 id="extensions">Extensions</h2>

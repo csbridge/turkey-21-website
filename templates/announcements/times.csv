@@ -1,6 +1,6 @@
 datetime_start,datetime_end,alert_type,category,location
-20210722 00:00, 20210729 12:00,alert-success,pre-program.ptl
-20210729 12:00, 20210802 08:00,alert-info,installation.ptl
+20210722 00:00, 20210729 11:45,alert-success,pre-program.ptl
+20210729 11:45, 20210802 00:00,alert-info,installation.ptl
 20210802 00:00, 20210802 09:45,alert-warning,Day1.ptl
 20210802 09:45, 20210802 10:25,alert-danger,lecture-nick
 20210802 09:45, 20210802 10:25,alert-danger,lecture-nick
