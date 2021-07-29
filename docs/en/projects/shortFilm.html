@@ -1000,6 +1000,7 @@ File: <code>short_film.py</code></p>
 <pre><code>def display_message(canvas, message):
   ...
 </code></pre>
+
 <p>The start message should look like the screen below.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/onceUpon.png">
@@ -1007,9 +1008,11 @@ File: <code>short_film.py</code></p>
 <p>The font (and font size) that we used was:</p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
+
 <p>Make sure to color the text white!  After two seconds you should remove the rectangle that is the background and the text that is the message. To do so you can use the <code>delete</code> function (which takes an object that was on the canvas and removes it).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
+
 <p>Of course, you can use this function as much as you want to tell your story!</p>
 <h2 id="setting-sun">Setting Sun</h2>
 <p>Your movie must have one scene to start: A setting sun. First, draw the sky, the earth and a sun. Then, slowly animate the sun descending. The sky should take up the top half of the canvas, and the earth should take up the second half. Consider the following images from the start of the program, and the program after a few seconds.</p>
@@ -1022,6 +1025,7 @@ File: <code>short_film.py</code></p>
   ...
   return color
 </code></pre>
+
 <p>Have the function return "yellow", "orange", or "red" based on how many iterations have passed.</p>
 <h2 id="finishing-up">Finishing Up</h2>
 <p>After your movie ends, display a finishing message using your <code>display_message()</code> function defined earlier. The end message should look like the screen below.</p>
