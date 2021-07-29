@@ -1,0 +1,57 @@
+<%
+# A list of the rows of staff members.
+# Each row is a list of the staff members to display photos for,
+# with each staff member being a (name, image file) tuple.  The
+# image files are assumed to live in img/staff/.
+courseStaff = [
+	[
+		("Nick", "nickt.jpg"),
+		("Barış", "default.jpg"),
+		("Buket", "default.jpg"),
+		("Beren", "default.jpg"),
+		("Yosefa", "yosefa.jpg"),
+		("Irem", "Irem.jpeg"),
+		("Ahmet", "AHMET.jpg"),
+    	("Berra", "Berra.jpg"),
+    	("Oğuzhan", "default.jpg"),
+    	("Eda", "Eda.jpeg"),
+    	("mert", "mert.jpg"),
+    	("Emre", "Emre.jpg"),
+    	("Beyza", "Beyza.jpeg"),
+    	("Erol", "Erol.jpeg"),
+    	("Yağız", "Yagiz.jpeg"),
+    	("Tarık", "Tarık.jpeg"),
+    	("Ege", "Ege.png"),
+    	("Tori", "default.jpg"),
+    	("Eu Jin", "EuJin.jpeg"),
+    	("Cem", "Cem.jpeg"),
+    	("Selin", "Selin.jpeg"),
+    	("Okan", "okan.jpg"),
+    	("Yasin", "Yasin.jpeg"),
+    	("Mahmut", "default.jpg"),
+    	("Emre", "default.jpg"),
+    	("Arda", "arda.JPG"),
+    	("Aslihan", "Aslihan.jpeg"),
+    	("Can", "Can.jpg"),
+    	("Onat", "Onat.png"),
+    	("Atahan", "Atahan.jpeg"),
+    	("Nursena", "NURSENA.jpeg"),
+    	("Kanoe", "kanoe.jpg")
+	],
+]
+%>
+
+% for i in range(len(courseStaff)):
+  	<div class="row">
+		% for staffMember in courseStaff[i]:
+	  		<div class="col-xs-2">
+				<div class="thumbnail">
+		  			<img class="thumbnailImg" src="{{pathToRoot}}img/staff/{{staffMember[1]}}" alt="profile picture">
+			  		<div class="caption">
+						<b>{{staffMember[0]}}</b>
+			  		</div>
+				</div>
+	  		</div>
+		% end
+  	</div>
+% end
