@@ -22,7 +22,7 @@
 	% if not defined('nosolution'):
 		<div class="row">
 			<div class="col-xs-12">
-				<b>Solution available on Section Leader Ed <a href="https://us.edstem.org/courses/972/resources">Resources Page</a>.</b>
+				<b>Solution available <a href="{{config['staff_solutions_link']}}">here</a>.</b>
 			</div>
 		</div>
 	% end
