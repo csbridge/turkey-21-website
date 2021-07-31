@@ -7,20 +7,29 @@ title: PyCharm Kurulumu
     <p id="osspiel"></p>
 </div>
 
-<!--
-<div class="alert alert-info">
-    <p>
-        <b>Running into issues?</b> Post on
-        <a href="https://us.edstem.org/join/KPUYZn">ed</a>. Please make your post visible to all so that other students can learn from the answer.
-    </p>
-</div>
--->
-
 <p>
     CS Bridge boyunca kod yazmak için <a href="https://www.jetbrains.com/pycharm/"> PyCharm</a> 
     adında bir uygulama kullanacaksınız. PyCharm IDE, veya <i>Bütünleşik Geliştirme Ortamı (Integrated Development Environment)</i>, 
     türünde bir uygulamadır. Yani PyCharm kullanarak kod dosyalarınızı inceleyebilir, değiştirebilir, programlarınızı çalıştırabilir ve hata ayıklama (debugging) arayüzünü kullanarak programlarınız nasıl çalıştığını kolaylıkla inceleyebilirsiniz. PyCharm Python için geliştirilmiş en popüler IDElerden biridir ve endüstride yaygın olarak kullanılır. Bu dökümanı PyCharm kurulumunda size yol göstermek için oluşturduk. 
 </p>
+
+<div class="chromeosonly">
+    <h2>Chromebook Installation Instructions</h2>
+    <p class="alert alert-info">We've detected that you are using a Chromebook.  The Chromebook installation instructions are different than for other platforms - <b>please use the following steps instead to install python and PyCharm and skip the install sections below.</b>  It might seem a little less straightforward than the regular installation but we are here to help you every step of the way!</p>
+    <p>The main steps will involve following along with <a href="https://www.youtube.com/watch?v=sykiO1A7J1g">this video</a>. You will essentially:</p>
+    <ol>
+        <li>Turn on linux (beta)</li>
+        <li>Install <code>python3</code> packages via terminal</li>
+        <li>Run pycharm for the first time via terminal</li>
+        <li>Download an app shortcut manager that allows you to access pycharm by clicking on a button (as opposed to opening terminal every time)</li>
+    </ol>
+    <p>Some things not in the video:</p>
+    <ul>
+        <li>A few scary warnings you might see during installation, that you can ignore.</li>
+        <li>Run <code>sudo apt-get install python3-tk</code> from the terminal after you follow the video to install a library.</li>
+    </ul>
+    <p>Once you have followed these steps, jump down to <a href="#testing-pycharm">Testing Pycharm</a> to test your installation.</p>
+</div>
 
 <h2>Python Kurulumu</h2>
 <p>
@@ -409,31 +418,22 @@ Eğer buna benzer bir çıktıyla karşılaştıysanız `Pillow`'u başarıyla y
 <script>
     function setWindows() {
         toggle("maconly", "none");
+        toggle("chromeosonly", "none");
         toggle("winonly", "inline-block");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("macos/", "win/")
-        }
-        
+
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
             launchers[i].innerHTML = 'py';
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "Windows işletim sistemi kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'> Mac kullanıyorum </a>."
-
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Alt";  
+        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>."
     }
 
     function setMacOS() {
         toggle("maconly", "inline-block");
         toggle("winonly", "none");
-        const images = document.getElementsByTagName('img');
-        for (let i = 0; i < images.length; i++) {
-            images[i].src = images[i].src.replace("win/", "macos/")
-        }
+        toggle("chromeosonly", "none");
 
         const launchers = document.getElementsByClassName("launcher");
         for (let i = 0; i < launchers.length; i++) {
@@ -441,24 +441,37 @@ Eğer buna benzer bir çıktıyla karşılaştıysanız `Pillow`'u başarıyla y
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "Mac kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setWindows()'> Windows işletim sistemi kullanıyorum </a>.";  
+        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>.";
+    }
 
-        const modifier = document.getElementById('modifier');
-        modifier.innerHTML = "Command";       
+    function setChromeOS() {
+        toggle("chromeosonly", "inline-block");
+        toggle("maconly", "none");
+        toggle("winonly", "none");
+
+        const launchers = document.getElementsByClassName("launcher");
+        for (let i = 0; i < launchers.length; i++) {
+            launchers[i].innerHTML = 'python3';
+        }
+
+        const osSpiel = document.getElementById('osspiel');
+        osSpiel.innerHTML = "We've detected you're using a Chromebook. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setMacOS()'>I'm using a Mac</a>.";
     }
 
     function setUnknownOS() {
-       const osSpiel = document.getElementById('osspiel'); 
+       const osSpiel = document.getElementById('osspiel');
        osSpiel.innerHTML = `
-        Hangi işletim sistemini kullandığınızı tespit edemedik.
-        Eğer MacOS kullanıyorsanız <a href="#" onclick="setMacOS()"> buraya tıklayın </a>, 
-        eğer Windows kullanıyorsanız <a href="#" onclick="setWindows()">  buraya tıklayın </a>.
+        We weren't able to detect what operating system you're using. Click
+        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac, 
+        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine,
+        or <a href="#" onclick="setChromeOS()">here </a> if you're using a Chromebook.
        `
     }
 
     function getOS() {
         if (navigator.appVersion.indexOf("Win") != -1) return "Windows"
         if (navigator.appVersion.indexOf("Mac") != -1) return "MacOS";
+        if (navigator.appVersion.indexOf("CrOS") != -1) return "ChromeOS";
         return "Unknown";
     }
 
@@ -466,7 +479,8 @@ Eğer buna benzer bir çıktıyla karşılaştıysanız `Pillow`'u başarıyla y
         const os = getOS();
         if (os === "MacOS") setMacOS();
         else if (os === "Windows") setWindows();
-        else setUnkownOS();
+        else if (os == "ChromeOS") setChromeOS();
+        else setUnknownOS();
     }
 
     function toggle(className, displayState) {
@@ -477,9 +491,7 @@ Eğer buna benzer bir çıktıyla karşılaştıysanız `Pillow`'u başarıyla y
         }
     }
 
-
     window.onload = setOS;
-
 </script>
 
 </body>

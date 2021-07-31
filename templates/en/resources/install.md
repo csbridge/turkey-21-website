@@ -3,12 +3,26 @@ title: Installing PyCharm
 
 <p id="osspiel" class="alert alert-warning"></p>
 
-<p class="alert alert-info"  role="alert">
-    If you are using a Chromebook, please consult <a class="alert-link" href="https://edstem.org/us/courses/6374/discussion/527525">this</a> thread on Ed.
-</p>
-
-
 You will be writing your code on your computer using an application called [PyCharm](https://www.jetbrains.com/pycharm/). PyCharm is what is known as an IDE, or _Integrated Development Environment_, which means that it allows us to edit our code, browse our files, run our programs and debug them, all in the same place. It's one of the most popular Python IDEs in the world, and used extremely commonly in industry. This handout is intended to take you through installing PyCharm on your own computer.
+
+
+<div class="chromeosonly">
+    <h2>Chromebook Installation Instructions</h2>
+    <p class="alert alert-info">We've detected that you are using a Chromebook.  The Chromebook installation instructions are different than for other platforms - <b>please use the following steps instead to install python and PyCharm and skip the install sections below.</b>  It might seem a little less straightforward than the regular installation but we are here to help you every step of the way!</p>
+    <p>The main steps will involve following along with <a href="https://www.youtube.com/watch?v=sykiO1A7J1g">this video</a>. You will essentially:</p>
+    <ol>
+        <li>Turn on linux (beta)</li>
+        <li>Install <code>python3</code> packages via terminal</li>
+        <li>Run pycharm for the first time via terminal</li>
+        <li>Download an app shortcut manager that allows you to access pycharm by clicking on a button (as opposed to opening terminal every time)</li>
+    </ol>
+    <p>Some things not in the video:</p>
+    <ul>
+        <li>A few scary warnings you might see during installation, that you can ignore.</li>
+        <li>Run <code>sudo apt-get install python3-tk</code> from the terminal after you follow the video to install a library.</li>
+    </ul>
+    <p>Once you have followed these steps, jump down to <a href="#testing-pycharm">Testing Pycharm</a> to test your installation.</p>
+</div>
 
 
 ## Installing Python
@@ -324,6 +338,7 @@ __Course FAQs will be continually updated as we receive questions.__
 <script>
     function setWindows() {
         toggle("maconly", "none");
+        toggle("chromeosonly", "none");
         toggle("winonly", "inline-block");
 
         const launchers = document.getElementsByClassName("launcher");
@@ -332,11 +347,26 @@ __Course FAQs will be continually updated as we receive questions.__
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a>."
+        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>."
     }
 
     function setMacOS() {
         toggle("maconly", "inline-block");
+        toggle("winonly", "none");
+        toggle("chromeosonly", "none");
+
+        const launchers = document.getElementsByClassName("launcher");
+        for (let i = 0; i < launchers.length; i++) {
+            launchers[i].innerHTML = 'python3';
+        }
+
+        const osSpiel = document.getElementById('osspiel');
+        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>.";
+    }
+
+    function setChromeOS() {
+        toggle("chromeosonly", "inline-block");
+        toggle("maconly", "none");
         toggle("winonly", "none");
 
         const launchers = document.getElementsByClassName("launcher");
@@ -345,21 +375,23 @@ __Course FAQs will be continually updated as we receive questions.__
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a>.";
+        osSpiel.innerHTML = "We've detected you're using a Chromebook. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setMacOS()'>I'm using a Mac</a>.";
     }
 
     function setUnknownOS() {
        const osSpiel = document.getElementById('osspiel');
        osSpiel.innerHTML = `
         We weren't able to detect what operating system you're using. Click
-        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac and
-        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine.
+        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac, 
+        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine,
+        or <a href="#" onclick="setChromeOS()">here </a> if you're using a Chromebook.
        `
     }
 
     function getOS() {
         if (navigator.appVersion.indexOf("Win") != -1) return "Windows"
         if (navigator.appVersion.indexOf("Mac") != -1) return "MacOS";
+        if (navigator.appVersion.indexOf("CrOS") != -1) return "ChromeOS";
         return "Unknown";
     }
 
@@ -367,6 +399,7 @@ __Course FAQs will be continually updated as we receive questions.__
         const os = getOS();
         if (os === "MacOS") setMacOS();
         else if (os === "Windows") setWindows();
+        else if (os == "ChromeOS") setChromeOS();
         else setUnknownOS();
     }
 
