@@ -38,7 +38,7 @@ Our goal is to create one community of enthusiastic teachers and students who su
 ### Requirements for the Course
 
 1. An internet connection strong enough to stream video.
-2. **Video conferencing software** to participate in lecture, office hours, section, and social activities. We will be using Zoom for most of the program-related activities where we are online together. You can download the latest versino of the Zoom Client for Meetings [here](https://zoom.us/download)
+2. **Video conferencing software** to participate in lecture, office hours, section, and social activities. We will be using Zoom for most of the program-related activities where we are online together. You can download the latest version of the Zoom Client for Meetings [here](https://zoom.us/download)
 3. The **PyCharm development environment** to complete assignments. Installation instructions are [here](install.html).
 4. A love of learning and an interest in getting to know other high school students in Turkey!
 
