@@ -3,13 +3,12 @@ title: CS Bridge SSS
 
 *CS Bridge hakkında bir sorunuz mu var? Bu sayfada cevaplanmış olabilir.*
 
-<!-- Table of Contents -->
 [TOC]
 
 ## Program
 
 <div class="panel-group" id="accordion">
-  <div class="panel panel-danger">
+  <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
         <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
@@ -41,7 +40,7 @@ Olabildiğince eğlenmeye çalışın. Program aktivitelerinin hepsine katılın
 
 ### Program hakkında genel bir sorum var, nerede sorabilirim?
 
-CS Bridge [Ed sayfası]({{config['discussion_forum_schedule_url']}}) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
+CS Bridge [Ed sayfası]({{config['discussion_forum_url']}}) genel sorularınızı sormak için en doğru yer. Ed'deki kategorileri kontrol edin ve sorunuzu en çok kapsayan kategoriyi seçin. Gün boyunca Ed'i kontrol edeceğiz ve sorularınızı olabildiğince hızlı cevaplamaya çalışacağız.
 
 ### Hastayım (ya da başka bir işim çıktı) ve Ders/Çay Saati/Grup buluşmamıza katılamayacağım, ne yapmalıyım?
 
@@ -57,11 +56,11 @@ Yazabildiğiniz kadar kodu teslim edin.
 
 ### Kayboldum. Nerede olmalıym? 
 
-Grubunuzun Ed sayfasında paylaşılan zaman çizelgesini kontrol edin. Aktivitelerin zamanlarını ve Zoom linklerini bu sayfada bulabilirsiniz.
+Aktivitelerin zamanlarını ve Zoom linklerini bu sayfada bulabilirsiniz: [Ed]({{config['discussion_forum_schedule_url']}})
 
 ### Dersleri tekrar izleyebilir miyim?
 
 Evet! Bütün dersler kaydedilip CS Bridge Ed sayfasının "Dersler" (Lectures) bölümünde sizinle paylaşılacak.
 
-<br/>
-* Bu sayfada cevaplanmamış sorularınızı [Ed]({{config['discussion_forum_url']}}) üzerinden sorabilirsiniz.*
+
+*Bu sayfada cevaplanmamış sorularınızı [Ed]({{config['discussion_forum_url']}}) üzerinden sorabilirsiniz.*
