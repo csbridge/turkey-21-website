@@ -459,13 +459,11 @@ Eğer buna benzer bir çıktıyla karşılaştıysanız `Pillow`'u başarıyla y
     }
 
     function setUnknownOS() {
-       const osSpiel = document.getElementById('osspiel');
-       osSpiel.innerHTML = `
-        We weren't able to detect what operating system you're using. Click
-        <a href="#" onclick="setMacOS()"> here </a> if you're using a Mac, 
-        <a href="#" onclick="setWindows()"> here </a> if you're using a Windows machine,
-        or <a href="#" onclick="setChromeOS()">here </a> if you're using a Chromebook.
-       `
+        toggle("chromeosonly", "none");
+        toggle("maconly", "none");
+        toggle("winonly", "none");
+        const osSpiel = document.getElementById('osspiel');
+        osSpiel.innerHTML = "We weren't able to detect what operating system you're using. Click <a href='#' onclick='setMacOS()'> here </a> if you're using a Mac, <a href='#' onclick='setWindows()'> here </a> if you're using a Windows machine, or <a href='#' onclick='setChromeOS()'>here </a> if you're using a Chromebook."
     }
 
     function getOS() {
