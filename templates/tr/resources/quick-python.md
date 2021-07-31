@@ -58,7 +58,7 @@ Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir (Kullan
   src="{{pathToRoot}}img/resources/quick-python/input_demo.png"
   class="img-fluid mx-auto d-block"
   style="width: 55%"
-  alt="Konsol girişi için örnek sonuç. Kullanıcı girdileri "Fine, thank you", daha sonra "4", sonra da "3.1415926535323846" ve program yarı çapı 4 olan bir çemberin çevresini sizin girdiğiniz pi (\pi) değeri ile hesaplar.
+  alt='Konsol girişi için örnek sonuç. Kullanıcı girdileri "Fine, thank you", daha sonra "4", sonra da "3.1415926535323846" ve program yarı çapı 4 olan bir çemberin çevresini sizin girdiğiniz pi (\pi) değeri ile hesaplar.'
 />
 </center>
 

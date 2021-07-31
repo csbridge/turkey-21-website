@@ -17,13 +17,13 @@ title: Grup Buluşmalarından Beklentiler
     <li>Bu saatte, bizler derste öğrenebileceğinizden daha detaylı olarak <b>soruları cevaplayacak, yaygın hatalar ve yanlış anlaşılmaların üstünde duracak, örnek problemleri tartışarak çözeceğiz. </b></li>
 </ul>
 <p>
-	Bu grup saatlerinin gerçekleşmesine olanak sağlayan büyük bir muhteşem grup liderleri takımımız var. Onlardan biri, tüm ders süreci için özel olarak sizin grup lideriniz olacak. Her hafta, siz ve diğer 7 öğrenciden oluşan grup olarak, onların önderliğinde buluşma saatine katılacaksınız. Umarız ki hepiniz ders süreci boyunca birbirinizi tanıyacaksınız.
+	Bu grup saatlerinin gerçekleşmesine olanak sağlayan büyük bir muhteşem grup liderleri takımımız var. Onlardan biri, tüm ders süreci için özel olarak sizin grup lideriniz olacak. Her hafta, siz ve diğer 7-10 öğrenciden oluşan grup olarak, onların önderliğinde buluşma saatine katılacaksınız. Umarız ki hepiniz ders süreci boyunca birbirinizi tanıyacaksınız.
 </p>
 
 <hr />
 
 ### Grup Buluşmasının Saati ve Yeri
-* Grup buluşmaları her akşam Çek Cumhuriyeti için 20:00'da, Türkiye için 21:00'da gerçekleşecek.  
+* Grup buluşmaları her akşam Türkiye için 20:45'da gerçekleşecek.  
 * Grup buluşması video konferans linki, grubunuza ait "Ed" sayfasında, grup lideriniz tarafından paylaşılacak.
 <hr/>
 
@@ -84,7 +84,7 @@ title: Grup Buluşmalarından Beklentiler
 <!-- Grup Buluşma Saatine Katılım -->
 ### Grup Buluşma Saatine Katılım
 <p>
-	Buluşma saatleri, Zoom üzerinden video görüşme ile gerçekleşecek.<b>"Zoom Client for Meetings" versiyon 5.7.3</b>'yi buradan indirebilirsiniz: <a href='https://zoom.us/download'>https://zoom.us/download</a>
+	Buluşma saatleri, Zoom üzerinden video görüşme ile gerçekleşecek.<b>"Zoom Client for Meetings"</b>'yi buradan indirebilirsiniz: <a href='https://zoom.us/download'>https://zoom.us/download</a>
 </p>
 <p>
 	Grup buluşma saatinize bilgisayarınızdan nasıl katılabileceğiniz ve ayrıntılar (örneğin, grubunuzun video görüşmesine ait Zoom linki gibi için grubunuzun Ed sayfasını ziyaret edebilirsiniz. <b> Zaman çizelgesi, ihtiyacınız olan Zoom linkleri ile birlikte, grubunuzun Ed sayfasında paylaşılacak.</b>
@@ -107,7 +107,7 @@ title: Grup Buluşmalarından Beklentiler
 <!-- Grup buluşmaları ne zaman başlayacak? -->
 ####  Grup buluşmaları ne zaman başlayacak?
 <p>
-    <b>Grup buluşmaları, kursun ilk gecesinde başlıyor olacak (4 Ağustos, Salı)!  </b> 
+    <b>Grup buluşmaları, kursun ilk gecesinde başlıyor olacak (2 Ağustos, Pazartesi)!  </b> 
 </p>
 
 <hr />
@@ -117,7 +117,7 @@ title: Grup Buluşmalarından Beklentiler
 
 Bizler, herkesin CS Bridge'te kendilerini rahat hissettikleri bir ortamda olduklarından emin olmak istiyoruz. Bu grup buluşmalarını da kapsıyor. <b> Özel yaşamınızı korumak için, hiçbir kişisel bilgiyi bu buluşmalarda paylaşmayın (buna iletişim bilginiz ve soyadınız da dahildir).</b>
 
-Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, eğer sizler grup buluşmalarınız veya başka zamanlarda hatalı davranışlara maruz kalırsanız, lütfen <a href='https://turkey21.csbridge.org/tr/resources/general-info.html'>CS Bridge ile ilgili genel bilgiler sayfasının </a> en altında özetlenen "hatalı davranışı bildirme süreci"ne göz atın. Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürebilmek, bizler için son derece önemli.
+Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, eğer sizler grup buluşmalarınız veya başka zamanlarda hatalı davranışlara maruz kalırsanız, lütfen <a href='general-info.html'>CS Bridge ile ilgili genel bilgiler sayfasının </a> en altında özetlenen "hatalı davranışı bildirme süreci"ne göz atın. Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürebilmek, bizler için son derece önemli.
 
 
 <hr />
@@ -127,5 +127,5 @@ Sonuç olarak, bu durumun kurs boyunca kimse için gerçekleşmemesini umarken, 
 #### <u>Diğer Sorular</u>
 <p>
     Sorularınız geldikçe bunları cevaplıyor olacağız. <br />
-    Lütfen göz atın: <a href='http://turkey21.csbridge.org/tr/resources/student-faq.html'>http://turkey21.csbridge.org/tr/resources/student-faq.html</a>
+    Lütfen göz atın: <a href='student-faq.html'>student-faq.html</a>
 </p>
