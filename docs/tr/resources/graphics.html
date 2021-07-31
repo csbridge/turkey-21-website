@@ -1167,7 +1167,7 @@ canvas.set_font(label, &quot;Times&quot;, 25)
 </code></pre>
 
 <h2 id="adding-images">Adding Images</h2>
-<p class="alert alert-info"><em>Note: if images do not work in your program, and instead give an error, you may not have installed the library necessary for images to work.  Make sure you followed the instructions in the <a href="../../tr/resources/install.html">installation guide</a> under "Installing Graphics".</em></p>
+<p class="alert alert-info"><em>Note: if images do not work in your program, and instead give an error, you may not have installed the library necessary for images to work.  Make sure you followed the instructions in the <a href="install.html#installing-graphics"><strong>installation guide</strong></a> under "Installing Graphics".</em></p>
 <p>You can add image files to your canvas as well.  To do this, use <code>create_image</code> (if you want the image to be the same size on the canvas as the image file) or <code>create_image_with_size</code>) (if you want the image to be another size you specify).  Both require you to specify the x and y location of the <strong>upper-left corner</strong> of the image on the canvas, as well as the name of the image file.  <code>create_image_with_size</code> also requires a width and a height that the image should be.  Here's an example that adds a smiley-face image to the canvas with upper-left corner at (25, 30), assuming we have an image file named "smiley.jpg" in our PyCharm project:</p>
 <pre><code>canvas.create_image(25, 30, &quot;smiley.png&quot;)
 

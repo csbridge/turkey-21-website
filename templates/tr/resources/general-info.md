@@ -167,4 +167,4 @@ Son olarak, lütfen düşünceli olun. Bunlar birçokları için zor zamanlar, b
 
 #### Hatalı davranışı bildirme süreci
 
-- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya davranışları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada]({{config["discussion_forum_url"]}}) bulunabilir.
+- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya davranışları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada]({{config['discussion_forum_url']}}) bulunabilir.
