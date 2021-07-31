@@ -33,11 +33,11 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Karel Reference"] = {"en": "Karel Reference", "tr": "Karel Referansı"}
 	translation_dictionary["Python Reference"] = {"en": "Python Reference", "tr": "Python Referansı"}
 	translation_dictionary["Graphics Reference"] = {"en": "Graphics Reference", "tr": "Grafikler Referansı"}
-	translation_dictionary["References"] = {"en": "References", "tr": "TODO"}
-	translation_dictionary["Software"] = {"en": "Software", "tr": "TODO"}
+	translation_dictionary["References"] = {"en": "References", "tr": "References"}
+	translation_dictionary["Software"] = {"en": "Software", "tr": "Software"}
 	translation_dictionary["Course Information"] = {"en": "Course Information", "tr": "Program Bilgileri"}
 	translation_dictionary["General Info"] = {"en": "General Info", "tr": "Genel Bilgiler"}
-	translation_dictionary["Code of Conduct"] = {"en": "Code of Conduct", "tr": "TODO"}
+	translation_dictionary["Code of Conduct"] = {"en": "Code of Conduct", "tr": "Code of Conduct"}
 	translation_dictionary["[Student] Course FAQs"] = {"en": "[Student] Course FAQs", "tr": "[Öğrenciler] Sıkça Sorulan Sorular"}
 	translation_dictionary["Section Info"] = {"en": "Section Info", "tr": "Grup Bilgileri"}
 	translation_dictionary["Install PyCharm"] = {"en": "Install PyCharm", "tr": "PyCharm Kurulumu"}
