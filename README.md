@@ -1,6 +1,21 @@
 # CSBridge Course Website - Turkey 21
 This repository is the course website for the online CSBridge Turkey summer 2021 course.
 
+## Adding Translation Changes
+If you are helping with translation of the course website, here are the steps you should follow:
+
+1. Clone this repository
++ Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
++ Create a new branch for your translation changes.  You can do this on the command line like this: `git checkout -b mynewbranch`.  Name it whatever you'd like.
++ Edit any necessary files in the `templates/` folder according to what you are translating.
++ Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a chance, the script will recompile the website so you can preview it again.
++ When you are done making changes, commit them to your branch (`git commit`)
++ Push your branch to GitHub (`git push`)
++ Create a pull request with your changes to be reviewed - you can find information about how to do this [here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).  You should also link this pull request to the GitHub issue you are working on so that we know what part is being updated.
++ An instructor will review and confirm the changes.
+
+Thank you very much for your help!
+
 ## Website Setup
 
 + Enable GitHub pages:
