@@ -1,24 +1,24 @@
 % rebase('templates/tr/template.ptl', title="Home")
 
 <div class="page-header">
-  <div class="container">
-    <div>
-      <div id="logo">
-        <img id="logoImg" src="{{pathToRoot}}img/logo.png" />
-      </div>
-      <div id="headerText" style="padding-bottom: 15px;">
-        <div class="h1" style="margin-top: 0px; font-size: 40px;">
-          Bilgisayar Bilimine Giriş
-        </div>
-        <div>
-          2021 Yaz
-        </div>
-        <div>
-          2 - 19 Ağustos, Online
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div>
+			<div id="logo">
+				<img id="logoImg" src="{{pathToRoot}}img/logo.png" />
+			</div>
+			<div id="headerText" style="padding-bottom: 15px;">
+				<div class="h1" style="margin-top: 0px; font-size: 40px;">
+					Bilgisayar Bilimine Giriş
+				</div>
+				<div>
+					2021 Yaz
+				</div>
+				<div>
+					2 - 19 Ağustos, Online
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <br />
@@ -26,33 +26,24 @@
 % include('templates/announcements/announcements.ptl', lang='tr')
 
 <div>
-    <h2>
-      Bu Dersin Amacı
-    </h2>
+	<h2>Bu Dersin Amacı</h2>
 
-    <p>
-      Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza
-      öğrenmeye devam edebilecek seviyede programcılığın temellerini
-      öğretmektir. Dersler, Stanford, Koç Üniversitesi ve CTU'dan gelen bir grup
-      eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin
-      Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden
-      öğreneceksiniz.
-    </p>
+	<p>Bu iki haftalık dersin amacı, size daha sonrasında kendi başınıza öğrenmeye devam edebilecek seviyede programcılığın temellerini öğretmektir. Dersler, Stanford, Koç Üniversitesi ve CTU'dan gelen bir grup eğitmen tarafından verilecektir. Programcılığı Stanford Üniversitesi'nin Bilgisayar Bilimine Giriş dersinde kullanılan materyeller üzerinden öğreneceksiniz.</p>
 </div>
+
+
+
 <hr/>
 
 <!-- Daily schedule / list of programs -->
-<div class="section" id="schedule">
-	<h2>Programlar</h2>
-  <!--
-	<div class="alert alert-info">
-	  Buradan lablar sırasında programlar üzerinde nasıl çalışacağınıza bakabilirsiniz: <a href="{{pathToRoot}}en/handouts/eclipse.html">buraya tıklayın</a>.
-	</div>
-  -->
-	%include("templates/programs/projectsTable.ptl", lang="tr")
-</div>
+<div class="visible-after" data-visible-after="2021062810">
+    <div class="section" id="schedule">
+    	<h2>Programlar</h2>
+    	%include("templates/programs/projectsTable.ptl", lang="tr")
+    </div>
 
-<hr/>
+    <hr/>
+</div>
 
 <!-- Course Staff -->
 <div class="section" id="staff">
