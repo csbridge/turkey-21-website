@@ -1,0 +1,3 @@
+At this time, you should be in lecture at <a class="alert-link" href="{{config['lecture_link']}}" target="_blank">this link</a>.
+Password is on <a class="alert-link" href="{{config['discussion_forum_schedule_url']}}" target="_blank">Ed!</a>
+If lecture ends early, check out the next activity in the message below!
