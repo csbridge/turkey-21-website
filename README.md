@@ -5,14 +5,14 @@ This repository is the course website for the online CSBridge Turkey summer 2021
 If you are helping with translation of the course website, here are the steps you should follow:
 
 1. Clone this repository
-+ Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
-+ Create a new branch for your translation changes.  You can do this on the command line like this: `git checkout -b mynewbranch`.  Name it whatever you'd like.
-+ Edit any necessary files in the `templates/` folder according to what you are translating.
-+ Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a chance, the script will recompile the website so you can preview it again.
-+ When you are done making changes, commit them to your branch (`git commit`)
-+ Push your branch to GitHub (`git push`)
-+ Create a pull request with your changes to be reviewed - you can find information about how to do this [here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).  You should also link this pull request to the GitHub issue you are working on so that we know what part is being updated.
-+ An instructor will review and confirm the changes.
+1. Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
+1. Create a new branch for your translation changes.  You can do this on the command line like this: `git checkout -b mynewbranch`.  Name it whatever you'd like.
+1. Edit any necessary files in the `templates/` folder according to what you are translating.
+1. Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a chance, the script will recompile the website so you can preview it again.
+1. When you are done making changes, commit them to your branch (`git commit`)
+1. Push your branch to GitHub (`git push`)
+1. Create a pull request with your changes to be reviewed - you can find information about how to do this [here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).  You should also link this pull request to the GitHub issue you are working on so that we know what part is being updated.
+1. An instructor will review and confirm the changes.
 
 Thank you very much for your help!
 
@@ -20,9 +20,9 @@ Thank you very much for your help!
 
 + Enable GitHub pages:
     1. Go to setting on the GitHub page for your repo.
-    + Change the 'Source' section of the GitHub pages to point to ```master branch/docs folder```.
-	+ Check ```Enforce HTTPS.```
-	+ Change the custom URL
+    1. Change the 'Source' section of the GitHub pages to point to ```master branch/docs folder```.
+	1. Check ```Enforce HTTPS.```
+	1. Change the custom URL
 
 This site uses GitHub pages.  Specifically, all files in the `docs` folder of the master branch are published.
 
@@ -39,11 +39,11 @@ python3 -m pip install -U watchdog[watchmedo]
 
 1. Change any file templates in ```templates/```
 
-2. ```python3 compile.py``` creates full html pages underneath the ```docs/``` folder.  Or use `./runLocal.sh` to compile and host a copy of the site at `localhost:8000`.
+1. ```python3 compile.py``` creates full html pages underneath the ```docs/``` folder.  Or use `./runLocal.sh` to compile and host a copy of the site at `localhost:8000`.
 
-3. Any slides or starter code changed in the top directory are symlinked to change the actual files in ```docs/```.
+1. Any slides or starter code changed in the top directory are symlinked to change the actual files in ```docs/```.
 
-4. After pushing to GitHub, it may take a few minutes for the changes to appear.
+1. After pushing to GitHub, it may take a few minutes for the changes to appear.
 
 This website uses [bottle 0.12](https://bottlepy.org/docs/0.12/index.html) to render templates and split up code.  Within the `templates/` folder, anything ending in `.html` or `.mdown` will be rendered to the website with the same structure (e.g. if an HTML file `test.html` is within `templates/en/projects/` it will be rendered to the site and viewable at `[ROOTURL]/en/projects/test.html`.
 
