@@ -25,7 +25,6 @@ title: CS Bridge SSS
 
 ## Sıkça Sorulan Sorular
 
-
 ### Bu program notlandırılıyor mu?
 
 Hayır, bu programı sadece öğrenmenin keyfi için düzenliyoruz!
@@ -62,5 +61,8 @@ Aktivitelerin zamanlarını ve Zoom linklerini bu sayfada bulabilirsiniz: [Ed]({
 
 Evet! Bütün dersler kaydedilip CS Bridge Ed sayfasının "Dersler" (Lectures) bölümünde sizinle paylaşılacak.
 
+
+
+<br/>
 
 *Bu sayfada cevaplanmamış sorularınızı [Ed]({{config['discussion_forum_url']}}) üzerinden sorabilirsiniz.*

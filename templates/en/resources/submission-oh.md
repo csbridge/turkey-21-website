@@ -32,6 +32,7 @@ Click on the correct session that you would like to submit for (correct day and 
 For each file you have, copy it from PyCharm using Select All (Mac OS X: ⌘-A, Windows: Ctrl-A) and then paste into the Ed editor (see the below images). **Do this for each file you want to submit** by clicking on the tabs.
 
 You can also click on the plus (`+`) button in the Ed editor and directly upload your Python or Karel file into the editor.
+
 <center>
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/selectall.png">
   <img style="width:45%" src="{{pathToRoot}}img/resources/submission-oh/selectall-paste.png">
@@ -49,8 +50,7 @@ Finally, click on "Submit" in the bottom-right corner to submit via Ed. You can 
 
 ## Office Hours
 
-Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
-Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
+Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
 
 * **Group Work** 
 

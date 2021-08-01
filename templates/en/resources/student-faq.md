@@ -39,7 +39,7 @@ Have fun with it! Participate **fully** in all program activities. This means at
 
 ### I have a general question about the course, where do I ask it?
 
-The CS Bridge Ed page is the perfect place to ask a general question. Check out the list of categories and select the one that best matches the topic you have a question about. We will keep an eye on Ed throughout the day and will try to answer questions as quickly as we can.
+The [CS Bridge Ed page]({{config['discussion_forum_url']}}) is the perfect place to ask a general question. Check out the list of categories and select the one that best matches the topic you have a question about. We will keep an eye on Ed throughout the day and will try to answer questions as quickly as we can.
 
 ### I am sick (or I have a time conflict) and I can't make it to Lecture/Tea Time/Section, what should I do?
 

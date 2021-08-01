@@ -5,11 +5,7 @@ title: Çalışmalarınızı Sisteme Yükleme/Ofis Saatleri
 
 ## Çalışmalarınızı Sisteme Yükleme
 
-Çalışmalarınızı günde iki kere Ed üzerinden yükleyeceksiniz. **Her şeyi bitirmediyseniz ya da hala çalışıyorsanız önemli değil.** Ders materyalini takip edebildiğinizden emin olmak adına kodunuzu sisteme yüklemenizi istiyoruz.
-
-Ayrıca, eğer ofis saatlerine katılırsanız ve debugging (hata ayıklama) için yardım isteyecekseniz de kodunuzu sisteme yüklemeniz gerekecek. Böylece, Group Liderleri kodunuzu indirip size daha hızlı yardım edebilecekler.
-
-Sisteme istediğiniz kadar yükleme yapabilirsiniz. Eğer debugging (hata ayıklama) için birkaç ofis saatine katılırsanız birkaç kere yükleme yapmak isteyebilirsiniz.
+Çalışmalarınızı günde iki kere Ed üzerinden yükleyeceksiniz. **Her şeyi bitirmediyseniz ya da hala çalışıyorsanız önemli değil.** Ders materyalini takip edebildiğinizden emin olmak adına kodunuzu sisteme yüklemenizi istiyoruz.  Sisteme istediğiniz kadar yükleme yapabilirsiniz.
 
 ### Sisteme çalışmalarınızı nasıl yükleyeceksiniz?
 
@@ -25,7 +21,6 @@ Kodunuzu sisteme yükleyeceğiniz [Ed]({{config['discussion_forum_url']}}) Lesso
 #### 2. Submission'ı (Teslim) seçin
 
 Çalışmasını yüklemek istediğiniz doğru çalışma oturumunu seçin (doğru gün ve saat, sabah ya da akşam). Örneğin, birinci gün için "Day 1 PM"e (Gün 1 Akşam) tıklayın. Not: İngilizcede AM öğleden önce, PM de öğleden sonra/akşam anlamına gelir.
-
 
 <center>
   <img style="width:60%" src="{{pathToRoot}}img/resources/submission-oh/lessons2.png">
@@ -55,8 +50,7 @@ Ed üzerinden çalışmalarınızı göndermek için son olarak sağ alt köşed
 
 ## Office Hours
 
-Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. 
-Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
+Office Hours provide you with an opportunity to work on your daily projects alongside other students and to ask for help when you need it. You can either get help in an environment with others or you can get 1-on-1 help from a Section Leader. Office Hours are optional but highly encouraged if you have questions about any of the course elements. They're also a great way to interact with a Section Leader, to fix a bug in your code, and to gain a deeper understanding of the material. Other Section Leaders will be there, not just the one you are assigned. Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discussion_forum_schedule_url']}}). If you want help with your code, once you are with a Section Leader you can share your screen if you need them to look at any code.
 
 * **Group Work** 
 
@@ -71,4 +65,3 @@ Go to the office hour Nooks link listed on the schedule in [Ed]({{config['discus
 If you run into any issues, just direct message the Head Section Leader (İrem in the afternoon and Ahmet in the evening) through Nooks by clicking the “Chat” tab at the left.
 
 Happy debugging!
-
