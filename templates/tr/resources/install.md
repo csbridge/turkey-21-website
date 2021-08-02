@@ -8,21 +8,22 @@ title: PyCharm Kurulumu
 CS Bridge boyunca kod yazmak için [PyCharm](https://www.jetbrains.com/pycharm/) adında bir uygulama kullanacaksınız. PyCharm IDE, veya _Bütünleşik Geliştirme Ortamı (Integrated Development Environment)_, türünde bir uygulamadır. Yani PyCharm kullanarak kod dosyalarınızı inceleyebilir, değiştirebilir, programlarınızı çalıştırabilir ve hata ayıklama (debugging) arayüzünü kullanarak programlarınız nasıl çalıştığını kolaylıkla inceleyebilirsiniz. PyCharm Python için geliştirilmiş en popüler IDElerden biridir ve endüstride yaygın olarak kullanılır. Bu dökümanı PyCharm kurulumunda size yol göstermek için oluşturduk. 
 
 <div class="chromeosonly">
-    <h2>Chromebook Installation Instructions</h2>
-    <p class="alert alert-info">We've detected that you are using a Chromebook.  The Chromebook installation instructions are different than for other platforms - <b>please use the following steps instead to install python and PyCharm and skip the install sections below.</b>  It might seem a little less straightforward than the regular installation but we are here to help you every step of the way!</p>
-    <p>The main steps will involve following along with <a href="https://www.youtube.com/watch?v=sykiO1A7J1g">this video</a>. You will essentially:</p>
+    <h2>Chromebook İçin Kurulum Aşamaları</h2>
+    <p class="alert alert-info">Chromebook kullandığınızı tespit ettik. Chromebook için kurulum süreci diğer platformlardan farklıdır - <b>lütfen Python ve PyCharm'ı kurmak için verilen aşamaları takip edin ve diğer bölümlerdeki kurulum aşamalarını atlayın</b>.  
+    Kurulum süreci diğer platformlara göre daha karmaşık olabilir. Fakat kurulumun her aşamasında size yol göstereceğiz.</p>
+    <p>Kurulumu tamamlamak için yapmanız gereken <a href="https://www.youtube.com/watch?v=sykiO1A7J1g">bu videoyu</a> takip etmek. Özetlemek gerekirse kurulum boyunca:</p>
     <ol>
-        <li>Turn on linux (beta)</li>
-        <li>Install <code>python3</code> packages via terminal</li>
-        <li>Run pycharm for the first time via terminal</li>
-        <li>Download an app shortcut manager that allows you to access pycharm by clicking on a button (as opposed to opening terminal every time)</li>
+        <li>Linux uygulama desteğini aktive edecek,</li>
+        <li><code>python3</code> paketlerini terminal kullarak yükleyecek,</li>
+        <li>PyCharm'ı terminal aracılığıyla ilk defa çalıştıracak,</li>
+        <li>Bir uygulama kısayol yöneticisi indirerek PyCharm'ı terminal yerine bir butona tıklayarak açılabilir hale getireceksin.</li>
     </ol>
-    <p>Some things not in the video:</p>
+    <p>Videoda bulunmayan bazı şeyler:</p>
     <ul>
-        <li>A few scary warnings you might see during installation, that you can ignore.</li>
-        <li>Run <code>sudo apt-get install python3-tk</code> from the terminal after you follow the video to install a library.</li>
+        <li>Kurulum süresince birkaç korkutucu (uzun ve ilk bakışta anlaşılmaz) uyarı mesajları görebilirsin. Bunları görmezden gelmende bir sakınca yok.</li>
+        <li>Kurulumu tamamladıktan sonra terminalden <code>sudo apt-get install python3-tk</code> komutunu çalıştırarak bir kütüphane yükleyebilirsiniz.</li>
     </ul>
-    <p>Once you have followed these steps, jump down to <a href="#testing-pycharm">Testing Pycharm</a> to test your installation.</p>
+    <p>Bu aşamaları tamamladıktan sonra <a href="#pycharm-kurulumunu-test-etmek">PyCharm Kurulumunu Test Etmek</a> bölümüne atlayarak kurulumu kontrol edebilirsiniz.</p>
 </div>
 
 ## Python Kurulumu
@@ -342,7 +343,7 @@ __Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Windows computer. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>I'm using a Mac</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>."
+        osSpiel.innerHTML = "Windows bir bilgisayar kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setMacOS()'>Mac kullanıyorum</a> ||  <a href='#' onclick='setChromeOS()'>Chromebook kullanıyorum</a>."
     }
 
     function setMacOS() {
@@ -356,7 +357,7 @@ __Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Mac. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setChromeOS()'>I'm using a Chromebook</a>.";
+        osSpiel.innerHTML = "Bir Mac kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>Windows bilgisayar kullanıyorum</a> ||  <a href='#' onclick='setChromeOS()'>Chromebook kullanıyorum</a>.";
     }
 
     function setChromeOS() {
@@ -370,7 +371,7 @@ __Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
         }
 
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We've detected you're using a Chromebook. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>I'm using a Windows Machine</a> ||  <a href='#' onclick='setMacOS()'>I'm using a Mac</a>.";
+        osSpiel.innerHTML = "Bir Chromebook kullandığınızı tespit ettik. &nbsp; &nbsp; <a href='#' onclick='setWindows()'>Windows bilgisayar kullanıyorum</a> ||  <a href='#' onclick='setMacOS()'>Mac kullanıyorum</a>.";
     }
 
     function setUnknownOS() {
@@ -378,7 +379,7 @@ __Sıkça sorulan sorular sizden gelen sorular doğrultusunda güncellenecektir.
         toggle("maconly", "none");
         toggle("winonly", "none");
         const osSpiel = document.getElementById('osspiel');
-        osSpiel.innerHTML = "We weren't able to detect what operating system you're using. Click <a href='#' onclick='setMacOS()'> here </a> if you're using a Mac, <a href='#' onclick='setWindows()'> here </a> if you're using a Windows machine, or <a href='#' onclick='setChromeOS()'>here </a> if you're using a Chromebook."
+        osSpiel.innerHTML = "Cihazınınız işletim sistemini tespit edemedik. Eğer Mac kullanıyorsanız <a href='#' onclick='setMacOS()'> buraya </a>, Windows kullanıyorsanız <a href='#' onclick='setWindows()'> buraya </a>, Chromebook kullanıyorsanız ise <a href='#' onclick='setChromeOS()'>buraya </a> tıklayın."
     }
 
     function getOS() {
