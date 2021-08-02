@@ -925,16 +925,54 @@ visible-after, to ensure they display when you want them to.
 
 	<div class="row">
 		<div class="col-xs-12">
-            <h2 id="exercise-1-mountain-karel-debugging">Exercise 1: Mountain Karel Debugging</h2>
+            <h2 id="exercise-1-mountain-karel-getting-started">Exercise 1: Mountain Karel Getting Started</h2>
 <p>Each of you should choose a role.  Then, click the button (and only that button!) corresponding to your role below.</p>
-<div class="panel-group" id="accordion">
+<div class="panel-group" id="accordion1">
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">I am the SL</a>
+        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse3">I am the SL</a>
       </h4>
     </div>
     <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+    You're an SL helping a student get started on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  Starter code is <a href="../../starter/Day2AM.zip">here</a>.
+    <br />
+    <br />
+    It looks like they are working on getting Karel to ascend the mountain, but are having trouble repeating steps.  They can share their screen with you if you want to take a look at code they are talking about.  Remember that loops and conditions are tricky at this point - the <a href="../../teach/notes/mountain.html">TA Notes</a> for this problem may help you!  The student will also fill you in on where they're at.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion1" href="#collapse4">I am the Student</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+    You're a student signing up for Office Hours for help with approaching <a href="../../en/projects/mountain.html">Mountain Karel</a>.  Download <a href="../../starter/office_hours_staff_training.zip">this PyCharm project</a> and open it in PyCharm - the file <code>mountain_karel_1.py</code> is "your code". From there you can play around with it first if you want to.
+    <br />
+    <br />
+    You are currently working on getting Karel to ascend the mountain, but are struggling - you can get Karel to ascend one step of the mountain, but you aren't sure how to use conditions (which you just learned about) to make Karel repeat the task.  Tell this to the SL when you start to describe where you are, and what you are stuck with.  You can share your screen to show the SL your code.
+    <br />
+    <br />
+    Note: the ultimate issue is you should first figure out <i>what you want to repeat</i>, and then <i>how long you want to repeat it for</i>.  You want to repeat the code to go up a single step, and you want to continue doing this until you reach the top of the mountain.  One possible solution is to use a <code>while</code> loop with the condition being <code>right_is_blocked()</code>.  Then inside the loop you include the instructions to go up one step.
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 id="exercise-2-mountain-karel-debugging">Exercise 2: Mountain Karel Debugging</h2>
+<p>Now, switch roles!  Then, click the button (and only that button!) corresponding to your new role below.</p>
+<div class="panel-group" id="accordion2">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse1">I am the SL</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
       <div class="panel-body">
     You're an SL helping a student with a bug they have while working on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  Starter code is <a href="../../starter/Day2AM.zip">here</a>.
     <br />
@@ -946,12 +984,12 @@ visible-after, to ensure they display when you want them to.
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">I am the Student</a>
+        <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2">I am the Student</a>
       </h4>
     </div>
-    <div id="collapse4" class="panel-collapse collapse">
+    <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
-    You're a student signing up for Office Hours for help with a bug you have while working on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  Download <a href="../../starter/mountain_submission.zip">this PyCharm project</a> and open it in PyCharm - this is "your code". From there you can play around with it first if you want to.
+    You're a student signing up for Office Hours for help with a bug you have while working on <a href="../../en/projects/mountain.html">Mountain Karel</a>.  Download <a href="../../starter/office_hours_staff_training.zip">this PyCharm project</a> and open it in PyCharm - the file <code>mountain_karel_2.py</code> is "your code". From there you can play around with it first if you want to.
     <br />
     <br />
     You are currently working on getting Karel to ascend the mountain, but are struggling - it looks like Karel climbs in a reasonable manner, but doesn't stop at the top, and keeps going to the top edge of the screen!  In other words, you have roughly figured out what you want to repeat, but are stuck figuring out the condition.  Tell this to the SL when you start to describe where you are, and what you are stuck with.  You can share your screen to show the SL your code.  You're having a hard time knowing what condition to use to get Karel to climb and then stop!
@@ -963,8 +1001,10 @@ visible-after, to ensure they display when you want them to.
   </div>
 </div>
 
-<h2 id="exercise-2-khansole-academy-debugging">Exercise 2: Khansole Academy Debugging</h2>
-<p>Now, switch roles!  Then, click the button (and only that button!) corresponding to your new role below.</p>
+<!-- Currently unused
+## Exercise 2: Khansole Academy Debugging
+Now, switch roles!  Then, click the button (and only that button!) corresponding to your new role below.
+
 <div class="panel-group" id="accordion2">
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -1000,6 +1040,7 @@ visible-after, to ensure they display when you want them to.
     </div>
   </div>
 </div>
+-->
 		</div>
 	</div>
 
