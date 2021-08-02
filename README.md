@@ -7,13 +7,23 @@ If you are helping with translation of the course website, here are the steps yo
 1. Make a fork of this repository
 1. Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
 1. Edit any necessary files in the `templates/` folder according to what you are translating.
-1. Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a chance, the script will recompile the website so you can preview it again.
-1. When you are done making changes, commit them to your branch (`git commit`)
-1. Push your branch to GitHub (`git push`)
+1. Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a change, the script will recompile the website so you can preview it again.
+1. When you are done making changes, commit them (`git commit`) and push to GitHub (`git push`)
 1. Create a pull request on the original repository with your changes to be reviewed - you can find information about how to do this [here](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).  You should also link this pull request to the GitHub issue you are working on so that we know what part is being updated.
 1. An instructor will review and confirm the changes.
 
 Thank you very much for your help!
+
+## Adding Lecture Materials
+If you want to post new lecture slides or code, here are the steps you should follow:
+
+1. Clone this repository
+1. Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
+1. Add your slides PDF to `docs/slides`
+1. Add your sample code (if any) to `docs/starter/lectures`
+1. Edit `templates/lectures.json` [as specified here](#updating-lecture-materials) to include information about your lecture materials
+1. Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a change, the script will recompile the website so you can preview it again.
+1. When you are done making changes, commit them (`git commit`) and push to GitHub (`git push`)
 
 ## Website Setup
 
