@@ -20,15 +20,11 @@ with open("templates/announcements/times.csv", 'r') as f:
 % for row in reader:
   % datetime_start, datetime_end, alert_type, fname = row
   <div class="alert {{alert_type}} visible-during" data-visible-start="{{datetime_start}}" data-visible-end="{{datetime_end}}">
-    % with open(os.path.join("templates", "announcements", lang, fname), 'r') as f:
-        {{!f.read()}}   
-    % end
+    % include(os.path.join("templates", "announcements", lang, fname))
   </div>
 % end
 
 <!-- Display the default announcement.  It will be removed (see times.js) if any announcements are visible above. -->
 <div class="alert alert-warning visible-default">
-  % with open(os.path.join("templates", "announcements", lang, "default.ptl"), 'r') as f:
-      {{!f.read()}}
-  % end
+  % include(os.path.join("templates", "announcements", lang, "default.ptl"))
 </div>
