@@ -21,7 +21,7 @@ If you want to post new lecture slides or code, here are the steps you should fo
 1. Install all necessary tools by running `pip3 install -r requirements.txt` and then after that running `python3 -m pip install -U watchdog[watchmedo]`
 1. Add your slides PDF to `docs/slides`
 1. Add your sample code (if any) to `docs/starter/lectures`
-1. Edit `templates/lectures.json` [as specified here](#updating-lecture-materials) to include information about your lecture materials
+1. Edit `templates/lectures.json` [as specified here](#updating-lecture-materials) to include information about your lecture materials.  The file already has entries for all lectures - you just need to update the fields in that entry as needed (e.g. when it becomes visible)
 1. Run `./runLocal.sh`, which compiles the website into the `docs/` folder and lets you preview it in a web browser at `localhost:8000` so that you can see any changes.  You can leave that script running as you work; every time you make a change, the script will recompile the website so you can preview it again.
 1. When you are done making changes, commit them (`git commit`) and push to GitHub (`git push`)
 
