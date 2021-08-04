@@ -383,6 +383,11 @@ visible-after, to ensure they display when you want them to.
 							<li
 									class="visible-after" data-visible-after="2021080509"
 							>
+								<a href="../../en/projects/stringArt.html">String Art</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2021080509"
+							>
 								<a href="../../en/projects/randomCircles.html">Random Circles</a>
 							</li>
 			</ul>
@@ -414,11 +419,6 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021080600"
 							>
 								<a href="../../en/projects/target.html">Target</a>
-							</li>
-							<li
-									class="visible-after" data-visible-after="2021080600"
-							>
-								<a href="../../en/projects/stringArt.html">String Art</a>
 							</li>
 			</ul>
 		</li>
@@ -1293,9 +1293,11 @@ filePath - the total path to the markdown file being rendered in this template
 for overlapping_object in overlapping_objects:
     # do something with overlapping_object ...
 </code></pre>
+
 <p>The coordinates provided to <code>find_overlapping</code> are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for.  You can also specify a single point, like this:</p>
 <pre><code>overlapping_objects = canvas.find_overlapping(x, y, x, y)
 </code></pre>
+
 <p>This will get the objects overlapping with the point <code>(x, y)</code>.</p>
 	</div>
 </div>

@@ -1,9 +1,13 @@
 template: templates/teach/notes/template.ptl
 problemTitle: String Art
 
-This problem deals with graphics and the for loop variable.  If students are struggling to understand `for` loops more generally, you might consider walking through an example of how a `for` loop works with its variable.  For instance, you might walk through how to print out the numbers 0 through 5 or even numbers, using the `i` variable in the loop.
+This problem gives students practice writing a graphics program using the variable within the loop.
 
-The recommended approach is to think through drawing a single line, and what changes between drawing each line (the startX and endY).  Then you try to find a pattern between these changes.  One way is to write out the coordinates for each line, like so:
+Before attempting this problem, walk through an example of how a `for` loop works, with its variable. For instance, you might walk through how to print out the numbers 0 through 5, or even numbers, using the `i` variable in the loop.
+
+**Learning Goal:** using loop counter variables and how to draw graphical objects
+
+**Recommended Approach**: think through drawing a single line, and what changes between drawing each line (the startX and endY).  Then you try to find a pattern between these changes.  One way is to write out the coordinates for each line, like so:
 
 + line 0: (0, height) to (0, 0)
 + line 1: (spacing, height) to (0, spacing)
