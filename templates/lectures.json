@@ -28,27 +28,11 @@
 	},
 
 	{
-		"title_en": "Karel",
-		"title_tr": "Karel",
-		"slidesURL": "slides/Lecture1.pdf",
-		"codeURL": "starter/lectures/Lecture1.zip",
-		"visible_after": "2021080208"
-	},
-
-	{
-		"title_en": "Control Flow Revisited",
-		"title_tr": "Değişkenler",
-		"slidesURL": "slides/Lecture5_ Control Flow Revisited.pdf",
-		"codeURL": "starter/lectures/Lecture5_Codes.zip",
-		"visible_after": "2021080401"
-	},
-
-	{
 		"title_en": "Control Flow Revisited",
 		"title_tr": "Kontrol Akışına Geri Dönüş",
-		"slidesURL": "slides/5-ControlFlowRevisited.pdf",
-		"codeURL": "starter/lectures/Lecture5.zip",
-		"visible_after": "2021082009"
+		"slidesURL": "slides/Lecture5_ Control Flow Revisited.pdf",
+		"codeURL": "starter/lectures/Lecture5_Codes.zip",
+		"visible_after": "2021080403"
 	},
 	{
 		"title_en": "For Loops, Deconstructed",
