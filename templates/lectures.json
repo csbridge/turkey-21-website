@@ -43,9 +43,9 @@
 	{
 		"title_en": "Graphics",
 		"title_tr": "Grafik",
-		"slidesURL": "slides/Lecture7_Graphics.pdf",
+		"slidesURL": "slides/Lecture7.pdf",
 		"codeURL": "starter/lectures/Lecture7.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080512"
 	},
 	{
 		"title_en": "Functions",
