@@ -25,7 +25,6 @@ the OUTPUT_DIR below.
 
 from util.bottle.bottle import SimpleTemplate
 import configparser
-import json
 import os
 import sys
 import markdown

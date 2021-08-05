@@ -1,4 +1,4 @@
-﻿[
+[
 	{
 		"title_en": "Karel",
 		"title_tr": "Karel",
@@ -30,8 +30,8 @@
 		"title_en": "Control Flow Revisited",
 		"title_tr": "Kontrol Akışına Geri Dönüş",
 		"slidesURL": "slides/Lecture5_ Control Flow Revisited.pdf",
-		"codeURL": "starter/lectures/Lecture5_Codes.zip",
-		"visible_after": "2021080403"
+		"codeURL": "starter/lectures/Lecture 5_Codes.zip",
+		"visible_after": "2021080408"
 	},
 	{
 		"title_en": "For Loops, Deconstructed",
