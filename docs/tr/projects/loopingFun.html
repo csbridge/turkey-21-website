@@ -1285,7 +1285,6 @@ filePath - the total path to the markdown file being rendered in this template
 <pre><code>for i in range(15):
     # some code...
 </code></pre>
-
 <p>Yukarıdaki döngü 15 tekrar yapar. Bir <code>for</code> döngüsünün anlamını ilk satırdan çözebilirsiniz:</p>
 <ul>
 <li>Bir sayaç değişkeni 'i' tanımlayın</li>
@@ -1297,14 +1296,12 @@ filePath - the total path to the markdown file being rendered in this template
     i += 2
     print(i)
 </code></pre>
-
 <p>Bu döngünün ilkinde, 'i' 0 olacaktır, ve 2 sayısı yazdırılacaktır. Fakat, döngünün ikinci tekrarında <code>i</code> 1 olacaktır. Her döngü tekrarında bunu düşününün, 'i'nin değerinin güncel olarak ne olduğundan bağımsız olarak; <code>i</code>, belirtilen aralıkta bulunan bir sonraki sayıya tekrar atanacaktır.</p>
 <p>That being said, it may be easier to follow if you create another variable instead of changing the loop variable:</p>
 <pre><code>for i in range(10):
     j = i + 2  # i'nin değerini değiştirmez
     print(j)
 </code></pre>
-
 <p>Aşağıdaki örnek, sayaç 'i'yi 'for' döngüsü içinde kullanmakla ilgilidir:</p>
 <p class="alert alert-info"><strong>İpucu:</strong> Döngü problemlerinde, bir döngü sayacının değerinin, size neyi yapmanızı söylediğini düşünün. Mesela, aşağıdaki ilk problemde,"i, 0 olduğunda, 1 sayısını yazdırmak istiyorum; i,1 olduğunda, 3 sayısını yazdırmak istiyorum; i, 2 olduğunda, 5 sayısını yazdırmak istiyorum vb." gibi düşünebiliriz.</p>
 <h2 id="eglenceli-donguler-1">Eğlenceli Döngüler 1</h2>
@@ -1321,7 +1318,6 @@ filePath - the total path to the markdown file being rendered in this template
 17
 19
 </code></pre>
-
 <p>Ekleme: Şimdi 0'dan başlarak ilk 10 çift sayıyı yazdırmayı deneyin.</p>
 <h2 id="eglenceli-donguler-2">Eğlenceli Döngüler 2</h2>
 <p>Aşağıdaki çıktıyı bir 'for' döngüsü ile elde etmeyi deneyin. İlk 10 çift sayıyı azalan sırayla yazdırın.</p>
@@ -1337,24 +1333,20 @@ filePath - the total path to the markdown file being rendered in this template
 4
 2
 </code></pre>
-
 <p>Bu problemi, önceki problemdeki döngü şartını değiştirmeden çözebilir misiniz? Aşağıdaki, 'for' döngüsü kodunu yazarak başlayın:</p>
 <pre><code>for i in range(10):
     # some code...
 </code></pre>
-
 <p>Bu problemi aşağıdaki döngüyü kullanarak nasıl çözerdiniz?</p>
 <pre><code>for i in range(20):
     # some code...
 </code></pre>
-
 <h2 id="eglenceli-donguler-3">Eğlenceli Döngüler 3</h2>
 <p>'for' döngüsü kullanın, fakat her şeyi tek bir satıra yazdırın. <code>print()</code> kullanırsanız herhangi bir yeni yazdırmada otomatik olarak diğer satıra geçecektir. Bu şekilde yapmamak için, parantezleri kapatmadan hemen önce <code>end=''</code> ekleyin. Örneğin, <code>print("yazılar veya değişkenler...")</code> yeni bir satır eklerken, <code>print("yazılar veya değişkenler...", end='')</code> eklemez.</p>
 <p>1'den başlayarak tam kare sayıları yazdırın.</p>
 <pre><code>1'den başlayarak, ilk 10 tam kare sayıyı tek bir satıra yazdıralım.
 1, 4, 9, 16, 25, 36, 49, 64, 81, 100
 </code></pre>
-
 <p>En sondaki tam sayıdan sonra virgül eklemektan kaçının!</p>
 <h2 id="ek-calsmalar-while-donguleri">Ek Çalışmalar: <code>while</code> Döngüleri</h2>
 <p>'while' döngüleriyle ilgili daha çok pratik mi istiyorsunuz? Yukarıdaki tüm alıştırmaları, 'for' yerine 'while' döngüsü ile yapmayı deneyin. Bol şans!</p>
