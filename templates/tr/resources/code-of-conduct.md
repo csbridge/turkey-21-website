@@ -35,7 +35,7 @@ Ayrıca aldığınız yardımların genel tavsiyeler niteliğinde olmalı ve ba�
 Eğer neyin intihal oluşturup oluşturmadığı konusunda şüpheleriniz varsa grup liderinize veya eğitmenlerimizden birine danışmaktan çekinmeyin.
 
 
-## Online Eğitim Kuralları Rules for Online Conduct
+## Online Eğitim Kuralları
 
 Program boyunca kullanılan tüm online platformları ve web sitelerini yasalara uygun şekilde kullanmayı taahhüt edersiniz. Bu platformlarda kurduğunuz iletişimlerden, yüklediğiniz tüm dosyalardan, paylaştığınız tüm bilgilerden ve bunlar sonucunda oluşabilecek tüm sonuçlardan siz sorumlusunuz. Program boyunca kullanılan hiçbir platformda ve email iletişiminde zararlı veya kötü niyetli içerik paylaşmayacağınızı kabul edersiniz. Bu ilkeyi ihlal eden bazı içerik ve davranışlar (kapsayıcı değil):
 
