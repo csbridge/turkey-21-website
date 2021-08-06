@@ -29,8 +29,8 @@
 	{
 		"title_en": "Control Flow Revisited",
 		"title_tr": "Kontrol Akışına Geri Dönüş",
-		"slidesURL": "slides/Lecture5_ Control Flow Revisited.pdf",
-		"codeURL": "starter/lectures/Lecture 5_Codes.zip",
+		"slidesURL": "slides/Lecture5.pdf",
+		"codeURL": "starter/lectures/Lecture5.zip",
 		"visible_after": "2021080408"
 	},
 	{
@@ -52,7 +52,7 @@
 		"title_tr": "Fonksiyonlar",
 		"slidesURL": "slides/Lecture8-Functions.pdf",
 		"codeURL": "starter/lectures/Lecture8.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080601"
 	},
 	{
 		"title_en": "Nested Loops",
