@@ -33,8 +33,8 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Karel Reference"] = {"en": "Karel Reference", "tr": "Karel Referansı"}
 	translation_dictionary["Python Reference"] = {"en": "Python Reference", "tr": "Python Referansı"}
 	translation_dictionary["Graphics Reference"] = {"en": "Graphics Reference", "tr": "Grafikler Referansı"}
-	translation_dictionary["References"] = {"en": "References", "tr": "References"}
-	translation_dictionary["Software"] = {"en": "Software", "tr": "Software"}
+	translation_dictionary["References"] = {"en": "References", "tr": "Referanslar"}
+	translation_dictionary["Software"] = {"en": "Software", "tr": "Yazılım"}
 	translation_dictionary["Course Information"] = {"en": "Course Information", "tr": "Program Bilgileri"}
 	translation_dictionary["General Info"] = {"en": "General Info", "tr": "Genel Bilgiler"}
 	translation_dictionary["Code of Conduct"] = {"en": "Code of Conduct", "tr": "Öğrenci Davranış Kuralları"}
@@ -48,7 +48,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Lectures"] = {"en": "Lectures", "tr": "Ders"}
 	translation_dictionary["Bonus"] = {"en": "Bonus", "tr": "Bonus"}
 	translation_dictionary["SL Page"] = {"en": "SL Page", "tr": "SL Sayfası"}
-	translation_dictionary["Sponsors"] = {"en": "Sponsors", "tr": "Sponsors"}
+	translation_dictionary["Sponsors"] = {"en": "Sponsors", "tr": "Sponsorlar"}
 %>
 
 <!-- The datetime editor, for testing -->
