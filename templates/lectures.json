@@ -64,9 +64,9 @@
 	{
 		"title_en": "Animation",
 		"title_tr": "Animation",
-		"slidesURL": "slides/10-Animation.pdf",
+		"slidesURL": "slides/Lecture10.pdf",
 		"codeURL": "starter/lectures/Lecture10.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080909"
 	},
 	{
 		"title_en": "Lists",

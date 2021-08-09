@@ -1055,14 +1055,14 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021080909"
 		>
 			<a tabindex="-1" href="#">10: Animation</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/10-Animation.pdf">Slides</a>
+	      					<a href="../../slides/Lecture10.pdf">Slides</a>
 						</li>
 						<li>
 	      					<a href="../../starter/lectures/Lecture10.zip">Code</a>
@@ -1286,6 +1286,7 @@ filePath - the total path to the markdown file being rendered in this template
 16
 Ascending!
 </code></pre>
+
 <p>And here is another one:</p>
 <pre><code>&gt; 5
 &gt; 4
@@ -1298,6 +1299,7 @@ Ascending!
 2
 Not ascending
 </code></pre>
+
 <p>Note that the -1 is not included in the list of numbers - it is just to indicate when the user is done entering numbers.</p>
 <h2 id="milestone-1-storing-and-outputting-numbers">Milestone 1: Storing And Outputting Numbers</h2>
 <p>Store the numbers that the user entered in a list, until they enter -1.  Remember not to put the -1 in the list!  You should just stop asking them for input.  Then, print out the numbers they entered.</p>
@@ -1308,24 +1310,30 @@ Not ascending
 else:
     # ...
 </code></pre>
+
 <p>So let's write one!  Write a function <code>is_ascending</code> that takes in a list of numbers as a parameter and returns whether or not the numbers in the list are in ascending order.  The function would look something like this:</p>
 <pre><code>def is_ascending(numbers):
     # TODO: return True if numbers is in ascending order, or False otherwise
 </code></pre>
+
 <p>It should iterate through the list and check that each pair of numbers is in the right order.  If any of them are in the wrong order, we know the list is not in ascending order, so we return <code>False</code>.  If we don't see any in the wrong order, it is ascending, and we return <code>True</code>!</p>
 <h2 id="list-hints">List Hints</h2>
 <p>To create a list of numbers use:</p>
 <pre><code>my_list = []
 </code></pre>
+
 <p>Recall that you can read an integer from the user using:</p>
 <pre><code>number = int(input(prompt))
 </code></pre>
+
 <p>To add an element to a list:</p>
 <pre><code>my_list.append(newValue)
 </code></pre>
+
 <p>To get an element from a list:</p>
 <pre><code>my_list[index]
 </code></pre>
+
 <p>To loop over all elements in a list:</p>
 <pre><code>for i in range(len(my_list)):
     # do something with my_list[i]
@@ -1336,6 +1344,7 @@ else:
 for elem in my_list:
     # do something with elem
 </code></pre>
+
 <p>To loop over some elements in a list:</p>
 <pre><code>for i in range(START, END):
     # do something with my_list[i]
