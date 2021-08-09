@@ -1298,7 +1298,30 @@ File: <code>place_100.py</code><br/></p>
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/place100/soln.py</pre>
+		<pre class="console" id="editor" style="height:480.0px">from karel.stanfordkarel import *
+
+&quot;&quot;&quot;
+File: place_100.py
+------------------------
+This program makes Karel place a pile of 100 beepers. Good times.
+&quot;&quot;&quot;
+
+
+def main():
+    move()
+
+    # This for loop will repeat the code inside 100 times.
+    for i in range(100):
+        put_beeper()
+
+    move()
+
+
+# There is no need to edit code beyond this point
+
+if __name__ == &quot;__main__&quot;:
+    run_karel_program()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
