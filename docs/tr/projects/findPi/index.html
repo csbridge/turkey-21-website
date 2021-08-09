@@ -1012,9 +1012,9 @@ filePath - the total path to the markdown file being rendered in this template
 		<p>Pi (&pi;) gerçek güzelliğin matematiksel halidir. Birçok denklemde karşımıza çıkar. Özellikle de dairesel hesaplar yaparken, çan eğrisi hesaplarken ve son olarak da, inanılmaz bir şekilde, <a href="https://tr.0wikipedia.org/wiki/Euler_%C3%B6zde%C5%9Fli%C4%9Fi">Euler Özdeşliği'nde</a>.</p>
 <p>Peki &pi; değerinin 3.14159265359... olduğunu nereden bliyoruz? Pi sayısını hesaplamanın birçok yöntemi var. Bu egzersiz ile pi sayısını dart tahtasını kullanarak hesaplamayı öğreneceğiz.</p>
 <p><center>
-<img style="width:500px" src="../../../img/projects/findPi/lifeOfPi.jpg"><br />
+<img style="width:500px" src="../../../img/projects/findPi/lifeOfPi.jpg">  </p>
 <p style="text-align:center"><i>Bu arkadaşın adı da Pi. Ama bu problem onunla alakasız (ismi dışında).</i></p>
-</center></p>
+<p></center></p>
 <p>Aşağıdaki (sol) sarı daireye bir dart oku attığınızı hayal edin. Eğer rastgele bir şekilde birçok ok atarsanız, bazıları sarı bölgenin içine bazıları da dışarıdaki gri alana isabet edecektir. Eğer hem içerideki daireye hem de dışarıdaki kareye denk gelen okları sayacak olursanız, bu toplamların oranı iki şeklin alanları oranına eşit olmalıdır.</p>
 <p><center>
 <img style="width:700px" src="../../../img/projects/findPi/darts.png"> 
@@ -1033,54 +1033,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:960.0px">&quot;&quot;&quot;
-File: find_pi.py
---------------------
-Find the value of pi by throwing random darts at a unit circle inscribed in
-a square. The fraction that land in the circle should equal pi / 4.
-&quot;&quot;&quot;
-
-# Needed to generate random numbers
-import random
-
-# Needed for sqrt
-import math
-
-# The number of darts to throw
-NUM_DARTS = 20000000
-
-
-def main():
-    print(&quot;This program takes a bit of time to run - thanks for your patience!&quot;)
-
-    num_in_circle = 0
-    for i in range(NUM_DARTS):
-        &quot;&quot;&quot;
-        get a random x and y coordinate between (-1, -1) and (1, 1)
-        (imagine the center of the circle is (0, 0))
-        &quot;&quot;&quot;
-        x = random.uniform(-1, 1)
-        y = random.uniform(-1, 1)
-
-        &quot;&quot;&quot;
-        test if the dart landed in the circle by calculating the length
-        of the hypotenuse of the triangle created at this point.
-        The radius of the circle is 1, so if the distance is more than 1
-        it is outside the circle.
-        &quot;&quot;&quot;
-        dist = math.sqrt(x * x + y * y)
-        if dist &lt;= 1:
-            num_in_circle += 1
-
-    # Approximate pi
-    fraction = num_in_circle / NUM_DARTS
-    pi = fraction * 4
-    print(pi)
-
-
-if __name__ == &#039;__main__&#039;:
-    main()
-</pre>
+		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/findPi/soln.py</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

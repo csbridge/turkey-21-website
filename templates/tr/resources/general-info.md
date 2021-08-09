@@ -5,33 +5,33 @@ title: CS Bridge ile İlgili Genel Bilgiler
 
 ### Açıklama
 
-CS Bridge, Amerika Birleşik Devletleri'ndeki Stanford Üniversitesi, Çek Cumhuriyeti'ndeki Çek Teknik Üniversitesi ve Türkiye'deki Koç Üniversitesi arasındaki bir işbirliğidir. Bu üç üniversitenin öğretim görevlileri ve öğrencileri Çek Cumhuriyeti ve Türkiye'deki lise öğrencilerine nasıl kod yazacaklarını öğretmek için bir araya geldi.
+CS Bridge, Amerika Birleşik Devletleri'ndeki Stanford Üniversitesi; Türkiye'de, İstanbul'daki Koç Üniversitesi ve İzmir'deki öğretim görevlileri ile öğrencileri arasındaki işbirliğidir. Bu öğretim görevlileri ve öğrenciler Türkiye'deki lise öğrencilerine nasıl kod yazacaklarını öğretmek için bir araya geldi.
 
 - Bu program, katılımcıların **önceden programlama deneyimi olmadığını varsayar.**
-- Program her gün **aynı zaman çizelgesini** izleyecektir.
-- Programı, zaman çizelgesinde belirtilen zamanların dışında, bilgisayarınızda kurs materyali üzerinde çalışmanıza gerek kalmayacak şekilde tasarladık. İçerik hakkında heyecanlandığınız için fazladan zaman harcamak istiyorsanız, elbette sorun değil ama gerekli değil.
+- Program her gün **aynı zaman çizelgesini** izleyecektir. (Sosyal aktivitelerimizin olduğu bazı günler hariç.)
+- Programı, zaman çizelgesinde belirtilen zamanların dışında, bilgisayarınızda kurs materyali üzerinde çalışmanıza gerek kalmayacak şekilde tasarladık. İçerik hakkında heyecanlandığınız için fazladan zaman harcamak istiyorsanız elbette sorun değil ama gerekli değil.
 - Hafta sonları **tatil** olacaktır.
 
 Bu program bileşenlerinin harika bir CS Bridge deneyimine sahip olmanıza yardımcı olacağını umuyoruz:
 
 - Her gün (video konferans yoluyla) **küçük bir grupta**, eğitim ekibinden biriyle buluşacaksınız.
-- Kurs, diğer öğrencilerle tanışmanıza ve eğitim ekibini tanımanıza yardımcı olacak **ilgi çekici ödevler ve projeler** ve diğer etkinlikler etrafında toplanmıştır.
+- Kurs, diğer öğrencilerle tanışmanıza ve eğitim ekibini tanımanıza yardımcı olacak **ilgi çekici ödevler ve projeler** ile diğer etkinlikler etrafında toplanmıştır.
 - Kursta not almayacaksınız, bu yüzden sadece öğrenmenin tadını çıkarın ve eğlenin!
-- Programın ana çıktısı, çok eğlenmeniz ve **yeni ve harika bir beceriyi: programlama becerisini edinmenizdir.**
+- Programın ana çıktısı, ÇOK EĞLENMENİZ ve **yeni ve harika bir beceriyi: programlama becerisini edinmenizdir.**
 - Kursu bitirdikten sonra bir bitirme sertifikası alacaksınız.
 
 ---
 
 ### CS Bridge Ekibi
 
-CS Bridge Ekibi **üç ülkeden gelen** - Çek Cumhuriyeti, Türkiye ve ABD'de bir grup harika eğitmenden oluşur.
+CS Bridge Ekibi **iki ülkeden gelen** -Türkiye ve ABD- bir grup harika eğitmenden oluşur.
 
-1. Öğretim Görevlileri - Bu insanlar üç üniversitenin şu andaki öğretim görevlileridir. Her gün sırayla ders verirken hepsini tanıma fırsatı bulacaksınız.
-+ Grup Liderleri - Bu eğlenceli insanlar her üç üniversiteden de bilgisayar bilimi tutkusu olan ve size rol model olacak öğrencilerdir. Grup Lideri tarafından yönetilen küçük bir gruba atanacaksınız. Kurs boyunca bu kişiyi çok iyi tanıyacaksınız!
-+ Program Yöneticileri - Her üniversiteden kayıt sürecini yöneten ve ailelerinizle program arasındaki ana irtibat noktası olan bir kişi vardır. Stanford Üniversitesinden CS Bridge Program Yöneticisi kursun idari bileşenlerini yönetecek.
+1. Öğretim Görevlileri - Bu insanlar üç üniversitenin şu andaki öğretim görevlileridir. Her gün sırayla ders verirlerken hepsini tanıma fırsatı bulacaksınız.
++ Grup Liderleri - Bu eğlenceli insanlar Stanford, Koç Üniversitesi'nden ve İzmir'deki üniversitelerden bilgisayar bilimi tutkusu olan ve size rol model olacak öğrencilerdir. Grup Lideri tarafından yönetilen küçük bir gruba atanacaksınız. Kurs boyunca bu kişiyi çok iyi tanıyacaksınız!
++ Program Yöneticileri - Her üniversiteden (Koç ve İzmir) kayıt sürecini yöneten ve ailelerinizle program arasındaki ana irtibat noktası olan bir kişi vardır. Stanford Üniversitesinden CS Bridge Program Yöneticisi, Yosefa Gilon, kursun idari bileşenlerini yönetecek.
 
-CS Bridge'i ilk kez yüz yüze değil, çevrimiçi sunuyoruz. Çevrimiçi bir platformun doğası nedeniyle, Türkiye ve Çek Cumhuriyeti programlarını birleştirebildik, yani kendi ülkenizdeki öğrencilerle tanışmanın yanı sıra, başka bir ülkeden lise öğrencilerini de tanıyacaksınız!
-Hedefimiz, hepiniz yeni ve heyecan verici bir beceriyi öğrendirken birbirini destekleyen hevesli öğretmenler ve öğrencilerden oluşan bir topluluk yaratmaktır!
+CS Bridge pandemiden önce yüz yüze yürütülen bir programdı. Programı çevrim içi olarak sunabilmek için biraz değiştirdik ve bu CS Bridge'i çevrim içi bir program olarak yürüttüğümüz ikinci yıl olacak.
+Hedefimiz, hepiniz yeni ve heyecan verici bir beceri öğrenirken hevesli öğretmenler ve birbirini destekleyen  öğrencilerden oluşan bir topluluk yaratmaktır!
 
 ---
 
@@ -39,9 +39,10 @@ Hedefimiz, hepiniz yeni ve heyecan verici bir beceriyi öğrendirken birbirini d
 ### Program Gereksinimleri
 
 1. Video akışı sağlayacak kadar güçlü bir İnternet bağlantısı.
-+ Derse, çalışma saatlerine, bölüme ve sosyal etkinliklere katılmak için **video konferans yazılımı**. Birlikte çevrimiçi olduğumuz programla ilgili tüm etkinlikler için Zoom'u kullanacağız. **"Zoom Client for Meetings" versiyon 5.7.3** i buradan indirebilirsiniz: [https://zoom.us/download](https://zoom.us/download)
-+ Ödevleri tamamlamak için **PyCharm geliştirme ortamı**. Buradaki kurulum talimatları: [install.html](install.html)
-+ Türkiye ve Çek Cumhuriyeti'ndeki diğer lise öğrencilerini tanıma ve öğrenme sevgisi!
++ Derse, çalışma saatlerine, grup toplantılarına ve sosyal etkinliklere katılmak için **video konferans yazılımı**. Birlikte çevrim içi olduğumuz, programla ilgili tüm etkinlikler için Zoom'u kullanacağız. 
+**"Zoom Client for Meetings" versiyon 5.7.3** i buradan indirebilirsiniz: [https://zoom.us/download](https://zoom.us/download)
++ Ödevleri tamamlamak için **PyCharm geliştirme ortamı**. Buradaki kurulum talimatlarını takip edebilirsiniz: [install.html](install.html)
++ Öğrenme isteği ve Türkiye'deki diğer lise öğrencilerini tanıma şansı!
 
 Bunlardan bazılarına sahip değilsem veya ne yapmam istendiğini anlamadıysam ne olur? Soru sormak için en iyi yer Ed. Ed hakkında daha fazla bilgi için aşağıya bakın!
 
@@ -55,43 +56,53 @@ Kursa **tamamen** katılmanız beklenmektedir. Programdaki her etkinliğe katıl
 
 #### A. <u> Dersler </u>
 
-Dersler **günde iki kez**, günün başında ve akşamları ise 30'ar dakikalık iki konferans biçiminde yapılacaktır. Sabah dersleri Koç Üniversitesi veya Çek Teknik Üniversitesinden, akşam dersleri ise Stanford Üniversitesinden birer eğitimci tarafından verilecektir. Burada dersin temel kavramlarını öğreneceksiniz.
+Dersler **günde iki kez**, sabahları ve akşamları olmak üzere 40'ar dakikalık iki konferans biçiminde yapılacaktır. Her ders üç üniversiteden katılan öğretim görevlilerinden biri tarafından verilecektir. Bu derslerde, programlamanın temel kavramlarını öğreneceksiniz.
 
-- Dersler Zoom aracılığıyla **CANLI** olarak verilecek ve Ed üzerine kaydedilecek ve yayınlanacaktır. Gerekirse daha sonra tekrar başvurabilirsiniz. "Ed nedir?" sorusunun cevabı için aşağıdaki İletişim bölümüne bakın!
+- Dersler Zoom aracılığıyla **CANLI** olarak verilecek ve
+kaydedilecektir. Bu kayıtlar Ed üzerinden yayınlanacaktır. Gerekirse daha sonra tekrar yararlanabilirsiniz. "Ed nedir?" sorusunun cevabı için aşağıdaki İletişim bölümüne bakın!
+
+#### B. <u>Hızlı Başlangıç</u>
+
+Hızlı Başlangıç, her gün sabah dersini takip edecektir.
+
+- Grup Lideri'niz ve grubunuzdaki öğrencilerle beraber derste öğrendiğiniz yeni konuyla ilgili kısa bir problemi çözmeye çalışacaksınız.
+- Hızlı Başlangıç, yeni öğrendikleriniz hakkında düşünmeye başlamanızı sağlamayı amaçlar, ancak Grup'da üzerinde çalışacağınız kadar derinlemesine olması amaçlanmamıştır. 
+
+#### C. <u> Çay Saati </u>
+
+Çay Saati, her gün sabah Hızlı Başlangıç'ı takip edecektir.
+
+- Grup Lideri'niz ve grubunuzdaki öğrencilerle birbirinizi tanımaya, oyunlar oynamaya ve kursla ilgili/ilgisiz konular hakkında konuşabilmeye fırsat yaratacak bir zaman dilimidir. Saat farkından dolayı, eğer Grup Lider'in ABD'de ise, sabah çay saatinde farklı bir Grup Lideri'ne atanacaksın ve farklı bir grup öğrenciyle sosyalleşebileceksin.
+- Kendinizi bir odada bir dairenin etrafında otururmuş çay içerken ve birbirinizi tanıyabilmek için laflarken hayal edin!
 
 
-#### B. <u> Çay Saati </u>
-
-Bu, her gün sabah dersini takip edecektir.
-
-- Grup Lideri önderliğindeki küçük bir gruba atanacaksınız ve birbirinizi tanıma, oyun oynama, program ilgili olan ve olmayan şeyler hakkında konuşma şansınız olacak.
-- Kendinizi bir odada bir dairenin etrafında otururmuş çay içerken ve birbirinizi tanıyabilmek laflarken hayal edin!
-
-
-#### C. <u> Gruplar </u>
+#### D. <u> Gruplar </u>
 
 Günde iki konferansa ek olarak, **Grup Lideriniz önderliğindeki küçük gruplarda günlük tartışma bölümüne katılacaksınız.**
 
-- Burası, derste öğrendiğiniz yeni kavramlarla pratik yapabileceğiniz yerdir.
+- Gruplar, derste öğrendiğiniz yeni kavramlarla pratik yapabileceğiniz yerdir.
 - Her gün aynı Grup Lideriyle ve aynı öğrenci grubuyla buluşacaksınız.
 
 
-#### D. <u>Office Hours/Work</u>
+#### E. <u>Office Saatleri/Çalışmaları</u>
 
-This is when you'll be able to ask for individual help on your code.
+Ofis Saatleri size diğer öğrencilerle birlikte günlük projeleriniz üzerinde çalışma ve ihtiyacınız olduğunda yardım isteme fırsatı sunar. Bir Grup Liderinden diğer öğrencilerle aynı ortamda veya birebir şekilde yardım alabilirsiniz. Ofis saatleri isteğe bağlıdır fakat kursun içeriğiyle ilgili sorunlarınız varsa şiddetle tavsiye edilir.
+Bunlara ek olarak, Grup Lideri ile iletişim kurmanın, kodunuzdaki bir hatayı düzeltmenin ve konu hakkında daha derin bir anlayış kazanmanın da harika bir yoludur. Sadece kendi Grup Lideriniz değil diğer Grup Liderleri de orada olacaktır.
 
-- If you need help, you'll join the Office Hours Nooks community and Section Leaders will be there to answer your questions.
-- You may have to wait in the Nook community until a Section Leader is free to help you.
-- If you don't have questions, this is the time that you'll spend working on your assignments.
+Programda listelenen Ofis Saati Nooks bağlantısına buradan gidebilirsiniz:
+[Ed]({{config['discussion_forum_schedule_url']}}). 
 
-#### E. <u> Projeler </u>
+- Ofis saatlerinin nasıl çalıştığı hakkında daha fazla bilgi almak için:
+[Submission/Office Hours page](submission-oh.html).
+
+#### F. <u> Projeler </u>
 
 Her gün üzerinde çalışacağınız iki programlama projesi olacak. Temel ödev soruları ayrı ayrı yapılacak şekilde tasarlanmıştır, ancak birbirinize öğretmenizi öneririz - bu, akranlarınıza “cevabı vermeden" onları cevaba yönlendirmeyi de içerir.
 
-- İlk projeyi her gün 14:00 saatine kadar, ikinci projeyi ise akşam Ofis Saatleri / Çalışma oturumunun sonuna kadar sunmanız beklenmektedir (23:00).
+- İlk projeyi her gün 14:00 saatine kadar, ikinci projeyi ise akşam Ofis Saatleri / Çalışma oturumunun sonuna kadar göndermeniz beklenmektedir (23:00). Her şeyi bitirmediysen sorun değil - yapabildiğin kadarını göndermen yeterli!
 - Ödevleri tamamlama ve gönderme ile ilgili talimatlar Ed'de yayınlanacaktır.
 
-#### F. <u> Sosyal Etkinlikler </u>
+#### G. <u> Sosyal Etkinlikler </u>
 
 Bu programda çok şey öğrenmenizi ama aynı zamanda **EĞLENMENİZİ** ve farklı okul ve bölgelerdeki öğrencileri tanımanızı istiyoruz! Ayrıca sadece kendi Grup Liderinizi değil, diğer Grup Liderlerini de tanımanızı istiyoruz!
 
@@ -114,27 +125,39 @@ Sınıf tartışma forumumuz Ed'de, burada bulunuyor: [EdStem](https://us.edstem
 
 İki Ed grubuna kayıt olacaksınız:
 
-1. **“CS Bridge: ana tartışma grubu.** Burası sorularınızı (kavramsal, teknik vb.) sorabileceğiniz ve kursla ilgili duyurular göndereceğimiz yerdir. Lütfen sınıf arkadaşlarınızın sorularını da yanıtlamaktan çekinmeyin! Bir soru göndermeden önce sorusunun sorulup sorulmadığını kontrol edin (eğer öyleyse, _daha önce verilmiş cevaplardan_ faydalanın!). Yinelenen soruları yanıtlamayabiliriz.
+1. **“CS Bridge Türkiye: ana tartışma grubu.** Burası sorularınızı (kavramsal, teknik vb.) sorabileceğiniz ve kursla ilgili duyurular göndereceğimiz yerdir. Lütfen sınıf arkadaşlarınızın sorularını da yanıtlamaktan çekinmeyin! Bir soru göndermeden önce sorusunun sorulup sorulmadığını kontrol edin (eğer öyleyse, _daha önce verilmiş cevaplardan_ faydalanın!). Yinelenen soruları yanıtlamayabiliriz.
 + **Grubunuzun Ed grubu.** Bu tartışma grubu, özellikle atanmış olduğunuz küçük grupla iletişim kurabilmeniz içindir. Grup Liderinizle iletişime geçmeniz gerekiyorsa, bu grupta **özel** bir gönderi yayınlayın (yalnızca personele şeklinde seçim yaparak). Bölümünüzdeki diğer öğrencilerin görmesini istiyorsanız da tüm gruba açık mesaj gönderebilirsiniz. Grubunuzla ilgili olmayan daha genel sorular için burası yerine ana CS Bridge Ed grubunu kullanın.
 
-İşte bazı ipuçları:
+İşte Ed için bazı topluluk normları ve beklentileri:
 
-- Bir soru yayınlamadan önce daha önce sorulmuş mu diye arayın!
+- Ed'de iletişimde bulunduğunuz Grup Liderlerine, öğrencilere ve eğitmenlere karşı her zaman saygılı ve nazik olun.
+
+- Bir soru yayınlamadan önce daha önce sorulmuş mu diye arayın.
+
 - Yararlı bulduğunuz soruları ve cevapları kalpleyin.
-- Kendinden emin olduğunuz soruları yanıtlayın.
+
+- Kendinizden emin olduğunuz soruları yanıtlayın.
+
 - Kursla ilgili ilginç içeriği personel ve akranlarınızla paylaşın.
+
+- İnsanları aşağılamadan konuşmaya dikkat edin. Homofobi, ırkçılık, cinsiyetçilik, engellilik veya diğer ayrımcılık biçimleri kabul edilemez ve hoş görülmez.
+
+- Ed'de herkesin görebileceği herhangi özel bir bilgi yayınlamayın.
+
+- Herhangi harici bir bağlantı atmayınız.
+
 - Ed hakkında daha fazla bilgi için [Hızlı Başlangıç ​​Kılavuzu](https://us.edstem.org/help) na başvurabilirsiniz.
 
 ---
 
-### Kiminle Ne Hakkında İletişim Kurmalı?
+### Ne Hakkında Kiminle İletişim Kurmalı?
 
-Bu sınıf üç zaman diliminde gerçekleşir, bu yüzden zamanında ve nasıl yardım alabileceğiniz için kiminle ve nasıl iletişim kuracağınızı bilmeniz önemlidir. Lütfen Bölüm Liderlerinin ve diğer öğrencilerin size yardımcı olabileceği Ed platformunu (yukarıda açıklanan [C4](#C4)) kullanın. Bazı yönergeler:
+Zamanında yardım alabilmeniz için kiminle, ne için ve nasıl iletişime geçeceğinizi bilmeniz önemlidir.Lütfen Bölüm Liderlerinin ve diğer öğrencilerin size yardımcı olabileceği Ed platformunu (yukarıda açıklanan [C4](#C4)) kullanın. Bazı yönergeler:
 
-- **Lojistik sorular, kavramsal ve teknik sorular veya genel program sohbeti** için lütfen CS Bridge Ed forumumuza herkese açık bir soru gönderin.
+- **Lojistik sorular, kavramsal ve teknik sorular veya genel program hakkında olan sorular** için lütfen CS Bridge Ed forumumuza herkese açık bir soru gönderin.
 - **Kişisel kaygılar veya sorunlar** için lütfen CS Bridge Ed 'de özel bir gönderi yayınlayın.
 - **Grup Liderinize bir mesaj göndermek** için bölümünüzün Ed bölümünde özel bir yayın yapın.
-- **Büyük kişisel sorunlar veya endişeler** için lütfen Burcu Hanım (Koç Üniversitesi) ile temasa geçin. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada] bulunabilir ({{config['discussion_forum_url']}}).
+- **Büyük kişisel sorunlar veya endişeler** için lütfen Burcu Hanım (Koç Üniversitesi) ya da Barış Bozkurt (İzmir) ile temasa geçin. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde bulunabilir: [burada]({{config['discussion_forum_url']}}).
 
 ---
 
@@ -145,26 +168,12 @@ Bu sınıf üç zaman diliminde gerçekleşir, bu yüzden zamanında ve nasıl y
 
 ---
 
-### Onurlu Öğrenme
-
-Kendi kişisel dürüstlüğünüze, bütünlüğünüze değer verin - bu, sınıfta öğrendiğimiz her şeyden daha önemlidir. Her öğrencinin derse dürüst ve tam katılımını bekliyoruz. Bazı anahtar bilgiler:
-
-+İnsanlığa, entelektüel keyfe, sosyal bağlantıya, yeni becerilere ve şükranlara değer veriyoruz.
-+ Birbirinize öğretin! Hepimiz birbirimiz için buradayız.
-+ Çözüm kodunuzu Ed forumlarındaki ödevlere herkese açık olarak göndermekten kaçının. Herkesin kendi çözümlerini keşfetme şansı elde etmesini istiyoruz.
-+ Kabullenici olun. Farklı ve harika bir topluluğuz.
-+ Kursla ilgili sorun yaşıyorsanız veya iletilen bir şeyi anlamıyorsanız, yardımcı olabilmemiz için lütfen bize bildirin.
-
-Son olarak, lütfen düşünceli olun. Bunlar birçokları için zor zamanlar, bu yüzden lütfen sınıf arkadaşlarınıza ve öğretmenlerinize yardım edin. CS Bridge, kabul edilemez davranışlardan arınmış bir öğrenme deneyimidir. Zorbalığa ve diğer katılımcılara zarar verme potansiyeli olan diğer faaliyetlere izin verilmez ve bunlar hoş görülmez. CS Bridge ve oluşturduğumuz topluluk, tüm öğrencilerin hoş karşılanması gereken bir yerdir.
-
----
-
 ### Ek kaynaklar
 
 #### Erişilebilirlik
 
-- Topluluğumuzun çeşitli öğrenme farklılıklarına sahip olacağını ve birçok özel ihtiyaçlara sahip birey içereceğini biliyoruz. Öğrenmeyi sizin için nasıl daha erişilebilir hale getireceğinize dair bir öneriniz varsa, Ed'de yayınlamaktan veya Grup Liderinize söylemekten çekinmeyin.
+- Topluluğumuzun çeşitli öğrenme farklılıklarına sahip olacağını ve birçok özel yeteneklere sahip birey içereceğini biliyoruz. Öğrenmeyi sizin için nasıl daha erişilebilir hale getireceğimize dair bir öneriniz varsa, Ed'de yayınlamaktan veya Grup Liderinize söylemekten çekinmeyin.
 
 #### Hatalı davranışı bildirme süreci
 
-- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya davranışları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada]({{config['discussion_forum_url']}}) bulunabilir.
+- Güvenli ve açık bir topluluk oluşturmak ve bunu sürdürmek bizim için büyük önem taşımaktadır. Başkalarının (öğrenci veya personel) eylemleri veya tavırları sizi güvensiz veya hoş karşılanmamış hissettiriyorsa, bize bildirmenizi istiyoruz. İletişim bilgileri CS Bridge Ed'de "Genel" kategorisinde [burada]({{config['discussion_forum_url']}}) bulunabilir.

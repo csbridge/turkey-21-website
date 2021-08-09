@@ -1026,13 +1026,11 @@ print(&quot;Değişken x'in değeri: &quot; + str(x))
 pi = 3.14                             # float
 print(&quot;Pi'nin yaklaşık değeri: &quot; + str(pi))
 </code></pre>
-
 <p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir:</p>
 <pre><code>Bu bir string
 Değişken x'in değeri: 5
 Pi'nin yaklaşık değeri: 3.14
 </code></pre>
-
 <h2 id="konsol-girdisi">Konsol Girdisi</h2>
 <p>Kullanıcıdan konsol aracılığıyla girdi alıp değerini bir değişkende tutmak için <code>input(..)</code> fonksiyonu kullanılır. Kullanıcı girdisini başka türde (integer, float, vb.) veri yapılarında tutmak için girdiyi istediğiniz türe <strong>çevirmeniz</strong> gerekecektir. </p>
 <pre><code>what_you_said = input(&quot;How are you doing? &quot;)            # Kullanıcıya nasıl olduğu soruluyor
@@ -1045,7 +1043,6 @@ pi = float(input(&quot;Enter your best guess at pi: &quot;))      # Kullanıcıd
 circumference = pi*diameter     
 print(&quot;circumference = &quot; + str(circumference))          # Çemberin çevresi konsola yazdırılıyor
 </code></pre>
-
 <p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir (Kullanıcı girdisi mavi ile belirtilmiştir):</p>
 <p><center>
 <img
@@ -1062,7 +1059,6 @@ print(&quot;circumference = &quot; + str(circumference))          # Çemberin ç
 def main():
     ...
 </code></pre>
-
 <p>Daha sonra aşağıdaki gibi rastgele sayılar elde edebilirsiniz. Rastgele sayıların üretilmesini istediğimiz alt ve üst limiti <code>lower = 0</code> ve <code>upper = 10</code> olarak tanımladığımızı varsayın.:</p>
 <pre><code>x = random.randint(lower, upper)  # [lower, upper] aralığında (alt ve üst limit dahil) rastgele bir tamsayı
 y = random.random()               # 0 ve 1 arasında rastgele rasyonel sayı

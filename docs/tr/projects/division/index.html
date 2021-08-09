@@ -1028,56 +1028,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:1000.0px">&quot;&quot;&quot;
-File: division.py
--------------------
-This program shows various division functions.
-&quot;&quot;&quot;
-
-
-def main():
-    show_info(50, 5)
-    show_info(99, 5)
-    show_info(73, 7)
-
-
-def show_info(value, divisor):
-    &quot;&quot;&quot;
-    Prints out information about the given value with the given divisor,
-    including whether the value is even or odd, what the integer division result
-    of value / divisor is, and what the remainder of that operation is.
-    &quot;&quot;&quot;
-    print(&quot;value = &quot; + str(value))
-    print(&quot;    is odd? &quot; + str(is_odd(value)))
-    print(&quot;    value / &quot; + str(divisor)
-          + &quot; = &quot; + str(divide(value, divisor))
-          + &quot; remainder &quot; + str(remainder(value, divisor)))
-
-
-def is_odd(value):
-    &quot;&quot;&quot;
-    Returns True if value is odd, False otherwise.
-    &quot;&quot;&quot;
-    return (value % 2) == 1
-
-
-def divide(value, divisor):
-    &quot;&quot;&quot;
-    Performs integer division for value / divisor.
-    &quot;&quot;&quot;
-    return value // divisor
-
-
-def remainder(value, divisor):
-    &quot;&quot;&quot;
-    Returns remainder of the integer division for value / divisor.
-    &quot;&quot;&quot;
-    return value % divisor
-
-
-if __name__ == &#039;__main__&#039;:
-    main()
-</pre>
+		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/division/soln.py</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
