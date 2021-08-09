@@ -1,62 +1,69 @@
 template: templates/tr/resources/faqTemplate.ptl
-title: Code of Conduct
+title: Öğrenci Davranış Kuralları
 
 [TOC]
 
-## Learning with Honor
+## Onurlu Öğrenim
 
-Value your own personal integrity -- it is of more importance than anything we learn in this class. We expect every student to engage honestly and fully in the course. Some guidelines:
+Kişisel bütünlüğünüze değer verin -- bu program boyunca öğreneceğiniz her şeyden daha değerli. Her öğrenciden dürüstlük ilkeleri doğrultusunda ve adanmış şekilde programa katılmasını bekliyoruz. Bunun için bazı önerilerimiz:
 
-- We value humanity, intellectual joy, social connection, new skills, and gratitude.
-- Teach each other! We are all in this for one another.
-- Avoid publicly posting your solution code to assignments on the Ed forums. We want everybody to get a chance to discover their own solution.
-- Be welcoming. We are a diverse and wonderful community. There is no tolerance for discrimination of any kind.
-- If you are having trouble with the course or do not understand something that is communicated, please let us know about it so we can help.
+- İnsanlığa, entelektüel çabadan alınan hazza, sosyal bağlantılar kurmaya, yeni becerilere ve sahip olduklarımızın farkında olmaya değer veririz.
+- Başkalarına öğret! CS Bridge tüm bileşenlerinin birbirinden öğrendiği bir programdır. Bu yolculukta birlikteyiz.
+- Çözümlerini Ed gönderilerinde ve diğer yerlerde paylaşma. Her öğrencinin kendi çözümünü oluşturma hazzını deneyimleme şansına sahip olmasını istiyoruz. 
+- Hoşgörülü ol. CS Bridge farklı kültürlerden bileşenler içeren harika bir topluluktur. Ayrımcılığa karşı en ufak toleransımız yok!
+- Eğer programı takip etmekte veya anlatılan herhangi bir konuyu anlamakta zorlanıyorsan sana yardımcı olabilmemiz için bizimle iletişime geç. 
+
+## Akademik Dürüstlük
+
+CS Bridge boyunca tamamladığınız tüm günlük projelerin ve final projesinin senin emeğin sonucu oluşmuş olmasını bekliyoruz. Eğer eğitmenlerimiz veya grup liderlerimiz çözümlerinin dış bir kaynaktan kopyalandığıyla ilgili bir kanıt bulursa sertifika alma hakkını kaybedersin. Öğrencilerimizin Stanford Üniversitesi Öğrenci Davranış Kuralları'na uymalarını bekliyoruz. Bilgisayar bilimleri için bu aşağıda açıklanan üç kurala uyulmasını da içerir:
+
+#### Kural 1: Başkalarının çözümlerine veya yazdıkları koda bakmamalısın.
+
+Başkalarının çözümlerini, veya onlardan faydalanarak oluşturulmuş çözümleri kendi emeğinizmiş gibi göstermek akademik sahtekarlıktır. Örneğin çözümün kısmen veya tamamen; internetten bulduğun, bir öğrenciden (aktif veya geçmiş) elde ettiğin veya başka herhangi bir kaynaktan faydalanarak oluşturulduysa bu senin emeğin değildir ve akademik dürüstlük ilkelerini ihlal eder. Birçok davranış kuralları ihlali online kaynaklardan bulunan çözüm kodlarının kullanılmasından doğmaktadır. Bu riskten uzak durmanın en iyi yolu programlama projelerinizin çözümlerini internette aramamaktır. Ayrıca, bir problemi nasıl çözebileceğinizi anlamak için bir başkasının çözümünü incelemek de davranış kurallarının ihlalidir. Özünde, program boyunca problemleri çözmek için başkalarının çözümlerine bakmamalısınız. Başka birinin kodunu incelemek "ödevinizi kontrol etmek", "ipucu almak" veya "alternatif çözümleri görmek" değil öğrenci davranış kuralları ihlalidir.
 
 
-## Plagiarism
-We expect that all work you submit for daily projects and the final project is your own. Students will not be eligible to receive a completion certificate if Instructors or Section Leaders discover evidence that a submission has been copied from an outside source. We expect students to follow Stanford University's Honor Code Policy. For Computer Science, this includes following these three rules as outlined by the Computer Science Department:
+#### Kural 2: Yazdığınız çözümleri diğer öğrencilerle paylaşmamalısın.
 
-#### Rule 1: You must not look at solutions or program code that are not your own.
-It is an act of plagiarism to submit work that is copied or derived from the work of others and submitted as your own. For example, using a solution from the Internet or a solution from another student (past or present) or some other source, in part or in whole, that is not your own work is a violation of the Honor Code. Many Honor Code infractions we see make use of solution code found online. The best way to steer clear of this possibility is not to search for online solutions to the programming assignments. Moreover, looking at someone else's solution code in order to determine how to solve the problem yourself is also an infraction of the Honor Code. In essence, you should not be looking at someone else's code in order to solve the problems in this class. This is not an appropriate way to "check your work," "get a hint," or "see alternative approaches."
+Kimseden yazdığı çözümlerin kopyasını istememeli ve çözümlerinizi başka öğrencilerle paylaşmamalısınız. Benzer şekilde, çözümü oluşturmak için kullandığınız strateji veya algoritmaları anlattığınız kişi sizinle aynı veya çok benzer bir çözüme ulaşacak şekilde detaylı olarak tartışmamalısınız. Ayrıca, çözümlerinizin güvenliğini sağlamak adına gerekli önlemleri almakla yükümlüsünüz. Örneğin çözümünüzü online kaynaklarda paylaşmamalı veya ortak kullanılan bilgisayarlarda bırakmamalısınız.
 
-#### Rule 2: You must not share your solution code with other students.
-In particular, you should not ask anyone to give you a copy of their code or, conversely, give your code to another student who asks you for it. Similarly, you should not discuss your algorithmic strategies to such an extent that you and your collaborators end up turning in the same code. Moreover, you are expected to take reasonable measures to maintain the privacy of your solutions. For example, you should not leave copies of your work on public computers nor post your solution code on a public website.
+#### Kural 3: Eğer çözümünüzü oluştururken yardım aldıysanız bunu belirtmelisin.
 
-#### Rule 3: You must indicate on your submission any assistance you received.
-If you received aid while producing your solution, you should indicate from whom you got help (if that person is not a section leader, TA, or instructor for this class) and what help you received. A proper citation should specifically identify the source (e.g., person's name, book title, website URL, etc.) and a clear indication of how this assistance influenced your work (be as specific as possible). For example, you might write "I discussed the approach used for sorting numbers in the sortNumbers method with Mary Smith." If you make use of such assistance without giving proper credit, you may be guilty of plagiarism.
+Eğer çözümünüzü oluştururken yardım aldıysanız bu yardımı kimden aldığınızı (eğer yardım eden kişi bir grup lideri veya eğitmen değil ise) ve yardımın içeriğini açıkça belirtmelisiniz. Geçerli bir kaynakça yardım kaynağını şüpheden uzak şekilde tanımlamalıdır (kişinin adı, kitap adı, web sitesi adresi gibi) ve bu yardımınızın çözümünüzü nasıl etkilediğini mümküm olduğunca ayrıntılı şekilde anlatmalıdır. Örneğin "sortNumbers fonksiyonunda sayıları sıralamak için izlemem gereken yöntemi Muazzez Kader ile tartıştım." aldığınız yardımı açıklamanın geçerli bir şeklidir. Eğer detaylı şekilde açıklamadan projelerinizde yardım alırsanız intihal yapmış olarak değerlendirilebilirsiniz.
 
-It is also important to make sure that the assistance you receive consists of general advice that does not cross the boundary into having someone else write the actual code or show you their code. It is fine to discuss ideas and strategies, but you should be careful to write your programs on your own, as indicated in Rules 1 and 2.
+Ayrıca aldığınız yardımların genel tavsiyeler niteliğinde olmalı ve başka birinin sizin kodunuza direkt katkıda bulunmasına yol açacak kadar ayrıntılu olmamalıdır. Fikirleri ve çözüm stratejilerini tartışmanızda bir sakınca yok, fakat Kural 1 ve 2'de açıklandığı gibi çözümlerinizi kendiniz yazmaya önem göstermelisiniz.
 
-If you are ever in doubt about what does or does not count as plagiarism, please ask your Section Leader or one of the Instructors.
+Eğer neyin intihal oluşturup oluşturmadığı konusunda şüpheleriniz varsa grup liderinize veya eğitmenlerimizden birine danışmaktan çekinmeyin.
 
-## Rules for Online Conduct
 
-You agree to use the Sites in accordance with all applicable laws. You are responsible for your own communications, including the upload, transmission and posting of information, and are responsible for the consequences of their posting on or through the Site. You further agree that you will not email or post malicious or harmful content anywhere on the Site, or on any other Stanford computing resources including without limitation the following:
+## Online Eğitim Kuralları
 
-- Content that defames or threatens others
-- Harassing statements or content that violates federal or state law
-- Content that discusses illegal activities with the intent to commit them
-- Content that is not your own, or infringes another's intellectual property, including, but not limited to, copyrights, trademarks or trade secrets
-- Content related to partisan political activities
-- Material that contains obscene (i.e. pornographic) language or images
-- Advertising or any form of commercial solicitation or promotion, including links to other sites
-- Content that is otherwise unlawful
-- Intentionally incomplete, misleading or inaccurate content
-- Violations of Honor Code
-- Copyrighted material, including without limitation software, graphics, text, photographs, sound, video and musical recordings, may not be placed on the Site without the express permission of the owner of the copyright in the material, or other legal entitlement to use the material.
+Program boyunca kullanılan tüm online platformları ve web sitelerini yasalara uygun şekilde kullanmayı taahhüt edersiniz. Bu platformlarda kurduğunuz iletişimlerden, yüklediğiniz tüm dosyalardan, paylaştığınız tüm bilgilerden ve bunlar sonucunda oluşabilecek tüm sonuçlardan siz sorumlusunuz. Program boyunca kullanılan hiçbir platformda ve email iletişiminde zararlı veya kötü niyetli içerik paylaşmayacağınızı kabul edersiniz. Bu ilkeyi ihlal eden bazı içerik ve davranışlar (kapsayıcı değil):
 
-## Ed Community Norms
-Here are some community norms and expectations for Ed:
+- Başkalarını karalayan veya tehtit eden içerikler
+- Taciz edici ifadeler veya yasaları ihlal eden içerikler
+- Yasadışı aktiviteleri teşvik eden veya özendiren tartışma ve içerikler
+- Hakları başkalarına ait veya başkalarının içerik haklarını ihlal eden içerikler. Telif hakları, marka hakları ve ticaret sırları bun içeriklere örneklerdir
+- Taraflı politik ve siyasi içerikler
+- Müstehcen dil veya görüntüler içeren içerikler
+- Herhangi bir formda reklam, promosyon veya pazarlama içeren içerikler. Diğer site ve ürünlere linkler de bu kategoriye dahildir
+- Yasadışı içerikler
+- Kasıtlı olarak eksik, yanıltıcı veya yanlış içerikler
+- Öğrenci davranış kurallarını ihlal eden içerikler
+- Hakları saklı olan içerikler. Yazılım, görseller, metin içeriği, fotoğraflar, ses, video, müzik kayıtları ve benzeri içerikler hak sahipleri tarafından yazılı izin alınmadan paylaşılamaz
 
-- Always be respectful and kind to section leaders, students and instructors that you are engaging with on Ed
-- Search before you post
-- Heart questions and answers you find useful
-- Answer questions you feel confident answering
-- Share interesting course related content with staff and peers
-- Do not talk about groups of people like they are inferior. Homophobia, racism, sexism, ableism, or other forms of discrimination are unacceptable and not tolerated.
-- Do not post any private information in Ed for everyone to see
-- Do not post any external links
+## Ed Topluluk Kuralları
 
-Please be considerate. These are tough times for many, so please help your classmates and teachers out. CS Bridge is a learning experience free of unacceptable behavior. Bullying and other activities that have the potential to harm other participants is not allowed and will not be tolerated. CS Bridge and the community we create is a place all students should feel welcome in.
+Ed topluluğumuzun kuralları ve uymanızı beklediğimiz görgü kuralları vardır:
+
+- Grup liderlerine, öğrencilere ve eğitmenlere her zaman saygılı ve kibar olun
+- Sorunuzu paylaşmadan önce daha önce sorulmuş mu diye arayın
+- Faydalı bulduğunuz soruları, cevapları ve içerikleri beğenin
+- Cevaplamaya yetkin hissettiğiniz soruları cevaplayın
+- İlginç bulduğunuz programla ilgili içerikleri ekiple ve öğrencilerle paylaşın
+- Herhangi bir insan veya insan topluluğu hakkında küçük düşürücü şekilde konuşmayın. Homofobi, ırkçılık, cinsiyetçilik, engelli bireyleri yok saymak veya küçük görmek ve ayrımcılığın her türlüsü kabul edilemez ve tahammül edilmeyecektir
+- Başkalarının görmesini istemediğiniz özel bilgileri Ed'de paylaşmayın
+- Programla alakasız içerik ve bağlantıları Ed'de paylaşmayın
+
+Lütfen düşünceli davranın. Birçoğumuz için çok zor zamanlardan geçiyoruz. Arkadaşlarınıza ve CS Bridge ekibine yardımcı olmaktan çekinmeyin. CS Bridge belirtilen kurallara uymayan davranışlardan arındırılmış bir öğrenme deneyimi sunmayı hedefler. Zorbalığa veya başkalarına zarar verme potansiyeli içeren diğer davranışlara izin verilmeyecektir ve görmezden gelinmeyecektir. CS Bridge ve oluşturduğumuz topluluk tüm öğrencilerin hoşnut ve güvende hissedeceği bir oluşumdur.
+
 

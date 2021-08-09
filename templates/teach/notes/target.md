@@ -1,11 +1,7 @@
 template: templates/teach/notes/template.ptl
 problemTitle: Target
 
-This is the second section problem for the evening.  See the first section problem for an overview of this section's topics.
-
-This problem gives students practice writing a program with functions and parameters, and also graphics.  You should emphasize making functions to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.
-
-Teaching tips:
+This problem gives students practice writing a program with functions and parameters, and also graphics.  We want to emphasize making functions to reuse code and design "top-down", meaning you design your program by breaking it into smaller pieces until you can implement each piece with a little code.
 
 + Learning goal: functions, parameters and decomposition
 + Milestone: draw one of the pieces - a single centered circle
