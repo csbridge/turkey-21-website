@@ -1085,14 +1085,14 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021081009"
 		>
 			<a tabindex="-1" href="#">12: The Mouse</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/12-Mouse.pdf">Sunum</a>
+	      					<a href="../../slides/Lecture12.pdf">Sunum</a>
 						</li>
 						<li>
 	      					<a href="../../starter/lectures/Lecture12.zip">Kod</a>
@@ -1290,6 +1290,7 @@ Dosya: <code>short_film.py</code></p>
 <pre><code>def display_message(canvas, message):
   ...
 </code></pre>
+
 <p>Başlangıç mesajı, aşağıdaki ekranda olduğu gibi görünmelidir.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/onceUpon.png">
@@ -1297,9 +1298,11 @@ Dosya: <code>short_film.py</code></p>
 <p>Burada kullandığımız font (ve font büyüklüğü) şunlardır:</p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
+
 <p>Yazının rengini beyaz yaptığınızdan emin olun! İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için <code>delete</code> fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
+
 <p>Tabii ki, bu fonksiyonu hikayenizi anlatmak için istediğiniz kadar kullanabilirsiniz!</p>
 <h2 id="gunesi-batrmak">Güneşi Batırmak</h2>
 <p>Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için önce gökyüzünü, dünyayı ve güneşi çizin. Ardından, yavaş yavaş güneşin inişi animasyonunu gerçekleştirin. Gökyüzü tuvalin üst yarısını ve yer ise ikinci yarıyı kaplamalıdır. Programın başlangıcından ve birkaç saniye sonrasından alınmış aşağıdaki kareleri göz önünde bulundurun.</p>
@@ -1313,6 +1316,7 @@ Dosya: <code>short_film.py</code></p>
   ...
   return color
 </code></pre>
+
 <p>Fonkisyonun, kaç yineleme geçtiğine göre "ye", "turuncu" veya "kırmızı" renklerinden birini döndürmesini sağlayın.</p>
 <h2 id="son-dokunuslar">Son Dokunuşlar</h2>
 <p>Filminiz bittikten sonra, daha önce tanımlanan <code>display_message()</code> fonksiyonunuzu kullanarak bir bitirme mesajı görüntüleyin. Bitiş mesajı aşağıdaki ekrana benzemelidir.</p>

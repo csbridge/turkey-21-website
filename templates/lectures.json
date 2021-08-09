@@ -78,9 +78,9 @@
 	{
 		"title_en": "The Mouse",
 		"title_tr": "The Mouse",
-		"slidesURL": "slides/12-Mouse.pdf",
+		"slidesURL": "slides/Lecture12.pdf",
 		"codeURL": "starter/lectures/Lecture12.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021081009"
 	},
 	{
 		"title_en": "Breakout Game",
