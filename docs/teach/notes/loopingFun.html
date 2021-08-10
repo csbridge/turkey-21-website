@@ -1000,7 +1000,7 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021081001"
 		>
 			<a tabindex="-1" href="#">11: Lists</a>
 
@@ -1204,13 +1204,11 @@ i = 1 -&gt; 3
 i = 2 -&gt; 5
 ...
 </code></pre>
-
 <p>One useful insight is that this is printing out the first 10 even numbers, but subtracted by 1:</p>
 <pre><code>i = 0 -&gt; (2 - 1)
 i = 1 -&gt; (4 - 1)
 i = 2 -&gt; (6 - 1)
 </code></pre>
-
 <p>This may be easier to think about, since to print out even numbers, we can add 1 to <code>i</code>, and then multiply by 2.  Thus, we want to print out (<code>i</code> + 1) * 2 - 1.</p>
 <h2 id="looping-fun-2">Looping Fun 2</h2>
 <p>For this problem, we want to print the following:</p>
@@ -1219,14 +1217,12 @@ i = 1 -&gt; 18
 i = 2 -&gt; 16
 ...
 </code></pre>
-
 <p>One useful insight here is that as <code>i</code> increases, we are "subtracting more from 20".  In particular, we are subtracting:</p>
 <pre><code>i = 0 -&gt; subtract 0
 i = 1 -&gt; subtract 2
 i = 2 -&gt; subtract 4
 ...
 </code></pre>
-
 <p>Therefore, we want to print out 20 - (<code>i</code> * 2).  (You could also loop from 0 to 19, as the problem also asks, and print out 20 - <code>i</code> only if <code>i</code> is even, but the first approach is more efficient because we loop 10 times instead of 20).</p>
 <h2 id="looping-fun-3">Looping Fun 3</h2>
 <p>For this problem, it's helpful to start by ignoring the "same line" printing and just print the first 10 squares.  In that case, we want to print the following:</p>
@@ -1235,7 +1231,6 @@ i = 1 -&gt; 4 (2 squared)
 i = 2 -&gt; 9 (3 squared)
 ...
 </code></pre>
-
 <p>Here, we notice that the number we are squaring is <code>i</code> + 1.  Therefore, we want to print out (<code>i</code> + 1) ** 2.</p>
 <p>To print all on the same line, we must use <code>end=''</code>, as mentioned in the problem.  We also want to print out commas between each number.  This is a fencepost problem!  We want to print 9 numbers, but 8 commas.  Therefore, we can print out 8 numbers followed by commas, and then the last number separately, or the first number separately, followed by 8 commas and numbers.</p>
 <hr />
