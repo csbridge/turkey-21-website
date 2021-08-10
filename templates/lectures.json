@@ -24,63 +24,63 @@
 		"title_tr": "Değişkenler",
 		"slidesURL": "slides/Lecture4_Variables.pdf",
 		"codeURL": "starter/lectures/Lecture4.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080401"
 	},
 	{
 		"title_en": "Control Flow Revisited",
 		"title_tr": "Kontrol Akışına Geri Dönüş",
-		"slidesURL": "slides/5-ControlFlowRevisited.pdf",
+		"slidesURL": "slides/Lecture5.pdf",
 		"codeURL": "starter/lectures/Lecture5.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080408"
 	},
 	{
 		"title_en": "For Loops, Deconstructed",
 		"title_tr": "For döngüsü ve analizi",
 		"slidesURL": "slides/Lecture6.pdf",
 		"codeURL": "starter/lectures/Lecture6.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080501"
 	},
 	{
 		"title_en": "Graphics",
 		"title_tr": "Grafik",
-		"slidesURL": "slides/Lecture7_Graphics.pdf",
+		"slidesURL": "slides/Lecture7.pdf",
 		"codeURL": "starter/lectures/Lecture7.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080509"
 	},
 	{
 		"title_en": "Functions",
 		"title_tr": "Fonksiyonlar",
 		"slidesURL": "slides/Lecture8-Functions.pdf",
 		"codeURL": "starter/lectures/Lecture8.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080601"
 	},
 	{
 		"title_en": "Nested Loops",
 		"title_tr": "Nested Loops",
 		"slidesURL": "slides/Lecture9.pdf",
 		"codeURL": "starter/lectures/Lecture9.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080901"
 	},
 	{
 		"title_en": "Animation",
 		"title_tr": "Animation",
-		"slidesURL": "slides/10-Animation.pdf",
+		"slidesURL": "slides/Lecture10.pdf",
 		"codeURL": "starter/lectures/Lecture10.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021080909"
 	},
 	{
 		"title_en": "Lists",
 		"title_tr": "Lists",
 		"slidesURL": "slides/Lecture11.pdf",
 		"codeURL": "starter/lectures/Lecture11.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021081001"
 	},
 	{
 		"title_en": "The Mouse",
 		"title_tr": "The Mouse",
-		"slidesURL": "slides/12-Mouse.pdf",
+		"slidesURL": "slides/Lecture12.pdf",
 		"codeURL": "starter/lectures/Lecture12.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021081009"
 	},
 	{
 		"title_en": "Breakout Game",

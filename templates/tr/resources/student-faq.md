@@ -31,7 +31,7 @@ Hayır, bu programı sadece öğrenmenin keyfi için düzenliyoruz!
 
 ### Bitirme sertifikası alacak mıyım?
 
-Evet, bütün programa katılım sağlarsanız bir bitirme sertifikası alacaksınız.
+Evet, bütün programa katılım sağlarsanız bir bitirme sertifikası alacaksınız. Bu düzenli olarak derslere, hızlı başlangıç, çay saati ve gruplara katılım; günlük projeleri sisteme yükleme ve final projesini tamamlamayı içermektedir. Eğer final projesi çözümünüz başka herhangi bir kaynaktan kopyalanmış kısımlar içerirse sertifika almaya hak hazanamayacaksınız. Program boyunca yüklediğiniz tüm işler sizin emeğiniz olmalıdır. Grup liderlerimiz hızlı başlangıç, çay saati ve gruplarda yoklama alacaktır. Sertifikalar program tamamlandıktan sonra email yoluyla size iletilecektir.
 
 ### Bu kurstan en iyi şekilde nasıl yararlanabilirim?
 
@@ -45,13 +45,13 @@ CS Bridge [Ed sayfası]({{config['discussion_forum_url']}}) genel sorularınız�
 
 Bu programı, düzenlenen bütün aktivitelere katılacağınız beklentisi ile tasarladık ancak beklenmedik durumların oluşabileceğinin farkındayız (hastalanabilir ya da ani bir kişisel sorunla karşılaşabilirsiniz), böyle bir durumda, özellikle bir aktiviteye katılamayacaksanız, en kısa zamanda Grup Liderinize Ed üzerinden özel mesaj gönderin. Grup Liderleriniz programdad geri kalmamanız için sizi yönlendirecektir. 
 
-### Ödevimi erken bitirdim, fazla zamanımla ne yapabilirim?
+### Günlük projeyi erken bitirdim, fazla zamanımla ne yapabilirim?
 
 Öğrendiğiniz konseptlerle yapabileceğiniz eğlenceli şeyleri düşünün; fikirlerinizi ve yaptıklarınızı diğer öğrencilerle Ed üzerinden paylaşın.
 
-### Daha ödevimi bitirmedim ama teslim zamanı geldi, ne yapabilirim? 
+### Daha günlük projeyi bitirmedim ama teslim zamanı geldi, ne yapabilirim? 
 
-Yazabildiğiniz kadar kodu teslim edin.
+Yazabildiğiniz kadar kodu teslim edin. Tüm projeyi bitirememiş olsanız bile sorun değil, fakat üzerinde çalıştığın çözümü her gün teslim etmelisin.
 
 ### Kayboldum. Nerede olmalıym? 
 

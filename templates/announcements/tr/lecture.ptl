@@ -1,3 +1,3 @@
-At this time, you should be in lecture at <a class="alert-link" href="{{config['lecture_link']}}" target="_blank">this link</a>.
-Password is on <a class="alert-link" href="{{config['discussion_forum_schedule_url']}}" target="_blank">Ed!</a>
-If lecture ends early, check out the next activity in the message below!
+Şu anda, derse <a class="alert-link" href="{{config['lecture_link']}}" target="_blank">bu bağlantıyı</a> kullanarak gitmelisiniz.
+Şifreyi <a class="alert-link" href="{{config['discussion_forum_schedule_url']}}" target="_blank">Ed</a> platformundan bulabilirsiniz.
+Eğer ders erken biterse, aşağıdaki mesajdan bir sonraki aktiviteye göz atabilirsiniz! 
