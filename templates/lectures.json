@@ -90,15 +90,15 @@
 		"visible_after": "2021081101"
 	},
 	{
-		"title_en": "Breakout Ideas",
-		"title_tr": "Brekaout Ideas",
-		"slidesURL": "slides/14-Breakout-Extra.pdf",
+		"title_en": "Breakout Extra",
+		"title_tr": "Breakout Ekstra",
+		"slidesURL": "slides/Lecture14.pdf",
 		"codeURL": "starter/Lecture14.zip",
-		"visible_after": "2021082009"
+		"visible_after": "2021081109"
 	},
 	{
 		"title_en": "Breakout Extra Features",
-		"title_tr": "Brekaout Extra Features",
+		"title_tr": "Breakout Ekstra Özellikler",
 		"slidesURL": "slides/Lecture15.pdf",
 		"visible_after": "2021081201"
 	},
