@@ -542,18 +542,34 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081200"
 		>
-			<a tabindex="-1" href="#">9: Breakout</a>
+			<a tabindex="-1" href="#">9: Breakout and Dictionaries</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2021081200"
 						>
-							Breakout
+							Sabah
 						</li>
 
 							<li
 									class="visible-after" data-visible-after="2021081200"
+							>
+								<a href="../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081209"
+						>
+							Akşam
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081209"
+							>
+								<a href="../../tr/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2021081209"
 							>
 								<a href="../../tr/projects/breakout.html">Breakout</a>
 							</li>
@@ -562,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -572,11 +588,6 @@ visible-after, to ensure they display when you want them to.
 							Sabah
 						</li>
 
-							<li
-									class="visible-after" data-visible-after="2021081300"
-							>
-								<a href="../../tr/projects/phonebook.html">Phonebook</a>
-							</li>
 							<li
 									class="visible-after" data-visible-after="2021081300"
 							>
@@ -1291,10 +1302,12 @@ filePath - the total path to the markdown file being rendered in this template
 <p>Sonsuza kadar çalışan bir döngü yazın. Döngünün içinde topun konumunu güncelleyin ve durdurun. Programınızın en yukarısına <code>import time</code> satırını ekleyerek ve aşağıdakini yaparak topu durdurabilirsiniz:</p>
 <pre><code>time.sleep(seconds)
 </code></pre>
+
 <p>Eğer durdurmazsanız bilgisayar insan gözünün hareketi görebileceğinden çok hızlı olarak animasyonu oynatır!</p>
 <p>Tuval üzerinde grafik bir şekil taşıma fonksiyonu vardır:</p>
 <pre><code>canvas.move(object, dx, dy)
 </code></pre>
+
 <p><em>dx</em>, nesnenin x yönünde hareket edeceği piksel sayısıdır. <BR>
 <em>dy</em>, nesnenin y yönünde hareket edeceği piksel sayısıdır. <BR></p>
 <h2 id="asama-3-topu-sektir">Aşama 3: Topu Sektir</h2>
@@ -1304,6 +1317,7 @@ filePath - the total path to the markdown file being rendered in this template
 <pre><code>canvas.get_left_x(obj)
 canvas.get_top_y(obj)
 </code></pre>
+
 <p>İşinize yarayabilecek başka bir Python fonksiyonu ise <code>abs(val)</code> - bir sayının mutlak değerini döndürür.</p>
 	</div>
 </div>

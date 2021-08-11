@@ -542,18 +542,34 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081200"
 		>
-			<a tabindex="-1" href="#">9: Breakout</a>
+			<a tabindex="-1" href="#">9: Breakout and Dictionaries</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2021081200"
 						>
-							Breakout
+							Morning
 						</li>
 
 							<li
 									class="visible-after" data-visible-after="2021081200"
+							>
+								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081209"
+						>
+							Evening
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081209"
+							>
+								<a href="../../en/projects/phonebook.html">Phonebook</a>
+							</li>
+							<li
+									class="visible-after" data-visible-after="2021081209"
 							>
 								<a href="../../en/projects/breakout.html">Breakout</a>
 							</li>
@@ -562,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Dictionaries, Breakout and Final Projects</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -572,11 +588,6 @@ visible-after, to ensure they display when you want them to.
 							Morning
 						</li>
 
-							<li
-									class="visible-after" data-visible-after="2021081300"
-							>
-								<a href="../../en/projects/phonebook.html">Phonebook</a>
-							</li>
 							<li
 									class="visible-after" data-visible-after="2021081300"
 							>
@@ -1290,6 +1301,7 @@ name? Nick
 666-555-4433
 ('add', 'lookup', 'quit') &gt; quit
 </code></pre>
+
 <p>Your program should be able to handle 3 commands: 'quit', 'lookup' and 'add'.  Quit should end the program.  Lookup should prompt the user for a name and then print out the number stored for that name.  If that name is not in the phone book, print an appropriate message.  Add should prompt the user for a name and number, and then should add them to the phone book.  If there was a previous entry with this same name, it should be overwritten.</p>
 <p>We recommend implementing one command at a time, in this order:</p>
 <ol>
@@ -1301,16 +1313,20 @@ name? Nick
 <p>To create an empty dictionary, use:</p>
 <pre><code>my_dict = {}
 </code></pre>
+
 <p>To add an entry to a dictionary:</p>
 <pre><code>my_dict[key] = value
 </code></pre>
+
 <p>To get a value for a key in the dictionary:</p>
 <pre><code>my_dict[key]
 </code></pre>
+
 <p>To check if something is in the dictionary:</p>
 <pre><code>if key in my_dict:
     ...
 </code></pre>
+
 <p>To loop over all elements in a dictionary:</p>
 <pre><code>for key in my_dict:
     # do something with key and my_dict[key]
