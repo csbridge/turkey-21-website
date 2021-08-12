@@ -89,8 +89,8 @@ datetime_start,datetime_end,alert_type,category,location
 20210812 13:00, 20210812 13:10,alert-danger,pm-submit.ptl
 20210813 13:00, 20210813 13:10,alert-danger,pm-submit.ptl
 20210817 13:00, 20210817 13:10,alert-danger,pm-submit.ptl
-20210818 09:30, 20210818 11:30,alert-primary,final-project-work-time.ptl
-20210806 11:30, 20210806 13:00,alert-primary,social-activity.ptl
-20210812 07:00, 20210812 08:30,alert-primary,social-activity.ptl
-20210816 10:15, 20210816 11:45,alert-primary,social-activity.ptl
-20210819 10:15, 20210819 12:00,alert-primary,social-activity.ptl
+20210818 09:30, 20210818 11:30,alert-info,final-project-work-time.ptl
+20210806 11:30, 20210806 13:00,alert-info,social-activity.ptl
+20210812 07:00, 20210812 08:30,alert-info,social-activity.ptl
+20210816 10:15, 20210816 11:45,alert-info,social-activity.ptl
+20210819 10:15, 20210819 12:00,alert-info,social-activity.ptl

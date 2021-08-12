@@ -1271,7 +1271,7 @@ visible-after, to ensure they display when you want them to.
     </div>
 </div>
 
-<p><br /></p>
+<p><br />
 <div class="collapse" id="quickreference">
     <h4>Create Graphical Objects</h4>
     <table class="table table-bordered table-striped">
@@ -1350,7 +1350,7 @@ visible-after, to ensure they display when you want them to.
                 <td>Removes <code>obj</code> from the canvas.</td>
             </tr>
         </tbody>
-    </table>   
+    </table> <br />
     <h4>Canvas Information</h4>
     <table class="table table-bordered table-striped">
         <thead>
@@ -1369,15 +1369,15 @@ visible-after, to ensure they display when you want them to.
                 <td>Returns the height of the canvas.</td>
             </tr>
         </tbody>
-    </table>    
+    </table>  <br />
     <hr />
-</div>
-
+</div></p>
 <p>One of the most common libraries to create graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library that should be automatically installed for Windows and Mac along with Python when you installed it.  But some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
 <h2 id="importing">Importing</h2>
 <p>To use our graphics library, you must first import it at the top of your program, like this:</p>
 <pre><code>from graphics import Canvas
 </code></pre>
+
 <h2 id="the-canvas">The Canvas</h2>
 <p>The drawing model for the graphics library is a "canvas" (much like a painting) where you are going to draw various shapes. The canvas is a grid of pixels that have <code>x</code> and <code>y</code> values.  The coordinate (0, 0) is in the <strong>upper-left-hand corner</strong> of the canvas.  The values of <code>x</code> increase as you move to the right.  The values of <code>y</code> increase as you move down.  In other words, you can think of the canvas as follows:</p>
 <p><img
@@ -1396,16 +1396,19 @@ canvas.set_canvas_title(&quot;My Program&quot;)  # sets the text in the window t
 # call this at the end of the program to make sure the window shows properly
 canvas.mainloop()
 </code></pre>
+
 <p>Below we provide a brief tour of some of the different shapes you can draw in a canvas as well as highlight a few of the options you have with regard to how those shapes look.  For a complete list of functions, check out the link at the top of this page to the full reference documentation.</p>
 <h2 id="drawing-lines">Drawing Lines</h2>
 <p>To draw lines on the canvas, use <code>create_line</code> and specify the coordinates for the <strong>start</strong> and <strong>end</strong> points of the line.  For example, the following command would draw a line from location (10, 20) to (100, 50) on the canvas:</p>
 <pre><code>canvas.create_line(10, 20, 100, 50)
 </code></pre>
+
 <p>By default, all lines are drawn black.</p>
 <h2 id="drawing-rectangles">Drawing Rectangles</h2>
 <p>To draw a rectangle on the canvas, use <code>create_rectangle</code> and specify the coordinates for the <strong>top left corner</strong> and <strong>bottom right corner</strong> of the rectangle.  For example, the following command would draw a rectangle with upper left-hand corner at (5, 50) and lower right-hand corner at (100, 200) on the canvas:</p>
 <pre><code>canvas.create_rectangle(5, 50, 100, 200)
 </code></pre>
+
 <p>By default, all rectangles are drawn unfilled with black outlines.  Here's what this code would draw on the canvas:</p>
 <p><img
   src="../../img/resources/graphics/create_rectangle.png"
@@ -1417,6 +1420,7 @@ canvas.mainloop()
 <p>To draw an oval on the canvas, use <code>create_oval</code> and specify the coordinates for the <strong>top left corner</strong> and <strong>bottom right corner</strong> of the bounding box containing the oval you would like to draw.  In other words, the oval drawn will have its top, bottom, right, and left just touching the sides of the bounding box you specify.  For example, the following command would draw the oval that fits within an imaginary rectangle with upper left-hand corner at (5, 50) and lower right-hand corner at (100, 200) on the canvas:</p>
 <pre><code>canvas.create_oval(5, 50, 100, 200)
 </code></pre>
+
 <p>By default, all ovals are drawn unfilled with black outlines.  Here's what this code would draw on the canvas - note that we can think of this as an imaginary bounding box from (5, 50) to (100, 200), with an oval drawn inside it:</p>
 <p><img
   src="../../img/resources/graphics/create_oval.png"
@@ -1428,6 +1432,7 @@ canvas.mainloop()
 <pre><code>canvas.create_rectangle(10, 50, 260, 200)
 canvas.create_oval(10, 50, 260, 200)
 </code></pre>
+
 <p><img
   src="../../img/resources/graphics/create_oval_bounding_box.png"
   class="img-fluid mx-auto d-block"
@@ -1438,11 +1443,13 @@ canvas.create_oval(10, 50, 260, 200)
 <p>To draw text on the canvas, use <code>create_text</code> and specify the coordinate for the <strong>center</strong> of the text label.  For example, the following command would add text to the canvas displaying "Hello, world!" <em>centered at</em> (50, 50):</p>
 <pre><code>canvas.create_text(50, 50, &quot;Hello, world!&quot;)
 </code></pre>
+
 <p>Note that while other graphical objects typically use their upper-left corner as their position, text uses its center point.  This is because often-times we wish to center text, such as in the middle of the screen.  We can do this easily using the dimensions of the canvas:</p>
 <pre><code>canvas.create_text(canvas.get_canvas_width() / 2, 
                    canvas.get_canvas_height() / 2, 
                    &quot;This is centered on the canvas!&quot;)
 </code></pre>
+
 <p>By default, all text is drawn in black in the system font.  Here's what this code for drawing a centered label would draw on the canvas:</p>
 <p><img
   src="../../img/resources/graphics/create_text.png"
@@ -1454,6 +1461,7 @@ canvas.create_oval(10, 50, 260, 200)
 <pre><code>label = canvas.create_text(100, 100, &quot;Hello, world!&quot;)
 canvas.set_font(label, &quot;Times&quot;, 25)
 </code></pre>
+
 <h2 id="adding-images">Adding Images</h2>
 <p class="alert alert-info"><em>Note: if images do not work in your program, and instead give an error, you may not have installed the library necessary for images to work.  Make sure you followed the instructions in the <a href="install.html#installing-graphics"><strong>installation guide</strong></a> under "Installing Graphics".</em></p>
 <p>You can add image files to your canvas as well.  To do this, use <code>create_image</code> (if you want the image to be the same size on the canvas as the image file) or <code>create_image_with_size</code>) (if you want the image to be another size you specify).  Both require you to specify the x and y location of the <strong>upper-left corner</strong> of the image on the canvas, as well as the name of the image file.  <code>create_image_with_size</code> also requires a width and a height that the image should be.  Here's an example that adds a smiley-face image to the canvas with upper-left corner at (25, 30), assuming we have an image file named "smiley.jpg" in our PyCharm project:</p>
@@ -1462,6 +1470,7 @@ canvas.set_font(label, &quot;Times&quot;, 25)
 # or add with specific dimensions width = 100, height = 200
 canvas.create_image_with_size(25, 30, 100, 200, &quot;smiley.png&quot;)
 </code></pre>
+
 <p>Here's what this code would draw on the canvas - note that the larger smiley is the one from the <code>create_image</code> call, and the distorted one is the 100x200 smiley drawn with <code>create_image_with_size</code>:</p>
 <p><img
   src="../../img/resources/graphics/create_image.png"
@@ -1476,12 +1485,14 @@ canvas.create_image_with_size(25, 30, 100, 200, &quot;smiley.png&quot;)
 ...
 canvas.delete(rect)
 </code></pre>
+
 <p>Note that deleting an object is permanent - if you want to temporarily make an object hidden, for instance, use <code>set_hidden</code>.  You can pass in either <code>True</code> or <code>False</code> to set an object to be hidden or visible:</p>
 <pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.set_hidden(rect, True)  # No longer visible
 ...
 canvas.set_hidden(rect, False) # visible again
 </code></pre>
+
 <h2 id="object-ordering">Object Ordering</h2>
 <p>Objects are drawn on the canvas in the order in which they are created by your code. So, if you draw a red rectangle after a yellow circle, the red rectangle can potentially cover (occlude) part of the yellow circle. This is sometimes referred to as the z-order of the objects.</p>
 <p>As an example, below, we first draw a yellow rectangle, then draw an orange oval (which partly overlaps the rectangle), and then some text (that is on top of both the rectangle and the oval).</p>
@@ -1492,6 +1503,7 @@ canvas.set_fill_color(oval, 'orange')
 label = canvas.create_text(70, 170, 'good times!')
 canvas.set_font(label, &quot;Times&quot;, 20)
 </code></pre>
+
 <p><img
   src="../../img/resources/graphics/z_order.png"
   class="img-fluid mx-auto d-block"
@@ -1504,11 +1516,13 @@ canvas.set_font(label, &quot;Times&quot;, 20)
 print(canvas.get_width(rect))  # prints 50
 print(canvas.get_height(rect)) # prints 100
 </code></pre>
+
 <p>You can also ask the canvas for information about their location.  Specifically, you can get the leftmost x coordinate of the object, or the topmost y coordinate:</p>
 <pre><code>oval = canvas.create_oval(5, 10, 50, 100)
 print(canvas.get_left_x(oval))  # prints 5
 print(canvas.get_top_y(oval))   # prints 10
 </code></pre>
+
 <p>Note that for something like an oval, the dimensions and left corner are from the bounding box that contains it.</p>
 <h2 id="updating-graphical-objects">Updating Graphical Objects</h2>
 <p>There are several helpful functions you can use to update the state of different graphical objects.</p>
@@ -1517,10 +1531,12 @@ print(canvas.get_top_y(oval))   # prints 10
 <pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.moveto(rect, 25, 50)
 </code></pre>
+
 <p>You can also change the location of an object by specifying <em>how much</em> you would like to move it by, instead of specifying the new location.  The <code>move</code> function lets you specify the change in <code>x</code> and the change in <code>y</code> for the object.  For example, here's how we would move a rect 5 pixels to the right, and 10 pixels down:</p>
 <pre><code>rect = canvas.create_rectangle(100, 200, 300, 400)
 canvas.move(rect, 5, 10)
 </code></pre>
+
 <p>Thus, <code>rect</code>'s new top-left-corner coordinate would be (105, 210).</p>
 <h4 id="coloring">Coloring</h4>
 <p>You can change the colors of various objects, both their <em>outline</em> and their <em>fill</em>.  Objects like rectangles and ovals have both - their outline is the border around the shape, and their fill is the inside of the shape.  Lines have just a fill - it's the color of the line.  Text also has just a fill - it's the color of the text.  Images have neither a fill nor an outline.  You can change the fill color for relevant objects using <code>set_fill_color</code>, and the outline color using <code>set_outline_color</code>.  For instance, here's how we could make a rectangle with a red outline and yellow fill:</p>
@@ -1528,6 +1544,7 @@ canvas.move(rect, 5, 10)
 canvas.set_outline_color(rect, 'red')
 canvas.set_fill_color(rect, 'yellow')
 </code></pre>
+
 <p>Here's what this would look like on the canvas:</p>
 <p><img
   src="../../img/resources/graphics/coloring.png"
@@ -1540,6 +1557,7 @@ canvas.set_fill_color(rect, 'yellow')
 canvas.set_outline_color(rect, '')    # no outline
 canvas.set_fill_color(rect, 'yellow') # yellow fill
 </code></pre>
+
 <p>Oftentimes we want to set both colors at the same time.  For this, we can use <code>set_color</code>.  This sets both the outline color and the fill color of a shape to a specified color.  You can even use it on shapes that don't have one of those - for instance, text has just a fill color, but you can use <code>set_color</code> to set its color anyway.  Therefore, most of the time, <code>set_color</code> is just what we need.  If you need more specificity in setting the outline color or fill color, however, you can use <code>set_outline_color</code> or <code>set_fill_color</code>.</p>
 <p>There are a ton of different colors available to use - for a complete list, <a href="https://www.tcl.tk/man/tcl8.6/TkCmd/colors.htm">check out this website</a>.</p>
 <h2 id="canvas-information">Canvas Information</h2>
