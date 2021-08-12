@@ -11,7 +11,8 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 09:45, 20210811 10:25,alert-danger,lecture.ptl
 20210812 09:45, 20210812 10:25,alert-danger,lecture.ptl
 20210813 09:45, 20210813 10:25,alert-danger,lecture.ptl
-20210817 09:45, 20210817 10:25,alert-danger,lecture.ptl
+20210816 09:45, 20210816 10:25,alert-danger,lecture.ptl
+20210818 09:45, 20210818 10:25,alert-danger,lecture.ptl
 20210803 01:00, 20210803 01:40,alert-danger,lecture.ptl
 20210804 01:00, 20210804 01:40,alert-danger,lecture.ptl
 20210805 01:00, 20210805 01:40,alert-danger,lecture.ptl
@@ -21,7 +22,6 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 01:00, 20210811 01:40,alert-danger,lecture.ptl
 20210812 01:00, 20210812 01:40,alert-danger,lecture.ptl
 20210813 01:00, 20210813 01:40,alert-danger,lecture.ptl
-20210816 01:00, 20210816 01:40,alert-danger,lecture.ptl
 20210817 01:00, 20210817 01:40,alert-danger,lecture.ptl
 20210802 10:25, 20210802 11:45,alert-success,quickstart+section.ptl
 20210803 10:25, 20210803 11:45,alert-success,quickstart+section.ptl
@@ -32,7 +32,9 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 10:25, 20210811 11:45,alert-success,quickstart+section.ptl
 20210812 10:25, 20210812 11:45,alert-success,quickstart+section.ptl
 20210813 10:25, 20210813 11:45,alert-success,quickstart+section.ptl
-20210817 10:25, 20210817 11:45,alert-success,quickstart+section.ptl
+20210816 10:25, 20210816 11:45,alert-success,quickstart+section.ptl
+20210817 10:00, 20210817 11:30,alert-success,quickstart+section.ptl
+20210819 09:30, 20210819 10:15,alert-success,quickstart+section.ptl
 20210803 01:40, 20210803 02:30,alert-success,quickstart+teatime.ptl
 20210804 01:40, 20210804 02:30,alert-success,quickstart+teatime.ptl
 20210805 01:40, 20210805 02:30,alert-success,quickstart+teatime.ptl
@@ -42,7 +44,7 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 01:40, 20210811 02:30,alert-success,quickstart+teatime.ptl
 20210812 01:40, 20210812 02:30,alert-success,quickstart+teatime.ptl
 20210813 01:40, 20210813 02:30,alert-success,quickstart+teatime.ptl
-20210816 01:40, 20210816 02:30,alert-success,quickstart+teatime.ptl
+20210816 01:00, 20210816 02:30,alert-success,quickstart+teatime.ptl
 20210817 01:40, 20210817 02:30,alert-success,quickstart+teatime.ptl
 20210818 01:40, 20210818 02:30,alert-success,quickstart+teatime.ptl
 20210802 12:00, 20210802 13:00,alert-warning,office-hours.ptl
@@ -54,6 +56,7 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 12:00, 20210811 13:00,alert-warning,office-hours.ptl
 20210812 12:00, 20210812 13:00,alert-warning,office-hours.ptl
 20210813 12:00, 20210813 13:00,alert-warning,office-hours.ptl
+20210816 12:00, 20210816 13:00,alert-warning,office-hours.ptl
 20210817 12:00, 20210817 13:00,alert-warning,office-hours.ptl
 20210818 12:00, 20210818 13:00,alert-warning,office-hours.ptl
 20210803 02:30, 20210803 03:30,alert-warning,office-hours.ptl
@@ -88,9 +91,9 @@ datetime_start,datetime_end,alert_type,category,location
 20210811 13:00, 20210811 13:10,alert-danger,pm-submit.ptl
 20210812 13:00, 20210812 13:10,alert-danger,pm-submit.ptl
 20210813 13:00, 20210813 13:10,alert-danger,pm-submit.ptl
-20210817 13:00, 20210817 13:10,alert-danger,pm-submit.ptl
-20210818 09:30, 20210818 11:30,alert-info,final-project-work-time.ptl
+20210818 13:00, 20210818 13:10,alert-danger,pm-submit.ptl
+20210818 10:25, 20210818 12:00,alert-info,final-project-work-time.ptl
 20210806 11:30, 20210806 13:00,alert-info,social-activity.ptl
 20210812 07:00, 20210812 08:30,alert-info,social-activity.ptl
-20210816 10:15, 20210816 11:45,alert-info,social-activity.ptl
+20210817 11:30, 20210816 13:00,alert-info,social-activity.ptl
 20210819 10:15, 20210819 12:00,alert-info,social-activity.ptl
