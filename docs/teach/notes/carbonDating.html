@@ -1082,17 +1082,17 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021081209"
 		>
 			<a tabindex="-1" href="#">16: Dictionaries</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/Lec16-Dictionaries.pdf">Slides</a>
+	      					<a href="../../slides/Lecture16.pdf">Slides</a>
 						</li>
 						<li>
-	      					<a href="../../starter/Day10AM-Dictionaries.zip">Code</a>
+	      					<a href="../../starter/lectures/Lecture16.zip">Code</a>
 						</li>
 			</ul>
 		</li>
@@ -1221,11 +1221,9 @@ When i is 1, we want to print out 50% and 5700 years
 When i is 2, we want to print out 25% and 11,400 years
 ...
 </code></pre>
-
 <p>From here, we ask: "What does i represent?".  We can see the pattern that <code>i</code> represents the number of times we divide 100% by 2, and the number of copies of 5700 we add together.  In other words:</p>
 <pre><code>When i is some value, we want to print out 100% / (2 ** i) and i * 5700 years
 </code></pre>
-
 <p>(The percent pattern is tricky, so it's ok if they just use a percent variable and divide it by 2 each time)</p>
 <p>If students are having trouble working with <code>i</code>, you can suggest they start out by having variables outside the loop to keep track of percent and years, and update them each time inside the loop (e.g. divide percent by 2, add 5700 to years).  From here, it's easier to see what the pattern is.  Then, instead of making separate variables for the values, we can just calculate them directly.</p>
 <h2 id="milestone-2-interactive-mode">Milestone 2: Interactive Mode</h2>

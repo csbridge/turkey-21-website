@@ -105,9 +105,9 @@
 	{
 		"title_en": "Dictionaries",
 		"title_tr": "Sözlükler",
-		"slidesURL": "slides/Lec16-Dictionaries.pdf",
-		"codeURL": "starter/Day10AM-Dictionaries.zip",
-		"visible_after": "2021082009"
+		"slidesURL": "slides/Lecture16.pdf",
+		"codeURL": "starter/lectures/Lecture16.zip",
+		"visible_after": "2021081209"
 	},
 	{
 		"title_en": "Final Project",

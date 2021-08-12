@@ -1153,17 +1153,17 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021081209"
 		>
 			<a tabindex="-1" href="#">16: Dictionaries</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/Lec16-Dictionaries.pdf">Slides</a>
+	      					<a href="../../slides/Lecture16.pdf">Slides</a>
 						</li>
 						<li>
-	      					<a href="../../starter/Day10AM-Dictionaries.zip">Code</a>
+	      					<a href="../../starter/lectures/Lecture16.zip">Code</a>
 						</li>
 			</ul>
 		</li>
@@ -1301,7 +1301,6 @@ name? Nick
 666-555-4433
 ('add', 'lookup', 'quit') &gt; quit
 </code></pre>
-
 <p>Your program should be able to handle 3 commands: 'quit', 'lookup' and 'add'.  Quit should end the program.  Lookup should prompt the user for a name and then print out the number stored for that name.  If that name is not in the phone book, print an appropriate message.  Add should prompt the user for a name and number, and then should add them to the phone book.  If there was a previous entry with this same name, it should be overwritten.</p>
 <p>We recommend implementing one command at a time, in this order:</p>
 <ol>
@@ -1313,20 +1312,16 @@ name? Nick
 <p>To create an empty dictionary, use:</p>
 <pre><code>my_dict = {}
 </code></pre>
-
 <p>To add an entry to a dictionary:</p>
 <pre><code>my_dict[key] = value
 </code></pre>
-
 <p>To get a value for a key in the dictionary:</p>
 <pre><code>my_dict[key]
 </code></pre>
-
 <p>To check if something is in the dictionary:</p>
 <pre><code>if key in my_dict:
     ...
 </code></pre>
-
 <p>To loop over all elements in a dictionary:</p>
 <pre><code>for key in my_dict:
     # do something with key and my_dict[key]
