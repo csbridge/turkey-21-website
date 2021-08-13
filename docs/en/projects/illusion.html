@@ -578,31 +578,20 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
+			<a tabindex="-1" href="#">10: Breakout</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2021081300"
 						>
-							Morning
+							Breakout
 						</li>
 
 							<li
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../en/projects/breakout.html">Breakout</a>
-							</li>
-						<li 
-								class="dropdown-header visible-after" data-visible-after="2021081309"
-						>
-							Evening
-						</li>
-
-							<li
-									class="visible-after" data-visible-after="2021081309"
-							>
-								<a href="../../en/projects/project.html">Final Project</a>
 							</li>
 			</ul>
 		</li>
@@ -661,6 +650,26 @@ visible-after, to ensure they display when you want them to.
 
 							<li
 									class="visible-after" data-visible-after="2021081800"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081900"
+		>
+			<a tabindex="-1" href="#">14: Final Project</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081900"
+						>
+							Final Project
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081900"
 							>
 								<a href="../../en/projects/project.html">Final Project</a>
 							</li>
@@ -898,6 +907,26 @@ visible-after, to ensure they display when you want them to.
 
 							<li
 									class="visible-after" data-visible-after="2021081100"
+							>
+								<a href="../../en/projects/keyboardKarel/">Keyboard Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081300"
+		>
+			<a tabindex="-1" href="#">10: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../en/projects/keyboardKarel/">Keyboard Karel</a>
 							</li>
@@ -1296,12 +1325,14 @@ File: <code>illusion1.py</code></p>
 <pre><code>SIZE = 100
 GAP = 10
 </code></pre>
+
 <p>which are written outside the <code>main()</code> function. These lines define constants: variables whose values never change. Since they are defined outside all functions, you can read their values at any point in the program. Though you could write this optical illusion using the numbers 100 and 10 directly wherever you need them, using constants makes your program much easier to read.</p>
 <h2 id="double-for-loop">Double for loop</h2>
 <p>This problem requires using a for-loop inside a for-loop. Remember to use a different iterator variable for the inner loop. For example, if your outer loop is of the form:</p>
 <pre><code>for i in range(100):
   ... inner loop here ...
 </code></pre>
+
 <p>The inner loop (the loop in the body) must iterate through a variable other than <code>i</code>.</p>
 <h1 id="extension">Extension</h1>
 <p>File: <code>illusion2.py</code></p>

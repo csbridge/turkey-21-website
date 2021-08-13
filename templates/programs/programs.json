@@ -665,15 +665,22 @@
         ]
     },
     {
-        "title_en": "Breakout and Final Projects",
-        "title_tr": "Breakout and Final Projects",
+        "title_en": "Breakout",
+        "title_tr": "Breakout",
         "visible_after": "2021081300",
         "bonus": false,
         "sections": [
             {
-                "title_en": "Morning",
-                "title_tr": "Sabah",
+                "title_en": "Breakout",
+                "title_tr": "Breakout",
                 "projectURL": "starter/Breakout.zip",
+                "examples": [
+                    {
+                        "title_en": "Keyboard Karel",
+                        "title_tr": "Keyboard Karel",
+                        "url": "projects/keyboardKarel/"
+                    }
+                ],
                 "projects": [
                     {
                         "imageURL": "img/projects/breakout/breakout.jpg",
@@ -684,24 +691,6 @@
                         "topic_tr": "Python, Graphics, Animation, Lists and Mouse",
                         "type": "project",
                         "url": "projects/breakout.html"
-                    }
-                ]
-            },
-            {
-                "title_en": "Evening",
-                "title_tr": "Akşam",
-                "visible_after": "2021081309",
-                "projectURL": "starter/FinalProject.zip",
-                "projects": [
-                    {
-                        "imageURL": "img/projects/finalProject/project.png",
-                        "teachURL": "teach/notes/finalProject.html",
-                        "title_en": "Final Project",
-                        "title_tr": "Final Projesi",
-                        "topic_en": "",
-                        "topic_tr": "",
-                        "type": "project",
-                        "url": "projects/project.html"
                     }
                 ]
             }
@@ -768,6 +757,31 @@
         "title_en": "Final Project",
         "title_tr": "Final Projesi",
         "visible_after": "2021081800",
+        "bonus": false,
+        "sections": [
+            {
+                "title_en": "Final Project",
+                "title_tr": "Final Projesi",
+                "projectURL": "starter/FinalProject.zip",
+                "projects": [
+                    {
+                        "imageURL": "img/projects/finalProject/project.png",
+                        "teachURL": "teach/notes/finalProject.html",
+                        "title_en": "Final Project",
+                        "title_tr": "Final Projesi",
+                        "topic_en": "",
+                        "topic_tr": "",
+                        "type": "project",
+                        "url": "projects/project.html"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title_en": "Final Project",
+        "title_tr": "Final Projesi",
+        "visible_after": "2021081900",
         "bonus": false,
         "sections": [
             {

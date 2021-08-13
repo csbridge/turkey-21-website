@@ -578,31 +578,20 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
+			<a tabindex="-1" href="#">10: Breakout</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
 						<li 
 								class="dropdown-header visible-after" data-visible-after="2021081300"
 						>
-							Sabah
+							Breakout
 						</li>
 
 							<li
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../tr/projects/breakout.html">Breakout</a>
-							</li>
-						<li 
-								class="dropdown-header visible-after" data-visible-after="2021081309"
-						>
-							Akşam
-						</li>
-
-							<li
-									class="visible-after" data-visible-after="2021081309"
-							>
-								<a href="../../tr/projects/project.html">Final Projesi</a>
 							</li>
 			</ul>
 		</li>
@@ -661,6 +650,26 @@ visible-after, to ensure they display when you want them to.
 
 							<li
 									class="visible-after" data-visible-after="2021081800"
+							>
+								<a href="../../tr/projects/project.html">Final Projesi</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081900"
+		>
+			<a tabindex="-1" href="#">14: Final Projesi</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081900"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081900"
 							>
 								<a href="../../tr/projects/project.html">Final Projesi</a>
 							</li>
@@ -898,6 +907,26 @@ visible-after, to ensure they display when you want them to.
 
 							<li
 									class="visible-after" data-visible-after="2021081100"
+							>
+								<a href="../../tr/projects/keyboardKarel/">Keyboard Karel</a>
+							</li>
+			</ul>
+		</li>
+		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081300"
+		>
+			<a tabindex="-1" href="#">10: Breakout</a>
+
+			<!-- When hovered, we want to show another side popup with programs -->
+			<ul class="dropdown-menu">
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Breakout
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../tr/projects/keyboardKarel/">Keyboard Karel</a>
 							</li>
@@ -1301,6 +1330,7 @@ Dosya: <code>short_film.py</code></p>
 <pre><code>def display_message(canvas, message):
   ...
 </code></pre>
+
 <p>Başlangıç mesajı, aşağıdaki ekranda olduğu gibi görünmelidir.</p>
 <p><center>
   <img style="width:500px" src="../../img/projects/shortfilm/onceUpon.png">
@@ -1308,9 +1338,11 @@ Dosya: <code>short_film.py</code></p>
 <p>Burada kullandığımız font (ve font büyüklüğü) şunlardır:</p>
 <pre><code>canvas.set_font(label, &quot;Papyrus&quot;, 40)
 </code></pre>
+
 <p>Yazının rengini beyaz yaptığınızdan emin olun! İki saniye sonra arka plan olan dikdörtgeni ve ileti olan metni kaldırmalısınız. Bunu yapmak için <code>delete</code> fonksiyonunu kullanabilirsiniz (Bu fonksiyon tuval üzerinde bulunan bir nesneyi parametre olarak alır ve ekrandan kaldırır).</p>
 <pre><code>canvas.delete(your_object)
 </code></pre>
+
 <p>Tabii ki, bu fonksiyonu hikayenizi anlatmak için istediğiniz kadar kullanabilirsiniz!</p>
 <h2 id="gunesi-batrmak">Güneşi Batırmak</h2>
 <p>Filminizin başlaması için bir sahne olmalı: Gün batımı. Bunu yapmak için önce gökyüzünü, dünyayı ve güneşi çizin. Ardından, yavaş yavaş güneşin inişi animasyonunu gerçekleştirin. Gökyüzü tuvalin üst yarısını ve yer ise ikinci yarıyı kaplamalıdır. Programın başlangıcından ve birkaç saniye sonrasından alınmış aşağıdaki kareleri göz önünde bulundurun.</p>
@@ -1324,6 +1356,7 @@ Dosya: <code>short_film.py</code></p>
   ...
   return color
 </code></pre>
+
 <p>Fonkisyonun, kaç yineleme geçtiğine göre "ye", "turuncu" veya "kırmızı" renklerinden birini döndürmesini sağlayın.</p>
 <h2 id="son-dokunuslar">Son Dokunuşlar</h2>
 <p>Filminiz bittikten sonra, daha önce tanımlanan <code>display_message()</code> fonksiyonunuzu kullanarak bir bitirme mesajı görüntüleyin. Bitiş mesajı aşağıdaki ekrana benzemelidir.</p>
