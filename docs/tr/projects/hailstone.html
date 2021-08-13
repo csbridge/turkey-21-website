@@ -1204,7 +1204,7 @@ visible-after, to ensure they display when you want them to.
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/17-Final-Project.pdf">Sunum</a>
+	      					<a href="../../slides/Lecture17.pdf">Sunum</a>
 						</li>
 			</ul>
 		</li>
@@ -1334,7 +1334,6 @@ Bu uygulamayı n 1'e eşit olana kadar devam ettirin.</p>
 4 çift sayıdır, bu yüzden yarısını alıyorum: 2
 2 çift sayıdır, bu yüzden yarısını alıyorum: 1
 </code></pre>
-
 <p>Bu örnekte gördüğünüz gibi, sayılar artar ve azalır, fakat sonunda, en azından denenen har sayıda 1'e ulaşarak süreç sonlandı. Bazı açılardan, bu süreç, toprağa düşene kadar sürekli rüzgarla yukarı taşınan dolu tanelerinin oluşumunu andırır. Bu benzetmeden dolayı, bu sayı dizisi genellike Dolu Tanesi dizisi olarak adlandırılır, tabii başka adları da vardır.</p>
 <p>Kullanıcıdan bir sayı alan, sonrasında bu sayının Dolu Tanesi dizisini ve 1'e ulaşana kadar kaç adım geçtiğini sırayla gösteren bir program yazın. Örneğin, programınız aşağıdaki gibi gözüken bir çıktı üretmelidir:</p>
 <pre><code>Bir sayı girin: 17
@@ -1351,18 +1350,15 @@ Bu uygulamayı n 1'e eşit olana kadar devam ettirin.</p>
 4 çift sayıdır, bu yüzden yarısını alıyorum: 2
 2 çift sayıdır, bu yüzden yarısını alıyorum: 1
 </code></pre>
-
 <p>Bu problem hakkında büyüleyici olan ise kimsenin şimdiye kadar her zaman duracağını kanıtlayamamasıdır. Süreçteki adımların sayısı çok büyüyebilir. Örneğin kullanıcıdan 27 sayısı alan program için ne kadar adım gerekir?</p>
 <p class="alert alert-info"><strong>İpucu:</strong> Python ile bölme yaparken '/' kullanmak, sonuç olarak her zaman gerçek bir sayı verir, bu sayı tam sayı olsa da. Bu program için, hesaplanan sayıları sonunda <code>.0</code> ile yazdırması anlamına gelir. Bunu önlemek için, bölümü 'int'e (tamsayı) çevirmeyi deneyin, <code>int(num / 2)</code> gibi. Sonrasında bu değeri yazırabilirsiniz veya bir değişken içinde depolayabilirsiniz, örneğin: <code>num = int(num / 2)</code>.</p>
 <h2 id="tekligi-veya-ciftligi-kontrol-etmek">Tekliği veya Çiftliği Kontrol Etmek</h2>
 <p>Bu problemi çözebilmek için, bir tamsayının tek veya çift olduğuna karar vermeliyiz. Bildiğiniz ve sevdiğiniz operatörlerin dışında (+, -, *, ve / gibi), programlama dilleri bir 'kalan' operatörüne sahiptir: %.</p>
 <pre><code>a % b
 </code></pre>
-
 <p>a'yı b'ye böldüğünüzde kalan sayıyı döndürür. Örneğin, 10 % 3, 1'e eşittir çünkü 10'u 3'e böldüğünüzde kalan 1 olacaktır. Herhangi bir sayıyı 2'ye böldüğünüzde, eğer sayı çiftse kalan 0 ve sayı tekse kalan 1'dir. Böylelikle,</p>
 <pre><code>n % 2 == 0
 </code></pre>
-
 <p>n'in çift olup olmadığına dair bir testtir.</p>
 	</div>
 </div>

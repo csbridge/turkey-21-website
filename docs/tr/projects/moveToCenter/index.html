@@ -1204,7 +1204,7 @@ visible-after, to ensure they display when you want them to.
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../../slides/17-Final-Project.pdf">Sunum</a>
+	      					<a href="../../../slides/Lecture17.pdf">Sunum</a>
 						</li>
 			</ul>
 		</li>
@@ -1325,42 +1325,7 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:720.0px">&quot;&quot;&quot;
-File: move_to_center.py
--------------------
-Moves a square from the left edge to the center of the screen.
-&quot;&quot;&quot;
-
-import time
-from graphics import Canvas
-
-SQUARE_SIZE = 100
-ANIMATION_DELAY_SECONDS = 0.02
-SQUARE_MOVE_AMOUNT = 2
-
-
-def main():
-    canvas = Canvas()
-    canvas.set_canvas_title(&quot;Move to Center&quot;)
-
-    # draw a square on the left side of the screen, centered
-    y = (canvas.get_canvas_height() - SQUARE_SIZE) / 2
-    square = canvas.create_rectangle(0, y, SQUARE_SIZE, y + SQUARE_SIZE)
-    canvas.set_color(square, &quot;black&quot;)
-
-    # move horizontally until we get to the center
-    target_x = (canvas.get_canvas_width() - canvas.get_width(square)) / 2
-    while canvas.get_left_x(square) &lt; target_x:
-        canvas.move(square, SQUARE_MOVE_AMOUNT, 0)
-        time.sleep(ANIMATION_DELAY_SECONDS)
-        canvas.update()
-
-    canvas.mainloop()
-
-
-if __name__ == &quot;__main__&quot;:
-    main()
-</pre>
+		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/moveToCenter/soln.py</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

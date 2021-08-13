@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="649f5db8-06ea-4a36-85c7-a1949add369b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lectures.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lectures.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wgVQhOAo22HbUqMGJJfyzHC00A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.compile">
+    <configuration name="compile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="turkey-21-website" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Buket\PycharmProjects\Dictionaries\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/compile.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="runLocal.sh" type="ShConfigurationType" temporary="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/runLocal.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.compile" />
+      <item itemvalue="Shell Script.runLocal.sh" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.compile" />
+        <item itemvalue="Shell Script.runLocal.sh" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="649f5db8-06ea-4a36-85c7-a1949add369b" name="Default Changelist" comment="" />
+      <created>1628880203284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628880203284</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="568" y="226" key="#Notifications" timestamp="1628882263809">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="568" y="226" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1628882263809" />
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628880849079">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1628880849079" />
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1628880285169">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1628880285169" />
+    <state width="1345" height="186" key="GridCell.Tab.0.bottom" timestamp="1628884859371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1628884859371" />
+    <state width="1345" height="186" key="GridCell.Tab.0.center" timestamp="1628884859371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1628884859371" />
+    <state width="1345" height="186" key="GridCell.Tab.0.left" timestamp="1628884859371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1628884859371" />
+    <state width="1345" height="186" key="GridCell.Tab.0.right" timestamp="1628884859371">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="186" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1628884859371" />
+    <state x="184" y="8" key="SettingsEditor" timestamp="1628880829049">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1628880829049" />
+  </component>
+</project>
