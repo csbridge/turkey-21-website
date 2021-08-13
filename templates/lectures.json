@@ -113,20 +113,14 @@
 		"title_en": "Final Project",
 		"title_tr": "Final Projesi",
 		"slidesURL": "slides/17-Final-Project.pdf",
-		"visible_after": "2021082009"
+		"visible_after": "2021081300"
 	},
 	{
-		"title_en": "Artificial Intelligence",
-		"title_tr": "Artificial Intelligence",
-		"slidesURL": "slides/18-AI.pdf",
-		"visible_after": "2021082009"
-	},
-	{
-		"title_en": "GUI Interactors",
-		"title_tr": "Arayüz Etkileşimcileri",
-		"slidesURL": "slides/20-GUI_Interactors.pdf",
-		"codeURL": "starter/Gui_Interactors.zip",
-		"visible_after": "2021082009"
+		"title_en": "Interactors and Artificial Intelligence",
+		"title_tr": "Interactors and Artificial Intelligence",
+		"slidesURL": "slides/Lecture18.pdf",
+		"codeURL": "starter/lectures/Lecture18.zip",
+		"visible_after": "2021081309"
 	},
 	{
 		"title_en": "Beyond CS Bridge",
