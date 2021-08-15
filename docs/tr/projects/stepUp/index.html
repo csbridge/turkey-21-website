@@ -1316,6 +1316,7 @@ pick_beeper()
 put_beeper()
 turn_left()
 </code></pre>
+
 <p>Karel'ın sağa dönmesini nasıl sağlarsınız?</p>
 	</div>
 </div>
@@ -1330,7 +1331,48 @@ turn_left()
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/stepUp/soln.py</pre>
+		<pre class="console" id="editor" style="height:840.0px">from karel.stanfordkarel import *
+
+&quot;&quot;&quot;
+File: step_up.py
+------------------------
+Your first example Karel program. Have Karel pick up the beeper in front
+of it and place it on top of the ledge.
+(This is a comment. Your computer will ignore it.)
+&quot;&quot;&quot;
+
+
+def main():
+    &quot;&quot;&quot;
+    When you start your program, this code will be executed.
+    &quot;&quot;&quot;
+    move()
+    pick_beeper()
+    turn_left()
+    move()
+    turn_right()
+    move()
+    put_beeper()
+    move()
+
+
+def turn_right():
+    &quot;&quot;&quot;
+    Defines a new command called turn_right that makes
+    Karel turn right by turning left 3 times.
+    &quot;&quot;&quot;
+
+    # this is a single-line comment. Computers ignore it.
+    turn_left()
+    turn_left()
+    turn_left()
+
+
+# There is no need to edit code beyond this point
+
+if __name__ == &quot;__main__&quot;:
+    run_karel_program()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

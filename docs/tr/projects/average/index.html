@@ -1321,7 +1321,32 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/average/soln.py</pre>
+		<pre class="console" id="editor" style="height:520.0px">&quot;&quot;&quot;
+File: average.py
+-------------------
+This program contains an implementation of an average
+function that takes in two inputs and returns their average.
+The main program calls this function several times with different
+inputs and prints out the results.
+&quot;&quot;&quot;
+
+
+def main():
+    print(average(4, 5))
+    print(average(10, 2))
+    print(average(-4.1, 9.8))
+
+
+def average(a, b):
+    &quot;&quot;&quot;
+    Takes in two inputs and returns their average.
+    &quot;&quot;&quot;
+    return (a + b) / 2
+
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
