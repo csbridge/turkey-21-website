@@ -17,10 +17,13 @@ When in doubt, go with your best judgment!  We want the project most of all to b
 
 **IMPORTANT NOTE**: when you meet 1:1 to approve final project ideas for your students, please fill out this form for each one briefly documenting their idea.  This way we have a list of all projects.  It's ok if the student deviates from their idea slightly, but we just want to get a sense of what people are working on.
 
-[Google Form here](https://forms.gle/FP1JPzr8wp3qQacY8)
+[Google Form here](https://forms.gle/xdfFz3F8zznhL7AcA)
 
 
 ## Nominating Projects
+
+[Update in progress...]
+
 Students must get their submissions in by the morning submission deadline.  After that time, you are free to start looking through your sectionee's submissions!  Here's how to access them.
 
 1) First, [click here](https://us.edstem.org/courses/968/lessons/4281/analytics) to open the dashboard for all the submissions for the final project.
