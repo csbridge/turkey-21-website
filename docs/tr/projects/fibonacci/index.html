@@ -578,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -592,6 +592,17 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
+							>
+								<a href="../../../tr/projects/project.html">Final Projesi</a>
 							</li>
 			</ul>
 		</li>
@@ -915,7 +926,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -1353,10 +1364,12 @@ filePath - the total path to the markdown file being rendered in this template
 4181
 6765
 </code></pre>
+
 <p>Bu program terimlerin değeri maksimum değerden küçük olduğu sürece çalışmaya devam eder. Bunu sağlamak için, aşağıdaki kalıbı kullanarak bir while döngüsü kullanmalısınız:</p>
 <pre><code>while term &lt;= MAX_TERM_VALUE:
     ... kodunuz buraya ...
 </code></pre>
+
 <p>Maksimum terim değerinin isimlendirilmiş bir sabitle belirtildiğini unutmayın.</p>
 	</div>
 </div>
@@ -1371,7 +1384,33 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/fibonacci/soln.py</pre>
+		<pre class="console" id="editor" style="height:540.0px">&quot;&quot;&quot;
+File: fibonacci.py
+--------------------
+This program lists the terms in the Fibonacci sequence up to
+a constant MAX_TERM_VALUE, which is the largest Fibonacci term
+the program will display.
+&quot;&quot;&quot;
+
+# Defines the largest term to display
+MAX_TERM_VALUE = 10000
+
+
+def main():
+    print(&quot;This program lists the Fibonacci sequence.&quot;)
+    current_term = 0
+    next_term = 1
+
+    while current_term &lt;= MAX_TERM_VALUE:
+        print(current_term)
+        term_after_next = current_term + next_term
+        current_term = next_term
+        next_term = term_after_next
+
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

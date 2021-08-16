@@ -665,8 +665,8 @@
         ]
     },
     {
-        "title_en": "Breakout",
-        "title_tr": "Breakout",
+        "title_en": "Breakout and Final Projects",
+        "title_tr": "Breakout and Final Projects",
         "visible_after": "2021081300",
         "bonus": false,
         "sections": [
@@ -691,6 +691,23 @@
                         "topic_tr": "Python, Graphics, Animation, Lists and Mouse",
                         "type": "project",
                         "url": "projects/breakout.html"
+                    }
+                ]
+            },
+            {
+                "title_en": "Final Project",
+                "title_tr": "Final Projesi",
+                "projectURL": "starter/FinalProject.zip",
+                "projects": [
+                    {
+                        "imageURL": "img/projects/finalProject/project.png",
+                        "teachURL": "teach/notes/finalProject.html",
+                        "title_en": "Final Project",
+                        "title_tr": "Final Projesi",
+                        "topic_en": "",
+                        "topic_tr": "",
+                        "type": "project",
+                        "url": "projects/project.html"
                     }
                 ]
             }

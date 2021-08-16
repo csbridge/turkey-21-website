@@ -578,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -592,6 +592,17 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
+							>
+								<a href="../../tr/projects/project.html">Final Projesi</a>
 							</li>
 			</ul>
 		</li>
@@ -915,7 +926,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -1336,11 +1347,13 @@ print(&quot;Değişken x'in değeri: &quot; + str(x))
 pi = 3.14                             # float
 print(&quot;Pi'nin yaklaşık değeri: &quot; + str(pi))
 </code></pre>
+
 <p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir:</p>
 <pre><code>Bu bir string
 Değişken x'in değeri: 5
 Pi'nin yaklaşık değeri: 3.14
 </code></pre>
+
 <h2 id="konsol-girdisi">Konsol Girdisi</h2>
 <p>Kullanıcıdan konsol aracılığıyla girdi alıp değerini bir değişkende tutmak için <code>input(..)</code> fonksiyonu kullanılır. Kullanıcı girdisini başka türde (integer, float, vb.) veri yapılarında tutmak için girdiyi istediğiniz türe <strong>çevirmeniz</strong> gerekecektir. </p>
 <pre><code>what_you_said = input(&quot;How are you doing? &quot;)            # Kullanıcıya nasıl olduğu soruluyor
@@ -1353,6 +1366,7 @@ pi = float(input(&quot;Enter your best guess at pi: &quot;))      # Kullanıcıd
 circumference = pi*diameter     
 print(&quot;circumference = &quot; + str(circumference))          # Çemberin çevresi konsola yazdırılıyor
 </code></pre>
+
 <p>Yukarıdaki kod çalıştırıldığında aşağıdaki çıktıyı verir (Kullanıcı girdisi mavi ile belirtilmiştir):</p>
 <p><center>
 <img
@@ -1369,6 +1383,7 @@ print(&quot;circumference = &quot; + str(circumference))          # Çemberin ç
 def main():
     ...
 </code></pre>
+
 <p>Daha sonra aşağıdaki gibi rastgele sayılar elde edebilirsiniz. Rastgele sayıların üretilmesini istediğimiz alt ve üst limiti <code>lower = 0</code> ve <code>upper = 10</code> olarak tanımladığımızı varsayın.:</p>
 <pre><code>x = random.randint(lower, upper)  # [lower, upper] aralığında (alt ve üst limit dahil) rastgele bir tamsayı
 y = random.random()               # 0 ve 1 arasında rastgele rasyonel sayı

@@ -578,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -592,6 +592,17 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
+							>
+								<a href="../../../tr/projects/project.html">Final Projesi</a>
 							</li>
 			</ul>
 		</li>
@@ -915,7 +926,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -1326,16 +1337,19 @@ filePath - the total path to the markdown file being rendered in this template
 <p>You can create a button with the <code>create_button</code> function, specifying the text of the button, and whether it should be added to the top, left, bottom, or right side of the window:</p>
 <pre><code>canvas.create_button(&quot;Create Rectangle&quot;, Canvas.TOP)
 </code></pre>
+
 <p>You can check if a button is clicked just like you check for mouse clicks or keyboard presses.  In your program's main loop, call <code>get_new_button_clicks()</code> to get a list of recent clicks.  Each click will be the name of the button that was clicked (e.g. "Create Rectangle", for the above button).  Here's an example:</p>
 <pre><code>button_clicks = canvas.get_new_button_clicks()
 for button_click in button_clicks:
     if button_click == &quot;Create Rectangle&quot;:
         ...
 </code></pre>
+
 <h3 id="text-fields">Text Fields</h3>
 <p>You can create a text field with the <code>create_text_field</code> function, specifying the text describing the text field, and whether it should be added to the top, left, bottom, or right side of the window:</p>
 <pre><code>canvas.create_text_field(&quot;Color&quot;, Canvas.TOP)
 </code></pre>
+
 <p>The name you specify will be both the "name" of the text field and also the text that appears next to the text field describing its purpose to users.</p>
 <p>To get the current contents of the text field, use the <code>get_text_field_text</code> function, specifying the name of the text field you want to read from (e.g. "Color", for the above text field):</p>
 <pre><code>color = canvas.get_text_field_text(&quot;Color&quot;)
@@ -1353,7 +1367,79 @@ for button_click in button_clicks:
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/coloredShapes/soln.py</pre>
+		<pre class="console" id="editor" style="height:1460.0px">&quot;&quot;&quot;
+File: colored_shapes.py
+-------------------
+A program that adds shapes at random locations on the canvas.  The user can specify both
+the type of shape and the color to use via interactors.
+&quot;&quot;&quot;
+
+from graphics import Canvas
+import random
+
+# The min and max dimensions for the shapes added to the canvas.
+MIN_SHAPE_SIZE = 10
+MAX_SHAPE_SIZE = 50
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Colored Shapes&quot;)
+
+    # Create the interactors (text field and 2 buttons)
+    canvas.create_text_field(&quot;Color&quot;, Canvas.TOP)
+    canvas.create_button(&quot;Create Oval&quot;, Canvas.TOP)
+    canvas.create_button(&quot;Create Rectangle&quot;, Canvas.TOP)
+
+    while True:
+        button_clicks = canvas.get_new_button_clicks()
+        for button_click in button_clicks:
+
+            # Get the contents of the color text field
+            color = canvas.get_text_field_text(&quot;Color&quot;)
+
+            # Create the shape corresponding to the button clicked, of the specified color
+            if button_click == &quot;Create Oval&quot;:
+                create_random_oval_with_color(canvas, color)
+            elif button_click == &quot;Create Rectangle&quot;:
+                create_random_rectangle_with_color(canvas, color)
+
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def create_random_oval_with_color(canvas, color):
+    &quot;&quot;&quot;
+    Creates an oval with a random size and location on the canvas, with the given color.
+    &quot;&quot;&quot;
+    width = random.randint(MIN_SHAPE_SIZE, MAX_SHAPE_SIZE)
+    height = random.randint(MIN_SHAPE_SIZE, MAX_SHAPE_SIZE)
+    x = random.randint(0, canvas.get_canvas_width() - width)
+    y = random.randint(0, canvas.get_canvas_height() - height)
+
+    # Create with given color
+    oval = canvas.create_oval(x, y, x + width, y + height)
+    canvas.set_color(oval, color)
+
+
+def create_random_rectangle_with_color(canvas, color):
+    &quot;&quot;&quot;
+    Creates a rectangle with a random size and location on the canvas, with the given color.
+    &quot;&quot;&quot;
+    width = random.randint(MIN_SHAPE_SIZE, MAX_SHAPE_SIZE)
+    height = random.randint(MIN_SHAPE_SIZE, MAX_SHAPE_SIZE)
+    x = random.randint(0, canvas.get_canvas_width() - width)
+    y = random.randint(0, canvas.get_canvas_height() - height)
+
+    # Create with given color
+    rect = canvas.create_rectangle(x, y, x + width, y + height)
+    canvas.set_color(rect, color)
+
+
+if __name__ == &#039;__main__&#039;:
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

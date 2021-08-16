@@ -578,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -592,6 +592,17 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../../tr/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Final Projesi
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
+							>
+								<a href="../../../tr/projects/project.html">Final Projesi</a>
 							</li>
 			</ul>
 		</li>
@@ -915,7 +926,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -1338,7 +1349,58 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/stampTool/soln.py</pre>
+		<pre class="console" id="editor" style="height:1040.0px">&quot;&quot;&quot;
+File: stamp_tool.py
+-------------------
+This program lets you move the mouse to move a &quot;stamp&quot; around the screen,
+and wherever you click it &quot;stamps&quot; (adds a copy of the stamp shape) to that
+location.
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+STAMP_SIZE = 50
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Stamp Tool&quot;)
+
+    stamp_tool = draw_stamp(canvas, canvas.get_mouse_x(), canvas.get_mouse_y(), &#039;blue&#039;)
+    while True:
+        clicks = canvas.get_new_mouse_clicks()
+        for click in clicks:
+            draw_stamp(canvas, click.x, click.y, &#039;black&#039;)
+
+        # stamp tool should be topmost
+        canvas.raise_to_front(stamp_tool)
+        center_stamp(canvas, stamp_tool, canvas.get_mouse_x(), canvas.get_mouse_y())
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def draw_stamp(canvas, x, y, color):
+    &quot;&quot;&quot;
+    Draws a stamp (rect) of the given color centered around the given location.
+    Returns the rectangle drawn.
+    &quot;&quot;&quot;
+    rect = canvas.create_rectangle(x - STAMP_SIZE / 2, y - STAMP_SIZE / 2,
+                                   x + STAMP_SIZE / 2, y + STAMP_SIZE / 2)
+    canvas.set_color(rect, color)
+    return rect
+
+
+def center_stamp(canvas, stamp, x, y):
+    &quot;&quot;&quot;
+    Repositions the given stamp (rect) to be centered around the given location.
+    &quot;&quot;&quot;
+    canvas.moveto(stamp, x - canvas.get_width(stamp) / 2, y - canvas.get_height(stamp) / 2)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>

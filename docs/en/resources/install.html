@@ -578,7 +578,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -592,6 +592,17 @@ visible-after, to ensure they display when you want them to.
 									class="visible-after" data-visible-after="2021081300"
 							>
 								<a href="../../en/projects/breakout.html">Breakout</a>
+							</li>
+						<li 
+								class="dropdown-header visible-after" data-visible-after="2021081300"
+						>
+							Final Project
+						</li>
+
+							<li
+									class="visible-after" data-visible-after="2021081300"
+							>
+								<a href="../../en/projects/project.html">Final Project</a>
 							</li>
 			</ul>
 		</li>
@@ -915,7 +926,7 @@ visible-after, to ensure they display when you want them to.
 		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021081300"
 		>
-			<a tabindex="-1" href="#">10: Breakout</a>
+			<a tabindex="-1" href="#">10: Breakout and Final Projects</a>
 
 			<!-- When hovered, we want to show another side popup with programs -->
 			<ul class="dropdown-menu">
@@ -1369,11 +1380,13 @@ filePath - the total path to the markdown file being rendered in this template
 </ul>
 
 <h3 class="maconly" data-toc-skip>Installing Python on a Mac</h3>
+
 <p class="note maconly">
     Macs come with a version of Python already installed, but this is an older version of Python. We use the newest version of Python, so make sure to follow these instructions even if you think you already have Python installed.  To install Python, simply open the downloaded installer file and follow the default instructions.
 </p>
 
 <h3 class="winonly" data-toc-skip>Installing Python on Windows</h3>
+
 <p class="winonly">
     Open the downloaded file. Before installing, there should be an option that says "Add Python 3.8 in PATH". <b>Make sure to check this box.</b> Then, continue installing normally.
 </p>
@@ -1408,6 +1421,7 @@ filePath - the total path to the markdown file being rendered in this template
         />
     </div>
 </div>
+
 <p><br /></p>
 <p id="configure_interpreter">Click 'Configure' and then open PyCharm's settings, like so:</p>
 <div class="row">
@@ -1429,6 +1443,7 @@ filePath - the total path to the markdown file being rendered in this template
         </div>
     </div>
 </div>
+
 <p><br /></p>
 <p id="setinterpreter">In the Preferences window, click 'Project Interpreter', open the dropdown menu, and click 'Show All':</p>
 <div class="row">
@@ -1440,6 +1455,7 @@ filePath - the total path to the markdown file being rendered in this template
             alt="PyCharm Preferences Window, in the 'Project Interpreter' Pane, with 'Show All' highlighted in the dropdown menu" />
     </div>
 </div>
+
 <p><br /></p>
 <p>In the following window, click the plus icon:</p>
 <div class="row">
@@ -1457,6 +1473,7 @@ filePath - the total path to the markdown file being rendered in this template
         </div>
     </div>
 </div>
+
 <p><br /></p>
 <p>Click 'System Interpreter' in the sidebar. Depending on whether you've installed other versions of Python before, Python 3.8 may already be selected in the dropdown menu. If not, select Python 3.8 and then click 'OK' and 'OK' again:</p>
 <div class="row">
@@ -1467,6 +1484,7 @@ filePath - the total path to the markdown file being rendered in this template
             alt="Adding the system interpreter in PyCharm" />
     </div>
 </div>
+
 <p><br /></p>
 <p>You should now be on a window that looks like this (although the contents of your list might look different):</p>
 <div class="row">
@@ -1477,6 +1495,7 @@ filePath - the total path to the markdown file being rendered in this template
             alt="Interpreter window after selecting system interpreter" />
     </div>
 </div>
+
 <p><br /></p>
 <p>Click 'OK' again to be taken back to the welcome page. You're now ready to test PyCharm!</p>
 <hr />
@@ -1490,6 +1509,7 @@ filePath - the total path to the markdown file being rendered in this template
             alt="Blank PyCharm Window" />
     </div>
 </div>
+
 <p><br /></p>
 <p>Click 'Project' in the top left to open the file explorer, and open <code>intro.py</code> to pull up the editor:</p>
 <div class="row">
@@ -1500,6 +1520,7 @@ filePath - the total path to the markdown file being rendered in this template
             alt="PyCharm Editor" />
     </div>
 </div>
+
 <p><br /></p>
 <p>You aren't required to read or understand this code (although you will be able to by the end of the course!) but note that this editor is where you'll be writing all your code for the class. Now, to run your program, click 'Terminal' in the bottom left corner, which will pull up a new terminal pane in your PyCharm window:</p>
 <div class="row">
@@ -1510,11 +1531,13 @@ filePath - the total path to the markdown file being rendered in this template
              alt="PyCharm Terminal" />
     </div>
 </div>
+
 <p><br /></p>
 <p>We'll talk more about the terminal later in the course, but for now, know that the terminal is how you'll be running your Python programs throughout the course. To run your first Python program, type this into the terminal and press enter:</p>
 <div class="text-center">
     <code><span class="launcher">python3</span> intro.py</code>
 </div>
+
 <p><br /></p>
 <p>You should see output that looks like this:</p>
 <div class="maconly">
@@ -1522,16 +1545,19 @@ filePath - the total path to the markdown file being rendered in this template
         style="width:100%"
         alt="First run output" />
 </div>
+
 <div class="winonly">
     <img src="../../img/pycharm/firstrun-win.png"
         style="width:100%"
         alt="First run output" />
 </div>
+
 <p><br /></p>
 <p>Now, type the following command into the terminal:</p>
 <div class="text-center">
     <code><span class="launcher">python3</span> intro.py &lt;YOUR NAME HERE&gt; </code>
 </div>
+
 <p><br /></p>
 <p>For example, if your name is Nick, you'd type <code><span class="launcher">python3</span> intro.py Nick</code>. You can type your full name if you'd prefer. You should now see output like this:</p>
 <div class="maconly">
@@ -1539,11 +1565,13 @@ filePath - the total path to the markdown file being rendered in this template
         style="width:100%"
         alt="Second run output" />
 </div>
+
 <div class="winonly">
     <img src="../../img/pycharm/secondrun-win.png"
         style="width:100%"
         alt="Second run output" />
 </div>
+
 <p><br /></p>
 <p>Congratulations! Your PyCharm installation is working so far!</p>
 <h3 id="installing-graphics">Installing Graphics</h3>
@@ -1551,6 +1579,7 @@ filePath - the total path to the markdown file being rendered in this template
 <div class="text-center">
     <code><span class="launcher">python3</span> -m pip install Pillow==7.1.1</code>
 </div>
+
 <p><br /></p>
 <p>If it prints a bunch of output followed by "Successfully installed Pillow-7.1.1" at the end, your installation should be complete.  You're ready to program!</p>
 <hr />
