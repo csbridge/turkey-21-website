@@ -1,4 +1,4 @@
-template: templates/tr/template.ptl
+template: templates/en/template.ptl
 title: Graphics Reference
 
 # Graphics Reference
@@ -340,6 +340,17 @@ canvas.move(rect, 5, 10)
 
 Thus, `rect`'s new top-left-corner coordinate would be (105, 210).
 
+You can also change all the coordinates of a shape such as a rectangle, oval and line, by using `coords` to specify new ones.  Like this:
+
+```
+rect = canvas.create_rectangle(100, 200, 300, 400)
+canvas.coords(rect, 100, 200, 500, 600)  # change width and height of rect
+
+...
+
+line = canvas.create_line(0, 0, 50, 50)
+canvas.coords(line, 0, 0, 100, 100) # make line longer
+```
 
 #### Coloring
 You can change the colors of various objects, both their _outline_ and their _fill_.  Objects like rectangles and ovals have both - their outline is the border around the shape, and their fill is the inside of the shape.  Lines have just a fill - it's the color of the line.  Text also has just a fill - it's the color of the text.  Images have neither a fill nor an outline.  You can change the fill color for relevant objects using `set_fill_color`, and the outline color using `set_outline_color`.  For instance, here's how we could make a rectangle with a red outline and yellow fill:
@@ -380,4 +391,11 @@ canvas_height = canvas.get_canvas_height()
 
 # Create centered text
 label = canvas.create_text(canvas_width / 2, canvas_height / 2, "I'm centered!")
+```
+
+## More Tkinter Options
+The Canvas is a regular `tk.Canvas` object and most of the provided functions are wrappers around the standard Tkinter functions.  E.g. `create_rectangle` is a wrapper around the `create_rectangle` Tkinter function.  You can call additional Tkinter functions on the Canvas, and specify additional options to many of the Canvas functions if you'd like via _keyword arguments_.  Keyword arguments are parameters you specify in a comma-separated list with the form `name=value`.  Many Tkinter options will work with the way the canvas draws graphics.  You can see a list of full Tkinter Canvas functionality [here](https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/canvas.html).  For instance, to make a rectangle with a dashed border, you can use `dash`:
+
+```
+rect = canvas.create_rectangle(10, 10, 100, 100, dash=(3, 5))
 ```

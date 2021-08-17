@@ -33,6 +33,7 @@ Note: when adding support for additional languages, also make sure to add the ab
 	translation_dictionary["Karel Reference"] = {"en": "Karel Reference", "tr": "Karel Referansı"}
 	translation_dictionary["Python Reference"] = {"en": "Python Reference", "tr": "Python Referansı"}
 	translation_dictionary["Graphics Reference"] = {"en": "Graphics Reference", "tr": "Grafikler Referansı"}
+	translation_dictionary["Interactive Programs Reference"] = {"en": "Interactive Programs Reference", "tr": "Interactive Programs Reference"}
 	translation_dictionary["References"] = {"en": "References", "tr": "Referanslar"}
 	translation_dictionary["Software"] = {"en": "Software", "tr": "Yazılım"}
 	translation_dictionary["Course Information"] = {"en": "Course Information", "tr": "Program Bilgileri"}
@@ -134,6 +135,15 @@ Note: when adding support for additional languages, also make sure to add the ab
 								% end
 							>
 								<a href="{{pathToRoot}}{{lang}}/resources/graphics.html">{{translation_dictionary["Graphics Reference"][lang]}}</a>
+							</li>
+
+							<!-- Interactive programs reference visible later -->
+							<li
+								% if not get('taMode', False):
+									class="visible-after" data-visible-after="2021081009"
+								% end
+							>
+								<a href="{{pathToRoot}}{{lang}}/resources/interactive-programs.html">{{translation_dictionary["Interactive Programs Reference"][lang]}}</a>
 							</li>
 
 							<li class="divider" />
