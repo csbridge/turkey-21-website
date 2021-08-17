@@ -1254,9 +1254,21 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081701"
+		>
+			<a tabindex="-1" href="#">20: Music Information Retrieval</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture20_Intro2MIR.pdf">Slides</a>
+						</li>
+			</ul>
+		</li>
+		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021082009"
 		>
-			<a tabindex="-1" href="#">20: Beyond CS Bridge</a>
+			<a tabindex="-1" href="#">21: Beyond CS Bridge</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
@@ -1336,17 +1348,17 @@ filePath - the total path to the markdown file being rendered in this template
 Worked Examples: <a href="../../en/projects/invertBeeper/">Invert</a>, <a href="../../en/projects/unkarel/index.html">UN Karel</a><br/>
 Day1: <code>random_painter_karel.py</code></p>
 <h2 id="problem">Problem</h2>
-<p>Karel is starting to find its world too black and white. Help it fill it with color.
+<p>Karel is starting to find its world too black and white. Help it fill it with color.</p>
 <p>
 <center>
-    <img style="width:100%"  src="../../img/projects/randomPainter/long.png"> <br />
+    <img style="width:100%"  src="../../img/projects/randomPainter/long.png">   
 </center>
-</p></p>
+</p>
+
 <h2 id="paint-and-random">Paint and Random</h2>
 <p>Karel has a few commands up its sleeve. It can paint the corner on which it is standing using the instruction</p>
 <pre><code>paint_corner(color)
 </code></pre>
-
 <p>The value enclosed in the parentheses is called an argument in the terminology of programming languages, and it may be any one of 
 <code><span style="color:red;">RED</span></code>, 
 <code><span style="color:orange;">ORANGE</span></code>, 
@@ -1359,7 +1371,6 @@ and so on. So you can call <code>paint_corner(RED)</code> to paint the square th
 <pre><code>if random(0.5):
     put_beeper()
 </code></pre>
-
 <p>will place a beeper (or will not) with equal probability. If you wanted, say, on average 75% of the time to have a beeper (instead of 50%), you could change the condition to <code>random(0.75).</code></p>
 <h2 id="painter">Painter</h2>
 <p>Use these new abilities to have Karel randomly paint each corner of a world one of two colors. You can chose any two colors you would like; we chose green and blue.</p>

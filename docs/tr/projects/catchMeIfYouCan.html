@@ -1254,9 +1254,21 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
+				class="dropdown-submenu visible-after" data-visible-after="2021081701"
+		>
+			<a tabindex="-1" href="#">20: Müzik Bilgi Erişim</a>
+
+			<!-- When hovered, we want to show another side popup with links to the slides/code -->
+			<ul class="dropdown-menu">
+						<li>
+	      					<a href="../../slides/Lecture20_Intro2MIR.pdf">Sunum</a>
+						</li>
+			</ul>
+		</li>
+		<li 
 				class="dropdown-submenu visible-after" data-visible-after="2021082009"
 		>
-			<a tabindex="-1" href="#">20: Beyond CS Bridge</a>
+			<a tabindex="-1" href="#">21: Beyond CS Bridge</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
@@ -1360,12 +1372,10 @@ filePath - the total path to the markdown file being rendered in this template
 for overlapping_object in overlapping_objects:
     # overlapping_object ile bir şeyler yap ...
 </code></pre>
-
 <p>The coordinates provided to <code>find_overlapping</code> are the top-left corner and bottom-right corner of the box you want to get all overlapping objects for. You can also specify a single point, like this:</p>
 <p><code>find_overlapping</code> için sağlanan koordinatlar, tüm örtüşen nesneleri almak istediğiniz kutunun sol üst köşesi ve sağ alt köşesidir. Ayrıca aşağıdaki gibi tek bir nokta da belirtebilirsiniz:</p>
 <pre><code>overlapping_objects = canvas.find_overlapping(x, y, x, y)
 </code></pre>
-
 <p>Bu, <code>(x, y)</code> noktası ile örtüşen nesneleri öğrenmemizi sağlayacaktır.</p>
 	</div>
 </div>
