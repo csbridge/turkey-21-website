@@ -129,6 +129,14 @@
 		"slidesURL": "slides/Lecture19.pdf",
 		"visible_after": "2021081311"
 	},
+
+	{
+	  "title_en": "Music Information Retrieval",
+	  "title_tr": "Müzik Bilgi Erişim",
+	  "slidesURL": "slides/Lecture20_Intro2MIR.pdf",
+	  "visible_after": "2021081701"
+	},
+
 	{
 		"title_en": "Beyond CS Bridge",
 		"title_tr": "Beyond CS Bridge",
