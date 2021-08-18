@@ -4,6 +4,7 @@
     <list default="true" id="649f5db8-06ea-4a36-85c7-a1949add369b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/bonus-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/bonus-index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/en/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/java-handouts/arrayLists.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/java-handouts/arrayLists.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/java-handouts/console.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/java-handouts/console.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/java-handouts/eclipse.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/java-handouts/eclipse.html" afterDir="false" />
@@ -118,10 +119,12 @@
       <change beforePath="$PROJECT_DIR$/docs/en/projects/target.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/projects/target.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/projects/unKarel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/projects/unKarel/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/projects/viralVideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/projects/viralVideo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/en/resources/api-docs/graphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/api-docs/graphics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/code-of-conduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/code-of-conduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/general-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/general-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/graphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/graphics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/en/resources/interactive-programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/interactive-programs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/pycharm-how-to.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/pycharm-how-to.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/quick-python.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/quick-python.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/en/resources/section-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/en/resources/section-info.html" afterDir="false" />
@@ -397,10 +400,12 @@
       <change beforePath="$PROJECT_DIR$/docs/tr/projects/target.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/projects/target.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/projects/unKarel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/projects/unKarel/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/projects/viralVideo.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/projects/viralVideo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tr/resources/api-docs/graphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/api-docs/graphics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/code-of-conduct.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/code-of-conduct.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/general-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/general-info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/graphics.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/graphics.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/install.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tr/resources/interactive-programs.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/interactive-programs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/pycharm-how-to.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/pycharm-how-to.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/quick-python.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/quick-python.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/section-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/section-info.html" afterDir="false" />
@@ -410,7 +415,7 @@
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/submission-sl.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/submission-sl.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/resources/whatsNext.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/resources/whatsNext.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/tr/sponsors.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tr/sponsors.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/lectures.json" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lectures.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ohlone slides/Lecture14.zip" beforeDir="false" afterPath="$PROJECT_DIR$/ohlone slides/Lecture14.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
