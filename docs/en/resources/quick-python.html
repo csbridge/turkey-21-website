@@ -1266,14 +1266,14 @@ visible-after, to ensure they display when you want them to.
 			</ul>
 		</li>
 		<li 
-				class="dropdown-submenu visible-after" data-visible-after="2021082009"
+				class="dropdown-submenu visible-after" data-visible-after="2021081809"
 		>
 			<a tabindex="-1" href="#">21: Beyond CS Bridge</a>
 
 			<!-- When hovered, we want to show another side popup with links to the slides/code -->
 			<ul class="dropdown-menu">
 						<li>
-	      					<a href="../../slides/20-Beyond-CSBridge.pdf">Slides</a>
+	      					<a href="../../slides/Lecture21.pdf">Slides</a>
 						</li>
 			</ul>
 		</li>
@@ -1366,11 +1366,13 @@ print(&quot;The variable x is &quot; + str(x))
 pi = 3.14                             # a float
 print(&quot;Pi is approximately &quot; + str(pi))
 </code></pre>
+
 <p>Running the above code gives the below output:</p>
 <pre><code>This is a string
 The variable x is 5
 Pi is approximately 3.14
 </code></pre>
+
 <h2 id="console-input">Console Input</h2>
 <p>To get user input from the console, we use the <code>input(..)</code> function to store user input into a variable. In order to store user input into variables of different types (integers, floats, etc.), you need to <strong>cast</strong> the input before storing into your variable.</p>
 <pre><code>what_you_said = input(&quot;How are you doing? &quot;)
@@ -1383,6 +1385,7 @@ pi = float(input(&quot;Enter your best guess at pi: &quot;))
 circumference = pi*diameter
 print(&quot;circumference = &quot; + str(circumference))
 </code></pre>
+
 <p>Running the above code gives the below output (User input in blue):</p>
 <p><center>
 <img
@@ -1399,15 +1402,18 @@ print(&quot;circumference = &quot; + str(circumference))
 def main():
     ...
 </code></pre>
+
 <p>You can then generate lots of random numbers as below. Let <code>lower = 0</code> and <code>upper = 10</code>:</p>
 <pre><code>x = random.randint(lower, upper)  # a random int in the range (lower, upper), inclusive
 y = random.random()               # a random decimal number between 0 and 1
 y = random.uniform(lower, upper)  # a random decimal number between lower and upper
 </code></pre>
+
 <p>You can also randomly choose an element from a list!</p>
 <pre><code>numbers = [10, 9, 20, 3, 4]
 number = random.choice(numbers)   # picks a random element from numbers
 </code></pre>
+
 <p>To randomly pick a color, if you have a <code>canvas</code> variable:</p>
 <pre><code>canvas.get_random_color()
 </code></pre>
