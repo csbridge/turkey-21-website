@@ -1369,7 +1369,44 @@ filePath - the total path to the markdown file being rendered in this template
     	</a>
     </p>
     <div class="collapse" id="soln-collapse">
-		<pre class="console" id="editor" style="height:20.0px">../../../en/projects/holePuncher/soln.py</pre>
+		<pre class="console" id="editor" style="height:760.0px">&quot;&quot;&quot;
+File: hole_puncher.py
+---------------------
+This program lets you click anywhere on the canvas to
+&quot;punch a hole&quot; (e.g. draw a black circle there).
+&quot;&quot;&quot;
+
+from graphics import Canvas
+
+HOLE_RADIUS = 10
+
+
+def main():
+    canvas = Canvas()
+    canvas.set_canvas_title(&quot;Hole Puncher&quot;)
+
+    # animation loop
+    while True:
+        clicks = canvas.get_new_mouse_clicks()
+        for click in clicks:
+            draw_hole(canvas, click.x, click.y)
+        canvas.update()
+
+    canvas.mainloop()
+
+
+def draw_hole(canvas, x, y):
+    &quot;&quot;&quot;
+    Draws a circle on the canvas centered at the given location.
+    &quot;&quot;&quot;
+    oval = canvas.create_oval(x - HOLE_RADIUS, y - HOLE_RADIUS,
+                              x + HOLE_RADIUS, y + HOLE_RADIUS)
+    canvas.set_color(oval, &#039;black&#039;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</pre>
     </div>
 
     <script src="../../../plugins/ace/ace.js" type="text/javascript" charset="utf-8"></script>
