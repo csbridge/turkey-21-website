@@ -480,6 +480,18 @@ mouse handler.
 Each mouse click contains x and y properties for the click location, e.g.
 clicks = canvas.get_new_mouse_clicks(); print(clicks[0].x).</p></div>
 </dd>
+<dt id="src.graphics.Canvas.get_new_mouse_drag_events"><code class="name flex">
+<span>def <span class="ident">get_new_mouse_drag_events</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns a list of all mouse drag events that have occurred since the last call to this function or any
+registered mouse handler.</p>
+<h2 id="returns">Returns</h2>
+<p>a list of all mouse drag events that have occurred since the last call to this function or any registered
+mouse handler.
+Each mouse drag event contains x and y properties for the drag location, e.g.
+mouse_drag_events = canvas.get_new_mouse_drag_events(); print(mouse_drag_events[0].x).</p></div>
+</dd>
 <dt id="src.graphics.Canvas.get_outline_color"><code class="name flex">
 <span>def <span class="ident">get_outline_color</span></span>(<span>self, obj)</span>
 </code></dt>
@@ -804,6 +816,22 @@ E.g. func(key_char).
 If this parameter is None, no function will be called when a key is pressed.</dd>
 </dl></div>
 </dd>
+<dt id="src.graphics.Canvas.set_on_mouse_dragged"><code class="name flex">
+<span>def <span class="ident">set_on_mouse_dragged</span></span>(<span>self, callback)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the specified function to be called whenever the mouse is dragged (moved while held down).
+If this function is called multiple times, only the last specified function is called when the mouse is dragged.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>callback</code></strong></dt>
+<dd>a function to call whenever the mouse is dragged.
+Must take in two parameters, which
+are the x and y coordinates (in that order) of the mouse drag event that just occurred.
+E.g. func(x, y).
+If this parameter is None, no function will be called when the mouse is dragged.</dd>
+</dl></div>
+</dd>
 <dt id="src.graphics.Canvas.set_on_mouse_pressed"><code class="name flex">
 <span>def <span class="ident">set_on_mouse_pressed</span></span>(<span>self, callback)</span>
 </code></dt>
@@ -962,6 +990,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.get_new_button_clicks" href="#src.graphics.Canvas.get_new_button_clicks">get_new_button_clicks</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_key_presses" href="#src.graphics.Canvas.get_new_key_presses">get_new_key_presses</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_new_mouse_clicks" href="#src.graphics.Canvas.get_new_mouse_clicks">get_new_mouse_clicks</a></code></li>
+<li><code><a title="src.graphics.Canvas.get_new_mouse_drag_events" href="#src.graphics.Canvas.get_new_mouse_drag_events">get_new_mouse_drag_events</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_outline_color" href="#src.graphics.Canvas.get_outline_color">get_outline_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_random_color" href="#src.graphics.Canvas.get_random_color">get_random_color</a></code></li>
 <li><code><a title="src.graphics.Canvas.get_text" href="#src.graphics.Canvas.get_text">get_text</a></code></li>
@@ -986,6 +1015,7 @@ Cannot be used on any non-text graphical object.</p>
 <li><code><a title="src.graphics.Canvas.set_hidden" href="#src.graphics.Canvas.set_hidden">set_hidden</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_button_clicked" href="#src.graphics.Canvas.set_on_button_clicked">set_on_button_clicked</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_key_pressed" href="#src.graphics.Canvas.set_on_key_pressed">set_on_key_pressed</a></code></li>
+<li><code><a title="src.graphics.Canvas.set_on_mouse_dragged" href="#src.graphics.Canvas.set_on_mouse_dragged">set_on_mouse_dragged</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_pressed" href="#src.graphics.Canvas.set_on_mouse_pressed">set_on_mouse_pressed</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_on_mouse_released" href="#src.graphics.Canvas.set_on_mouse_released">set_on_mouse_released</a></code></li>
 <li><code><a title="src.graphics.Canvas.set_outline_color" href="#src.graphics.Canvas.set_outline_color">set_outline_color</a></code></li>

@@ -122,7 +122,6 @@
 		"codeURL": "starter/lectures/Lecture18.zip",
 		"visible_after": "2021081309"
 	},
-
 	{
 		"title_en": "Machine Learning and Computer Vision",
 		"title_tr": "Machine Learning and Computer Vision",
@@ -130,9 +129,15 @@
 		"visible_after": "2021081311"
 	},
 	{
+		"title_en": "Music Information Retrieval",
+		"title_tr": "Müzik Bilgi Erişim",
+		"slidesURL": "slides/Lecture20_Intro2MIR.pdf",
+		"visible_after": "2021081701"
+	},
+	{
 		"title_en": "Beyond CS Bridge",
 		"title_tr": "Beyond CS Bridge",
-		"slidesURL": "slides/20-Beyond-CSBridge.pdf",
-		"visible_after": "2021082009"
+		"slidesURL": "slides/Lecture21.pdf",
+		"visible_after": "2021081809"
 	}
 ]

@@ -97,3 +97,6 @@ datetime_start,datetime_end,alert_type,category,location
 20210812 07:00, 20210812 08:30,alert-info,social-activity.ptl
 20210817 11:30, 20210816 13:00,alert-info,social-activity.ptl
 20210819 10:15, 20210819 12:00,alert-info,social-activity.ptl
+20210819 02:30, 20210819 04:00,alert-info,final-project-work-time.ptl
+20210819 01:30, 20210819 02:30,alert-warning,office-hours.ptl
+20210819 04:00, 20210819 04:10,alert-danger,am-submit.ptl

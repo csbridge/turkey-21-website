@@ -22,11 +22,9 @@ When in doubt, go with your best judgment!  We want the project most of all to b
 
 ## Nominating Projects
 
-[Update in progress...]
-
 Students must get their submissions in by the morning submission deadline.  After that time, you are free to start looking through your sectionee's submissions!  Here's how to access them.
 
-1) First, [click here](https://us.edstem.org/courses/968/lessons/4281/analytics) to open the dashboard for all the submissions for the final project.
+1) First, [click here](https://edstem.org/us/courses/6374/lessons/21382/analytics/) to open the dashboard for all the submissions for the final project.
 
 2) Search for your students by typing their name in.  If they submitted, you should see two green checkboxes next to their name - one for their PyCharm files, and another for their project summary.
 
@@ -40,17 +38,18 @@ Students must get their submissions in by the morning submission deadline.  Afte
 	<img style="padding:10px;max-width:100%" src="{{pathToRoot}}img/projects/finalProject/download.png" />
 </center>
 
-4) We need you to nominate one of your sectionee's submissions to be demoed in the final presentation in the evening!  If a student hasn't submitted by the deadline, just skip them for consideration.  If they submitted their project but not the written summary, do your best to try and understand what it does.  Here are some things to look for (it doesn't have to satisfy all of these things, these are just some notes):
+4) We need you to nominate **one** of your sectionee's submissions to be demoed in the final presentation in the evening!  If a student hasn't submitted by the deadline, just skip them for consideration.  If they submitted their project but not the written summary, do your best to try and understand what it does.  Here are some things to look for (it doesn't have to satisfy all of these things, these are just some notes):
 
 * Is it creative?
 * Is it particularly aesthetically pleasing?
 * Is it algorithmically interesting?
 * Based on where the student started, is it particularly impressive?
+* Based on what was covered in CS Bridge and the goals and expectations of the class, is it particularly impressive?
 
-It doesn't have to be just the most technically complex project - look at the projects more overall and, for instance, see if someone who was struggling a lot came through with a  great final project, or someone came up with a particularly creative idea for a program.
+It doesn't have to be just the most technically complex project - look at the projects more overall and, for instance, see if someone who was struggling a lot came through with a great final project, or someone came up with a particularly creative idea for a program.
 
-**Once you have chosen a student to nominate, [submit their info here](https://docs.google.com/forms/d/1iBxb28pWzGU7E0FkLLeVoLW0gb4PJUB-togmhkSKUW0)**
+**Once you have chosen a student to nominate, [submit their info here](https://forms.gle/8seXLqPYcK8cLSbt9)**
 
 Nominating them doesn't guarantee they will be demoed - we will further filter down the submissions.  But we will try to demo as many as we can!
 
-**Please submit your nomination as soon as you can, but no later than the start of section (1PM EDT / 10AM PDT / 8PM Turkey time / 7PM Prague time)**
+**Please submit your nomination as soon as you can, but no later than 7:30PM Turkey time /  9:30AM Pacific time)**
