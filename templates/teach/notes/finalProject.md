@@ -53,3 +53,12 @@ It doesn't have to be just the most technically complex project - look at the pr
 Nominating them doesn't guarantee they will be demoed - we will further filter down the submissions.  But we will try to demo as many as we can!
 
 **Please submit your nomination as soon as you can, but no later than 7:30PM Turkey time /  9:30AM Pacific time)**
+
+### Checking For Copied Code
+
+While you are reviewing, **please also let us know (message instructors) if you find any submission that you are suspicious about for copying code.**  This commonly comes up as submissions that include code that CS Bridge students are not likely to know how to write, such as:
+
++ writing a game using an external graphics engine like `pygame`
++ using advanced material like 2D lists or classes
+
+Just because they did this doesn't mean they inappropriately copied code, but if the submission looks weird to you (as in "huh, I think it's unlikely that a CS Bridge student would write this"), please let us know and we will look into it further.  Letting us know doesn't mean anything will happen with their submission - it just means we will take a closer look.
