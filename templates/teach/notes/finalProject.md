@@ -54,11 +54,22 @@ Nominating them doesn't guarantee they will be demoed - we will further filter d
 
 **Please submit your nomination as soon as you can, but no later than 7:30PM Turkey time /  9:30AM Pacific time)**
 
-### Checking For Copied Code
+### Checking For Submissions Needing Further Review
 
+While you are reviewing, please **also check for any submissions that may have copied code, and any submissions that you don't think are sufficient for a full final project**.
+
+#### Code Copying
 While you are reviewing, **please also let us know (message instructors) if you find any submission that you are suspicious about for copying code.**  This commonly comes up as submissions that include code that CS Bridge students are not likely to know how to write, such as:
 
 + writing a game using an external graphics engine like `pygame`
 + using advanced material like 2D lists or classes
 
 Just because they did this doesn't mean they inappropriately copied code, but if the submission looks weird to you (as in "huh, I think it's unlikely that a CS Bridge student would write this"), please let us know and we will look into it further.  Letting us know doesn't mean anything will happen with their submission - it just means we will take a closer look.
+
+#### Sufficient Final Project
+While you are reviewing, **please also let us know (message instructors) if you find any submission that you feel is insufficient for a final project.**  You can use your best judgment here, but this may mean things like:
+
++ very short
++ more along the complexity of a quickstart or very short project problem instead of a final project, a bit closer to Breakout
+
+For any submissions like this, please let us know and we will look into it further.  Letting us know doesn't mean anything will happen with their submission - it just means we will take a closer look.

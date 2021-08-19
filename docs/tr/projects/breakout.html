@@ -1384,6 +1384,7 @@ File: <code>breakout.py</code></p>
 <pre><code>change_x = 10
 change_y = 10
 </code></pre>
+
 <p>"Değişim" (change) bileşenleri, her zaman adımında meydana gelen konum değişikliğini temsil eder. Başlangıçta, top aşağıya doğru gidiyor olmalı. <code>change_x</code> and <code>change_y</code> için +10.0 başlangıç hızını deneyebilirsiniz.</p>
 <p>Python grafik kütüphanesinde bir nesneyi taşımanın iki yolu olduğunu hatırlayın:</p>
 <pre><code># Objeyi spesifik bir new_x, new_y konumuna taşımak
@@ -1392,6 +1393,7 @@ canvas.moveto(object, new_x, new_y)
 # x koordinatını change_x kadar ve the y koordinatını change_y kadar arttırmak
 canvas.move(object, change_x, change_y)
 </code></pre>
+
 <p>Topunuzu ve change değişkenlerini yarattıktan sonra, bir sonraki görev, kürek ve tuğlaları göz ardı ederek topu ekranda sektirmek. Bu, topu hareket ettirip duraklattığınız bir "animasyon döngüsü" programlamanızı gerektirir. Sonra topun nasıl zıplayacağını düşünebilirsiniz. Bunu yapmak için, topun sıfır olmayan bir boyuta sahip olduğunu göz önünde bulundurarak topun koordinatlarının sınırların ötesine geçip geçmediğini kontrol etmeniz gerekir. Böylece, topun sağ duvardan sekip sekmediğini görmek için, topun sağ kenarının koordinatının pencerenin genişliğinden daha büyük olup olmadığını görmeniz gerekir; diğer üç yön benzer şekilde ele alınır. Şimdilik, topun alt duvardan sekmesini sağlayın, böylece dünyadaki yolunu izlemesini izleyebilirsiniz.</p>
 <p>Bir sıçramadan sonra ne olduğunu hesaplamak son derece basittir. Top üst veya alt duvardan sekerse, tek yapmanız gereken <code>change_y</code> işaretini ters çevirmektir. Simetrik olarak, yan duvarlardan sekmek, <code>change_x</code> işaretini tersine çevirir.</p>
 <p>Yararlı olabilecek bir şey, topun sekmesini ve <code>change_x</code> ve <code>change_y</code> değiştirilmesini sağlayarak <code>change_x</code> ve <code>change_y</code>nin yeni değerlerini döndüren bir fonksiyon yaratmaktır. Birden fazla değer döndüren bir fonksiyonunuz olabilir:</p>
@@ -1403,17 +1405,20 @@ def my_func(...):
     ...
     return var1, var2
 </code></pre>
+
 <h2 id="3-paddle-olustur">3. Paddle'ı oluştur</h2>
 <p>Sıradaki adım paddle'ı oluşturmak. Sadece bir paddle var, o da içi boyanmış bir dikdörtgen. Paddle'ın pencerenin altına göre konumunu bile biliyorsunuz.</p>
 <p>Paddle oluşturmanın zor kısmı, onun imleci takip etmesini sağlamak. Fakat burada sadece imlecin x koordinatına dikkat etmelisiniz çünkü paddle'ın y pozisyonu değişmiyor.</p>
 <p>Animasyon döngüsünde her seferinde farenin konumunu isteyin ve paddle'ı temsil eden dikdörtgeni buna göre hareket ettirin. Farenin konumunu almak için <code>canvas.get_mouse_x()</code> fonksiyonunu aşağıdaki gibi kullanabilirsiniz:</p>
 <pre><code>mouse_x = canvas.get_mouse_x()
 </code></pre>
+
 <h2 id="4-carpsmalar-tespit-et">4. Çarpışmaları tespit et</h2>
 <p>İlginç kısım burada geliyor. Breakout'u gerçek bir oyun haline getirmek için, topun ekrandaki başka bir nesneyle çarpışıp çarpışmadığını söyleyebilmeniz gerekiyor. Bilim insanlarının sık sık yaptığı gibi, basitleştiren bir varsayımda bulunarak başlamak ve sonrasında da bu varsayımı genişletmek yardımcı olabilir. Topu bir daireden çok tek bir nokta gibi düşünün. Bu durumda, başka bir nesne ile çarpışıp çarpışmadığını nasıl söyleyebilirsiniz?</p></p>
 <p>Sol üst köşesi <code>(x_1, y_1)</code>'de ve sağ alt köşesi <code>(x_2, y_2)</code>'de olan dikdörtgenle üst üste binen tüm nesnelerin listesini döndüren bir canvas fonksiyonu vardır:<code>canvas.find_overlapping(x_1, y_1, x_2, y_2)</code></p>
 <pre><code>objs = canvas.find_overlapping(x_1,  y_1, x_2, y_2)
 </code></pre>
+
 <p>Yapılacak en kolay şey, aslında gerçek bilgisayar oyunlarında da yapılan, topun dışındaki dikkatli bir şekilde seçilmiş birkaç noktayı kontrol etmek ve bu noktalardan hiçbirinin herhangi bir şeyle çarpışıp çarpışmadığını görmek. Bu noktalardan birine bir şey bulduğunuz anda, topun o nesneyle çarpışmış olduğunu ilan edebilirsiniz.</p>
 <p><center>
   <img src="../../img/projects/breakout/breakoutCollision.png"></img>
@@ -1429,10 +1434,12 @@ y_2 = ball_coords[3]
 # sonra o bölgedeki tüm nesnelerin bir listesini alabiliriz
 colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 </code></pre>
+
 <p>Bu dikdörtgendeki tüm çakışan nesneleri alırsanız, fonksiyon size bir liste döndürür. Bu listede <code>top</code> ve topun şu anda çarpıştığı nesneler olacaktır. Çarpışan bir nesnenin top olup olmadığını test etmek için, elemanın top değişkeninize <code>==</code> olup olmadığını kontrol edebilirsiniz.</p>
 <p>Top paddle ile çarpışırsa, yukarı çıkması için topu zıplatmanız gerekir. Eğer topun çarptığı nesne paddle değilse, olabileceği tek şey tuğladır, çünkü dünyadaki diğer nesnelerin tamamı tuğlalardır. Bir kez daha, dikey yönde bir sıçramaya neden olmalısınız (<code>change_y</code> değişkeninin yönünü çevirin), ancak tuğlayı da almanız gerekir. Bunu yapmak için tek yapmanız gereken <code>delete</code> fonskiyonunu çağırarak ekrandan kaldırmaktır:</p>
 <pre><code>canvas.delete(square) # square adındaki objeyi siler
 </code></pre>
+
 <h2 id="ekstra-dokunuslar"><span style="color:blue">Ekstra Dokunuşlar</span></h2>
 <p>Eğer buraya kadar geldiyseniz, tüm zahmetli kısımları yapmışsınızdır. Fakat zamanınız varsa, göz önünde bulundurabileceğiz birkaç detay daha var.</p></p>
 <ol>
@@ -1459,6 +1466,7 @@ colliding_list = canvas.find_overlapping(x_1, y_1, x_2, y_2)
 &gt; python3 -m pip install pyobjc
 ...bir şeyler yazar...
 </code></pre>
+
 <p>Ardından, programınızın üstüne aşağıdaki içe aktarmayı ekleyin:</p>
 <pre><code># Use this for Mac
 from playsound import playsound
@@ -1466,6 +1474,7 @@ from playsound import playsound
 # Use this for PC
 from winsound import PlaySound,SND_FILENAME,SND_ASYNC
 </code></pre>
+
 <p>Son olarak, programınızda bir ses çalmak istediğinizde, aşağıdaki fonksiyonu çağırın:</p>
 <pre><code># Use this for Mac
 playsound('mysoundfile.au', block=False)
@@ -1473,6 +1482,7 @@ playsound('mysoundfile.au', block=False)
 # Use this for PC
 PlaySound('mysoundfile.au', SND_FILENAME | SND_ASYNC)
 </code></pre>
+
 <p><code>'mysoundfile.au'</code> dosyasını projenizdeki ses dosyasının adıyla değiştirmelisiniz.</p>
 <p>We include <code>bounce.au</code> as a bounce sound you can use.  On Windows, you should use the included <code>bounce.wav</code> sound instead (<code>.au</code> files won't work).</p>
 <ul>
