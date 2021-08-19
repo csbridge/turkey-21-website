@@ -1330,7 +1330,7 @@ visible-after, to ensure they display when you want them to.
     </div>
 </div>
 
-<p><br />
+<p><br /></p>
 <div class="collapse" id="quickreference">
     <h4>Get Recent Events</h4>
     <table class="table table-bordered table-striped">
@@ -1385,9 +1385,10 @@ visible-after, to ensure they display when you want them to.
                 <td>Delete a text field from the canvas.  This should be called with the same description text you specified when you created the text field.</td>
             </tr>
         </tbody>
-    </table>  <br />
+    </table>    
     <hr />
-</div></p>
+</div>
+
 <p>One of the most common libraries to create interactive graphics in Python is called Tk (short for "tkinter"). Tk is a powerful graphics library that should be automatically installed for Windows and Mac along with Python when you installed it.  But some of the functions are hard to use.  For this reason, we provide our own small graphics library that is built on top of Tk and makes it easier to use.  However, it's not a replacement for Tk - it just adds new functions to make certain things like drawing text easier.  You can always explore the full Tk library if you're interested in seeing what else you can do!</p>
 <h2 id="the-mouse">The Mouse</h2>
 <p>You can get the location of the mouse at any time using <code>get_mouse_x()</code> and <code>get_mouse_y()</code> on the canvas:</p>
@@ -1395,7 +1396,6 @@ visible-after, to ensure they display when you want them to.
 ...
 canvas.moveto(rect, canvas.get_mouse_x(), canvas.get_mouse_y())
 </code></pre>
-
 <p>Most times, we will get the mouse location inside a loop so that we can update something many times as the mouse moves (such as the position of a shape).</p>
 <p>To check for mouse clicks, use <code>get_new_mouse_clicks</code> in a loop:</p>
 <pre><code>while ...:
@@ -1403,7 +1403,6 @@ canvas.moveto(rect, canvas.get_mouse_x(), canvas.get_mouse_y())
     for click in clicks:
         canvas.create_rectangle(click.x, click.y, click.x + 10, click.y + 10)
 </code></pre>
-
 <p>Each element of the list given to you by the canvas has an <code>x</code> and <code>y</code> coordinate that you can use to know where that click occurred.</p>
 <p>To check for mouse drag events (when the user moves the mouse while it is being held down), use <code>get_new_mouse_drag_events</code> in a loop:</p>
 <pre><code>while ...:
@@ -1411,13 +1410,11 @@ canvas.moveto(rect, canvas.get_mouse_x(), canvas.get_mouse_y())
     for event in mouse_drag_events:
         canvas.create_rectangle(event.x, event.y, event.x + 10, event.y + 10)
 </code></pre>
-
 <p>Each element of the list given to you by the canvas has an <code>x</code> and <code>y</code> coordinate that you can use to know where that mouse drag event occurred.</p>
 <p>Finally, you can wait for the user to click using <code>wait_for_click</code>:</p>
 <pre><code>canvas.wait_for_click() # This line will wait for the user to click
 print(&quot;You clicked!&quot;) # This code will not run until the user clicks
 </code></pre>
-
 <p>Unlike the previous examples, <code>wait_for_click</code> doesn't need to be called in a loop - the function itself will not finish until the user clicks.</p>
 <h2 id="the-keyboard">The Keyboard</h2>
 <p>To check for keyboard key presses, use <code>get_new_key_presses</code> in a loop:</p>
@@ -1427,25 +1424,21 @@ print(&quot;You clicked!&quot;) # This code will not run until the user clicks
         if press == &quot;Up&quot;:
             character.move(0, -5)
 </code></pre>
-
 <p>Each element of the list given to you by the canvas is the text name of the key that was pressed.  E.g. "a" will be for the lowercase "a" key, "A" will be if Shift+a is pressed, etc.  If you are unsure what the key name is, try writing a program that prints out the key name, like this:</p>
 <pre><code>while True:
     presses = canvas.get_new_key_presses()
     for press in presses:
         print(press)
 </code></pre>
-
 <h2 id="interactors-buttons-text-fields">Interactors (Buttons / Text Fields)</h2>
 <p>You can add interactors (buttons and text fields) around the edges of the canvas to allow users to interact with them.  These aren't put on the canvas, these are put around the edges of the canvas, so you don't specify coordinates like you usually do for graphical objects, you specify which area (top, bottom, left, right) you want the interactor.</p>
 <h3 id="buttons">Buttons</h3>
 <p>Create a button using the <code>create_button</code> function:</p>
 <pre><code>my_button = canvas.create_button(&quot;Click me&quot;, Canvas.TOP)
 </code></pre>
-
 <p>To delete the button you have created, use <code>destroy()</code> on the button variable:</p>
 <pre><code>my_button.destroy()
 </code></pre>
-
 <p>To check for button clicks, use <code>get_new_button_clicks</code> in a loop:</p>
 <pre><code>while ...:
     clicks = canvas.get_new_button_clicks()
@@ -1453,21 +1446,17 @@ print(&quot;You clicked!&quot;) # This code will not run until the user clicks
         if click == &quot;Click me&quot;:
             ...
 </code></pre>
-
 <p>Each element of the list given to you by the canvas is the text name of the button that was clicked.</p>
 <h3 id="text-fields">Text Fields</h3>
 <p>Create a text field using the <code>create_text field</code> function:</p>
 <pre><code>canvas.create_text_field(&quot;Enter name&quot;, Canvas.TOP)
 </code></pre>
-
 <p>To delete the text field you have created, use <code>delete_text_field()</code> and specify the description you used when you created it:</p>
 <pre><code>canvas.delete_text_field(&quot;Enter name&quot;)
 </code></pre>
-
 <p>To get the text currently entered into the text field, use <code>canvas.get_text_field_text</code> and specify the description you used when you created it:</p>
 <pre><code>entered_text = canvas.get_text_field_text(&quot;Enter name&quot;)
 </code></pre>
-
 <p>You will usually use this in combination with a button to know when the user is ready to do something - e.g. have them enter their name and click "Ok" to begin:</p>
 <pre><code>while ...:
     clicks = canvas.get_new_button_clicks()
